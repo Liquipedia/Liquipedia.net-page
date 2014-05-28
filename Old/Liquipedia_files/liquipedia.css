@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+ 
+body 
+{
+	text-align: center;
+	background-color: #0a2f52;
+	height: 100%;
+	background-image: url(http://wiki.teamliquid.net/images/lpBG.jpg);
+	background-repeat:repeat;
+}
+
+.gradBG
+{
+	margin:0;
+	overflow:hidden;
+	background-image: url(http://wiki.teamliquid.net/images/gradBG.png);
+	background-repeat: repeat-x;
+	width:100%;
+	padding-bottom:20px;
+}
+
+.hot_pages
+{
+	width: 730px;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: #0a2f52;
+	border: 3px solid #8eaec2;
+	border-radius: 40px;
+	box-shadow: 0 10px 10px #061c33;
+	text-align:left;
+	padding: 35px;
+	padding-top: 25px;
+}
+
+.hot_pages .columns
+{
+	column-count:2;
+	-webkit-column-count:2;
+	-moz-column-count:2;
+}
+
+.hot_pages img
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.boxes
+{
+	margin:0 -55px 0 -55px;
+}
+
+.splash
+{
+	width:800px;
+	height:390px;
+	margin:0px auto;
+	position: relative;
+	top: 30px;
+	background-color:#0A2F52;
+	border: 3px solid #8eaec2;
+	border-radius:40px;
+	box-shadow:0px 10px 10px #061c33;
+}
+
+.lplogo
+{
+ 	background-position: 7px center;
+    background-repeat: no-repeat;
+    border: 2px solid #0A2F52;
+    border-radius: 15px;
+    color: #8EAEC2;
+    display: block;
+    height: 56px;
+    width: 250px;
+    line-height: 0;
+    margin: 0;
+    -moz-transition:border 0.4s, box-shadow 0.4s; /* Firefox 4 */
+	-webkit-transition:border 0.4s, box-shadow 0.4s; /* Safari and Chrome */
+	-o-transition:border 0.4s, box-shadow 0.4s; /* Opera */
+}	
+.wikilink
+{
+	visibility:hidden;
+}
+.lplogo:hover 
+{
+	border:2px solid #8eaec2;
+	border-radius:15px;
+	box-shadow:0px 0px 20px #8eaec2 inset;	
+	transition:border 0.4s, box-shadow 0.4s;
+	-moz-transition:border 0.4s, box-shadow 0.4s; /* Firefox 4 */
+	-webkit-transition:border 0.4s, box-shadow 0.4s; /* Safari and Chrome */
+	-o-transition:border 0.4s, box-shadow 0.4s; /* Opera */
+}
+.lplogo:active
+{
+	border:2px solid #8eaec2;
+	border-radius:15px;
+	box-shadow:0px 0px 50px #8eaec2 inset;	
+	transition:border 0.05s, box-shadow 0.05s;
+	-moz-transition:border 0.05s, box-shadow 0.05s; /* Firefox 4 */
+	-webkit-transition:border 0.05s, box-shadow 0.05s; /* Safari and Chrome */
+	-o-transition:border 0.05s, box-shadow 0.05s; /* Opera */
+}
+
+#lpsc2
+{
+	background-image:url(images/StarCraftII.jpg);
+}
+
+#lpdota2
+{
+	background-image:url(images/Dota2.jpg);
+}
+
+#lpbw
+{
+	background-image:url(images/BroodWar.jpg);
+}
+
+#lphs
+{
+	background-image:url(images/Hearthstone.jpg);
+}
+
+h2
+{
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+a
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:	#8eaec2;
+	text-decoration: none;
+}
+a#ccbysa:hover, a#tl:hover, .contactlink:hover
+{
+	text-decoration:underline;
+}
+
+.container {
+    float: left;
+    height: 306px;
+    margin: 40px 0 0 80px;
+    width: 284px;
+}
+
+#logo
+{
+ 	float:left; 
+	margin:48px 0px 0px 50px;
+	background-image:url(images/logo.png);
+	height:292px;
+	width:321px;
+}
+
+.contactdetail
+{
+	width:800px;
+	height:135px;
+	margin:0px auto;
+	margin-top: 20px;
+	background-color:#0a2f52;
+	border: 3px solid #8eaec2;
+	border-radius:40px;
+	box-shadow:0px 10px 10px #061c33;	
+	text-align:left;
+}
+
+#CDleft
+{
+	line-height:200%;
+	margin:35px 0px 35px 40px;
+	width:50%;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:	#8eaec2;
+}
+
+#disclaimer 
+{ 
+	visibility:hidden;
+	height:0px;
+	width:0px;
+}
+
+#CDright
+{
+	margin:30px 105px 35px 0px;
+	float:right;	
+	line-height:19px;
+}
+
+.contactlink
+{
+	padding-left:22px;
+	line-height:190%;
+}
+
+#email
+{
+	margin-bottom:2px;
+	margin-left:2px;
+}
+
+#logo2
+{
+	background:url(images/logo.png);
+	height:292px;
+	width:321px;
+	transition:opacity 1s;
+	-moz-transition:opacity 1s; /* Firefox 4 */
+	-webkit-transition:opacity 1s; /* Safari and Chrome */
+	-o-transition:opacity 1s; /* Opera */
+}
+#logo
+{
+	background:url(images/logotrans.png);
+	height:292px;
+	width:321px;
+}
+#logo2:hover
+{
+	opacity:0;
+	transition:opacity 1s;
+	-moz-transition:opacity 1s; /* Firefox 4 */
+	-webkit-transition:opacity 1s; /* Safari and Chrome */
+	-o-transition:opacity 1s; /* Opera */
+}

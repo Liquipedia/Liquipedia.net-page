@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	font-family:Verdana, Tahoma, Geneva, sans-serif;
+	font-size:medium;
+	background-image:none;
+}
+
+#logo
+{
+	margin:0 auto 0 auto;
+	background:url(images/logo.png);
+	height:292px;
+	width:321px;
+}
+
+
+.lplogo
+{
+	display:block;
+	border:0.2em solid white;
+	border-radius:1.2em;
+	text-align:center;
+	height:60px;
+	line-height:40%;
+	margin-bottom:-0.8em;
+}
+
+
+span.wikilink
+{
+	text-align:center;
+	line-height:170%;
+	margin:0;
+	font-size:xx-large;
+	padding:0.9em;
+}
+
+.container 
+{
+	margin-top:1em; 
+	margin-bottom:2em;
+}
+
+.container a { text-decoration:none; }
+
+#CDleft
+{
+	margin:1em 0 0 0;
+	width:auto;
+	font-size:medium;
+}
+#CDright
+{
+ 	margin:0 0 0 1em ;
+}
+
+.hot_pages
+{
+	text-align:left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+
+.hot_pages .columns
+{
+	column-count:1;
+	-webkit-column-count:1;
+	-moz-column-count:1;
+}
+
+.hot_pages img
+{
+	display: none;
+}
+

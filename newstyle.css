@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { 
+	background:url('lp-hex-bg.png') repeat;
+	margin:0px;
+}
+div.global-nav {
+	height:18px;
+	width:100%;
+	background:#00162c;
+	margin:0px 0px 0px 0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	text-align:right;
+}
+div.global-nav a:link, div.global-nav a:hover, div.global-nav a:active, div.global-nav a:visited {
+	color:#fff;
+	text-decoration:none;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	margin-right:20px;
+}
+div.top {
+	margin-top:-12px;
+	z-index:2;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.50) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.50)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+div#logo {
+ 	margin-left:auto;
+	margin-right:auto;
+	padding-left:167px;
+	text-align:center;
+	
+}
+h1, h2 {
+	font-family:Roboto, Verdana, Arial, sans-serif;
+	text-shadow:0px 5px 2px #000;
+	color:#FFF;	
+	text-align:center;
+	width:930px;
+	margin-left:auto;
+	margin-right:auto;
+}
+	
+h1 {
+	font-weight:100;
+	font-size:224%;
+}
+
+h2 {
+	font-weight:400;
+	font-size:140%;
+}
+
+.top h1 { font-size:280%}
+
+div.whitebox {
+	background:#FFF repeat;
+	border-top:5px #8eaec2 solid;
+	border-bottom:5px #8eaec2 solid;
+	border-left:0px;
+	border-right:0px;
+	box-shadow:0px 5px 2px #000;
+	padding:40px 0px;
+	width:100%;
+	margin:5px 0px;
+	z-index:2;
+}

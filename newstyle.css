@@ -2,78 +2,257 @@
 /* CSS Document */
 
 body { 
-	background:url('lp-hex-bg.png') repeat;
-	margin:0px;
+    background:url('lp-hex-bg.png') repeat;
+    margin:0px;
 }
 div.global-nav {
-	height:18px;
-	width:100%;
-	background:#00162c;
-	margin:0px 0px 0px 0px;
-	position:absolute;
-	top:0px;
-	left:0px;
-	text-align:right;
+    height:18px;
+    width:100%;
+    background:#00162c;
+    margin:0px 0px 0px 0px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    text-align:right;
 }
 div.global-nav a:link, div.global-nav a:hover, div.global-nav a:active, div.global-nav a:visited {
-	color:#fff;
-	text-decoration:none;
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	margin-right:20px;
+    color:#fff;
+    text-decoration:none;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    margin-right:20px;
 }
 div.top {
-	margin-top:-12px;
-	z-index:2;
-	background: -moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b300162c', endColorstr='#0000162c',GradientType=0 ); /* IE6-9 */
+    margin-top:-12px;
+    z-index:2;
+    background: -moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b300162c', endColorstr='#0000162c',GradientType=0 ); /* IE6-9 */
 
 
 }
 div#logo {
- 	margin-left:auto;
-	margin-right:auto;
-	padding-left:167px;
-	text-align:center;
-	
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:167px;
+    text-align:center;
+    
 }
 h1, h2 {
-	font-family:Roboto, Verdana, Arial, sans-serif;
-	text-shadow:0px 5px 2px #000;
-	color:#FFF;	
-	text-align:center;
-	width:930px;
-	margin-left:auto;
-	margin-right:auto;
+    font-family:Roboto, Verdana, Arial, sans-serif;
+    text-shadow:0px 5px 2px #000;
+    color:#FFF;	
+    text-align:center;
+    width:930px;
+    margin-left:auto;
+    margin-right:auto;
 }
-	
+
 h1 {
-	font-weight:100;
-	font-size:224%;
+    font-weight:100;
+    font-size:224%;
 }
 
 h2 {
-	font-weight:400;
-	font-size:140%;
+    font-weight:400;
+    font-size:140%;
 }
 
 .top h1 { font-size:280%}
 
 div.whitebox {
-	background:#FFF repeat;
-	border-top:5px #8eaec2 solid;
-	border-bottom:5px #8eaec2 solid;
-	border-left:0px;
-	border-right:0px;
-	box-shadow:0px 5px 2px #000;
-	padding:40px 0px;
-	width:100%;
-	margin:5px 0px;
-	z-index:2;
+    background:#FFF repeat;
+    border-top:5px #8eaec2 solid;
+    border-bottom:5px #8eaec2 solid;
+    border-left:0px;
+    border-right:0px;
+    box-shadow:0px 5px 2px #000;
+    padding:40px 0px;
+    width:100%;
+    margin: 0px;
+    z-index:2;
+}
+
+/* This describes the boxes */
+.sc-box {
+    background-color: #b6cfe5;
+}
+.dota-box {
+    background-color: #e5ccb6
+}
+.hs-box {
+    background-color: #e5d8b6
+}
+.bw-box {
+    background-color: #e5e5e5
+}
+.hots-box {
+    background-color: #b9b6e5
+}
+.ssb-box {
+    background-color: #b6e5c7
+}
+
+.game-box {
+    font-family:Arial, Helvetica, sans-serif;
+    border: #000;
+    height: 240px;
+}
+
+/* This is the grid */
+/*
+  Simple Grid
+  Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - dallasbass.com
+  */
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0px;
+}
+
+.grid {
+    width: 100%;
+    max-width: 1140px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.grid-pad {
+    padding: 20px 0 0px 20px;
+}
+
+.grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+
+.push-right {
+    float: right;
+}
+
+/* Content Columns */
+
+.col-1-1 {
+    width: 100%;
+}
+.col-2-3, .col-8-12 {
+    width: 66.66%;
+}
+
+.col-1-2, .col-6-12 {
+    width: 50%;
+}
+
+.col-1-3, .col-4-12 {
+    width: 33.33%;
+}
+
+.col-1-4, .col-3-12 {
+    width: 25%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-1-6, .col-2-12 {
+    width: 16.667%;
+}
+
+.col-1-7 {
+    width: 14.28%;
+}
+
+.col-1-8 {
+    width: 12.5%;
+}
+
+.col-1-9 {
+    width: 11.1%;
+}
+
+.col-1-10 {
+    width: 10%;
+}
+
+.col-1-11 {
+    width: 9.09%;
+}
+
+.col-1-12 {
+    width: 8.33%
+}
+
+/* Layout Columns */
+
+.col-11-12 {
+    width: 91.66%
+}
+
+.col-10-12 {
+    width: 83.333%;
+}
+
+.col-9-12 {
+    width: 75%;
+}
+
+.col-5-12 {
+    width: 41.66%;
+}
+
+.col-7-12 {
+    width: 58.33%
+}
+
+@media handheld, only screen and (max-width: 767px) {
+
+
+    .grid {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+    }
+
+    [class*='col-'] {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+    }
 }

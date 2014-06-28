@@ -4,6 +4,7 @@
 body { 
     background:url('lp-hex-bg.png') repeat;
     margin:0px;
+    font-family: Verdana, Geneva, Ubuntu, sans-serif;
 }
 div.global-nav {
     height:18px;
@@ -19,7 +20,7 @@ div.global-nav a:link, div.global-nav a:hover, div.global-nav a:active, div.glob
     color:#fff;
     text-decoration:none;
     font-size:12px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Ubuntu, sans-serif;
     font-weight:bold;
     margin-right:20px;
 }
@@ -99,9 +100,23 @@ div.whitebox {
 }
 
 .game-box {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Ubuntu, sans-serif;
     border: #000;
     height: 240px;
+    padding: 15px;
+}
+
+.wiki-header {
+    text-align: center;
+    font-size: 40px;
+    font-family:Roboto, Verdana, Arial, sans-serif;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+a { 
+    color: #000;
 }
 
 /* This is the grid */

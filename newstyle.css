@@ -119,6 +119,17 @@ a {
     color: #000;
 }
 
+.content { 
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+}
+
+.footer { 
+    height: 100px;
+}
+
 /* This is the grid */
 /*
   Simple Grid

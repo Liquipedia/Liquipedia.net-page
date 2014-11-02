@@ -67,7 +67,7 @@ h2 {
 .top h1 { font-size:280%}
 
 div.whitebox {
-    background:#FFF repeat;
+    background:#daeffc repeat;
     border-top:5px #8eaec2 solid;
     border-bottom:5px #8eaec2 solid;
     border-left:0px;
@@ -80,7 +80,7 @@ div.whitebox {
 }
 
 /* This describes the boxes */
-.sc-box {
+.sc2-box {
     background-color: #b6cfe5;
 }
 .dota-box {
@@ -90,7 +90,7 @@ div.whitebox {
     background-color: #e5d8b6
 }
 .bw-box {
-    background-color: #e5e5e5
+    background-color: #dbe1e5
 }
 .hots-box {
     background-color: #b9b6e5
@@ -99,36 +99,72 @@ div.whitebox {
     background-color: #b6e5c7
 }
 
+.content { 
+    max-width: 930px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+
 .game-box {
-    font-family: Verdana, Geneva, Ubuntu, sans-serif;
+    font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
     border: #000;
-    height: 240px;
-    padding: 15px;
+	/* for bigger boxes
+    height: 230px;
+	width: 367px;*/ 
+	height:193px;
+	width:297px;
+    padding: 15px 26px;
+	font-size:12px;
+	line-height:1.8em;
 }
 
 .wiki-header {
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     font-family:Roboto, Verdana, Arial, sans-serif;
     width: 100%;
-    height: 100px;
-    line-height: 100px;
+	font-weight:300;
+    height: 1em;
+    line-height: 1em;
 }
 
-a { 
-    color: #000;
-}
+a:link					{color: #000;}
+a:visited				{color:#525;}
+a:active				{color:#555;}
+a:hover 				{color:#555;}
 
-.content { 
-    max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: auto;
-}
+.wiki-header a:link 	{text-decoration:none; color:#000;}
+.wiki-header a:visited 	{text-decoration:none; color:#000;}
+.wiki-header a:active 	{text-decoration:underline;}
+.wiki-header a:hover 	{text-decoration:underline;
+	/*font-weight:600; letter-spacing:-0.03625em;*/
+	}
+
 
 .footer { 
     height: 100px;
+	background-color: #8eaec2;
+
 }
+
+.disclaimer {
+	float:left;
+	font-size:13px;
+}
+
+.icon-list{
+	width: 295px;
+	float: right;
+	padding:20px 11px;
+}
+.icon-list img {
+	height:40px;
+	width:40px;
+	margin:0px 14px}
+
+
+
 
 /* This is the grid */
 /*
@@ -151,7 +187,7 @@ body {
 
 [class*='col-'] {
     float: left;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 [class*='col-']:last-of-type {
@@ -160,8 +196,8 @@ body {
 
 .grid {
     width: 100%;
-    max-width: 1140px;
-    min-width: 755px;
+    max-width: 930px;
+    min-width: 930px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -173,11 +209,11 @@ body {
 }
 
 .grid-pad {
-    padding: 20px 0 0px 20px;
+    padding: 10px 0 0px 10px;
 }
 
 .grid-pad > [class*='col-']:last-of-type {
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .push-right {
@@ -259,17 +295,45 @@ body {
     width: 58.33%
 }
 
-@media handheld, only screen and (max-width: 767px) {
+@media (max-width: 1140px) {
+
+}
+
+@media (max-width: 930px) {
+	
+	div#logo {
+    padding-left:15%;
+	}
+
+	h1, h2 { width:620px;}
+
+	h1 {font-size:224%; }
+
+	.top h1 { margin-top:30px; font-size:188%}
+
+	h2 {font-size:120%; }
+	
+	.disclaimer {width:295px;}
+
+}
+
+@media handheld, only screen and (max-width: 620px) {
 
 
     .grid {
-	width: 100%;
 	min-width: 0;
 	margin-left: 0px;
 	margin-right: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
     }
+	h1, h2 { width:90%;}
+
+	h1 {font-size:148%; }
+
+	.top h1 {font-size:126%}
+
+	h2 {font-size:93%; }
 
     [class*='col-'] {
 	width: auto;
@@ -281,4 +345,31 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
     }
+	
+	.game-box {
+    font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
+    border: #000;
+    height: 240px;
+	width: 388px;
+    padding: 15px;
+	font-size:13px;
+	line-height:20px;
+	}
+	
+	.wiki-header {
+    text-align: center;
+    font-size: 40px;
+    font-family:Roboto, Verdana, Arial, sans-serif;
+    width: 100%;
+	font-weight:300;
+    height: 40px;
+    line-height: 40px;
+	}
+
+	.content { 
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+	}
 }

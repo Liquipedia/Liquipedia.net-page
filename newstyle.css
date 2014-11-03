@@ -1,6 +1,7 @@
 body { 
     background:url('lp-hex-bg.png') repeat;
 	background-size:25%;
+	
     margin:0px;
     font-family: Verdana, Geneva, Ubuntu, sans-serif;
 }
@@ -180,6 +181,10 @@ a:hover 				{color:#555;}
 	}
 	h1 { font-size:180%;}
 	h2 { font-size:110%;}
+	
+	body {
+		background-size:auto;
+	}
 }
 
 @media only screen and (min-width:400) {

@@ -1,32 +1,14 @@
-@charset "utf-8";
-/* CSS Document */
-
 body { 
     background:url('lp-hex-bg.png') repeat;
+	background-size:25%;
     margin:0px;
     font-family: Verdana, Geneva, Ubuntu, sans-serif;
 }
-div.global-nav {
-    height:18px;
-    width:100%;
-    background:#00162c;
-    margin:0px 0px 0px 0px;
-    position:absolute;
-    top:0px;
-    left:0px;
-    text-align:right;
-}
-div.global-nav a:link, div.global-nav a:hover, div.global-nav a:active, div.global-nav a:visited {
-    color:#fff;
-    text-decoration:none;
-    font-size:12px;
-    font-family: Verdana, Geneva, Ubuntu, sans-serif;
-    font-weight:bold;
-    margin-right:20px;
-}
+
+div.global-nav {display:none;}
+
 div.top {
-    margin-top:-12px;
-    z-index:2;
+	    z-index:2;
     background: -moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -34,49 +16,69 @@ div.top {
     background: -ms-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b300162c', endColorstr='#0000162c',GradientType=0 ); /* IE6-9 */
-
-
+	
 }
-div#logo {
-    margin-left:auto;
-    margin-right:auto;
-    padding-left:167px;
-    text-align:center;
-    
-}
+
+#logo img {
+	width: 90%;
+	max-width: 506px;
+	margin: 0px 5%;
+	}
+	
 h1, h2 {
-    font-family:Roboto, Verdana, Arial, sans-serif;
-    text-shadow:0px 5px 2px #000;
-    color:#FFF;	
-    text-align:center;
-    width:930px;
-    margin-left:auto;
-    margin-right:auto;
+	font-family: Roboto, Verdana, Arial, sans-serif;
+	text-shadow: 0px 5px 2px #000;
+	color: #FFF;
+	text-align: center;
+	width: 100%;
 }
 
 h1 {
     font-weight:300;
-    font-size:224%;
+    font-size:160%;
 }
 
 h2 {
     font-weight:400;
-    font-size:140%;
+    font-size:90%;
 }
 
-.top h1 { font-size:280%}
+.top h1 {font-size:67%; margin-top:3px; margin-bottom:2px; font-weight:400;}
+.top h2 {display:none;}
+
 
 div.whitebox {
-    background:#daeffc repeat;
-    border-top:5px #8eaec2 solid;
-    border-bottom:5px #8eaec2 solid;
-    border-left:0px;
-    border-right:0px;
-    box-shadow:0px 5px 2px #000;
-    padding:40px 0px;
-    width:100%;
-    margin: 0px;
-    z-index:2;
+	background: #daeffc repeat;
+	border-top: 5px #8eaec2 solid;
+	border-bottom: 5px #8eaec2 solid;
+	border-left: 0px;
+	border-right: 0px;
+	box-shadow: 0px 5px 2px #000;
+	width: 100%;
+	margin: 0px;
+	z-index: 2;
+	-webkit-box-shadow: 2px 5px 0px #000;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 5px;
+}
+
+a:link					{color: #000;}
+a:visited				{color:#525;}
+a:active				{color:#555;}
+a:hover 				{color:#555;}
+
+.wiki-header a:link 	{text-decoration:none; color:#000;}
+.wiki-header a:visited 	{text-decoration:none; color:#000;}
+.wiki-header a:active 	{text-decoration:underline;}
+.wiki-header a:hover 	{text-decoration:underline;
+	/*font-weight:600; letter-spacing:-0.03625em;*/
+	}
+
+.wiki-header {
+	text-align:center;
+	font-size:25px
 }
 
 /* This describes the boxes */
@@ -98,278 +100,196 @@ div.whitebox {
 .ssb-box {
     background-color: #b6e5c7
 }
-
-.content { 
-    max-width: 930px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: auto;
-}
-
 .game-box {
-    font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
-    border: #000;
-	/* for bigger boxes
-    height: 230px;
-	width: 367px;*/ 
-	height:193px;
-	width:297px;
-    padding: 15px 26px;
-	font-size:12px;
-	line-height:1.8em;
-}
-
-.wiki-header {
-    text-align: center;
-    font-size: 36px;
-    font-family:Roboto, Verdana, Arial, sans-serif;
-    width: 100%;
-	font-weight:300;
-    height: 1em;
-    line-height: 1em;
-}
-
-a:link					{color: #000;}
-a:visited				{color:#525;}
-a:active				{color:#555;}
-a:hover 				{color:#555;}
-
-.wiki-header a:link 	{text-decoration:none; color:#000;}
-.wiki-header a:visited 	{text-decoration:none; color:#000;}
-.wiki-header a:active 	{text-decoration:underline;}
-.wiki-header a:hover 	{text-decoration:underline;
-	/*font-weight:600; letter-spacing:-0.03625em;*/
+	width: 100%;
+	height: 35px;
+	font-size: 25px;
+	font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
+	font-weight: 400;
+	margin: 0 auto 5px auto;
 	}
 
 
+.box-wrap {
+	width:100%;
+}
+
+.game-box p { display:none;}
+
+.content { 
+	margin:0 5%; 
+	font-size:80%;
+	padding-top: 0;
+	
+}
+
+
 .footer { 
-    height: 100px;
+    min-height: 100px;
 	background-color: #8eaec2;
+	padding-top:10px;
 
 }
 
 .disclaimer {
-	float:left;
-	font-size:13px;
+	font-size:12px;
+	width:90%;
+	padding:0 5% 1px;
 }
 
 .icon-list{
-	width: 295px;
-	float: right;
-	padding:20px 11px;
+	width: 100%;
 }
 .icon-list img {
-	height:40px;
-	width:40px;
-	margin:0px 14px}
-
-
-
-
-/* This is the grid */
-/*
-  Simple Grid
-  Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
-  Project Page - http://thisisdallas.github.com/Simple-Grid/
-  Author - Dallas Bass
-  Site - dallasbass.com
-  */
-
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	width:15%;
+	max-width:40px;
+	margin:0 5%;
 }
 
-body {
-    margin: 0px;
+@media only screen and (min-width: 280px) {
+
+	.icon-list {
+		width:280px;
+		margin:0 auto;
+	}
+		.top h1 {
+		font-size:80%; 
+		margin-bottom:4px;
+	}
 }
-
-[class*='col-'] {
-    float: left;
-    padding-right: 10px;
-}
-
-[class*='col-']:last-of-type {
-    padding-right: 0px;
-}
-
-.grid {
-    width: 100%;
-    max-width: 930px;
-    min-width: 930px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.grid:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.grid-pad {
-    padding: 10px 0 0px 10px;
-}
-
-.grid-pad > [class*='col-']:last-of-type {
-    padding-right: 10px;
-}
-
-.push-right {
-    float: right;
-}
-
-/* Content Columns */
-
-.col-1-1 {
-    width: 100%;
-}
-.col-2-3, .col-8-12 {
-    width: 66.66%;
-}
-
-.col-1-2, .col-6-12 {
-    width: 50%;
-}
-
-.col-1-3, .col-4-12 {
-    width: 33.33%;
-}
-
-.col-1-4, .col-3-12 {
-    width: 25%;
-}
-
-.col-1-5 {
-    width: 20%;
-}
-
-.col-1-6, .col-2-12 {
-    width: 16.667%;
-}
-
-.col-1-7 {
-    width: 14.28%;
-}
-
-.col-1-8 {
-    width: 12.5%;
-}
-
-.col-1-9 {
-    width: 11.1%;
-}
-
-.col-1-10 {
-    width: 10%;
-}
-
-.col-1-11 {
-    width: 9.09%;
-}
-
-.col-1-12 {
-    width: 8.33%
-}
-
-/* Layout Columns */
-
-.col-11-12 {
-    width: 91.66%
-}
-
-.col-10-12 {
-    width: 83.333%;
-}
-
-.col-9-12 {
-    width: 75%;
-}
-
-.col-5-12 {
-    width: 41.66%;
-}
-
-.col-7-12 {
-    width: 58.33%
-}
-
-@media (max-width: 1140px) {
-
-}
-
-@media (max-width: 930px) {
 	
-	div#logo {
-    padding-left:15%;
+@media only screen and (min-width: 310px) {
+
+	.top h1 {
+		font-size:90%; 
+		margin-bottom:6px;
 	}
 
-	h1, h2 { width:620px;}
-
-	h1 {font-size:224%; }
-
-	.top h1 { margin-top:30px; font-size:188%}
-
-	h2 {font-size:120%; }
-	
-	.disclaimer {width:295px;}
-
-}
-
-@media handheld, only screen and (max-width: 620px) {
-
-
-    .grid {
-	min-width: 0;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-    }
-	h1, h2 { width:90%;}
-
-	h1 {font-size:148%; }
-
-	.top h1 {font-size:126%}
-
-	h2 {font-size:93%; }
-
-    [class*='col-'] {
-	width: auto;
-	float: none;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-    }
+	.top h2 {
+		font-size:70%; 
+		width: 90%; 
+		margin:0 5% 10px; 
+		display:block;  
+	}
 	
 	.game-box {
-    font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
-    border: #000;
-    height: 240px;
-	width: 388px;
-    padding: 15px;
-	font-size:13px;
-	line-height:20px;
+		height:40px;
+	}
+	.wiki-header {
+		font-size:30px;
+		font-weight:300;
+	}
+	h1 { font-size:180%;}
+	h2 { font-size:110%;}
+}
+
+@media only screen and (min-width:400) {
+
+	.top h1 {
+		font-size:110%; 
+		margin-bottom:8px;
+	}
+		
+	.top h2 {
+		font-size:80%; 
+		width: 94%; 
+		margin:0 3% 12px; 
+		display:block;  
 	}
 	
-	.wiki-header {
-    text-align: center;
-    font-size: 40px;
-    font-family:Roboto, Verdana, Arial, sans-serif;
-    width: 100%;
-	font-weight:300;
-    height: 40px;
-    line-height: 40px;
+	div.whitebox {
+		padding-top:10px;
+		padding-bottom:5px;
 	}
+	
+	h1 { font-size:200%;}
+	h2 { font-size:125%;}
+}
 
-	.content { 
-    max-width: 1140px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
+@media only screen and (min-width: 480px) {
+		
+	.top h1 {
+		font-size:130%; 
+		margin-bottom:10px;
+		font-weight:300;
 	}
+	
+	.top h2 {
+		font-size:100%; 
+		width: 96%; 
+		margin:0 2% 14px; 
+		display:block;  
+	}
+	
+	.game-box {
+		height:60px;
+	}
+	.wiki-header {
+		font-size:40px;
+	}
+		
+	div.whitebox {
+		padding-top:15px;
+		padding-bottom:10px;
+	}
+	
+	
+}
+
+@media only screen and (min-width:560px) {
+
+	#logo img {
+		margin-left:auto;
+		margin-right:auto;
+		display: block;
+	}
+	.top h1 {
+		font-size:160%; 
+	}
+	.top h2 {
+		font-size:110%; 
+	}
+	
+	h1 { font-size:224%;}
+	h2 { font-size:140%;}
+}
+	
+@media only screen and (min-width:620px) {
+	
+	.box-wrap {
+		width: 620px;
+		height: 710px;
+		margin: 0 auto;
+	}
+	.game-box { 
+		width: 297px; 
+		height:193px;
+		float:left;
+		margin:5px; 
+	} 
+	.game-box p { 
+		display:block;
+		font-size:12px;
+		line-height:1.8em;
+		text-align: left;
+		padding:0px 26px;
+	}
+	.wiki-header {
+		font-size:36px;
+		margin-top:5px;
+	}
+	.disclaimer{	
+		float:left;
+		width:40%;
+		margin-top:-10px;
+		padding-top:0px;
+	}
+	
+	.icon-list {
+		float:right;
+		margin:0;
+	}
+	.footer {
+		min-height:60px;}
+		
 }

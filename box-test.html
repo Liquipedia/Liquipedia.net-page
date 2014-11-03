@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style>
+.card {
+	width:100%;
+	max-width:300px; 
+	height:50px; 
+	margin:0 auto 10px auto; 
+}
+.card-wrap {width:100%;}
+
+@media (min-width: 620px) {
+	.card {
+	float:left; 
+	width:300px; 
+	height:200px; 
+	margin:0 10px 10px 0; 
+}
+	.card-wrap {width:620px;margin-left:auto;margin-right:auto;}
+
+}
+
+@media (min-width: 930px) {
+	.card-wrap {width:930px;}
+
+}
+</style>
+<body>
+<div class="card-wrap" style=" position:relative;">
+	<div class="card" style="background-color:#F90;"></div>
+   	<div class="card" style="background-color:#3F0;"></div>
+	<div class="card" style="background-color:#C60;"></div>
+	<div class="card" style="background-color:#888;"></div>
+   	<div class="card" style="background-color:#09F;"></div>
+    <div class="card" style="background-color:#90F;"></div>
+
+</div>
+</body>
+</html>

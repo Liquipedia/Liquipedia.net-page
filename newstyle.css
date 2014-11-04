@@ -12,7 +12,8 @@ body {
 .global-nav {display:none;}
 
 div.top {
-	    z-index:2;
+	margin-top:-4px;
+	z-index:2;
     background: -moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -38,7 +39,8 @@ h1, h2 {
 	text-shadow: 0px 5px 2px #000;
 	color: #FFF;
 	text-align: center;
-	width: 100%;
+	width: 90%;
+	margin:0 5% 10px; 
 }
 
 h1 {
@@ -56,7 +58,8 @@ h2 {
 
 
 div.whitebox {
-	background: #daeffc repeat;
+/*	background: #daeffc repeat; */
+	background: #FFF repeat;
 	border-top: 5px #8eaec2 solid;
 	border-bottom: 5px #8eaec2 solid;
 	border-left: 0px;
@@ -72,15 +75,15 @@ div.whitebox {
 	padding-top: 5px;
 }
 
-a:link					{color: #000;}
-a:visited				{color:#525;}
-a:active				{color:#555;}
-a:hover 				{color:#555;}
+a:link				{color: #000;}
+a:visited			{color:#525;}
+a:active			{color:#555;}
+a:hover 			{color:#555;}
 
-.wiki-header a:link 	{text-decoration:none; color:#000;}
-.wiki-header a:visited 	{text-decoration:none; color:#000;}
-.wiki-header a:active 	{text-decoration:underline;}
-.wiki-header a:hover 	{text-decoration:underline;
+.game-box a:link 	{text-decoration:none; color:#000;}
+.game-box a:visited {text-decoration:none; color:#000;}
+.game-box a:active 	{text-decoration:underline;}
+.game-box a:hover 	{text-decoration:underline;
 	/*font-weight:600; letter-spacing:-0.03625em;*/
 	}
 
@@ -88,6 +91,8 @@ a:hover 				{color:#555;}
 	text-align:center;
 	font-size:25px
 }
+
+/* Not going to be using this most likely .wiki-header a {display:block;} */
 
 /* This describes the boxes */
 .sc2-box {
@@ -117,12 +122,10 @@ a:hover 				{color:#555;}
 	margin: 0 auto 5px auto;
 	}
 
-
 .box-wrap {
 	width:100%;
 }
 
-.game-box p { display:none;}
 
 .content {
 	margin: 0 5%;
@@ -140,24 +143,35 @@ a:hover 				{color:#555;}
 
 .disclaimer {
 	font-size:12px;
-	width:90%;
-	padding:0 5% 1px;
+	width:100%;
 }
 
 .icon-list{
 	width: 100%;
 }
+
 .icon-list img {
-	width:15%;
-	max-width:40px;
-	margin:0 5%;
+	width: 16%;
+	max-width: 40px;
+	height:auto;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 12%;
+	margin-top: 0;
 }
+
+img.twitch {margin-right:0;}
+
+.game-box p { display:none;}
+
+span#full-intro {display:none;}
+
 
 @media only screen and (min-width: 280px) {
 
 	.icon-list {
-		width:280px;
-		margin:0 auto;
+	width:280px;
+	margin: 0 auto;
 	}
 		.top h1 {
 		font-size:80%; 
@@ -175,7 +189,6 @@ a:hover 				{color:#555;}
 	.top h2 {
 		font-size:70%; 
 		width: 90%; 
-		margin:0 5% 10px; 
 		display:block;  
 	}
 	
@@ -266,9 +279,12 @@ a:hover 				{color:#555;}
 }
 	
 @media only screen and (min-width:620px) {
+	div.top {
+		margin-top:0px;	
+	}
 	
 	.box-wrap {
-		width: 620px;
+		width: 614px;
 		height: 609px;
 		margin: 0 auto;
 	}
@@ -290,8 +306,10 @@ a:hover 				{color:#555;}
 		font-size:36px;
 		margin-top:5px;
 	}
+	.wiki-header a {display:inline;} 
 	.content{
-		max-width:620px;
+		max-width:604px;
+		padding:0 5px;
 		margin:0 auto;
 	}
 	
@@ -352,18 +370,22 @@ a:hover 				{color:#555;}
 @media only screen and (min-width:930px) {
 	
 	.box-wrap {
-		width: 930px;
+		width: 921px;
 		height: 409px;
 		margin: 0 auto;
 	}
 	.content {
-		width:930px;
-		max-width:930px;
+		width:911px;
+		max-width:911px;
 	
 	}
 	
 	.top h1 {
-		font-size:280%; 
+	font-size: 280%;
+	width:911px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 	}
 	
 	.top h2 {

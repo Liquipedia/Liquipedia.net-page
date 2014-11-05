@@ -382,7 +382,7 @@ p {
 		display: block;
 	}
 	.top h1 {
-		font-size:160%; 
+		font-size:150%; 
 	}
 	.top h2 {
 		font-size:110%; 
@@ -449,8 +449,8 @@ p {
 	}
 	
 	.top h1 {
-		font-size:180%; 
-		margin-top:18px;
+	font-size: 170%;
+	margin-top: 18px;
 	}
 	.top h2 {
 		font-size:125%; 
@@ -523,6 +523,14 @@ p {
 	}
 
 }
+
+@media only screen and (min-width:650px) {
+		.top h1 {font-size:180%;}
+}
+
+@media only screen and (min-width:700px) {
+		.top h1 {font-size:190%;}
+}
 @media only screen and (min-width:930px) {
 	
 	.box-wrap {
@@ -548,12 +556,20 @@ p {
 		font-size:140%; 
 		max-width: 930px;
 	}
-		.how-to {
-		column-count:3;
-		-moz-column-count:3;
-		-webkit-column-count:3;
-		column-gap:10px;
-		-moz-column-gap:10px;
-		-webkit-column-gap:10px;
+	
+	.how-to {
+	column-count:3;
+	-moz-column-count:3;
+	-webkit-column-count:3;
+	column-gap:10px;
+	-moz-column-gap:10px;
+	-webkit-column-gap:10px;
 	}
+	
+	.how-to .double {
+		column-span:2;
+		-moz-column-span:2;
+		-webkit-column-span:2;
+	}
+	
 }

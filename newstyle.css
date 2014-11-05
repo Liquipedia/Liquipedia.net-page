@@ -241,6 +241,15 @@ span#full-intro {display:none;}
 		font-size:15px;
 	}
 	
+ul {
+	padding-left: 15px;
+}
+
+p { 
+	margin-top:0px;
+	margin-bottom:1em; 
+}
+
 @media only screen and (min-width: 280px) {
 
 	.icon-list {
@@ -512,7 +521,17 @@ span#full-intro {display:none;}
 	#toggle-ssb:checked + #toggle-ssb-label:after {
 		display:none;
 	}
-		
+	.how-to {
+		column-count:2;
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-gap:10px;
+		-moz-column-gap:10px;
+		-webkit-column-gap:10px;
+	}
+	.how-to:first-child {
+
+	}
 }
 @media only screen and (min-width:930px) {
 	
@@ -538,5 +557,13 @@ span#full-intro {display:none;}
 	.top h2 {
 		font-size:140%; 
 		max-width: 930px;
+	}
+		.how-to {
+		column-count:3;
+		-moz-column-count:3;
+		-webkit-column-count:3;
+		column-gap:10px;
+		-moz-column-gap:10px;
+		-webkit-column-gap:10px;
 	}
 }

@@ -424,9 +424,10 @@ input[type=checkbox] {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
-		content:"\2C5";
-		vertical-align:middle;
-		font-size:30px;
+		content:"+";
+		font-size:40px;
+		font-weight:300;
+		line-height:1.1em;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
 	#toggle-dota:checked + #toggle-dota-label:after, 
@@ -434,9 +435,10 @@ input[type=checkbox] {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after {
-		content:"\2C4";
-		vertical-align:middle;
-		font-size:30px;
+		content:"\2212";
+		font-size:40px;
+		font-weight:300;		
+		line-height:1.1em;
 	}
 	.wiki-header {
 		margin-left:5%;
@@ -463,7 +465,7 @@ input[type=checkbox] {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
-		font-size:25px;
+		font-size:30px;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
 	#toggle-dota:checked + #toggle-dota-label:after, 
@@ -471,7 +473,7 @@ input[type=checkbox] {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after {
-		font-size:25px;
+		font-size:30px;
 	}
 }
 @media only screen and (max-width:309px) {
@@ -481,7 +483,8 @@ input[type=checkbox] {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
-		font-size:20px;
+		font-size:25px;
+		font-weight:400;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
 	#toggle-dota:checked + #toggle-dota-label:after, 
@@ -489,6 +492,7 @@ input[type=checkbox] {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after {
-		font-size:20px;
+		font-size:25px;
+		font-weight:400;
 	}
 }

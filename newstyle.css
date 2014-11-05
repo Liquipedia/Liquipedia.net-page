@@ -176,10 +176,6 @@ span#full-intro {display:none;}
 	.toggle-button {
 		display:none !important;
 	}
-
-	input[type=checkbox] {
-		display:block;
-	}
 	.wiki-header {
 		width: calc(100% - 37px)
 	}
@@ -233,14 +229,14 @@ span#full-intro {display:none;}
 	.game-box {
 		padding-bottom: 1px;
 	}
-	.game-box > input[type=checkbox] {
-		margin-top:20px;
-	}
 
 	.game-box {
 		font-size:15px;
 	}
 	
+	input[type=checkbox] {
+		display:none;
+	}
 @media only screen and (min-width: 280px) {
 
 	.icon-list {
@@ -480,11 +476,6 @@ span#full-intro {display:none;}
 		padding-right: 20px;
 		line-height: 18px;
 	}
-	
-	input[type=checkbox] {
-		display:none;
-	}
-	
 	
 	#toggle-sc2:not(:checked) + label + div + #sc2, 
 	#toggle-dota:not(:checked) + label + div + #dota, 

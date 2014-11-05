@@ -234,7 +234,6 @@ span#full-intro {display:none;}
 		font-size:15px;
 	}
 	
-<<<<<<< HEAD
 ul {
 	padding-left: 15px;
 }
@@ -244,11 +243,10 @@ p {
 	margin-bottom:1em; 
 }
 
-=======
 	input[type=checkbox] {
 		display:none;
 	}
->>>>>>> origin/master
+	
 @media only screen and (min-width: 280px) {
 
 	.icon-list {
@@ -260,7 +258,7 @@ p {
 		margin-bottom:4px;
 	}
 	
-.game-box p { font-size:12px;}
+	.game-box p { font-size:12px;}
 }
 	
 @media only screen and (min-width: 310px) {
@@ -304,7 +302,7 @@ p {
 		font-size:30px;
 		font-weight:300;
 	}
-.game-box p { font-size:13px;}
+	.game-box p { font-size:13px;}
 }
 
 @media only screen and (min-width:400) {
@@ -329,7 +327,7 @@ p {
 	h1 { font-size:200%;}
 	h2 { font-size:125%;}
 	
-.game-box > p { font-size:14px;}
+	.game-box > p { font-size:14px;}
 }
 
 @media only screen and (min-width: 480px) {
@@ -373,7 +371,7 @@ p {
 		font-size:40px;
 	}
 	
-.game-box > p { font-size:15px;}
+	.game-box > p { font-size:15px;}
 }
 
 @media only screen and (min-width:560px) {
@@ -523,9 +521,7 @@ p {
 		-moz-column-gap:10px;
 		-webkit-column-gap:10px;
 	}
-	.how-to:first-child {
 
-	}
 }
 @media only screen and (min-width:930px) {
 	

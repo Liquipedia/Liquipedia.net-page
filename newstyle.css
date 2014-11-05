@@ -88,8 +88,8 @@ a:hover 			{color:#555;}
 	}
 
 .wiki-header {
-	text-align:center;
-	font-size:25px
+	text-align: left;
+	font-size: 25px
 }
 
 /* Not going to be using this most likely .wiki-header a {display:block;} */

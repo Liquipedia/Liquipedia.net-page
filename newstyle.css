@@ -161,7 +161,7 @@ a:hover 			{color:#555;}
 
 img.twitch {margin-right:0;}
 
-.game-box p { display:none;}
+.game-box p:first-of-type { display:none;}
 
 span#full-intro {display:none;}
 
@@ -402,12 +402,12 @@ input[type=checkbox] {
 		float:right;
 		width: 30px
 	}
-	#toggle-sc2:not(:checked) + label + div + #sc2, 
-	#toggle-dota:not(:checked) + label + div + #dota, 
-	#toggle-hs:not(:checked) + label + div + #hs, 
-	#toggle-bw:not(:checked) + label + div + #bw, 
-	#toggle-hots:not(:checked) + label + div + #hots, 
-	#toggle-ssb:not(:checked) + label + div + #ssb {
+	#toggle-sc2:not(:checked):first-of-type + label + div + #sc2, 
+	#toggle-dota:not(:checked):first-of-type + label + div + #dota, 
+	#toggle-hs:not(:checked):first-of-type + label + div + #hs, 
+	#toggle-bw:not(:checked):first-of-type + label + div + #bw, 
+	#toggle-hots:not(:checked):first-of-type + label + div + #hots, 
+	#toggle-ssb:not(:checked):first-of-type + label + div + #ssb {
 		display:none;
 	}
 	#toggle-sc2:checked + label + div + #sc2, 
@@ -418,23 +418,23 @@ input[type=checkbox] {
 	#toggle-ssb:checked + label + div + #ssb {
 		display:block;
 	}
-	#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-	#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+	#toggle-sc2:not(:checked):first-of-type + #toggle-sc2-label:after, 
+	#toggle-dota:not(:checked):first-of-type + #toggle-dota-label:after, 
+	#toggle-hs:not(:checked):first-of-type + #toggle-hs-label:after, 
+	#toggle-bw:not(:checked):first-of-type + #toggle-bw-label:after, 
+	#toggle-hots:not(:checked):first-of-type + #toggle-hots-label:after, 
+	#toggle-ssb:not(:checked):first-of-type + #toggle-ssb-label:after {
 		content:"+";
 		font-size:40px;
 		font-weight:300;
 		line-height:1.1em;
 	}
-	#toggle-sc2:checked + #toggle-sc2-label:after, 
-	#toggle-dota:checked + #toggle-dota-label:after, 
-	#toggle-hs:checked + #toggle-hs-label:after, 
-	#toggle-bw:checked + #toggle-bw-label:after, 
-	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after {
+	#toggle-sc2:checked:first-of-type + #toggle-sc2-label:after, 
+	#toggle-dota:checked:first-of-type + #toggle-dota-label:after, 
+	#toggle-hs:checked:first-of-type + #toggle-hs-label:after, 
+	#toggle-bw:checked:first-of-type + #toggle-bw-label:after, 
+	#toggle-hots:checked:first-of-type + #toggle-hots-label:after, 
+	#toggle-ssb:checked:first-of-type + #toggle-ssb-label:after {
 		content:"\2212";
 		font-size:40px;
 		font-weight:300;		

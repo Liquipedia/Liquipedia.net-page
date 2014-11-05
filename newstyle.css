@@ -438,11 +438,10 @@ p {
 		margin:0 auto;
 	}
 	
-	.disclaimer{	
-		float:left;
-		width:50%;
-		margin-top:-10px;
-		padding:0 0 0 0px;
+	.disclaimer{
+	float: left;
+	width: 50%;
+	padding: 0 0 0 0px;
 	}
 	
 	.icon-list {

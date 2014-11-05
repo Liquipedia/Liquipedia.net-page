@@ -44,8 +44,8 @@ h1, h2 {
 }
 
 h1 {
-    font-weight:300;
-    font-size:160%;
+    font-weight:400;
+    font-size:110%;
 }
 
 h2 {
@@ -53,7 +53,12 @@ h2 {
     font-size:90%;
 }
 
-.top h1 {font-size:67%; margin-top:3px; margin-bottom:2px; font-weight:400;}
+.top h1 {
+	font-size: 45%;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	font-weight: 400;
+}
 .top h2 {display:none;}
 
 

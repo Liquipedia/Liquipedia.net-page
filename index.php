@@ -34,14 +34,14 @@ while ($row = mysql_fetch_assoc ($r))
 <html>
 <head>
   <title>Liquipedia</title>
-   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  	<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
-  	<meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers" />
-  	<link href="newstyle.css" rel="stylesheet" type="text/css" />
-  	<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css' />
-  	<link media="screen and (min-device-width:310px) and (min-width:310px)" href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css' />
-    <link href="/favicon.ico" rel="shortcut icon" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
+  <meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers" />
+  <link href="newstyle.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css' />
+  <link media="screen and (min-device-width:310px) and (min-width:310px)" href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css' />
+   <link href="/favicon.ico" rel="shortcut icon" /> 
 </head>
 
 <body>

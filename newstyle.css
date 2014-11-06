@@ -133,6 +133,9 @@ a:active 			{color:#faa700;}
 	line-height: 1.6em;
 	margin-right: 5%;
 	margin-top:0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .box-wrap {

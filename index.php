@@ -1,3 +1,34 @@
+<?php
+$no_session = true;
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/connect.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/functions.php');
+
+header ("Content-Type: text/html; charset=utf-8");
+header ("Cache-Control: no-cache, s-maxage=60");
+
+$hot_links = array ();
+
+$r = mysql_queryS ("SELECT * FROM wiki_hot ORDER BY hits DESC");
+while ($row = mysql_fetch_assoc ($r))
+{
+	$title = $row['title'];
+	$url = $row['page'];
+
+	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(starcraft2|dota2|starcraft|hearthstone|heroes|smash)\/(.+)$/", $url, $m))
+	{
+		$title = str_replace ("_", " ", $title);
+
+		if (count ($hot_links[$m[1]]) < 5)
+		{
+			$hot_links[$m[1]][] = array (
+				'title' => $title,
+				'href' => $url
+			);
+		}
+	}
+}
+
+?>
 <!DOCTYPE HTML>
 <!-- Hi you, yes you that’s looking at our source code! Are you a website specialist? We are looking for people to help us with our templates, especially with mobile development. If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet! -->
 <html>
@@ -32,11 +63,9 @@
 	  <label for="toggle-sc2" class="toggle-button-label" id="toggle-sc2-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft2/Main_Page">StarCraft II</a></div>
 	  <p id="sc2">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['starcraft2'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
 	<div class="dota-box game-box">
@@ -44,11 +73,9 @@
 	  <label for="toggle-dota" class="toggle-button-label" id="toggle-dota-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/dota2/Main_Page">Dota 2</a></div>
 	  <p id="dota">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['dota2'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
 	<div class="hs-box game-box">
@@ -56,11 +83,9 @@
 	  <label for="toggle-hs" class="toggle-button-label" id="toggle-hs-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/hearthstone/Main_Page">Hearthstone</a></div>
 	  <p id="hs">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['hearthstone'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
 	<div class="bw-box game-box">
@@ -68,11 +93,9 @@
 	  <label for="toggle-bw" class="toggle-button-label" id="toggle-bw-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft/Main_Page">Brood War</a></div>
 	  <p id="bw">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['starcraft'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
 	<div class="hots-box game-box">
@@ -80,11 +103,9 @@
 	  <label for="toggle-hots" class="toggle-button-label" id="toggle-hots-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
 	  <p id="hots">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['heroes'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
 	<div class="ssb-box game-box">
@@ -92,11 +113,9 @@
 	  <label for="toggle-ssb" class="toggle-button-label" id="toggle-ssb-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/smash/Main_Page">Smash</a></div>
 	  <p id="ssb">
-	    <a href="#">2014 Global Starcraft II League 3/Code S</a><br />
-	    <a href="#">The International 2014</a><br />
-	    <a href="#">DreamHack Summer 2014</a><br />
-	    <a href="#">Blizzcon 2014</a><br />
-        <a href="#">2014 StarCraft II World Championship Series</a><br />
+<?php foreach ($hot_links['smash'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
 	  </p>
 	</div>
   </div>

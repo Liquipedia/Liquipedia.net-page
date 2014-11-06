@@ -425,8 +425,11 @@ p {
 		margin-bottom:22px;
 		margin-left:22px;
 		margin-right:22px;
-
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow: ellipsis;
 	}
+	
 	.wiki-header {
 	font-size: 36px;
 	margin-top: 10px;

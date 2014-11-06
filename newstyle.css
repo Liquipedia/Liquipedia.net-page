@@ -80,10 +80,10 @@ div.whitebox {
 	padding-top: 5px;
 }
 
-a:link				{color: #000;}
-a:visited			{color:#525;}
-a:active			{color:#555;}
-a:hover 			{color:#555;}
+a:link				{color:#002bb8; text-decoration:none;}
+a:visited			{color:#5a3696; text-decoration:none;}
+a:hover				{text-decoration:underline}
+a:active 			{color:#faa700;}
 
 .game-box a:link 	{text-decoration:none; color:#000;}
 .game-box a:visited {text-decoration:none; color:#000;}

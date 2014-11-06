@@ -175,69 +175,68 @@ a:hover 			{color:#555;}
 
 img.twitch {margin-right:0;}
 
-
 span#full-intro {display:none;}
 
-	.toggle-button {
-		display:none !important;
-	}
-	.wiki-header {
-		width: calc(100% - 37px)
-	}
-	.toggle-button-label:after {
-		float:right;
-		width: 30px
-	}
-	#toggle-sc2:not(:checked) + label + div + #sc2, 
-	#toggle-dota:not(:checked) + label + div + #dota, 
-	#toggle-hs:not(:checked) + label + div + #hs, 
-	#toggle-bw:not(:checked) + label + div + #bw, 
-	#toggle-hots:not(:checked) + label + div + #hots, 
-	#toggle-ssb:not(:checked) + label + div + #ssb {
-		display:none;
-	}
-	#toggle-sc2:checked + label + div + #sc2, 
-	#toggle-dota:checked + label + div + #dota, 
-	#toggle-hs:checked + label + div + #hs, 
-	#toggle-bw:checked + label + div + #bw, 
-	#toggle-hots:checked + label + div + #hots, 
-	#toggle-ssb:checked + label + div + #ssb {
-		display:block;
-	}
-	
-	#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-	#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
-		content:"+";
-		font-size:25px;
-		font-weight:400;
-		line-height:1.1em;
-	}
-	#toggle-sc2:checked + #toggle-sc2-label:after, 
-	#toggle-dota:checked + #toggle-dota-label:after, 
-	#toggle-hs:checked + #toggle-hs-label:after, 
-	#toggle-bw:checked + #toggle-bw-label:after, 
-	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after {
-		content:"\2212";
-		font-size:25px;
-		font-weight:400;	
-		line-height:1.1em;
-	}
-	.wiki-header {
-		margin-left:5%;
-		text-align:left;
-	}
-	.game-box {
-		padding-bottom: 1px;
-	}
+.toggle-button {
+	display:none !important;
+}
+.wiki-header {
+	width: calc(100% - 37px)
+}
+.toggle-button-label:after {
+	float:right;
+	width: 30px
+}
+#toggle-sc2:not(:checked) + label + div + #sc2, 
+#toggle-dota:not(:checked) + label + div + #dota, 
+#toggle-hs:not(:checked) + label + div + #hs, 
+#toggle-bw:not(:checked) + label + div + #bw, 
+#toggle-hots:not(:checked) + label + div + #hots, 
+#toggle-ssb:not(:checked) + label + div + #ssb {
+	display:none;
+}
+#toggle-sc2:checked + label + div + #sc2, 
+#toggle-dota:checked + label + div + #dota, 
+#toggle-hs:checked + label + div + #hs, 
+#toggle-bw:checked + label + div + #bw, 
+#toggle-hots:checked + label + div + #hots, 
+#toggle-ssb:checked + label + div + #ssb {
+	display:block;
+}
 
-	.game-box {
-		font-size:15px;
-	}
+#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
+#toggle-dota:not(:checked) + #toggle-dota-label:after, 
+#toggle-hs:not(:checked) + #toggle-hs-label:after, 
+#toggle-bw:not(:checked) + #toggle-bw-label:after, 
+#toggle-hots:not(:checked) + #toggle-hots-label:after, 
+#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+	content:"+";
+	font-size:25px;
+	font-weight:400;
+	line-height:1.1em;
+}
+#toggle-sc2:checked + #toggle-sc2-label:after, 
+#toggle-dota:checked + #toggle-dota-label:after, 
+#toggle-hs:checked + #toggle-hs-label:after, 
+#toggle-bw:checked + #toggle-bw-label:after, 
+#toggle-hots:checked + #toggle-hots-label:after, 
+#toggle-ssb:checked + #toggle-ssb-label:after {
+	content:"\2212";
+	font-size:25px;
+	font-weight:400;	
+	line-height:1.1em;
+}
+.wiki-header {
+	margin-left:5%;
+	text-align:left;
+}
+.game-box {
+	padding-bottom: 1px;
+}
+
+.game-box {
+	font-size:15px;
+}
 	
 ul {
 	padding-left: 15px;
@@ -282,7 +281,10 @@ p {
 		font-size:30px;
 		font-weight:300;
 	}
-	h1 { font-size:180%;}
+	h1 { 
+		font-size:180%;
+		font-weight:300;
+		}
 	h2 { font-size:110%;}
 	
 	body {
@@ -529,7 +531,10 @@ p {
 }
 
 @media only screen and (min-width:650px) {
-		.top h1 {font-size:180%;}
+		.top h1 {
+	font-size: 180%;
+	font-style: normal;
+}
 }
 
 @media only screen and (min-width:700px) {
@@ -549,7 +554,7 @@ p {
 	}
 	
 	.top h1 {
-	font-size: 280%;
+	font-size: 220%;
 	width:911px;
 	margin-left:auto;
 	margin-right:auto;

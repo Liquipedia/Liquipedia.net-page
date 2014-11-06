@@ -245,6 +245,10 @@ ul {
 	padding-left: 15px;
 }
 
+li { 
+	margin-bottom:5px;
+}
+
 p { 
 	margin-top:0px;
 	margin-bottom:1em; 

@@ -3,8 +3,11 @@ $no_session = true;
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/connect.php');
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/functions.php');
 
+$expire = gmdate ('D, d M Y H:i:s \G\M\T', time() + 60);
+
 header ("Content-Type: text/html; charset=utf-8");
-header ("Cache-Control: no-cache, s-maxage=60");
+header ("Cache-Control: s-maxage=60");
+header ("Expires: $expire");
 
 $hot_links = array ();
 
@@ -41,7 +44,7 @@ while ($row = mysql_fetch_assoc ($r))
   <link href="newstyle.css" rel="stylesheet" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css' />
   <link media="screen and (min-device-width:310px) and (min-width:310px)" href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css' />
-   <link href="/favicon.ico" rel="shortcut icon" /> 
+  <link href="/favicon.ico" rel="icon" /> 
 </head>
 
 <body>
@@ -171,7 +174,7 @@ while ($row = mysql_fetch_assoc ($r))
   </div>
     <div class="footer">
         <div class="content">
-            <div class="icon-list"> <a href="http://twitter.com/LiquipediaNet" target="_blank"><img class="twitter" src="InfoboxIcon_Twitter2.png" alt="Twitter"/></a><a href="https://www.facebook.com/Liquipedia" target="_blank"><img src="InfoboxIcon_Facebook.png" alt="Facebook" /></a><a href="https://www.youtube.com/user/Liquipedia" target="_blank"><img src="InfoboxIcon_YouTube.png" alt="YouTube"/></a><a href="http://www.twitch.tv/liquipedia" target="_blank"><img class="twitch" src="InfoboxIcon_Twitch.png" alt="Twitch" /></a>
+            <div class="icon-list"> <a href="https://twitter.com/LiquipediaNet" target="_blank"><img class="twitter" src="InfoboxIcon_Twitter2.png" alt="Twitter"/></a><a href="https://www.facebook.com/Liquipedia" target="_blank"><img src="InfoboxIcon_Facebook.png" alt="Facebook" /></a><a href="https://www.youtube.com/user/Liquipedia" target="_blank"><img src="InfoboxIcon_YouTube.png" alt="YouTube"/></a><a href="http://www.twitch.tv/liquipedia" target="_blank"><img class="twitch" src="InfoboxIcon_Twitch.png" alt="Twitch" /></a>
             </div>
             <div class="disclaimer">  	
             <p>Text is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA</a>.<br />

@@ -47,8 +47,9 @@ while ($row = mysql_fetch_assoc ($r))
 <body>
   <div class="global-nav">
     <span><a href="http://www.teamliquidpro.com/">TeamLiquidPro</a></span>
-	<span><a href="http://www.liquidhearth.com/">LiquidHearth</a></span>
-	<span><a href="http://www.liquiddota.com/">LiquidDota</a></span>
+    <span><a href="http://www.liquidlegends.net/">LiquidLegends</a></span>
+    <span><a href="http://www.liquidhearth.com/">LiquidHearth</a></span>
+    <span><a href="http://www.liquiddota.com/">LiquidDota</a></span>
     <span><a href="http://www.teamliquid.net">TeamLiquid</a></span>
   </div>
   <div class="top">
@@ -58,6 +59,16 @@ while ($row = mysql_fetch_assoc ($r))
   </div>
 <div class="whitebox">
   <div class="box-wrap">
+	<div class="dota-box game-box">
+	  <input type="checkbox" class="toggle-button" id="toggle-dota" />
+	  <label for="toggle-dota" class="toggle-button-label" id="toggle-dota-label"></label>
+	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/dota2/Main_Page">Dota 2</a></div>
+	  <p id="dota">
+<?php foreach ($hot_links['dota2'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
+	  </p>
+	</div>
 	<div class="sc2-box game-box">
 	  <input type="checkbox" class="toggle-button" id="toggle-sc2" />
 	  <label for="toggle-sc2" class="toggle-button-label" id="toggle-sc2-label"></label>
@@ -68,12 +79,12 @@ while ($row = mysql_fetch_assoc ($r))
 <?php } ?>
 	  </p>
 	</div>
-	<div class="dota-box game-box">
-	  <input type="checkbox" class="toggle-button" id="toggle-dota" />
-	  <label for="toggle-dota" class="toggle-button-label" id="toggle-dota-label"></label>
-	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/dota2/Main_Page">Dota 2</a></div>
-	  <p id="dota">
-<?php foreach ($hot_links['dota2'] as $h) { ?>
+	<div class="cs-box game-box">
+	  <input type="checkbox" class="toggle-button" id="toggle-cs" />
+	  <label for="toggle-cs" class="toggle-button-label" id="toggle-cs-label"></label>
+	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/counterstrike/Main_Page">Counter-Strike</a></div>
+	  <p id="cs">
+<?php foreach ($hot_links['counterstrike'] as $h) { ?>
 	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 <?php } ?>
 	  </p>
@@ -98,22 +109,22 @@ while ($row = mysql_fetch_assoc ($r))
 <?php } ?>
 	  </p>
 	</div>
-	<div class="hots-box game-box">
-	  <input type="checkbox" class="toggle-button" id="toggle-hots" />
-	  <label for="toggle-hots" class="toggle-button-label" id="toggle-hots-label"></label>
-	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
-	  <p id="hots">
-<?php foreach ($hot_links['heroes'] as $h) { ?>
-	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-<?php } ?>
-	  </p>
-	</div>
 	<div class="ssb-box game-box">
 	  <input type="checkbox" class="toggle-button" id="toggle-ssb" />
 	  <label for="toggle-ssb" class="toggle-button-label" id="toggle-ssb-label"></label>
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/smash/Main_Page">Smash</a></div>
 	  <p id="ssb">
 <?php foreach ($hot_links['smash'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
+	  </p>
+	</div>
+	<div class="hots-box game-box">
+	  <input type="checkbox" class="toggle-button" id="toggle-hots" />
+	  <label for="toggle-hots" class="toggle-button-label" id="toggle-hots-label"></label>
+	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
+	  <p id="hots">
+<?php foreach ($hot_links['heroes'] as $h) { ?>
 	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 <?php } ?>
 	  </p>

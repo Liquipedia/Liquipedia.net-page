@@ -117,6 +117,9 @@ a:active 			{color:#faa700;}
 .ssb-box {
     background-color: #b6e5c7
 }
+.cs-box {
+    background-color: #cde5b6
+}
 .game-box {
 	width: 100%;
 	font-size: 25px;
@@ -195,7 +198,8 @@ span#full-intro {display:none;}
 #toggle-hs:not(:checked) + label + div + #hs, 
 #toggle-bw:not(:checked) + label + div + #bw, 
 #toggle-hots:not(:checked) + label + div + #hots, 
-#toggle-ssb:not(:checked) + label + div + #ssb {
+#toggle-ssb:not(:checked) + label + div + #ssb, 
+#toggle-cs:not(:checked) + label + div + #cs {
 	display:none;
 }
 #toggle-sc2:checked + label + div + #sc2, 
@@ -203,7 +207,8 @@ span#full-intro {display:none;}
 #toggle-hs:checked + label + div + #hs, 
 #toggle-bw:checked + label + div + #bw, 
 #toggle-hots:checked + label + div + #hots, 
-#toggle-ssb:checked + label + div + #ssb {
+#toggle-ssb:checked + label + div + #ssb, 
+#toggle-cs:checked + label + div + #cs {
 	display:block;
 }
 
@@ -212,7 +217,8 @@ span#full-intro {display:none;}
 #toggle-hs:not(:checked) + #toggle-hs-label:after, 
 #toggle-bw:not(:checked) + #toggle-bw-label:after, 
 #toggle-hots:not(:checked) + #toggle-hots-label:after, 
-#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
+#toggle-cs:not(:checked) + #toggle-cs-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
@@ -223,7 +229,8 @@ span#full-intro {display:none;}
 #toggle-hs:checked + #toggle-hs-label:after, 
 #toggle-bw:checked + #toggle-bw-label:after, 
 #toggle-hots:checked + #toggle-hots-label:after, 
-#toggle-ssb:checked + #toggle-ssb-label:after {
+#toggle-ssb:checked + #toggle-ssb-label:after, 
+#toggle-cs:checked + #toggle-cs-label:after {
 	content:"\2212";
 	font-size:25px;
 	font-weight:400;	
@@ -303,7 +310,8 @@ p {
 	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
+	#toggle-cs:not(:checked) + #toggle-cs-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -312,7 +320,8 @@ p {
 	#toggle-hs:checked + #toggle-hs-label:after, 
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after {
+	#toggle-ssb:checked + #toggle-ssb-label:after, 
+	#toggle-cs:checked + #toggle-cs-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -373,7 +382,8 @@ p {
 	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
+	#toggle-cs:not(:checked) + #toggle-cs-label:after {
 		font-size:40px;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
@@ -381,7 +391,8 @@ p {
 	#toggle-hs:checked + #toggle-hs-label:after, 
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after {
+	#toggle-ssb:checked + #toggle-ssb-label:after, 
+	#toggle-cs:checked + #toggle-cs-label:after {
 		font-size:40px;
 	}
 	
@@ -508,7 +519,8 @@ p {
 	#toggle-hs:not(:checked) + label + div + #hs, 
 	#toggle-bw:not(:checked) + label + div + #bw, 
 	#toggle-hots:not(:checked) + label + div + #hots, 
-	#toggle-ssb:not(:checked) + label + div + #ssb {
+	#toggle-ssb:not(:checked) + label + div + #ssb, 
+	#toggle-cs:not(:checked) + label + div + #cs {
 		display:block;
 	}
 	
@@ -517,7 +529,8 @@ p {
 	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after {
+	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
+	#toggle-cs:not(:checked) + #toggle-cs-label:after {
 		display:none;
 	}
 	
@@ -526,7 +539,8 @@ p {
 	#toggle-hs:checked + #toggle-hs-label:after, 
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after {
+	#toggle-ssb:checked + #toggle-ssb-label:after, 
+	#toggle-cs:checked + #toggle-cs-label:after {
 		display:none;
 	}
 	.how-to {

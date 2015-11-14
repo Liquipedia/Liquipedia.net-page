@@ -17,7 +17,7 @@ while ($row = mysql_fetch_assoc ($r))
 	$title = $row['title'];
 	$url = $row['page'];
 
-	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(starcraft2|dota2|starcraft|hearthstone|heroes|smash|counterstrike)\/(.+)$/", $url, $m))
+	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(starcraft2|dota2|starcraft|hearthstone|heroes|smash|counterstrike|overwatch)\/(.+)$/", $url, $m))
 	{
 		$title = str_replace ("_", " ", $title);
 
@@ -40,7 +40,7 @@ while ($row = mysql_fetch_assoc ($r))
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
-  <meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers, Counter-Strike" />
+  <meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers, Counter-Strike, Overwatch" />
   <link href="newstyle.css" rel="stylesheet" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css' />
   <link media="screen and (min-width:310px)" href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css' />
@@ -128,6 +128,16 @@ while ($row = mysql_fetch_assoc ($r))
 	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
 	  <p id="hots">
 <?php foreach ($hot_links['heroes'] as $h) { ?>
+	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+<?php } ?>
+	  </p>
+	</div>
+	<div class="ow-box game-box">
+	  <input type="checkbox" class="toggle-button" id="toggle-ow" />
+	  <label for="toggle-ow" class="toggle-button-label" id="toggle-ow-label"></label>
+	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/overwatch/Main_Page">Overwatch</a></div>
+	  <p id="ow">
+<?php foreach ($hot_links['overwatch'] as $h) { ?>
 	<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 <?php } ?>
 	  </p>

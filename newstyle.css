@@ -44,13 +44,13 @@ h1, h2 {
 }
 
 h1 {
-    font-weight:400;
-    font-size:110%;
+	font-weight:400;
+	font-size:110%;
 }
 
 h2 {
-    font-weight:400;
-    font-size:90%;
+	font-weight:400;
+	font-size:90%;
 }
 
 .top h1 {
@@ -69,11 +69,11 @@ div.whitebox {
 	border-bottom: 5px #8eaec2 solid;
 	border-left: 0px;
 	border-right: 0px;
-	box-shadow: 0px 5px 2px #000;
 	width: 100%;
 	margin: 0px;
 	z-index: 2;
 	-webkit-box-shadow: 2px 5px 0px #000;
+	box-shadow: 0px 5px 2px #000;
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
@@ -86,11 +86,9 @@ a:hover				{text-decoration:underline}
 a:active 			{color:#faa700;}
 
 .game-box a:link 	{text-decoration:none; color:#000;}
-.game-box a:visited {text-decoration:none; color:#000;}
+.game-box a:visited 	{text-decoration:none; color:#000;}
 .game-box a:active 	{text-decoration:underline;}
-.game-box a:hover 	{text-decoration:underline;
-	/*font-weight:600; letter-spacing:-0.03625em;*/
-	}
+.game-box a:hover 	{text-decoration:underline;}
 
 .wiki-header {
 	font-size:25px
@@ -100,25 +98,28 @@ a:active 			{color:#faa700;}
 
 /* This describes the boxes */
 .sc2-box {
-    background-color: #b6cfe5;
+	background-color: #b6cfe5;
 }
 .dota-box {
-    background-color: #e5ccb6
+	background-color: #e5ccb6;
 }
 .hs-box {
-    background-color: #e5d8b6
+	background-color: #e5d8b6;
 }
 .bw-box {
-    background-color: #dbe1e5
+    background-color: #dbe1e5;
 }
 .hots-box {
-    background-color: #b9b6e5
+    background-color: #b9b6e5;
 }
 .ssb-box {
-    background-color: #b6e5c7
+    background-color: #b6e5c7;
 }
 .cs-box {
-    background-color: #cde5b6
+    background-color: #cde5b6;
+}
+.ow-box {
+    background-color: #e5b6c0;
 }
 .game-box {
 	width: 100%;
@@ -187,11 +188,11 @@ span#full-intro {display:none;}
 	display:none !important;
 }
 .wiki-header {
-	width: calc(100% - 37px)
+	width: calc(100% - 37px);
 }
 .toggle-button-label:after {
 	float:right;
-	width: 30px
+	width: 30px;
 }
 #toggle-sc2:not(:checked) + label + div + #sc2, 
 #toggle-dota:not(:checked) + label + div + #dota, 
@@ -199,7 +200,8 @@ span#full-intro {display:none;}
 #toggle-bw:not(:checked) + label + div + #bw, 
 #toggle-hots:not(:checked) + label + div + #hots, 
 #toggle-ssb:not(:checked) + label + div + #ssb, 
-#toggle-cs:not(:checked) + label + div + #cs {
+#toggle-cs:not(:checked) + label + div + #cs, 
+#toggle-ow:not(:checked) + label + div + #ow {
 	display:none;
 }
 #toggle-sc2:checked + label + div + #sc2, 
@@ -208,7 +210,8 @@ span#full-intro {display:none;}
 #toggle-bw:checked + label + div + #bw, 
 #toggle-hots:checked + label + div + #hots, 
 #toggle-ssb:checked + label + div + #ssb, 
-#toggle-cs:checked + label + div + #cs {
+#toggle-cs:checked + label + div + #cs, 
+#toggle-ow:checked + label + div + #ow {
 	display:block;
 }
 
@@ -218,7 +221,8 @@ span#full-intro {display:none;}
 #toggle-bw:not(:checked) + #toggle-bw-label:after, 
 #toggle-hots:not(:checked) + #toggle-hots-label:after, 
 #toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-#toggle-cs:not(:checked) + #toggle-cs-label:after {
+#toggle-cs:not(:checked) + #toggle-cs-label:after, 
+#toggle-ow:not(:checked) + #toggle-ow-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
@@ -230,7 +234,8 @@ span#full-intro {display:none;}
 #toggle-bw:checked + #toggle-bw-label:after, 
 #toggle-hots:checked + #toggle-hots-label:after, 
 #toggle-ssb:checked + #toggle-ssb-label:after, 
-#toggle-cs:checked + #toggle-cs-label:after {
+#toggle-cs:checked + #toggle-cs-label:after, 
+#toggle-ow:checked + #toggle-ow-label:after {
 	content:"\2212";
 	font-size:25px;
 	font-weight:400;	
@@ -276,7 +281,9 @@ p {
 		margin-bottom:4px;
 	}
 	
-	.game-box p { font-size:12px;}
+	.game-box p {
+		font-size:12px;
+	}
 }
 	
 @media only screen and (min-width: 310px) {
@@ -299,7 +306,9 @@ p {
 		font-size:180%;
 		font-weight:300;
 		}
-	h2 { font-size:110%;}
+	h2 {
+		font-size:110%;
+	}
 	
 	body {
 		background-size:auto;
@@ -311,7 +320,8 @@ p {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after {
+	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
+	#toggle-ow:not(:checked) + #toggle-ow-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -321,11 +331,14 @@ p {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after {
+	#toggle-cs:checked + #toggle-cs-label:after, 
+	#toggle-ow:checked + #toggle-ow-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
-	.game-box p { font-size:13px;}
+	.game-box p {
+		font-size:13px;
+	}
 }
 
 @media only screen and (min-width:400) {
@@ -350,7 +363,9 @@ p {
 	h1 { font-size:200%;}
 	h2 { font-size:125%;}
 	
-	.game-box > p { font-size:14px;}
+	.game-box > p {
+		font-size:14px;
+	}
 }
 
 @media only screen and (min-width: 480px) {
@@ -383,7 +398,8 @@ p {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after {
+	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
+	#toggle-ow:not(:checked) + #toggle-ow-label:after {
 		font-size:40px;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
@@ -392,11 +408,14 @@ p {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after {
+	#toggle-cs:checked + #toggle-cs-label:after, 
+	#toggle-ow:checked + #toggle-ow-label:after {
 		font-size:40px;
 	}
 	
-	.game-box > p { font-size:15px;}
+	.game-box > p {
+		font-size:15px;
+	}
 }
 
 @media only screen and (min-width:560px) {
@@ -449,10 +468,10 @@ p {
 	}
 	
 	.wiki-header {
-	font-size: 36px;
-	margin-top: 10px;
-	text-align: center;
-	margin-right: 5%;
+		font-size: 36px;
+		margin-top: 10px;
+		text-align: center;
+		margin-right: 5%;
 	}
 	.wiki-header a {display:inline;} 
 	.content{
@@ -462,9 +481,9 @@ p {
 	}
 	
 	.disclaimer{
-	float: left;
-	width: 50%;
-	padding: 0 0 0 0px;
+		float: left;
+		width: 50%;
+		padding: 0 0 0 0px;
 	}
 	
 	.icon-list {
@@ -476,8 +495,8 @@ p {
 	}
 	
 	.top h1 {
-	font-size: 170%;
-	margin-top: 18px;
+		font-size: 170%;
+		margin-top: 18px;
 	}
 	.top h2 {
 		font-size:125%; 
@@ -488,14 +507,14 @@ p {
 	
 	.global-nav { 
 		display:inline-block;
-	    height:18px;
-    	width:100%;
-	    background:#00162c;
-	    margin:0px 0px 0px 0px;
-    	position:absolute;
-	    top:0px;
-	    left:0px;
-	    text-align:right;
+		height:18px;
+		width:100%;
+		background:#00162c;
+		margin:0px 0px 0px 0px;
+		position:absolute;
+		top:0px;
+		left:0px;
+		text-align:right;
 	}
 	
 	.global-nav a:link, .global-nav a:hover, .global-nav a:active, .global-nav a:visited {
@@ -520,7 +539,8 @@ p {
 	#toggle-bw:not(:checked) + label + div + #bw, 
 	#toggle-hots:not(:checked) + label + div + #hots, 
 	#toggle-ssb:not(:checked) + label + div + #ssb, 
-	#toggle-cs:not(:checked) + label + div + #cs {
+	#toggle-cs:not(:checked) + label + div + #cs, 
+	#toggle-ow:not(:checked) + label + div + #ow {
 		display:block;
 	}
 	
@@ -530,7 +550,8 @@ p {
 	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after {
+	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
+	#toggle-ow:not(:checked) + #toggle-ow-label:after {
 		display:none;
 	}
 	
@@ -540,25 +561,26 @@ p {
 	#toggle-bw:checked + #toggle-bw-label:after, 
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after {
+	#toggle-cs:checked + #toggle-cs-label:after, 
+	#toggle-ow:checked + #toggle-ow-label:after {
 		display:none;
 	}
 	.how-to {
-		column-count:2;
 		-moz-column-count:2;
 		-webkit-column-count:2;
-		column-gap:10px;
+		column-count:2;
 		-moz-column-gap:10px;
 		-webkit-column-gap:10px;
+		column-gap:10px;
 	}
 
 }
 
 @media only screen and (min-width:650px) {
-		.top h1 {
-	font-size: 180%;
-	font-style: normal;
-}
+	.top h1 {
+		font-size: 180%;
+		font-style: normal;
+	}
 }
 
 @media only screen and (min-width:700px) {
@@ -578,11 +600,11 @@ p {
 	}
 	
 	.top h1 {
-	font-size: 220%;
-	width:911px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
+		font-size: 220%;
+		width:911px;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
 	}
 	
 	.top h2 {
@@ -591,18 +613,18 @@ p {
 	}
 	
 	.how-to {
-	column-count:3;
-	-moz-column-count:3;
-	-webkit-column-count:3;
-	column-gap:10px;
-	-moz-column-gap:10px;
-	-webkit-column-gap:10px;
+		-moz-column-count:3;
+		-webkit-column-count:3;
+		column-count:3;
+		-moz-column-gap:10px;
+		-webkit-column-gap:10px;
+		column-gap:10px;
 	}
 	
 	.how-to .double {
-		column-span:2;
 		-moz-column-span:2;
 		-webkit-column-span:2;
+		column-span:2;
 	}
 	
 }

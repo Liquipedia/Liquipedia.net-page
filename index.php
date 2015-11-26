@@ -32,7 +32,7 @@ while ($row = mysql_fetch_assoc ($r))
 }
 
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!-- Hi you, yes you that’s looking at our source code! Are you a website specialist? We are looking for people to help us with our templates, especially with mobile development. If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet! -->
 <html>
 <head>

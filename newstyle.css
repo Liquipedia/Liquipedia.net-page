@@ -107,29 +107,29 @@ a:active 			{color:#faa700;}
 	background-color: #e5d8b6;
 }
 .bw-box {
-    background-color: #dbe1e5;
+	background-color: #dbe1e5;
 }
 .hots-box {
-    background-color: #b9b6e5;
+	background-color: #b9b6e5;
 }
 .ssb-box {
-    background-color: #b6e5c7;
+	background-color: #b6e5c7;
 }
 .cs-box {
-    background-color: #cde5b6;
+	background-color: #cde5b6;
 }
 .ow-box {
-    background-color: #e5b6c0;
+	background-color: #e5b6c0;
 }
 .commons-box {
-    background-color: #e5e5e5;
+	background-color: #e5e5e5;
 }
 .game-box {
-    width: 100%;
-    font-size: 25px;
-    font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
-    font-weight: 400;
-    margin: 0 auto 5px auto;
+	width: 100%;
+	font-size: 25px;
+	font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
+	font-weight: 400;
+	margin: 0 auto 5px auto;
 }
 
 

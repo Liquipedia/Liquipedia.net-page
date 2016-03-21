@@ -121,6 +121,9 @@ a:active 			{color:#faa700;}
 .ow-box {
     background-color: #e5b6c0;
 }
+.commons-box {
+    background-color: #e5e5e5;
+}
 .game-box {
 	width: 100%;
 	font-size: 25px;
@@ -201,7 +204,8 @@ span#full-intro {display:none;}
 #toggle-hots:not(:checked) + label + div + #hots, 
 #toggle-ssb:not(:checked) + label + div + #ssb, 
 #toggle-cs:not(:checked) + label + div + #cs, 
-#toggle-ow:not(:checked) + label + div + #ow {
+#toggle-ow:not(:checked) + label + div + #ow,
+#toggle-commons:not(:checked) + label + div + #commons {
 	display:none;
 }
 #toggle-sc2:checked + label + div + #sc2, 
@@ -211,7 +215,8 @@ span#full-intro {display:none;}
 #toggle-hots:checked + label + div + #hots, 
 #toggle-ssb:checked + label + div + #ssb, 
 #toggle-cs:checked + label + div + #cs, 
-#toggle-ow:checked + label + div + #ow {
+#toggle-ow:checked + label + div + #ow,
+#toggle-commons:checked + label + div + #commons {
 	display:block;
 }
 
@@ -222,7 +227,8 @@ span#full-intro {display:none;}
 #toggle-hots:not(:checked) + #toggle-hots-label:after, 
 #toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
 #toggle-cs:not(:checked) + #toggle-cs-label:after, 
-#toggle-ow:not(:checked) + #toggle-ow-label:after {
+#toggle-ow:not(:checked) + #toggle-ow-label:after,
+#toggle-commons:not(:checked) + #toggle-commons-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
@@ -235,7 +241,8 @@ span#full-intro {display:none;}
 #toggle-hots:checked + #toggle-hots-label:after, 
 #toggle-ssb:checked + #toggle-ssb-label:after, 
 #toggle-cs:checked + #toggle-cs-label:after, 
-#toggle-ow:checked + #toggle-ow-label:after {
+#toggle-ow:checked + #toggle-ow-label:after,
+#toggle-commons:checked + #toggle-commons-label:after {
 	content:"\2212";
 	font-size:25px;
 	font-weight:400;	
@@ -321,7 +328,8 @@ p {
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
 	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after {
+	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+        #toggle-commons:not(:checked) + #toggle-commons-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -332,7 +340,8 @@ p {
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
 	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after {
+	#toggle-ow:checked + #toggle-ow-label:after,
+        #toggle-commons:checked + #toggle-commons-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -399,7 +408,8 @@ p {
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
 	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after {
+	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+        #toggle-commons:not(:checked) + #toggle-commons-label:after {
 		font-size:40px;
 	}
 	#toggle-sc2:checked + #toggle-sc2-label:after, 
@@ -409,7 +419,8 @@ p {
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
 	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after {
+	#toggle-ow:checked + #toggle-ow-label:after,
+        #toggle-commons:checked + #toggle-commons-label:after {
 		font-size:40px;
 	}
 	
@@ -540,7 +551,8 @@ p {
 	#toggle-hots:not(:checked) + label + div + #hots, 
 	#toggle-ssb:not(:checked) + label + div + #ssb, 
 	#toggle-cs:not(:checked) + label + div + #cs, 
-	#toggle-ow:not(:checked) + label + div + #ow {
+	#toggle-ow:not(:checked) + label + div + #ow,
+        #toggle-commons:not(:checked) + label + div + #commons {
 		display:block;
 	}
 	
@@ -551,7 +563,8 @@ p {
 	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
 	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
 	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after {
+	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+        #toggle-commons:not(:checked) + #toggle-commons-label:after {
 		display:none;
 	}
 	
@@ -562,7 +575,8 @@ p {
 	#toggle-hots:checked + #toggle-hots-label:after, 
 	#toggle-ssb:checked + #toggle-ssb-label:after, 
 	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after {
+	#toggle-ow:checked + #toggle-ow-label:after,
+        #toggle-commons:checked + #toggle-commons-label:after{
 		display:none;
 	}
 	.how-to {

@@ -141,6 +141,18 @@ while ($row = mysql_fetch_assoc ($r))
 <?php } ?>
 	  </p>
 	</div>
+      <div class="commons-box game-box">
+	  <input type="checkbox" class="toggle-button" id="toggle-commons" />
+	  <label for="toggle-commons" class="toggle-button-label" id="toggle-commons-label"></label>
+	  <div class="wiki-header"><a href="http://wiki.teamliquid.net/commons/Main_Page">Commons</a></div>
+	  <p id="commons">
+	    <a href="http://wiki.teamliquid.net/commons/Special:Upload">Upload Files</a><br />
+	    <a href="http://wiki.teamliquid.net/commons/Copyrights_Repository">Copyrights Repository</a><br />
+	    <a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a><br />
+	    <a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a><br />
+	    <a href="http://wiki.teamliquid.net/commons/Liquipedia:Images_taken_on_this_day"></a>Images taken on this day<br />
+	  </p>
+	</div>
   </div>
   </div>
   <h1>How To Contribute</h1>

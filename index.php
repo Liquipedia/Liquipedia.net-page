@@ -34,6 +34,13 @@ while ($row = mysql_fetch_assoc ($r))
 ?>
 <!DOCTYPE html>
 <!-- 
+	 _ _             _                _ _       
+	| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ 
+	| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |
+	| | | (_| | |_| | | |_) |  __/ (_| | | (_| |
+	|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|
+	        |_|       |_|                       
+
 	Hi you, yes you who's looking at our source code! Are you a website specialist?
 	We are looking for people to help us with our templates, especially with mobile development.
 	If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet!

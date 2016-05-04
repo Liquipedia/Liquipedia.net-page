@@ -9,6 +9,48 @@ body {
 	font-family: Verdana, Geneva, Ubuntu, sans-serif;
 }
 
+.search {
+	text-align: center;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+.search select {
+	height: 2.5em;
+	width: 150px;
+	text-align: center;
+}
+.search button {
+	line-height: 2em;
+	height: 2.56em;
+	width: 150px;
+}
+.search input {
+	line-height: 2em;
+	width: 605px;
+}
+@media(max-width:929px) {
+	.search select {
+		width: 100px;
+	}
+	.search button {
+		width: 100px;
+	}
+	.search input {
+		width: 400px;
+	}
+}
+@media(max-width:619px) {
+	.search select {
+		width: 100px;
+	}
+	.search button {
+		width: 56px;
+	}
+	.search input {
+		width: calc(100% - 162px);
+	}
+}
+
 .global-nav {display:none;}
 
 div.top {

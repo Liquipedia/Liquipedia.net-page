@@ -70,6 +70,21 @@ while ($row = mysql_fetch_assoc ($r))
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
 			<div id="logo"><img src="lp-logo-bg.png" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
+			<form id="search" class="search" action="/dota2/index.php">
+				<select onchange="document.getElementById('search').action = '/' + this.value + '/index.php';">
+					<option value="dota2" selected="selected">Dota 2</option>
+					<option value="starcraft2">StarCraft II</option>
+					<option value="counterstrike">Counter-Strike</option>
+					<option value="hearthstone">Hearthstone</option>
+					<option value="starcraft">Brood War</option>
+					<option value="smash">Smash</option>
+					<option value="heroes">Heroes</option>
+					<option value="overwatch">Overwatch</option>
+					<option value="commons">Commons</option>
+				</select><!--
+				--><input type="search" name="search" placeholder="Search..."><!--
+				--><button type="submit">Search</button>
+			</form>
 		</div>
 		<div class="whitebox">
 			<div class="box-wrap">

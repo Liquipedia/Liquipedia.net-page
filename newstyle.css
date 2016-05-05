@@ -213,16 +213,7 @@ a:active 			{color:#faa700;}
 
 .icon-list{
 	width: 100%;
-}
-
-.icon-list img {
-	width: 16%;
-	max-width: 40px;
-	height:auto;
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-right: 12%;
-	margin-top: 0;
+	float: right;
 }
 
 img.twitch {margin-right:0;}
@@ -319,12 +310,13 @@ p {
 		display:none;
 	}
 	
-@media only screen and (min-width: 280px) {
-
+@media only screen and (min-width: 450px) {
 	.icon-list {
-		width:280px;
+		width:185px;
 		margin: 0 auto;
 	}
+}
+@media only screen and (min-width: 280px) {
 	.top h1 {
 		font-size:80%; 
 		margin-bottom:4px;
@@ -539,14 +531,6 @@ p {
 		padding: 0 0 0 0px;
 	}
 	
-	.icon-list {
-		float:right;
-		margin:0;
-	}
-	.footer {
-		min-height:60px;
-	}
-	
 	.top h1 {
 		font-size: 170%;
 		margin-top: 18px;
@@ -683,4 +667,44 @@ p {
 		column-span:2;
 	}
 	
+}
+
+.lp-icon {
+	background: url(/commons/skins/LiquiFlow/images/infoboxicon_sprite.png) no-repeat 0 0;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+	background-size: auto 128px;
+	vertical-align: middle;
+}
+.lp-icon.lp-facebook {
+	background-position: calc(-288px) -32px;
+}
+.lp-icon.lp-facebook:hover {
+	background-position: calc(-288px) 0;
+}
+.lp-icon.lp-github {
+	background-position: calc(-832px) -32px;
+}
+.lp-icon.lp-github:hover {
+	background-position: calc(-832px) 0;
+}
+.lp-icon.lp-twitch {
+	background-position: calc(-640px) -32px;
+}
+.lp-icon.lp-twitch:hover {
+	background-position: calc(-640px) 0;
+}
+.lp-icon.lp-twitter {
+	background-position: calc(-672px) -32px;
+}
+.lp-icon.lp-twitter:hover {
+	background-position: calc(-672px) 0;
+}
+.lp-icon.lp-youtube {
+	background-position: calc(-800px) -32px;
+}
+.lp-icon.lp-youtube:hover {
+	background-position: calc(-800px) 0;
 }

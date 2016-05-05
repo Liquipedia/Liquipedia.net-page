@@ -222,18 +222,11 @@ while ($row = mysql_fetch_assoc ($r))
 		<div class="footer">
 			<div class="content">
 				<div class="icon-list">
-					<a href="https://twitter.com/LiquipediaNet" target="_blank">
-						<img class="twitter" src="InfoboxIcon_Twitter2.png" alt="Twitter"/>
-					</a>
-					<a href="https://www.facebook.com/Liquipedia" target="_blank">
-						<img src="InfoboxIcon_Facebook.png" alt="Facebook" />
-					</a>
-					<a href="https://www.youtube.com/user/Liquipedia" target="_blank">
-						<img src="InfoboxIcon_YouTube.png" alt="YouTube"/>
-					</a>
-					<a href="http://www.twitch.tv/liquipedia" target="_blank">
-						<img class="twitch" src="InfoboxIcon_Twitch.png" alt="Twitch" />
-					</a>
+					<a href="https://twitter.com/LiquipediaNet" target="_blank"><i class="lp-icon lp-twitter"></i></a>
+					<a href="https://www.facebook.com/Liquipedia" target="_blank"><i class="lp-icon lp-facebook"></i></a>
+					<a href="https://www.youtube.com/user/Liquipedia" target="_blank"><i class="lp-icon lp-youtube"></i></a>
+					<a href="http://www.twitch.tv/liquipedia" target="_blank"><i class="lp-icon lp-twitch"></i></a>
+					<a href="http://www.github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
 				</div>
 				<div class="disclaimer">
 					<p>Text is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA</a>.<br />Images have varied licenses. Click on an image to see the image's page for more details.</p>

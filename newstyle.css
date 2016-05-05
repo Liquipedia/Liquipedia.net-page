@@ -139,28 +139,28 @@ a:active 			{color:#faa700;}
 /* Not going to be using this most likely .wiki-header a {display:block;} */
 
 /* This describes the boxes */
-.sc2-box {
+.starcraft2-box {
 	background-color: #b6cfe5;
 }
-.dota-box {
+.dota2-box {
 	background-color: #e5ccb6;
 }
-.hs-box {
+.hearthstone-box {
 	background-color: #e5d8b6;
 }
-.bw-box {
+.starcraft-box {
 	background-color: #dbe1e5;
 }
-.hots-box {
+.heroes-box {
 	background-color: #b9b6e5;
 }
-.ssb-box {
+.smash-box {
 	background-color: #b6e5c7;
 }
-.cs-box {
+.counterstrike-box {
 	background-color: #cde5b6;
 }
-.ow-box {
+.overwatch-box {
 	background-color: #e5b6c0;
 }
 .commons-box {
@@ -230,51 +230,51 @@ span#full-intro {display:none;}
 	float:right;
 	width: 30px;
 }
-#toggle-sc2:not(:checked) + label + div + #sc2, 
-#toggle-dota:not(:checked) + label + div + #dota, 
-#toggle-hs:not(:checked) + label + div + #hs, 
-#toggle-bw:not(:checked) + label + div + #bw, 
-#toggle-hots:not(:checked) + label + div + #hots, 
-#toggle-ssb:not(:checked) + label + div + #ssb, 
-#toggle-cs:not(:checked) + label + div + #cs, 
-#toggle-ow:not(:checked) + label + div + #ow,
+#toggle-starcraft2:not(:checked) + label + div + #starcraft2, 
+#toggle-dota2:not(:checked) + label + div + #dota2, 
+#toggle-hearthstone:not(:checked) + label + div + #hearthstone, 
+#toggle-starcraft:not(:checked) + label + div + #starcraft, 
+#toggle-heroes:not(:checked) + label + div + #heroes, 
+#toggle-smash:not(:checked) + label + div + #smash, 
+#toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
+#toggle-overwatch:not(:checked) + label + div + #overwatch,
 #toggle-commons:not(:checked) + label + div + #commons {
 	display:none;
 }
-#toggle-sc2:checked + label + div + #sc2, 
-#toggle-dota:checked + label + div + #dota, 
-#toggle-hs:checked + label + div + #hs, 
-#toggle-bw:checked + label + div + #bw, 
-#toggle-hots:checked + label + div + #hots, 
-#toggle-ssb:checked + label + div + #ssb, 
-#toggle-cs:checked + label + div + #cs, 
-#toggle-ow:checked + label + div + #ow,
+#toggle-starcraft2:checked + label + div + #starcraft2, 
+#toggle-dota2:checked + label + div + #dota2, 
+#toggle-hearthstone:checked + label + div + #hearthstone, 
+#toggle-starcraft:checked + label + div + #starcraft, 
+#toggle-heroes:checked + label + div + #heroes, 
+#toggle-smash:checked + label + div + #smash, 
+#toggle-counterstrike:checked + label + div + #counterstrike, 
+#toggle-overwatch:checked + label + div + #overwatch,
 #toggle-commons:checked + label + div + #commons {
 	display:block;
 }
 
-#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-#toggle-ow:not(:checked) + #toggle-ow-label:after,
+#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
+#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
+#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
+#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
+#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
+#toggle-smash:not(:checked) + #toggle-smash-label:after, 
+#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
+#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
 #toggle-commons:not(:checked) + #toggle-commons-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
 	line-height:1.1em;
 }
-#toggle-sc2:checked + #toggle-sc2-label:after, 
-#toggle-dota:checked + #toggle-dota-label:after, 
-#toggle-hs:checked + #toggle-hs-label:after, 
-#toggle-bw:checked + #toggle-bw-label:after, 
-#toggle-hots:checked + #toggle-hots-label:after, 
-#toggle-ssb:checked + #toggle-ssb-label:after, 
-#toggle-cs:checked + #toggle-cs-label:after, 
-#toggle-ow:checked + #toggle-ow-label:after,
+#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
+#toggle-dota2:checked + #toggle-dota2-label:after, 
+#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
+#toggle-starcraft:checked + #toggle-starcraft-label:after, 
+#toggle-heroes:checked + #toggle-heroes-label:after, 
+#toggle-smash:checked + #toggle-smash-label:after, 
+#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
+#toggle-overwatch:checked + #toggle-overwatch-label:after,
 #toggle-commons:checked + #toggle-commons-label:after {
 	content:"\2212";
 	font-size:25px;
@@ -355,26 +355,26 @@ p {
 		background-size:auto;
 	}
 	
-	#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-	#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
+	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
+	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
+	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
+	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
+	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
 	#toggle-commons:not(:checked) + #toggle-commons-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
-	#toggle-sc2:checked + #toggle-sc2-label:after, 
-	#toggle-dota:checked + #toggle-dota-label:after, 
-	#toggle-hs:checked + #toggle-hs-label:after, 
-	#toggle-bw:checked + #toggle-bw-label:after, 
-	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after,
+	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
+	#toggle-dota2:checked + #toggle-dota2-label:after, 
+	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
+	#toggle-heroes:checked + #toggle-heroes-label:after, 
+	#toggle-smash:checked + #toggle-smash-label:after, 
+	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:checked + #toggle-overwatch-label:after,
 	#toggle-commons:checked + #toggle-commons-label:after {
 		font-size:30px;
 		font-weight:300;
@@ -435,25 +435,25 @@ p {
 	}
 	
 	
-	#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-	#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
+	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
+	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
+	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
+	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
+	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
 	#toggle-commons:not(:checked) + #toggle-commons-label:after {
 		font-size:40px;
 	}
-	#toggle-sc2:checked + #toggle-sc2-label:after, 
-	#toggle-dota:checked + #toggle-dota-label:after, 
-	#toggle-hs:checked + #toggle-hs-label:after, 
-	#toggle-bw:checked + #toggle-bw-label:after, 
-	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after,
+	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
+	#toggle-dota2:checked + #toggle-dota2-label:after, 
+	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
+	#toggle-heroes:checked + #toggle-heroes-label:after, 
+	#toggle-smash:checked + #toggle-smash-label:after, 
+	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:checked + #toggle-overwatch-label:after,
 	#toggle-commons:checked + #toggle-commons-label:after {
 		font-size:40px;
 	}
@@ -570,39 +570,39 @@ p {
 		line-height: 18px;
 	}
 	
-	#toggle-sc2:not(:checked) + label + div + #sc2, 
-	#toggle-dota:not(:checked) + label + div + #dota, 
-	#toggle-hs:not(:checked) + label + div + #hs, 
-	#toggle-bw:not(:checked) + label + div + #bw, 
-	#toggle-hots:not(:checked) + label + div + #hots, 
-	#toggle-ssb:not(:checked) + label + div + #ssb, 
-	#toggle-cs:not(:checked) + label + div + #cs, 
-	#toggle-ow:not(:checked) + label + div + #ow,
+	#toggle-starcraft2:not(:checked) + label + div + #starcraft2, 
+	#toggle-dota2:not(:checked) + label + div + #dota2, 
+	#toggle-hearthstone:not(:checked) + label + div + #hearthstone, 
+	#toggle-starcraft:not(:checked) + label + div + #starcraft, 
+	#toggle-heroes:not(:checked) + label + div + #heroes, 
+	#toggle-smash:not(:checked) + label + div + #smash, 
+	#toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
+	#toggle-overwatch:not(:checked) + label + div + #overwatch,
 	#toggle-commons:not(:checked) + label + div + #commons {
 		display:block;
 	}
 	
-	#toggle-sc2:not(:checked) + #toggle-sc2-label:after, 
-	#toggle-dota:not(:checked) + #toggle-dota-label:after, 
-	#toggle-hs:not(:checked) + #toggle-hs-label:after, 
-	#toggle-bw:not(:checked) + #toggle-bw-label:after, 
-	#toggle-hots:not(:checked) + #toggle-hots-label:after, 
-	#toggle-ssb:not(:checked) + #toggle-ssb-label:after, 
-	#toggle-cs:not(:checked) + #toggle-cs-label:after, 
-	#toggle-ow:not(:checked) + #toggle-ow-label:after,
+	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
+	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
+	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
+	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
+	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
+	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
 	#toggle-commons:not(:checked) + #toggle-commons-label:after {
 		display:none;
 	}
 	
-	#toggle-sc2:checked + #toggle-sc2-label:after, 
-	#toggle-dota:checked + #toggle-dota-label:after, 
-	#toggle-hs:checked + #toggle-hs-label:after, 
-	#toggle-bw:checked + #toggle-bw-label:after, 
-	#toggle-hots:checked + #toggle-hots-label:after, 
-	#toggle-ssb:checked + #toggle-ssb-label:after, 
-	#toggle-cs:checked + #toggle-cs-label:after, 
-	#toggle-ow:checked + #toggle-ow-label:after,
-	#toggle-commons:checked + #toggle-commons-label:after{
+	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
+	#toggle-dota2:checked + #toggle-dota2-label:after, 
+	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
+	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
+	#toggle-heroes:checked + #toggle-heroes-label:after, 
+	#toggle-smash:checked + #toggle-smash-label:after, 
+	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
+	#toggle-overwatch:checked + #toggle-overwatch-label:after,
+	#toggle-commons:checked + #toggle-commons-label:after {
 		display:none;
 	}
 	.how-to {

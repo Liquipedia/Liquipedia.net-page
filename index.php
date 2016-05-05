@@ -88,81 +88,81 @@ while ($row = mysql_fetch_assoc ($r))
 		</div>
 		<div class="whitebox">
 			<div class="box-wrap">
-				<div class="dota-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-dota" />
-					<label for="toggle-dota" class="toggle-button-label" id="toggle-dota-label"></label>
+				<div class="dota2-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-dota2" />
+					<label for="toggle-dota2" class="toggle-button-label" id="toggle-dota2-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/dota2/Main_Page">Dota 2</a></div>
-					<p id="dota">
+					<p id="dota2">
 						<?php foreach ($hot_links['dota2'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					 </p>
 				</div>
-				<div class="sc2-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-sc2" />
-					<label for="toggle-sc2" class="toggle-button-label" id="toggle-sc2-label"></label>
+				<div class="starcraft2-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-starcraft2" />
+					<label for="toggle-starcraft2" class="toggle-button-label" id="toggle-starcraft2-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft2/Main_Page">StarCraft II</a></div>
-					<p id="sc2">
+					<p id="starcraft2">
 						<?php foreach ($hot_links['starcraft2'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="cs-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-cs" />
-					<label for="toggle-cs" class="toggle-button-label" id="toggle-cs-label"></label>
+				<div class="counterstrike-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-counterstrike" />
+					<label for="toggle-counterstrike" class="toggle-button-label" id="toggle-counterstrike-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/counterstrike/Main_Page">Counter-Strike</a></div>
-					<p id="cs">
+					<p id="counterstrike">
 						<?php foreach ($hot_links['counterstrike'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="hs-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-hs" />
-					<label for="toggle-hs" class="toggle-button-label" id="toggle-hs-label"></label>
+				<div class="hearthstone-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-hearthstone" />
+					<label for="toggle-hearthstone" class="toggle-button-label" id="toggle-hearthstone-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/hearthstone/Main_Page">Hearthstone</a></div>
-					<p id="hs">
+					<p id="hearthstone">
 						<?php foreach ($hot_links['hearthstone'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="bw-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-bw" />
-					<label for="toggle-bw" class="toggle-button-label" id="toggle-bw-label"></label>
+				<div class="starcraft-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-starcraft" />
+					<label for="toggle-starcraft" class="toggle-button-label" id="toggle-starcraft-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft/Main_Page">Brood War</a></div>
-					<p id="bw">
+					<p id="starcraft">
 						<?php foreach ($hot_links['starcraft'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="ssb-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-ssb" />
-					<label for="toggle-ssb" class="toggle-button-label" id="toggle-ssb-label"></label>
+				<div class="smash-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-smash" />
+					<label for="toggle-smash" class="toggle-button-label" id="toggle-smash-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/smash/Main_Page">Smash</a></div>
-					<p id="ssb">
+					<p id="smash">
 						<?php foreach ($hot_links['smash'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="hots-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-hots" />
-					<label for="toggle-hots" class="toggle-button-label" id="toggle-hots-label"></label>
+				<div class="heroes-box game-box">
+					<input type="checkbox" class="toggle-button" id="toggle-heroes" />
+					<label for="toggle-heroes" class="toggle-button-label" id="toggle-heroes-label"></label>
 					<div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
-					<p id="hots">
+					<p id="heroes">
 						<?php foreach ($hot_links['heroes'] as $h) { ?>
 							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 						<?php } ?>
 					</p>
 				</div>
-				<div class="ow-box game-box">
-				<input type="checkbox" class="toggle-button" id="toggle-ow" />
-				<label for="toggle-ow" class="toggle-button-label" id="toggle-ow-label"></label>
+				<div class="overwatch-box game-box">
+				<input type="checkbox" class="toggle-button" id="toggle-overwatch" />
+				<label for="toggle-overwatch" class="toggle-button-label" id="toggle-overwatch-label"></label>
 				<div class="wiki-header"><a href="http://wiki.teamliquid.net/overwatch/Main_Page">Overwatch</a></div>
-				<p id="ow">
+				<p id="overwatch">
 					<?php foreach ($hot_links['overwatch'] as $h) { ?>
 						<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
 					<?php } ?>

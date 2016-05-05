@@ -53,7 +53,7 @@ while ($row = mysql_fetch_assoc ($r))
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
 		<meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers, Counter-Strike, Overwatch" />
-		<link href="newstyle.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400|Roboto:300" rel="stylesheet" type="text/css" />
 		<link href="/favicon.ico" rel="icon" /> 
 	</head>

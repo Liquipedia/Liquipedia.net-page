@@ -188,7 +188,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<h3>Alpha Wiki</h3>
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://wiki.teamliquid.net/">this form</a>.</p>
 					<ul>
-						<li><a href="http://wiki.teamliquid.net/warcraft/Main_Page">Warcraft</a></li>
+						<li><a href="http://wiki.teamliquid.net/warcraft/Main_Page">Warcraft III</a></li>
 					</ul>
 				</div>
 			</div>

@@ -26,6 +26,7 @@ body {
 }
 .search input {
 	line-height: 2em;
+	height: 2.56em;
 	width: 907px;
 }
 @media(max-width:1224px) {
@@ -592,6 +593,14 @@ p {
 		display:none;
 	}
 	.how-to {
+		-moz-column-count:2;
+		column-count:2;
+		-moz-column-gap:3em;
+		column-gap:3em;
+		-moz-column-rule:1px solid #dddddd;
+		column-rule:1px solid #dddddd;
+	}
+	.other-wikis {
 		-moz-column-count:2;
 		column-count:2;
 		-moz-column-gap:3em;

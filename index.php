@@ -173,7 +173,7 @@ while ($row = mysql_fetch_assoc ($r))
 		<h1>Other wikis</h1>
 		<div class="whitebox">
 			<div class="content other-wikis">
-				<div class="other-wikis-left">
+				<table class="other-wikis-left"><tr><td>
 					<h3>Commons Wiki</h3>
 					<p>This is the file repository for all our wikis, to add an image this is where you upload it and then you can use it on any of the wikis.</p>
 					<ul>
@@ -183,14 +183,14 @@ while ($row = mysql_fetch_assoc ($r))
 						<li><a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a></li>
 						<li><a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
 					</ul>
-				</div>
-				<div class="other-wikis-right">
+				</td></tr></table>
+				<table class="other-wikis-right"><tr><td>
 					<h3>Alpha Wikis</h3>
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
 					<ul>
 						<li><a href="http://wiki.teamliquid.net/warcraft/Main_Page">Warcraft III</a></li>
 					</ul>
-				</div>
+				</td></tr></table>
 			</div>
 		</div>
 		<h1>How To Contribute</h1>

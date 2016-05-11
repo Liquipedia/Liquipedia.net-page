@@ -171,6 +171,7 @@ while ($row = mysql_fetch_assoc ($r))
 			</div>
 		</div>
 		<h1>Other wikis</h1>
+		<h2>Other wikis operated by the Liquipedia community</h2>
 		<div class="whitebox">
 			<div class="content other-wikis">
 				<table class="other-wikis-left"><tr><td>

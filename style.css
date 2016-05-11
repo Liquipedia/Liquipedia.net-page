@@ -163,9 +163,6 @@ a:active 			{color:#faa700;}
 .overwatch-box {
 	background-color: #e5b6c0;
 }
-.commons-box {
-	background-color: #e5e5e5;
-}
 .game-box {
 	width: 100%;
 	font-size: 25px;
@@ -237,8 +234,7 @@ span#full-intro {display:none;}
 #toggle-heroes:not(:checked) + label + div + #heroes, 
 #toggle-smash:not(:checked) + label + div + #smash, 
 #toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
-#toggle-overwatch:not(:checked) + label + div + #overwatch,
-#toggle-commons:not(:checked) + label + div + #commons {
+#toggle-overwatch:not(:checked) + label + div + #overwatch {
 	display:none;
 }
 #toggle-starcraft2:checked + label + div + #starcraft2, 
@@ -248,8 +244,7 @@ span#full-intro {display:none;}
 #toggle-heroes:checked + label + div + #heroes, 
 #toggle-smash:checked + label + div + #smash, 
 #toggle-counterstrike:checked + label + div + #counterstrike, 
-#toggle-overwatch:checked + label + div + #overwatch,
-#toggle-commons:checked + label + div + #commons {
+#toggle-overwatch:checked + label + div + #overwatch {
 	display:block;
 }
 
@@ -260,8 +255,7 @@ span#full-intro {display:none;}
 #toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
 #toggle-smash:not(:checked) + #toggle-smash-label:after, 
 #toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
-#toggle-commons:not(:checked) + #toggle-commons-label:after {
+#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
@@ -274,8 +268,7 @@ span#full-intro {display:none;}
 #toggle-heroes:checked + #toggle-heroes-label:after, 
 #toggle-smash:checked + #toggle-smash-label:after, 
 #toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-#toggle-overwatch:checked + #toggle-overwatch-label:after,
-#toggle-commons:checked + #toggle-commons-label:after {
+#toggle-overwatch:checked + #toggle-overwatch-label:after {
 	content:"\2212";
 	font-size:25px;
 	font-weight:400;	
@@ -287,9 +280,6 @@ span#full-intro {display:none;}
 }
 .game-box {
 	padding-bottom: 1px;
-}
-
-.game-box {
 	font-size:15px;
 }
 	
@@ -362,8 +352,7 @@ p {
 	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
 	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
 	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
-	#toggle-commons:not(:checked) + #toggle-commons-label:after {
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -374,8 +363,7 @@ p {
 	#toggle-heroes:checked + #toggle-heroes-label:after, 
 	#toggle-smash:checked + #toggle-smash-label:after, 
 	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after,
-	#toggle-commons:checked + #toggle-commons-label:after {
+	#toggle-overwatch:checked + #toggle-overwatch-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -442,8 +430,7 @@ p {
 	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
 	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
 	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
-	#toggle-commons:not(:checked) + #toggle-commons-label:after {
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
 		font-size:40px;
 	}
 	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
@@ -453,8 +440,7 @@ p {
 	#toggle-heroes:checked + #toggle-heroes-label:after, 
 	#toggle-smash:checked + #toggle-smash-label:after, 
 	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after,
-	#toggle-commons:checked + #toggle-commons-label:after {
+	#toggle-overwatch:checked + #toggle-overwatch-label:after {
 		font-size:40px;
 	}
 	
@@ -487,16 +473,14 @@ p {
 	}
 	
 	.box-wrap {
-		width: 614px;
-		height: 809px;
+		width: 600px;
 		margin: 0 auto;
 	}
 	
 	.game-box { 
 		width: 297px; 
 		height:193px;
-		float:left;
-		margin:5px; 
+		display: inline-block;
 	} 
 	.game-box > p { 
 		display:block;
@@ -577,8 +561,7 @@ p {
 	#toggle-heroes:not(:checked) + label + div + #heroes, 
 	#toggle-smash:not(:checked) + label + div + #smash, 
 	#toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
-	#toggle-overwatch:not(:checked) + label + div + #overwatch,
-	#toggle-commons:not(:checked) + label + div + #commons {
+	#toggle-overwatch:not(:checked) + label + div + #overwatch {
 		display:block;
 	}
 	
@@ -589,8 +572,7 @@ p {
 	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
 	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
 	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after,
-	#toggle-commons:not(:checked) + #toggle-commons-label:after {
+	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
 		display:none;
 	}
 	
@@ -601,17 +583,19 @@ p {
 	#toggle-heroes:checked + #toggle-heroes-label:after, 
 	#toggle-smash:checked + #toggle-smash-label:after, 
 	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after,
-	#toggle-commons:checked + #toggle-commons-label:after {
+	#toggle-overwatch:checked + #toggle-overwatch-label:after {
 		display:none;
 	}
 	.how-to {
 		-moz-column-count:2;
 		-webkit-column-count:2;
 		column-count:2;
-		-moz-column-gap:10px;
-		-webkit-column-gap:10px;
-		column-gap:10px;
+		-moz-column-gap:3em;
+		-webkit-column-gap:3em;
+		column-gap:3em;
+		-moz-column-rule:1px solid #dddddd;
+		-webkit-column-rule:1px solid #dddddd;
+		column-rule:1px solid #dddddd;
 	}
 
 }
@@ -629,8 +613,7 @@ p {
 @media only screen and (min-width:930px) {
 	
 	.box-wrap {
-		width: 921px;
-		height: 609px;
+		width: 903px;
 		margin: 0 auto;
 	}
 	.content {
@@ -656,9 +639,12 @@ p {
 		-moz-column-count:3;
 		-webkit-column-count:3;
 		column-count:3;
-		-moz-column-gap:10px;
-		-webkit-column-gap:10px;
-		column-gap:10px;
+		-moz-column-gap:3em;
+		-webkit-column-gap:3em;
+		column-gap:3em;
+		-moz-column-rule:1px solid #dddddd;
+		-webkit-column-rule:1px solid #dddddd;
+		column-rule:1px solid #dddddd;
 	}
 	
 	.how-to .double {
@@ -667,6 +653,30 @@ p {
 		column-span:2;
 	}
 	
+}
+@media only screen and (min-width:1225px) {
+	
+	.box-wrap {
+		width: 1205px;
+		margin: 0 auto;
+	}
+	
+	.content {
+		width: 1205px;
+		max-width: 1205px;
+	}
+	
+	.how-to {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+		-moz-column-gap:3em;
+		-webkit-column-gap:3em;
+		column-gap:3em;
+		-moz-column-rule:1px solid #dddddd;
+		-webkit-column-rule:1px solid #dddddd;
+		column-rule:1px solid #dddddd;
+	}
 }
 
 .lp-icon {

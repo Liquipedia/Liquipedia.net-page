@@ -159,26 +159,37 @@ while ($row = mysql_fetch_assoc ($r))
 					</p>
 				</div>
 				<div class="overwatch-box game-box">
-				<input type="checkbox" class="toggle-button" id="toggle-overwatch" />
-				<label for="toggle-overwatch" class="toggle-button-label" id="toggle-overwatch-label"></label>
-				<div class="wiki-header"><a href="http://wiki.teamliquid.net/overwatch/Main_Page">Overwatch</a></div>
-				<p id="overwatch">
-					<?php foreach ($hot_links['overwatch'] as $h) { ?>
-						<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-					<?php } ?>
-				</p>
-				</div>
-				<div class="commons-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-commons" />
-					<label for="toggle-commons" class="toggle-button-label" id="toggle-commons-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/commons/Main_Page">Commons</a></div>
-					<p id="commons">
-						<a href="http://wiki.teamliquid.net/commons/Special:Upload">Upload Files</a><br />
-						<a href="http://wiki.teamliquid.net/commons/Copyrights_Repository">Copyrights Repository</a><br />
-						<a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a><br />
-						<a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a><br />
-						<a href="http://wiki.teamliquid.net/commons/Liquipedia:Images_taken_on_this_day"></a>Images taken on this day<br />
+					<input type="checkbox" class="toggle-button" id="toggle-overwatch" />
+					<label for="toggle-overwatch" class="toggle-button-label" id="toggle-overwatch-label"></label>
+					<div class="wiki-header"><a href="http://wiki.teamliquid.net/overwatch/Main_Page">Overwatch</a></div>
+					<p id="overwatch">
+						<?php foreach ($hot_links['overwatch'] as $h) { ?>
+							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+						<?php } ?>
 					</p>
+				</div>
+			</div>
+		</div>
+		<h1>Other wikis</h1>
+		<div class="whitebox">
+			<div class="content other-wikis">
+				<div class="other-wikis-left">
+					<h3>Commons Wiki</h3>
+					<p>This is the file repository for all our wikis, to add an image this is where you upload it and then you can use it on any of the wikis.</p>
+					<ul>
+						<li><a href="http://wiki.teamliquid.net/commons/Main_Page">Commons Wiki</a></li>
+						<li><a href="http://wiki.teamliquid.net/commons/Special:Upload">File Upload</a></li>
+						<li><a href="http://wiki.teamliquid.net/commons/Copyrights_Repository">Copyrights Repository</a></li>
+						<li><a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a></li>
+						<li><a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
+					</ul>
+				</div>
+				<div class="other-wikis-right">
+					<h3>Alpha Wiki</h3>
+					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://wiki.teamliquid.net/">this form</a>.</p>
+					<ul>
+						<li><a href="http://wiki.teamliquid.net/warcraft/Main_Page">Warcraft</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

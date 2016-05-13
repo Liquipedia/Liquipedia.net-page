@@ -81,7 +81,7 @@ while ($row = mysql_fetch_assoc ($r))
 			<div id="logo"><img src="lp-logo-bg.png" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<form id="search" class="search" action="/dota2/index.php">
-				<select onchange="document.getElementById('search').action = '/' + this.value + '/index.php';">
+				<select id="wikiselect">
 					<?php foreach ($wikis as $wiki_key => $wiki) {
 						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
 					} ?>
@@ -183,7 +183,18 @@ while ($row = mysql_fetch_assoc ($r))
 			</div>
 		</div>
 		<script type="text/javascript">
-			
+			window.addEventListener("load", function() {
+				if(!document.cookie.includes('liquipedia_last_wiki_search')) {
+					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys($wikis)[0]; ?>';
+				}
+				var startwiki = document.cookie.replace(/(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+				document.getElementById('wikiselect').value = startwiki;
+				document.getElementById('search').action = '/' + startwiki + '/index.php';
+				document.getElementById('wikiselect').onchange = function() {
+					document.cookie = 'liquipedia_last_wiki_search=' + this.value;
+					document.getElementById('search').action = '/' + this.value + '/index.php';
+				}
+			});
 		</script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];

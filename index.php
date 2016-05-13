@@ -9,6 +9,16 @@ header ("Content-Type: text/html; charset=utf-8");
 header ("Cache-Control: s-maxage=60");
 header ("Expires: $expire");
 
+$wikis = array (
+	'dota2' => 'Dota 2',
+	'starcraft2' => 'StarCraft II',
+	'counterstrike' => 'Counter-Strike',
+	'hearthstone' => 'Hearthstone',
+	'starcraft' => 'Brood War',
+	'smash' => 'Smash',
+	'heroes' => 'Heroes',
+	'overwatch' => 'Overwatch'
+);
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM wiki_hot ORDER BY hits DESC");
@@ -17,7 +27,7 @@ while ($row = mysql_fetch_assoc ($r))
 	$title = $row['title'];
 	$url = $row['page'];
 
-	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(starcraft2|dota2|starcraft|hearthstone|heroes|smash|counterstrike|overwatch)\/(.+)$/", $url, $m))
+	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(" . implode ("|", array_keys ($wikis)) . ")\/(.+)$/", $url, $m))
 	{
 		$title = str_replace ("_", " ", $title);
 
@@ -72,14 +82,9 @@ while ($row = mysql_fetch_assoc ($r))
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<form id="search" class="search" action="/dota2/index.php">
 				<select onchange="document.getElementById('search').action = '/' + this.value + '/index.php';">
-					<option value="dota2" selected="selected">Dota 2</option>
-					<option value="starcraft2">StarCraft II</option>
-					<option value="counterstrike">Counter-Strike</option>
-					<option value="hearthstone">Hearthstone</option>
-					<option value="starcraft">Brood War</option>
-					<option value="smash">Smash</option>
-					<option value="heroes">Heroes</option>
-					<option value="overwatch">Overwatch</option>
+					<?php foreach ($wikis as $wiki_key => $wiki) {
+						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
+					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
 				--><input type="search" name="search" placeholder="Search..."><!--
@@ -88,86 +93,18 @@ while ($row = mysql_fetch_assoc ($r))
 		</div>
 		<div class="whitebox">
 			<div class="box-wrap">
-				<div class="dota2-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-dota2" />
-					<label for="toggle-dota2" class="toggle-button-label" id="toggle-dota2-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/dota2/Main_Page">Dota 2</a></div>
-					<p id="dota2">
-						<?php foreach ($hot_links['dota2'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					 </p>
-				</div>
-				<div class="starcraft2-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-starcraft2" />
-					<label for="toggle-starcraft2" class="toggle-button-label" id="toggle-starcraft2-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft2/Main_Page">StarCraft II</a></div>
-					<p id="starcraft2">
-						<?php foreach ($hot_links['starcraft2'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="counterstrike-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-counterstrike" />
-					<label for="toggle-counterstrike" class="toggle-button-label" id="toggle-counterstrike-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/counterstrike/Main_Page">Counter-Strike</a></div>
-					<p id="counterstrike">
-						<?php foreach ($hot_links['counterstrike'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="hearthstone-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-hearthstone" />
-					<label for="toggle-hearthstone" class="toggle-button-label" id="toggle-hearthstone-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/hearthstone/Main_Page">Hearthstone</a></div>
-					<p id="hearthstone">
-						<?php foreach ($hot_links['hearthstone'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="starcraft-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-starcraft" />
-					<label for="toggle-starcraft" class="toggle-button-label" id="toggle-starcraft-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/starcraft/Main_Page">Brood War</a></div>
-					<p id="starcraft">
-						<?php foreach ($hot_links['starcraft'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="smash-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-smash" />
-					<label for="toggle-smash" class="toggle-button-label" id="toggle-smash-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/smash/Main_Page">Smash</a></div>
-					<p id="smash">
-						<?php foreach ($hot_links['smash'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="heroes-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-heroes" />
-					<label for="toggle-heroes" class="toggle-button-label" id="toggle-heroes-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/heroes/Main_Page">Heroes</a></div>
-					<p id="heroes">
-						<?php foreach ($hot_links['heroes'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
-				<div class="overwatch-box game-box">
-					<input type="checkbox" class="toggle-button" id="toggle-overwatch" />
-					<label for="toggle-overwatch" class="toggle-button-label" id="toggle-overwatch-label"></label>
-					<div class="wiki-header"><a href="http://wiki.teamliquid.net/overwatch/Main_Page">Overwatch</a></div>
-					<p id="overwatch">
-						<?php foreach ($hot_links['overwatch'] as $h) { ?>
-							<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
-						<?php } ?>
-					</p>
-				</div>
+				<?php foreach ($wikis as $wiki_key => $wiki) { ?>
+					<div class="<?php echo $wiki_key; ?>-box game-box">
+						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
+						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
+						<div class="wiki-header"><a href="http://wiki.teamliquid.net/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki; ?></a></div>
+						<p id="<?php echo $wiki_key; ?>">
+							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
+								<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+							<?php } ?>
+						 </p>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 		<h1>Other wikis</h1>
@@ -241,10 +178,13 @@ while ($row = mysql_fetch_assoc ($r))
 					<a href="http://www.github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
 				</div>
 				<div class="disclaimer">
-					<p>Text is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA</a>.<br />Images have varied licenses. Click on an image to see the image's page for more details.</p>
+					<p>Text is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Images have varied licenses. Click on an image to see the image's page for more details.</p>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			
+		</script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-576564-4']);

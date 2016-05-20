@@ -139,9 +139,9 @@ while ($row = mysql_fetch_assoc ($r))
 				<p>When you visit Liquipedia, consider adding to it or correcting something, it doesn’t have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
 				<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account—if you don’t have one already—log in, click edit, find and fix the typo, click save, and you are done.</p>
 				<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
-				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our “How to contribute” sections you can find in the menus on the left of the wiki pages. You can find us in our IRC channel where other contributors can help you. <a href="http://webchat.quakenet.org/?channels=#liquipedia" target="_blank">#liquipedia on QuakeNet</a>.</p>
+				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our “How to contribute�? sections you can find in the menus on the left of the wiki pages. You can find us in our IRC channel where other contributors can help you. <a href="http://webchat.quakenet.org/?channels=#liquipedia" target="_blank">#liquipedia on QuakeNet</a>.</p>
 				<h3>Logging in and registering</h3>
-				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the “<a href="http://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>” link on any wiki page, just remember to follow the instructions and complete the registration.<br />
+				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the “<a href="http://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>�? link on any wiki page, just remember to follow the instructions and complete the registration.<br />
 				Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
 				<h3>Editing</h3>
 				<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. <br />
@@ -164,7 +164,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<li>Help other contributors in our IRC channel, especially newer ones.</li>
 					<li>Spread the word that everyone can help grow Liquipedia.</li>
 					<li>Give us <a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
-					<li>Correct people when they call us “LiquiDpedia” with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
+					<li>Correct people when they call us “LiquiDpedia�? with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
 				</ul>
 			</div>
 		</div>
@@ -183,7 +183,7 @@ while ($row = mysql_fetch_assoc ($r))
 			</div>
 		</div>
 		<script type="text/javascript">
-			window.addEventListener("load", function() {
+			window.addEventListener("DOMContentLoaded", function() {
 				if(!document.cookie.includes('liquipedia_last_wiki_search')) {
 					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys($wikis)[0]; ?>';
 				}

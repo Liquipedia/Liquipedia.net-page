@@ -18,6 +18,7 @@ body {
 	height: 2.5em;
 	width: 150px;
 	text-align: center;
+	text-align-last: center
 }
 .search button {
 	line-height: 2em;

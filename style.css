@@ -15,18 +15,24 @@ body {
 	box-sizing: border-box;
 }
 .search select {
-	height: 2.5em;
+	height: 2.56em;
 	width: 150px;
+	padding:0 10px;
+	border:1px solid #cccccc;
 }
 .search button {
 	line-height: 2em;
 	height: 2.56em;
 	width: 150px;
+	padding:0 10px;
+	border:1px solid #cccccc;
 }
 .search input {
 	line-height: 2em;
 	height: 2.56em;
 	width: 907px;
+	padding:0 10px;
+	border:1px solid #cccccc;
 }
 @media(max-width:1224px) {
 	.search input {

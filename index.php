@@ -21,7 +21,7 @@ $wikis = array (
 );
 $hot_links = array ();
 
-$r = mysql_queryS ("SELECT * FROM wiki_hot ORDER BY hits DESC");
+$r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
 while ($row = mysql_fetch_assoc ($r))
 {
 	$title = $row['title'];

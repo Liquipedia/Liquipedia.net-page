@@ -19,6 +19,10 @@ $wikis = array (
 	'heroes' => 'Heroes',
 	'overwatch' => 'Overwatch'
 );
+$alphawikis = array (
+	'warcraft' => 'Warcraft III',
+	'fighters' => 'Fighting Games'
+);
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
@@ -84,6 +88,9 @@ while ($row = mysql_fetch_assoc ($r))
 				<select id="wikiselect">
 					<?php foreach ($wikis as $wiki_key => $wiki) {
 						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
+					}
+					foreach ($alphawikis as $wiki_key => $wiki) {
+						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
 					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
@@ -126,8 +133,9 @@ while ($row = mysql_fetch_assoc ($r))
 					<h3>Liquipedia Alpha Wikis</h3>
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
 					<ul>
-						<li><a href="http://wiki.teamliquid.net/warcraft/Main_Page">Warcraft III</a></li>
-						<li><a href="http://wiki.teamliquid.net/fighters/Main_Page">Fighting Games</a></li>
+						<?php foreach ($alphawikis as $wiki_key => $wiki) {
+							echo '<li><a href="http://wiki.teamliquid.net/' . $wiki_key . '/Main_Page">' . $wiki . '</a></li>';
+						} ?>
 					</ul>
 				</td></tr></table>
 			</div>

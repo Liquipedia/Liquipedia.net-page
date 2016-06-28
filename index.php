@@ -21,7 +21,8 @@ $wikis = array (
 );
 $alphawikis = array (
 	'warcraft' => 'Warcraft III',
-	'fighters' => 'Fighting Games'
+	'fighters' => 'Fighting Games',
+	'rocketleague' => 'Rocket League'
 );
 $hot_links = array ();
 

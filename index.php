@@ -119,7 +119,7 @@ while ($row = mysql_fetch_assoc ($r))
 		<h2>Other wikis operated by the Liquipedia community</h2>
 		<div class="whitebox">
 			<div class="content other-wikis">
-				<table class="other-wikis-left"><tr><td>
+				<div class="other-wikis-left">
 					<h3>Commons Wiki</h3>
 					<p>This is the file repository for all our wikis, to add an image this is where you upload it and then you can use it on any of the wikis.</p>
 					<ul>
@@ -129,8 +129,8 @@ while ($row = mysql_fetch_assoc ($r))
 						<li><a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a></li>
 						<li><a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
 					</ul>
-				</td></tr></table>
-				<table class="other-wikis-right"><tr><td>
+				</div>
+				<div class="other-wikis-right">
 					<h3>Liquipedia Alpha Wikis</h3>
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
 					<ul>
@@ -138,7 +138,7 @@ while ($row = mysql_fetch_assoc ($r))
 							echo '<li><a href="http://wiki.teamliquid.net/' . $wiki_key . '/Main_Page">' . $wiki . '</a></li>';
 						} ?>
 					</ul>
-				</td></tr></table>
+				</div>
 			</div>
 		</div>
 		<h1>How To Contribute</h1>

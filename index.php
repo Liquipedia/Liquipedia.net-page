@@ -108,7 +108,7 @@ while ($row = mysql_fetch_assoc ($r))
 						<div class="wiki-header"><a href="http://wiki.teamliquid.net/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>">
 							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
-								<a href="<?=$h['href']?>"><?=$h['title']?></a><br />
+								<a href="<?=$h['href']?>" title="<?=$h['title']?>"><?=$h['title']?></a><br />
 							<?php } ?>
 						 </p>
 					</div>

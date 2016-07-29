@@ -2,6 +2,7 @@
 $no_session = true;
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/connect.php');
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/functions.php');
+require_once ('wikis.php');
 
 $expire = gmdate ('D, d M Y H:i:s \G\M\T', time() + 60);
 
@@ -9,21 +10,6 @@ header ("Content-Type: text/html; charset=utf-8");
 header ("Cache-Control: s-maxage=60");
 header ("Expires: $expire");
 
-$wikis = array (
-	'dota2' => 'Dota 2',
-	'starcraft2' => 'StarCraft II',
-	'counterstrike' => 'Counter-Strike',
-	'hearthstone' => 'Hearthstone',
-	'starcraft' => 'Brood War',
-	'smash' => 'Smash',
-	'heroes' => 'Heroes',
-	'overwatch' => 'Overwatch'
-);
-$alphawikis = array (
-	'warcraft' => 'Warcraft III',
-	'fighters' => 'Fighting Games',
-	'rocketleague' => 'Rocket League'
-);
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
@@ -72,7 +58,6 @@ while ($row = mysql_fetch_assoc ($r))
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="/favicon.ico" rel="icon" /> 
 	</head>
-
 	<body>
 		<div class="global-nav">
 			<span><a href="https://www.teamliquidpro.com/">TeamLiquidPro</a></span>
@@ -88,10 +73,10 @@ while ($row = mysql_fetch_assoc ($r))
 			<form id="search" class="search" action="/dota2/index.php">
 				<select id="wikiselect">
 					<?php foreach ($wikis as $wiki_key => $wiki) {
-						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
+						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
 					}
 					foreach ($alphawikis as $wiki_key => $wiki) {
-						echo '<option value="' . $wiki_key . '">' . $wiki . '</option>';
+						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
 					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
@@ -105,7 +90,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="http://wiki.teamliquid.net/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki; ?></a></div>
+						<div class="wiki-header"><a href="http://wiki.teamliquid.net/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>">
 							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
 								<a href="<?=$h['href']?>" title="<?=$h['title']?>"><?=$h['title']?></a><br />
@@ -135,7 +120,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
 					<ul>
 						<?php foreach ($alphawikis as $wiki_key => $wiki) {
-							echo '<li><a href="http://wiki.teamliquid.net/' . $wiki_key . '/Main_Page">' . $wiki . '</a></li>';
+							echo '<li><a href="http://wiki.teamliquid.net/' . $wiki_key . '/Main_Page">' . $wiki['name'] . '</a></li>';
 						} ?>
 					</ul>
 				</div>
@@ -188,7 +173,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<a href="https://github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
 				</div>
 				<div class="disclaimer">
-					<p>Text is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Images have varied licenses. Click on an image to see the image's page for more details.</p>
+					<p>Text is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Files have varied licenses. Click on an image to see the image's page for more details.</p>
 				</div>
 			</div>
 		</div>
@@ -206,7 +191,6 @@ while ($row = mysql_fetch_assoc ($r))
 				}
 			});
 		</script>
-
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -216,7 +200,6 @@ while ($row = mysql_fetch_assoc ($r))
 		  ga('create', 'UA-576564-4', 'auto');
 		  ga('send', 'pageview');
 		</script>
-
 		<!-- Quantcast Tag -->
 		<script type="text/javascript">
 			var _qevents = _qevents || [];

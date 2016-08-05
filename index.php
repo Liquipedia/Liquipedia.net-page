@@ -2,7 +2,7 @@
 $no_session = true;
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/connect.php');
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/functions.php');
-require_once ('wikis.php');
+require_once ('includes/wikis.php');
 
 $expire = gmdate ('D, d M Y H:i:s \G\M\T', time() + 60);
 
@@ -54,7 +54,7 @@ while ($row = mysql_fetch_assoc ($r))
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
 		<meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers, Counter-Strike, Overwatch" />
-		<link href="style.css" rel="stylesheet" type="text/css" />
+		<link href="./css/style.css" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="/favicon.ico" rel="icon" /> 
 	</head>
@@ -68,7 +68,7 @@ while ($row = mysql_fetch_assoc ($r))
 		</div>
 		<div class="top">
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
-			<div id="logo"><img src="lp-logo-bg.png" alt="liquipedia" /></div>
+			<div id="logo"><img src="./images/lp-logo-bg.png" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<form id="search" class="search" action="/dota2/index.php">
 				<select id="wikiselect">

@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body { 
-	background:url('lp-hex-bg.png') repeat;
+	background:url(../images/lp-hex-bg.png) repeat;
 	background-size:25%;
 	
 	margin:0px;
@@ -82,7 +82,7 @@ div.top {
 	max-width: 506px;
 	margin: 0px 5% 5px;
 	-webkit-filter: drop-shadow(0px 5px 2px #000);
-	filter: url(shadow.svg#drop-shadow);
+	filter: url(../images/shadow.svg#drop-shadow);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
 	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
 }
@@ -692,7 +692,7 @@ p {
 }
 
 .lp-icon {
-	background: url(/images/FrontPageIcon_Sprite.png) no-repeat 0 0;
+	background: url(../images/FrontPageIcon_Sprite.png) no-repeat 0 0;
 	display: inline-block;
 	width: 32px;
 	height: 32px;

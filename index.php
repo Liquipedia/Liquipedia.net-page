@@ -80,7 +80,7 @@ while ($row = mysql_fetch_assoc ($r))
 					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
-				--><input type="search" name="search" placeholder="Search..."><!--
+				--><input type="search" name="search" placeholder="Search..." autofocus><!--
 				--><button type="submit">Search</button>
 			</form>
 		</div>

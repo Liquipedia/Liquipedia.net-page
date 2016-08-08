@@ -10,6 +10,8 @@ header ("Content-Type: text/html; charset=utf-8");
 header ("Cache-Control: s-maxage=60");
 header ("Expires: $expire");
 
+$baseurl = 'http://wiki.teamliquid.net';
+
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
@@ -90,7 +92,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="http://wiki.teamliquid.net/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
+						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>">
 							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
 								<a href="<?=$h['href']?>" title="<?=$h['title']?>"><?=$h['title']?></a><br />
@@ -108,11 +110,11 @@ while ($row = mysql_fetch_assoc ($r))
 					<h3>Commons Wiki</h3>
 					<p>This is the file repository for all our wikis, to add an image this is where you upload it and then you can use it on any of the wikis.</p>
 					<ul>
-						<li><a href="http://wiki.teamliquid.net/commons/Main_Page">Commons Wiki</a></li>
-						<li><a href="http://wiki.teamliquid.net/commons/Special:Upload">File Upload</a></li>
-						<li><a href="http://wiki.teamliquid.net/commons/Copyrights_Repository">Copyrights Repository</a></li>
-						<li><a href="http://wiki.teamliquid.net/commons/Special:RunQuery/Find_images">Find Images</a></li>
-						<li><a href="http://wiki.teamliquid.net/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
+						<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
+						<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>
+						<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
+						<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
+						<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
 					</ul>
 				</div>
 				<div class="other-wikis-right">
@@ -120,7 +122,7 @@ while ($row = mysql_fetch_assoc ($r))
 					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
 					<ul>
 						<?php foreach ($alphawikis as $wiki_key => $wiki) {
-							echo '<li><a href="http://wiki.teamliquid.net/' . $wiki_key . '/Main_Page">' . $wiki['name'] . '</a></li>';
+							echo '<li><a href="' . $baseurl . '/' . $wiki_key . '/Main_Page">' . $wiki['name'] . '</a></li>';
 						} ?>
 					</ul>
 				</div>

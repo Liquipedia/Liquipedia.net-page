@@ -205,6 +205,9 @@ span#full-intro {
 .toggle-button-label:after {
 	float:right;
 	width:30px;
+	font-size:25px;
+	font-weight:400;
+	line-height:1.1em;
 }
 .toggle-button:not(:checked) ~ .game-box-content {
 	display:none;
@@ -214,15 +217,9 @@ span#full-intro {
 }
 .toggle-button:not(:checked) + .toggle-button-label:after {
 	content:"+";
-	font-size:25px;
-	font-weight:400;
-	line-height:1.1em;
 }
 .toggle-button:checked + .toggle-button-label:after {
 	content:"\2212";
-	font-size:25px;
-	font-weight:400;
-	line-height:1.1em;
 }
 .wiki-header {
 	margin-left:5%;
@@ -284,11 +281,7 @@ input[type=checkbox] {
 	body {
 		background-size:auto;
 	}
-	.toggle-button:not(:checked) + .toggle-button-label:after {
-		font-size:30px;
-		font-weight:300;
-	}
-	.toggle-button:checked + .toggle-button-label:after {
+	.toggle-button-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -340,10 +333,7 @@ input[type=checkbox] {
 		padding-top:15px;
 		padding-bottom:10px;
 	}
-	.toggle-button:not(:checked) + .toggle-button-label:after {
-		font-size:40px;
-	}
-	.toggle-button:checked + .toggle-button-label:after {
+	.toggle-button-label:after {
 		font-size:40px;
 	}
 	.game-box > p {
@@ -427,10 +417,7 @@ input[type=checkbox] {
 	.toggle-button:not(:checked) ~ .game-box-content {
 		display:block;
 	}
-	.toggle-button:not(:checked) + .toggle-button-label:after {
-		display:none;
-	}
-	.toggle-button:checked + .toggle-button-label:after {
+	.toggle-button-label:after {
 		display:none;
 	}
 	.how-to {

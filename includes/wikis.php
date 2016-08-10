@@ -37,7 +37,7 @@ $wikis = array (
 	'overwatch' => array (
 		'name' => 'Overwatch',
 		'background-color' => '#e5b6c0',
-	)
+	),
 );
 $alphawikis = array (
 	'warcraft' => array (
@@ -48,7 +48,7 @@ $alphawikis = array (
 	),
 	'rocketleague' => array (
 		'name' => 'Rocket League',
-	)
+	),
 );
 
 ?>

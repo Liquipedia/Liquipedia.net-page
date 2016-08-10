@@ -1,288 +1,227 @@
 @charset "utf-8";
 /* CSS Document */
 
-body { 
+body {
 	background:url(../images/lp-hex-bg.png) repeat;
 	background-size:25%;
-	
 	margin:0px;
-	font-family: Verdana, Geneva, Ubuntu, sans-serif;
+	font-family:Verdana, Geneva, Ubuntu, sans-serif;
 }
-
 .search {
-	text-align: center;
-	padding: 20px 0;
-	box-sizing: border-box;
+	text-align:center;
+	padding:20px 0;
+	box-sizing:border-box;
 }
 .search select {
-	height: 2.56em;
-	width: 150px;
+	height:2.56em;
+	width:150px;
 	padding:0 10px;
 	border:1px solid #cccccc;
 }
 .search button {
-	line-height: 2em;
-	height: 2.56em;
-	width: 150px;
+	line-height:2em;
+	height:2.56em;
+	width:150px;
 	padding:0 10px;
 	border:1px solid #cccccc;
 }
 .search input {
-	line-height: 2em;
-	height: 2.56em;
-	width: 907px;
+	line-height:2em;
+	height:2.56em;
+	width:907px;
 	padding:0 10px;
 	border:1px solid #cccccc;
 }
 @media(max-width:1224px) {
 	.search input {
-		width: 605px;
+		width:605px;
 	}
 }
 @media(max-width:929px) {
 	.search select {
-		width: 100px;
+		width:100px;
 	}
 	.search button {
-		width: 100px;
+		width:100px;
 	}
 	.search input {
-		width: 400px;
+		width:400px;
 	}
 }
 @media(max-width:619px) {
 	.search select {
-		width: 100px;
+		width:100px;
 	}
 	.search button {
-		width: 56px;
+		width:56px;
 	}
 	.search input {
-		width: calc(100% - 162px);
+		width:calc(100% - 162px);
 	}
 }
-
-.global-nav {display:none;}
-
+.global-nav {
+	display:none;
+}
 div.top {
 	margin-top:-4px;
-	padding-top: 10px;
+	padding-top:10px;
 	z-index:2;
-	background: -moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,22,44,0.7) 0%,rgba(0,22,44,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b300162c', endColorstr='#0000162c',GradientType=0 ); /* IE6-9 */
+	background:-moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* IE10+ */
+	background:linear-gradient(to bottom, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b300162c', endColorstr='#0000162c', GradientType=0); /* IE6-9 */
 }
-
 #logo img {
-	width: 90%;
-	max-width: 506px;
-	margin: 0px 5% 5px;
-	-webkit-filter: drop-shadow(0px 5px 2px #000);
-	filter: url(../images/shadow.svg#drop-shadow);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
-	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
+	width:90%;
+	max-width:506px;
+	margin:0px 5% 5px;
+	-webkit-filter:drop-shadow(0px 5px 2px #000);
+	filter:url(../images/shadow.svg#drop-shadow);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
+	filter:"progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
 }
-	
-h1, h2 {
-	font-family: Roboto, Verdana, Arial, sans-serif;
-	text-shadow: 0px 5px 2px #000;
-	color: #FFF;
-	text-align: center;
-	width: 90%;
-	margin:0 5% 10px; 
+h1,
+h2 {
+	font-family:Roboto, Verdana, Arial, sans-serif;
+	text-shadow:0px 5px 2px #000;
+	color:#FFF;
+	text-align:center;
+	width:90%;
+	margin:0 5% 10px;
 }
-
 h1 {
 	font-weight:400;
 	font-size:110%;
 }
-
 h2 {
 	font-weight:400;
 	font-size:90%;
 }
-
 .top h1 {
-	font-size: 45%;
-	margin-top: 3px;
-	margin-bottom: 2px;
-	font-weight: 400;
+	font-size:45%;
+	margin-top:3px;
+	margin-bottom:2px;
+	font-weight:400;
 }
-.top h2 {display:none;}
-
-
+.top h2 {
+	display:none;
+}
 div.whitebox {
-/*	background: #daeffc repeat; */
-	background: #FFF repeat;
-	border-top: 5px #8eaec2 solid;
-	border-bottom: 5px #8eaec2 solid;
-	border-left: 0px;
-	border-right: 0px;
-	width: 100%;
-	margin: 0px;
-	z-index: 2;
-	-webkit-box-shadow: 2px 5px 0px #000;
-	box-shadow: 0px 5px 2px #000;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 5px;
+	background:#ffffff repeat;
+	border-top:5px #8eaec2 solid;
+	border-bottom:5px #8eaec2 solid;
+	border-left:0px;
+	border-right:0px;
+	width:100%;
+	margin:0px;
+	z-index:2;
+	-webkit-box-shadow:2px 5px 0px #000;
+	box-shadow:0px 5px 2px #000;
+	padding-bottom:0;
+	padding-left:0;
+	padding-right:0;
+	padding-top:5px;
 }
-
-a:link				{color:#002bb8; text-decoration:none;}
-a:visited			{color:#5a3696; text-decoration:none;}
-a:hover				{text-decoration:underline}
-a:active 			{color:#faa700;}
-
-.game-box a:link 		{text-decoration:none; color:#000;}
-.game-box a:visited 		{text-decoration:none; color:#000;}
-.game-box a:active 		{text-decoration:underline;}
-.game-box a:hover 		{text-decoration:underline;}
-
+a:link {
+	color:#002bb8; text-decoration:none;
+}
+a:visited {
+	color:#5a3696; text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+a:active {
+	color:#faa700;
+}
+.game-box a:link {
+	text-decoration:none;
+	color:#000000;
+}
+.game-box a:visited {
+	text-decoration:none;
+	color:#000000;
+}
+.game-box a:active {
+	text-decoration:underline;
+}
+.game-box a:hover {
+	text-decoration:underline;
+}
 .wiki-header {
 	font-size:25px
 }
-
-/* Not going to be using this most likely .wiki-header a {display:block;} */
-
 /* This describes the boxes */
-.starcraft2-box {
-	background-color: #b6cfe5;
-}
-.dota2-box {
-	background-color: #e5ccb6;
-}
-.hearthstone-box {
-	background-color: #e5d8b6;
-}
-.starcraft-box {
-	background-color: #dbe1e5;
-}
-.heroes-box {
-	background-color: #b9b6e5;
-}
-.smash-box {
-	background-color: #b6e5c7;
-}
-.counterstrike-box {
-	background-color: #cde5b6;
-}
-.overwatch-box {
-	background-color: #e5b6c0;
-}
 .game-box {
-	width: 100%;
-	font-size: 25px;
-	font-family: Roboto, Verdana, Geneva, Ubuntu, sans-serif;
-	font-weight: 400;
-	margin: 0 auto 5px auto;
+	width:100%;
+	font-size:25px;
+	font-family:Roboto, Verdana, Geneva, Ubuntu, sans-serif;
+	font-weight:400;
+	margin:0 auto 5px auto;
 }
-
-
 .game-box > p {
-	font-size: 12px;
-	display: none;
-	margin-left: 5%;
-	line-height: 1.6em;
-	margin-right: 5%;
+	font-size:12px;
+	display:none;
+	margin-left:5%;
+	line-height:1.6em;
+	margin-right:5%;
 	margin-top:0px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
-
 .box-wrap {
 	width:100%;
 }
-
-
 .content {
-	margin: 0 5%;
-	font-size: 80%;
-	
+	margin:0 5%;
+	font-size:80%;
 }
-
-
-.footer { 
-	min-height: 100px;
-	background-color: #8eaec2;
+.footer {
+	min-height:100px;
+	background-color:#8eaec2;
 	padding-top:10px;
-
 }
-
 .disclaimer {
 	font-size:12px;
 	width:100%;
 }
-
 .icon-list{
-	width: 100%;
-	float: right;
+	width:100%;
+	float:right;
 }
-
-img.twitch {margin-right:0;}
-
-span#full-intro {display:none;}
-
+span#full-intro {
+	display:none;
+}
 .toggle-button {
 	display:none !important;
 }
 .wiki-header {
-	width: calc(100% - 37px);
+	width:calc(100% - 37px);
 }
 .toggle-button-label:after {
 	float:right;
-	width: 30px;
+	width:30px;
 }
-#toggle-starcraft2:not(:checked) + label + div + #starcraft2, 
-#toggle-dota2:not(:checked) + label + div + #dota2, 
-#toggle-hearthstone:not(:checked) + label + div + #hearthstone, 
-#toggle-starcraft:not(:checked) + label + div + #starcraft, 
-#toggle-heroes:not(:checked) + label + div + #heroes, 
-#toggle-smash:not(:checked) + label + div + #smash, 
-#toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
-#toggle-overwatch:not(:checked) + label + div + #overwatch {
+.toggle-button:not(:checked) ~ .game-box-content {
 	display:none;
 }
-#toggle-starcraft2:checked + label + div + #starcraft2, 
-#toggle-dota2:checked + label + div + #dota2, 
-#toggle-hearthstone:checked + label + div + #hearthstone, 
-#toggle-starcraft:checked + label + div + #starcraft, 
-#toggle-heroes:checked + label + div + #heroes, 
-#toggle-smash:checked + label + div + #smash, 
-#toggle-counterstrike:checked + label + div + #counterstrike, 
-#toggle-overwatch:checked + label + div + #overwatch {
+.toggle-button:checked ~ .game-box-content {
 	display:block;
 }
-
-#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
-#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
-#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
-#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
-#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
-#toggle-smash:not(:checked) + #toggle-smash-label:after, 
-#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
+.toggle-button:not(:checked) + .toggle-button-label:after {
 	content:"+";
 	font-size:25px;
 	font-weight:400;
 	line-height:1.1em;
 }
-#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
-#toggle-dota2:checked + #toggle-dota2-label:after, 
-#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
-#toggle-starcraft:checked + #toggle-starcraft-label:after, 
-#toggle-heroes:checked + #toggle-heroes-label:after, 
-#toggle-smash:checked + #toggle-smash-label:after, 
-#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-#toggle-overwatch:checked + #toggle-overwatch-label:after {
+.toggle-button:checked + .toggle-button-label:after {
 	content:"\2212";
 	font-size:25px;
-	font-weight:400;	
+	font-weight:400;
 	line-height:1.1em;
 }
 .wiki-header {
@@ -290,91 +229,66 @@ span#full-intro {display:none;}
 	text-align:left;
 }
 .game-box {
-	padding-bottom: 1px;
+	padding-bottom:1px;
 	font-size:15px;
 }
-	
 ul {
-	padding-left: 15px;
+	padding-left:15px;
 }
-
-li { 
+li {
 	margin-bottom:5px;
 }
-
-p { 
+p {
 	margin-top:0px;
-	margin-bottom:1em; 
+	margin-bottom:1em;
 }
-
-	input[type=checkbox] {
-		display:none;
-	}
-	
-@media only screen and (min-width: 450px) {
+input[type=checkbox] {
+	display:none;
+}
+@media only screen and (min-width:450px) {
 	.icon-list {
 		width:185px;
-		margin: 0 auto;
+		margin:0 auto;
 	}
 }
-@media only screen and (min-width: 280px) {
+@media only screen and (min-width:280px) {
 	.top h1 {
-		font-size:80%; 
+		font-size:80%;
 		margin-bottom:4px;
 	}
-	
 	.game-box p {
 		font-size:12px;
 	}
 }
-	
-@media only screen and (min-width: 310px) {
-
+@media only screen and (min-width:310px) {
 	.top h1 {
-		font-size:90%; 
+		font-size:90%;
 		margin-bottom:6px;
 	}
-
 	.top h2 {
-		font-size:70%; 
-		width: 90%; 
-		display:block;  
+		font-size:70%;
+		width:90%;
+		display:block;
 	}
 	.wiki-header {
 		font-size:30px;
 		font-weight:300;
 	}
-	h1 { 
+	h1 {
 		font-size:180%;
 		font-weight:300;
-		}
+	}
 	h2 {
 		font-size:110%;
 	}
-	
 	body {
 		background-size:auto;
 	}
-	
-	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
-	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
-	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
-	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
-	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
-	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
+	.toggle-button:not(:checked) + .toggle-button-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
-	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
-	#toggle-dota2:checked + #toggle-dota2-label:after, 
-	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
-	#toggle-heroes:checked + #toggle-heroes-label:after, 
-	#toggle-smash:checked + #toggle-smash-label:after, 
-	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after {
+	.toggle-button:checked + .toggle-button-label:after {
 		font-size:30px;
 		font-weight:300;
 	}
@@ -382,219 +296,141 @@ p {
 		font-size:13px;
 	}
 }
-
 @media only screen and (min-width:400) {
-
 	.top h1 {
-		font-size:110%; 
+		font-size:110%;
 		margin-bottom:8px;
 	}
-		
 	.top h2 {
-		font-size:80%; 
-		width: 94%; 
-		margin:0 3% 12px; 
-		display:block;  
+		font-size:80%;
+		width:94%;
+		margin:0 3% 12px;
+		display:block;
 	}
-	
 	div.whitebox {
 		padding-top:10px;
 		padding-bottom:5px;
 	}
-	
-	h1 { font-size:200%;}
-	h2 { font-size:125%;}
-	
+	h1 {
+		font-size:200%;
+	}
+	h2 {
+		font-size:125%;
+	}
 	.game-box > p {
 		font-size:14px;
 	}
 }
-
-@media only screen and (min-width: 480px) {
-		
+@media only screen and (min-width:480px) {
 	.top h1 {
-		font-size:130%; 
+		font-size:130%;
 		margin-bottom:10px;
 		font-weight:300;
 	}
-	
 	.top h2 {
-		font-size:100%; 
-		width: 96%; 
-		margin:0 2% 14px; 
-		display:block;  
+		font-size:100%;
+		width:96%;
+		margin:0 2% 14px;
+		display:block;
 	}
 	.wiki-header {
 		font-size:40px;
 	}
-		
 	div.whitebox {
 		padding-top:15px;
 		padding-bottom:10px;
 	}
-	
-	
-	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
-	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
-	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
-	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
-	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
-	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
+	.toggle-button:not(:checked) + .toggle-button-label:after {
 		font-size:40px;
 	}
-	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
-	#toggle-dota2:checked + #toggle-dota2-label:after, 
-	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
-	#toggle-heroes:checked + #toggle-heroes-label:after, 
-	#toggle-smash:checked + #toggle-smash-label:after, 
-	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after {
+	.toggle-button:checked + .toggle-button-label:after {
 		font-size:40px;
 	}
-	
 	.game-box > p {
 		font-size:15px;
 	}
 }
-
 @media only screen and (min-width:560px) {
-
 	#logo img {
 		margin-left:auto;
 		margin-right:auto;
-		display: block;
+		display:block;
 	}
 	.top h1 {
-		font-size:150%; 
+		font-size:150%;
 	}
 	.top h2 {
-		font-size:110%; 
+		font-size:110%;
 	}
-	
-	h1 { font-size:224%;}
-	h2 { font-size:140%;}
+	h1 {
+		font-size:224%;
+	}
+	h2 {
+		font-size:140%;
+	}
 }
-	
 @media only screen and (min-width:620px) {
 	div.top {
-		margin-top:0px;	
+		margin-top:0px;
 	}
-	
 	.box-wrap {
-		width: 600px;
-		margin: 0 auto;
+		width:600px;
+		margin:0 auto;
 	}
-	
-	.game-box { 
-		width: 297px; 
+	.game-box {
+		width:297px;
 		height:193px;
-		display: inline-block;
-	} 
-	.game-box > p { 
+		display:inline-block;
+	}
+	.game-box > p {
 		display:block;
 		font-size:12px;
 		line-height:1.8em;
-		text-align: left;
+		text-align:left;
 		margin-top:15px;
 		margin-bottom:22px;
 		margin-left:22px;
 		margin-right:22px;
 		white-space:nowrap;
 		overflow:hidden;
-		text-overflow: ellipsis;
+		text-overflow:ellipsis;
 	}
-	
 	.wiki-header {
-		font-size: 36px;
-		margin-top: 10px;
-		text-align: center;
-		margin-right: 5%;
+		font-size:36px;
+		margin-top:10px;
+		text-align:center;
+		margin-right:5%;
 	}
-	.wiki-header a {display:inline;} 
-	.content{
+	.wiki-header a {
+		display:inline;
+	}
+	.content {
 		max-width:604px;
 		padding:0 5px;
 		margin:0 auto;
 	}
-	
-	.disclaimer{
-		float: left;
-		width: 50%;
-		padding: 0 0 0 0px;
+	.disclaimer {
+		float:left;
+		width:50%;
+		padding:0 0 0 0px;
 	}
-	
 	.top h1 {
-		font-size: 170%;
-		margin-top: 18px;
+		font-size:170%;
+		margin-top:18px;
 	}
 	.top h2 {
-		font-size:125%; 
-		max-width: 620px;
+		font-size:125%;
+		max-width:620px;
 		margin-left:auto;
 		margin-right:auto;
 	}
-	
-	.global-nav { 
-		display:inline-block;
-		height:24px;
-		width:100%;
-		background:#00162c;
-		margin:0px 0px 0px 0px;
-		position:absolute;
-		top:0px;
-		left:0px;
-		text-align:right;
-	}
-	
-	.global-nav a:link, .global-nav a:hover, .global-nav a:active, .global-nav a:visited {
-		color:#fff;
-		text-decoration:none;
-		font-size:12px;
-		font-family: Verdana, Geneva, Ubuntu, sans-serif;
-		font-weight:bold;
-		margin-right:20px;
-	}
-		
-	div.global-nav span {
-		/* color: #818DA0; */
-		float: right;
-		padding-right: 20px;
-		line-height: 18px;
-	}
-	
-	#toggle-starcraft2:not(:checked) + label + div + #starcraft2, 
-	#toggle-dota2:not(:checked) + label + div + #dota2, 
-	#toggle-hearthstone:not(:checked) + label + div + #hearthstone, 
-	#toggle-starcraft:not(:checked) + label + div + #starcraft, 
-	#toggle-heroes:not(:checked) + label + div + #heroes, 
-	#toggle-smash:not(:checked) + label + div + #smash, 
-	#toggle-counterstrike:not(:checked) + label + div + #counterstrike, 
-	#toggle-overwatch:not(:checked) + label + div + #overwatch {
+	.toggle-button:not(:checked) ~ .game-box-content {
 		display:block;
 	}
-	
-	#toggle-starcraft2:not(:checked) + #toggle-starcraft2-label:after, 
-	#toggle-dota2:not(:checked) + #toggle-dota2-label:after, 
-	#toggle-hearthstone:not(:checked) + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:not(:checked) + #toggle-starcraft-label:after, 
-	#toggle-heroes:not(:checked) + #toggle-heroes-label:after, 
-	#toggle-smash:not(:checked) + #toggle-smash-label:after, 
-	#toggle-counterstrike:not(:checked) + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:not(:checked) + #toggle-overwatch-label:after {
+	.toggle-button:not(:checked) + .toggle-button-label:after {
 		display:none;
 	}
-	
-	#toggle-starcraft2:checked + #toggle-starcraft2-label:after, 
-	#toggle-dota2:checked + #toggle-dota2-label:after, 
-	#toggle-hearthstone:checked + #toggle-hearthstone-label:after, 
-	#toggle-starcraft:checked + #toggle-starcraft-label:after, 
-	#toggle-heroes:checked + #toggle-heroes-label:after, 
-	#toggle-smash:checked + #toggle-smash-label:after, 
-	#toggle-counterstrike:checked + #toggle-counterstrike-label:after, 
-	#toggle-overwatch:checked + #toggle-overwatch-label:after {
+	.toggle-button:checked + .toggle-button-label:after {
 		display:none;
 	}
 	.how-to {
@@ -613,46 +449,65 @@ p {
 		-moz-column-rule:1px solid #dddddd;
 		column-rule:1px solid #dddddd;
 	}
-
 }
-
 @media only screen and (min-width:650px) {
 	.top h1 {
-		font-size: 180%;
-		font-style: normal;
+		font-size:180%;
+		font-style:normal;
+	}
+	.global-nav {
+		display:inline-block;
+		height:24px;
+		width:100%;
+		background:#00162c;
+		margin:0px 0px 0px 0px;
+		position:absolute;
+		top:0px;
+		left:0px;
+		text-align:right;
+	}
+	.global-nav a:link,
+	.global-nav a:hover,
+	.global-nav a:active,
+	.global-nav a:visited {
+		color:#fff;
+		text-decoration:none;
+		font-size:12px;
+		font-family:Verdana, Geneva, Ubuntu, sans-serif;
+		font-weight:bold;
+		margin-right:20px;
+	}
+	.global-nav span {
+		float:right;
+		padding-right:20px;
+		line-height:18px;
 	}
 }
-
 @media only screen and (min-width:700px) {
 	.top h1 {
-		font-size: 190%;
+		font-size:190%;
 	}
 }
 @media only screen and (min-width:930px) {
-	
 	.box-wrap {
-		width: 903px;
-		margin: 0 auto;
+		width:903px;
+		margin:0 auto;
 	}
 	.content {
 		width:901px;
 		max-width:901px;
-	
 	}
-	
 	.top h1 {
-		font-size: 220%;
+		font-size:220%;
 		width:901px;
 		margin-left:auto;
 		margin-right:auto;
 		text-align:center;
 	}
-	
 	.top h2 {
-		font-size:140%; 
-		max-width: 930px;
+		font-size:140%;
+		max-width:930px;
 	}
-	
 	.how-to {
 		-moz-column-count:3;
 		column-count:3;
@@ -661,26 +516,21 @@ p {
 		-moz-column-rule:1px solid #dddddd;
 		column-rule:1px solid #dddddd;
 	}
-	
 	.how-to .double {
 		-moz-column-span:2;
 		-webkit-column-span:2;
 		column-span:2;
 	}
-	
 }
 @media only screen and (min-width:1225px) {
-	
 	.box-wrap {
-		width: 1206px;
-		margin: 0 auto;
+		width:1206px;
+		margin:0 auto;
 	}
-	
 	.content {
-		width: 1195px;
-		max-width: 1195px;
+		width:1195px;
+		max-width:1195px;
 	}
-	
 	.how-to {
 		-moz-column-count:2;
 		column-count:2;
@@ -690,43 +540,43 @@ p {
 		column-rule:1px solid #dddddd;
 	}
 }
-
+/* footer icons */
 .lp-icon {
-	background: url(../images/FrontPageIcon_Sprite.png) no-repeat 0 0;
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	overflow: hidden;
-	background-size: auto 64px;
-	vertical-align: middle;
+	background:url(../images/FrontPageIcon_Sprite.png) no-repeat 0 0;
+	display:inline-block;
+	width:32px;
+	height:32px;
+	overflow:hidden;
+	background-size:auto 64px;
+	vertical-align:middle;
 }
 .lp-icon.lp-facebook {
-	background-position: -64px -32px;
+	background-position:-64px -32px;
 }
 .lp-icon.lp-facebook:hover {
-	background-position: -64px 0;
+	background-position:-64px 0;
 }
 .lp-icon.lp-github {
-	background-position: -128px -32px;
+	background-position:-128px -32px;
 }
 .lp-icon.lp-github:hover {
-	background-position: -128px 0;
+	background-position:-128px 0;
 }
 .lp-icon.lp-twitch {
-	background-position: 0 -32px;
+	background-position:0 -32px;
 }
 .lp-icon.lp-twitch:hover {
-	background-position: 0 0;
+	background-position:0 0;
 }
 .lp-icon.lp-twitter {
-	background-position: -32px -32px;
+	background-position:-32px -32px;
 }
 .lp-icon.lp-twitter:hover {
-	background-position: -32px 0;
+	background-position:-32px 0;
 }
 .lp-icon.lp-youtube {
-	background-position: -96px -32px;
+	background-position:-96px -32px;
 }
 .lp-icon.lp-youtube:hover {
-	background-position: -96px 0;
+	background-position:-96px 0;
 }

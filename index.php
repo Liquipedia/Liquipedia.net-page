@@ -34,6 +34,11 @@ while ($row = mysql_fetch_assoc ($r))
 	}
 }
 
+$keywords = '';
+foreach ($wikis as $wiki_key => $wiki) {
+	$keywords .= ', ' . $wiki['name'];
+}
+
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -55,10 +60,17 @@ while ($row = mysql_fetch_assoc ($r))
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more…" />
-		<meta name="keywords" content="esports, wiki, StarCraft, StarCraft 2, Brood War, Dota 2, Hearthstone, Heroes of the Storm, Super Smash Brothers, Counter-Strike, Overwatch" />
+		<meta name="keywords" content="esports, wiki<?php echo $keywords; ?>" />
 		<link href="./css/style.css" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
-		<link href="/favicon.ico" rel="icon" /> 
+		<link href="./favicon.ico" rel="icon" /> 
+		<style>
+		<?php
+			foreach ($wikis as $wiki_key => $wiki) {
+				echo "\t\t\t." . $wiki_key . '-box { background-color: ' . $wiki['background-color'] . " }\n";
+			}
+		?>
+		</style>
 	</head>
 	<body>
 		<div class="global-nav">
@@ -93,9 +105,9 @@ while ($row = mysql_fetch_assoc ($r))
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
 						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
-						<p id="<?php echo $wiki_key; ?>">
+						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
-								<a href="<?=$h['href']?>" title="<?=$h['title']?>"><?=$h['title']?></a><br />
+								<a href="<?php echo $baseurl . $h['href']; ?>" title="<?=$h['title']?>"><?php echo $h['title']; ?></a><br />
 							<?php } ?>
 						 </p>
 					</div>
@@ -134,7 +146,7 @@ while ($row = mysql_fetch_assoc ($r))
 			<div class="content how-to">
 				<p>Contributing to the wiki is actually pretty easy and keep in mind that every more-correct-than-wrong contribution is valuable no matter how small. </p>
 				<p>When you visit Liquipedia, consider adding to it or correcting something, it doesn't have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
-				<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account—if you don't have one already—log in, click edit, find and fix the typo, click save, and you are done.</p>
+				<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an accountâ€”if you don't have one alreadyâ€”log in, click edit, find and fix the typo, click save, and you are done.</p>
 				<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
 				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can find us in our IRC channel where other contributors can help you. <a href="http://webchat.quakenet.org/?channels=#liquipedia" target="_blank">#liquipedia on QuakeNet</a>.</p>
 				<h3>Logging in and registering</h3>
@@ -194,13 +206,13 @@ while ($row = mysql_fetch_assoc ($r))
 			});
 		</script>
 		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-576564-4', 'auto');
-		  ga('send', 'pageview');
+			ga('create', 'UA-576564-4', 'auto');
+			ga('send', 'pageview');
 		</script>
 		<!-- Quantcast Tag -->
 		<script type="text/javascript">
@@ -214,7 +226,6 @@ while ($row = mysql_fetch_assoc ($r))
 				var scpt = document.getElementsByTagName('script')[0];
 				scpt.parentNode.insertBefore(elem, scpt);
 			})();
-
 			_qevents.push({
 				qacct:"p-c4R4Uj3EI2IsY"
 			});

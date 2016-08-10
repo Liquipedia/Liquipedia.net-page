@@ -50,5 +50,6 @@ $alphawikis = array (
 		'name' => 'Rocket League',
 	),
 );
+$baseurl = 'http://wiki.teamliquid.net';
 
 ?>

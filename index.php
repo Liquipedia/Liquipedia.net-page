@@ -10,8 +10,6 @@ header ("Content-Type: text/html; charset=utf-8");
 header ("Cache-Control: s-maxage=60");
 header ("Expires: $expire");
 
-$baseurl = 'http://wiki.teamliquid.net';
-
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");

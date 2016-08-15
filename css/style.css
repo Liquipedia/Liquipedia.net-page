@@ -17,6 +17,7 @@ body {
 	width:150px;
 	padding:0 10px;
 	border:1px solid #cccccc;
+	cursor:pointer;
 }
 .search button {
 	line-height:2em;
@@ -24,6 +25,7 @@ body {
 	width:150px;
 	padding:0 10px;
 	border:1px solid #cccccc;
+	cursor:pointer;
 }
 .search input {
 	line-height:2em;

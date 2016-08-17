@@ -52,7 +52,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 	If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet, 
 	or send us an email to liquipedia <at> teamliquid <dot> net!
 -->
-<html>
+<html lang="en">
 	<head>
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,5 +1,5 @@
 <?php
-require_once ('includes/wikis.php');
+require_once('includes/wikis.php');
 
 if(isset($_GET['action'])) {
 	$action = htmlspecialchars($_GET['action']);
@@ -7,14 +7,14 @@ if(isset($_GET['action'])) {
 	$action = null;
 }
 if($action == 'listwikis') {
-	$return = array ();
+	$return = array();
 
 	$return['baseurl'] = $baseurl;
 	$return['wikis'] = $wikis;
 	$return['alphawikis'] = $alphawikis;;
 	$return['allwikis'] = array_merge($wikis, $alphawikis);
 
-	echo json_encode ($return);
+	echo json_encode($return);
 } else { ?>
 <!DOCTYPE html>
 <!-- 
@@ -41,10 +41,10 @@ if($action == 'listwikis') {
 	echo '<h1>Liquipedia API</h1>';
 	echo '<p>The wiki APIs are at:</p>';
 	echo '<ul>';
-	foreach ($wikis as $wiki_key => $wiki) {
+	foreach($wikis as $wiki_key => $wiki) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
-	foreach ($alphawikis as $wiki_key => $wiki) {
+	foreach($alphawikis as $wiki_key => $wiki) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
 	echo '</ul>';

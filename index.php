@@ -67,7 +67,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<style>
 		<?php
 			foreach ($wikis as $wiki_key => $wiki) {
-				echo "\t\t\t." . $wiki_key . '-box { background-color: ' . $wiki['background-color'] . " }\n";
+				echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki['background-color'] . " }\n";
 			}
 		?>
 		</style>

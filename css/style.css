@@ -14,7 +14,7 @@ body {
 }
 .search select {
 	height:2.56em;
-	width:150px;
+	width:100px;
 	padding:0 10px;
 	border:1px solid #cccccc;
 	cursor:pointer;
@@ -22,7 +22,7 @@ body {
 .search button {
 	line-height:2em;
 	height:2.56em;
-	width:150px;
+	width:56px;
 	padding:0 10px;
 	border:1px solid #cccccc;
 	cursor:pointer;
@@ -30,16 +30,11 @@ body {
 .search input {
 	line-height:2em;
 	height:2.56em;
-	width:907px;
+	width:calc(100% - 162px);
 	padding:0 10px;
 	border:1px solid #cccccc;
 }
-@media(max-width:1224px) {
-	.search input {
-		width:605px;
-	}
-}
-@media(max-width:929px) {
+@media(min-width:620px) {
 	.search select {
 		width:100px;
 	}
@@ -50,15 +45,26 @@ body {
 		width:400px;
 	}
 }
-@media(max-width:619px) {
+@media(min-width:930px) {
 	.search select {
-		width:100px;
+		width:150px;
 	}
 	.search button {
-		width:56px;
+		width:150px;
 	}
 	.search input {
-		width:calc(100% - 162px);
+		width:605px;
+	}
+}
+@media(min-width:1225px) {
+	body.column-4 .search select {
+		width:150px;
+	}
+	body.column-4 .search button {
+		width:150px;
+	}
+	body.column-4 .search input {
+		width:907px;
 	}
 }
 .global-nav {
@@ -512,15 +518,15 @@ input[type=checkbox] {
 	}
 }
 @media only screen and (min-width:1225px) {
-	.box-wrap {
+	body.column-4 .box-wrap {
 		width:1206px;
 		margin:0 auto;
 	}
-	.content {
+	body.column-4 .content {
 		width:1195px;
 		max-width:1195px;
 	}
-	.how-to {
+	body.column-4 .how-to {
 		-moz-column-count:2;
 		column-count:2;
 		-moz-column-gap:3em;

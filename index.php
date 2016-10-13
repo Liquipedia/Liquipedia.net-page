@@ -10,6 +10,8 @@ header ("Content-Type: text/html; charset=utf-8");
 header ("Cache-Control: s-maxage=60");
 header ("Expires: $expire");
 
+$col_number = 3;
+
 $hot_links = array ();
 
 $r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
@@ -70,7 +72,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 		?>
 		</style>
 	</head>
-	<body>
+	<body class="column-<?php echo $col_number; ?>">
 		<div class="global-nav">
 			<span><a href="https://www.teamliquidpro.com/">TeamLiquidPro</a></span>
 			<span><a href="http://www.liquidlegends.net/">LiquidLegends</a></span>

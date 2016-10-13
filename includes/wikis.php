@@ -49,6 +49,11 @@ $wikis = array (
 		'background-color' => '#e5b6c0',
 		'api' => $baseurl . '/overwatch/api.php',
 	),
+	'rocketleague' => array (
+		'name' => 'Rocket League',
+		'background-color' => '#ffdaae',
+		'api' => $baseurl . '/rocketleague/api.php',
+	),
 );
 $alphawikis = array (
 	'warcraft' => array (
@@ -60,11 +65,6 @@ $alphawikis = array (
 		'name' => 'Fighting Games',
 		'background-color' => '',
 		'api' => $baseurl . '/fighters/api.php',
-	),
-	'rocketleague' => array (
-		'name' => 'Rocket League',
-		'background-color' => '',
-		'api' => $baseurl . '/rocketleague/api.php',
 	),
 );
 

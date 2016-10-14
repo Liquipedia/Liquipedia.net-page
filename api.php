@@ -7,12 +7,15 @@ if(isset($_GET['action'])) {
 	$action = null;
 }
 if($action == 'listwikis') {
+	header('Content-Type: application/json');
+
 	$return = array();
 
 	$return['baseurl'] = $baseurl;
 	$return['wikis'] = $wikis;
-	$return['alphawikis'] = $alphawikis;;
-	$return['allwikis'] = array_merge($wikis, $alphawikis);
+	$return['alphawikis'] = $alphawikis;
+	$return['miscwikis'] = $miscwikis;
+	$return['allwikis'] = array_merge($wikis, $alphawikis, $miscwikis);
 
 	echo json_encode($return);
 } else { ?>
@@ -47,9 +50,12 @@ if($action == 'listwikis') {
 	foreach($alphawikis as $wiki_key => $wiki) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
+	foreach($miscwikis as $wiki_key => $wiki) {
+		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
+	}
 	echo '</ul>';
 	?>
-	<p>Parameters:</p>
+	<p>Parameters to this api:</p>
 	<ul>
 		<li><strong>action</strong>: accepts "listwikis"</li>
 	</ul>

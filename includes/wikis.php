@@ -67,5 +67,12 @@ $alphawikis = array (
 		'api' => $baseurl . '/fighters/api.php',
 	),
 );
+$miscwikis = array (
+	'commons' => array (
+		'name' => 'Liquipedia Commons',
+		'background-color' => '',
+		'api' => $baseurl . '/commons/api.php',
+	),
+);
 
 ?>

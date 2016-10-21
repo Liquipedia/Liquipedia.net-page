@@ -169,6 +169,8 @@ a:active {
 	font-family:Roboto, Verdana, Geneva, Ubuntu, sans-serif;
 	font-weight:400;
 	margin:0 auto 5px auto;
+	padding-bottom:1px;
+	font-size:15px;
 }
 .game-box > p {
 	font-size:12px;
@@ -232,10 +234,6 @@ span#full-intro {
 .wiki-header {
 	margin-left:5%;
 	text-align:left;
-}
-.game-box {
-	padding-bottom:1px;
-	font-size:15px;
 }
 ul {
 	padding-left:15px;
@@ -379,6 +377,7 @@ input[type=checkbox] {
 		width:297px;
 		height:193px;
 		display:inline-block;
+		vertical-align:top;
 	}
 	.game-box > p {
 		display:block;

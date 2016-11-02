@@ -24,25 +24,25 @@ $wikis = array (
 		'background-color' => '#b6cfe5',
 		'api' => $baseurl . '/starcraft2/api.php',
 	),
-	'hearthstone' => array (
-		'name' => 'Hearthstone',
-		'background-color' => '#e5d8b6',
-		'api' => $baseurl . '/hearthstone/api.php',
-	),
 	'overwatch' => array (
 		'name' => 'Overwatch',
 		'background-color' => '#e5b6c0',
 		'api' => $baseurl . '/overwatch/api.php',
 	),
-	'heroes' => array (
-		'name' => 'Heroes',
-		'background-color' => '#b9b6e5',
-		'api' => $baseurl . '/heroes/api.php',
+	'hearthstone' => array (
+		'name' => 'Hearthstone',
+		'background-color' => '#e5d8b6',
+		'api' => $baseurl . '/hearthstone/api.php',
 	),
 	'smash' => array (
 		'name' => 'Smash',
 		'background-color' => '#b6e5c7',
 		'api' => $baseurl . '/smash/api.php',
+	),
+	'heroes' => array (
+		'name' => 'Heroes',
+		'background-color' => '#b9b6e5',
+		'api' => $baseurl . '/heroes/api.php',
 	),
 	'starcraft' => array (
 		'name' => 'Brood War',

@@ -57,7 +57,7 @@ if($action == 'listwikis') {
 	?>
 	<p>Parameters to this api:</p>
 	<ul>
-		<li><strong>action</strong>: accepts "listwikis"</li>
+		<li><strong>action</strong>: accepts "<a href="api.php?action=listwikis">listwikis</a>"</li>
 	</ul>
 	</body>
 </html>

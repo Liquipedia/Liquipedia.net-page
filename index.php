@@ -107,7 +107,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php foreach ($hot_links[$wiki_key] as $h) { ?>
-								<a href="<?php echo $baseurl . $h['href']; ?>" title="<?=$h['title']?>"><?php echo $h['title']; ?></a><br />
+								<a href="<?php echo $h['href']; ?>" title="<?=$h['title']?>"><?php echo $h['title']; ?></a><br />
 							<?php } ?>
 						 </p>
 					</div>

@@ -250,7 +250,7 @@ input[type=checkbox] {
 }
 @media only screen and (min-width:450px) {
 	.icon-list {
-		width:185px;
+		width:217px;
 		margin:0 auto;
 	}
 }
@@ -536,41 +536,32 @@ input[type=checkbox] {
 }
 /* footer icons */
 .lp-icon {
-	background:url(../images/FrontPageIcon_Sprite.png) no-repeat 0 0;
 	display:inline-block;
 	width:32px;
 	height:32px;
 	overflow:hidden;
-	background-size:auto 64px;
+	background-size:32px 64px;
 	vertical-align:middle;
-}
-.lp-icon.lp-facebook {
-	background-position:-64px -32px;
-}
-.lp-icon.lp-facebook:hover {
-	background-position:-64px 0;
-}
-.lp-icon.lp-github {
-	background-position:-128px -32px;
-}
-.lp-icon.lp-github:hover {
-	background-position:-128px 0;
-}
-.lp-icon.lp-twitch {
 	background-position:0 -32px;
 }
-.lp-icon.lp-twitch:hover {
+.lp-icon:hover {
 	background-position:0 0;
 }
-.lp-icon.lp-twitter {
-	background-position:-32px -32px;
+.lp-icon.lp-discord {
+	background-image:url(../images/InfoboxIcon_Discord.png);
 }
-.lp-icon.lp-twitter:hover {
-	background-position:-32px 0;
+.lp-icon.lp-facebook {
+	background-image:url(../images/InfoboxIcon_Facebook.png);
+}
+.lp-icon.lp-github {
+	background-image:url(../images/InfoboxIcon_GitHub.png);
+}
+.lp-icon.lp-twitch {
+	background-image:url(../images/InfoboxIcon_Twitch.png);
+}
+.lp-icon.lp-twitter {
+	background-image:url(../images/InfoboxIcon_Twitter.png);
 }
 .lp-icon.lp-youtube {
-	background-position:-96px -32px;
-}
-.lp-icon.lp-youtube:hover {
-	background-position:-96px 0;
+	background-image:url(../images/InfoboxIcon_YouTube.png);
 }

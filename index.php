@@ -180,6 +180,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<div class="footer">
 			<div class="content">
 				<div class="icon-list">
+					<a href="http://liquipedia.net/discord" target="_blank"><i class="lp-icon lp-discord"></i></a>
 					<a href="https://twitter.com/LiquipediaNet" target="_blank"><i class="lp-icon lp-twitter"></i></a>
 					<a href="https://www.facebook.com/Liquipedia" target="_blank"><i class="lp-icon lp-facebook"></i></a>
 					<a href="https://www.youtube.com/user/Liquipedia" target="_blank"><i class="lp-icon lp-youtube"></i></a>

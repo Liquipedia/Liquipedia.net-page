@@ -66,6 +66,11 @@ $alphawikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/fighters/api.php',
 	),
+	'teamfortress' => array (
+		'name' => 'Team Fortress',
+		'background-color' => '',
+		'api' => $baseurl . '/teamfortress/api.php',
+	),
 );
 $miscwikis = array (
 	'commons' => array (

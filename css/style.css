@@ -248,6 +248,10 @@ p {
 input[type=checkbox] {
 	display:none;
 }
+
+.other-wikis-left {
+	-webkit-column-break-after:always
+}
 @media only screen and (min-width:450px) {
 	.icon-list {
 		width:217px;

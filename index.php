@@ -59,7 +59,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 	<head>
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki<?php echo $keywords; ?>" />
 		<link href="./css/style.css" rel="stylesheet" type="text/css" />

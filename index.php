@@ -64,7 +64,8 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<meta name="keywords" content="esports, wiki<?php echo $keywords; ?>" />
 		<link href="./css/style.css" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
-		<link href="./favicon.ico" rel="icon" /> 
+		<link href="./favicon.ico" rel="icon" />
+		<meta name="theme-color" content="#5496cf">
 		<style>
 		<?php
 			foreach ($wikis as $wiki_key => $wiki) {

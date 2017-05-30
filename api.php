@@ -15,7 +15,8 @@ if($action == 'listwikis') {
 	$return['wikis'] = $wikis;
 	$return['alphawikis'] = $alphawikis;
 	$return['miscwikis'] = $miscwikis;
-	$return['allwikis'] = array_merge($wikis, $alphawikis, $miscwikis);
+	$return['otherwikis'] = $otherwikis;
+	$return['allwikis'] = array_merge($wikis, $alphawikis, $miscwikis, $otherwikis);
 
 	echo json_encode($return);
 } else { ?>

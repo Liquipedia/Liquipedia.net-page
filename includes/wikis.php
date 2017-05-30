@@ -71,12 +71,69 @@ $alphawikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/teamfortress/api.php',
 	),
+	'worldofwarcraft' => array (
+		'name' => 'World of Warcraft',
+		'background-color' => '',
+		'api' => $baseurl . '/worldofwarcraft/api.php',
+	),
 );
 $miscwikis = array (
 	'commons' => array (
 		'name' => 'Liquipedia Commons',
 		'background-color' => '',
 		'api' => $baseurl . '/commons/api.php',
+	),
+);
+$otherwikis = array (
+	'clashroyale' => array (
+		'name' => 'Clash Royale',
+		'background-color' => '',
+		'api' => $baseurl . '/clashroyale/api.php',
+	),
+	'trackmania' => array (
+		'name' => 'TrackMania',
+		'background-color' => '',
+		'api' => $baseurl . '/trackmania/api.php',
+	),
+	'diabotical' => array (
+		'name' => 'Diabotical',
+		'background-color' => '',
+		'api' => $baseurl . '/diabotical/api.php',
+	),
+	'battlerite' => array (
+		'name' => 'Battlerite',
+		'background-color' => '',
+		'api' => $baseurl . '/battlerite/api.php',
+	),
+	'crossfire' => array (
+		'name' => 'CrossFire',
+		'background-color' => '',
+		'api' => $baseurl . '/crossfire/api.php',
+	),
+	'leagueoflegends' => array (
+		'name' => 'League of Legends',
+		'background-color' => '',
+		'api' => $baseurl . '/leagueoflegends/api.php',
+	),
+	'fifa' => array (
+		'name' => 'FIFA',
+		'background-color' => '',
+		'api' => $baseurl . '/fifa/api.php',
+	),
+	'pokemon' => array (
+		'name' => 'Pokémon',
+		'background-color' => '',
+		'api' => $baseurl . '/pokemon/api.php',
+	),
+	'quake' => array (
+		'name' => 'Quake',
+		'background-color' => '',
+		'api' => $baseurl . '/quake/api.php',
+	),
+	'rainbowsix' => array (
+		'name' => 'Rainbow 6',
+		'background-color' => '',
+		'api' => $baseurl . '/rainbowsix/api.php',
 	),
 );
 

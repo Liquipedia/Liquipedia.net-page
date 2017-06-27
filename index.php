@@ -131,7 +131,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 						<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
 						<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
 						<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
-					</ul>
+					</ul><br>
 				</div>
 				<div class="other-wikis-right">
 					<h3>Liquipedia Alpha Wikis</h3>

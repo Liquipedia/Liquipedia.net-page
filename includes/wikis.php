@@ -76,6 +76,11 @@ $alphawikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
 	),
+	'leagueoflegends' => array (
+		'name' => 'League of Legends',
+		'background-color' => '',
+		'api' => $baseurl . '/leagueoflegends/api.php',
+	),
 );
 $miscwikis = array (
 	'commons' => array (
@@ -109,11 +114,6 @@ $otherwikis = array (
 		'name' => 'CrossFire',
 		'background-color' => '',
 		'api' => $baseurl . '/crossfire/api.php',
-	),
-	'leagueoflegends' => array (
-		'name' => 'League of Legends',
-		'background-color' => '',
-		'api' => $baseurl . '/leagueoflegends/api.php',
 	),
 	'fifa' => array (
 		'name' => 'FIFA',

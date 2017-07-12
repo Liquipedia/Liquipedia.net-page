@@ -249,8 +249,10 @@ input[type=checkbox] {
 	display:none;
 }
 
-.other-wikis-left {
-	-webkit-column-break-after:always
+.other-wikis-left,
+.other-wikis-right {
+	-webkit-column-break-after:always;
+	display:table;
 }
 @media only screen and (min-width:450px) {
 	.icon-list {

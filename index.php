@@ -88,7 +88,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 			<div id="logo"><img src="./images/lp-logo-bg.png" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<form id="search" class="search" action="/dota2/index.php">
-				<select id="wikiselect">
+				<select id="wikiselect" aria-label="Select a Wiki to search">
 					<?php foreach ($wikis as $wiki_key => $wiki) {
 						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
 					}
@@ -97,7 +97,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
-				--><input type="search" name="search" placeholder="Search..." autofocus><!--
+				--><input aria-label="Search for" type="search" name="search" placeholder="Search..." autofocus><!--
 				--><button type="submit">Search</button>
 			</form>
 		</div>
@@ -153,13 +153,13 @@ foreach ($wikis as $wiki_key => $wiki) {
 				<p>When you visit Liquipedia, consider adding to it or correcting something, it doesn't have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
 				<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account&mdash;if you don't have one already&mdash;log in, click edit, find and fix the typo, click save, and you are done.</p>
 				<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
-				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a href="http://liquipedia.net/discord" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
+				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="http://liquipedia.net/discord" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
 				<h3>Logging in and registering</h3>
 				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="http://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration.<br />
 				Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
 				<h3>Editing</h3>
 				<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. <br />
-				When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a href="http://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
+				When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="http://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
 				<h3>Areas to help out with</h3>
 				<p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
 				<ul>
@@ -185,15 +185,15 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<div class="footer">
 			<div class="content">
 				<div class="icon-list">
-					<a href="http://liquipedia.net/discord" target="_blank"><i class="lp-icon lp-discord"></i></a>
-					<a href="https://twitter.com/LiquipediaNet" target="_blank"><i class="lp-icon lp-twitter"></i></a>
-					<a href="https://www.facebook.com/Liquipedia" target="_blank"><i class="lp-icon lp-facebook"></i></a>
-					<a href="https://www.youtube.com/user/Liquipedia" target="_blank"><i class="lp-icon lp-youtube"></i></a>
-					<a href="https://www.twitch.tv/liquipedia" target="_blank"><i class="lp-icon lp-twitch"></i></a>
-					<a href="https://github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
+					<a aria-label="Discord" rel="noopener" href="http://liquipedia.net/discord" target="_blank"><i class="lp-icon lp-discord"></i></a>
+					<a aria-label="Twitter" rel="noopener" href="https://twitter.com/LiquipediaNet" target="_blank"><i class="lp-icon lp-twitter"></i></a>
+					<a aria-label="Facebook" rel="noopener" href="https://www.facebook.com/Liquipedia" target="_blank"><i class="lp-icon lp-facebook"></i></a>
+					<a aria-label="YouTube" rel="noopener" href="https://www.youtube.com/user/Liquipedia" target="_blank"><i class="lp-icon lp-youtube"></i></a>
+					<a aria-label="Twitch" rel="noopener" href="https://www.twitch.tv/liquipedia" target="_blank"><i class="lp-icon lp-twitch"></i></a>
+					<a aria-label="GitHub" rel="noopener" href="https://github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
 				</div>
 				<div class="disclaimer">
-					<p>Text is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Files have varied licenses. Click on an image to see the image's page for more details.</p>
+					<p>Text is licensed under <a rel="noopener" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Files have varied licenses. Click on an image to see the image's page for more details.</p>
 				</div>
 			</div>
 		</div>

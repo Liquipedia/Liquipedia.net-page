@@ -65,6 +65,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<link href="./css/style.css" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="./favicon.ico" rel="icon" />
+		<link href="/manifest.json" rel="manifest" />
 		<meta name="theme-color" content="#5496cf">
 		<style>
 		<?php

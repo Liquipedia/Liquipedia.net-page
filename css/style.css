@@ -540,6 +540,9 @@ input[type=checkbox] {
 		column-rule:1px solid #dddddd;
 	}
 }
+.toggle-button-label::after {
+	cursor:pointer;
+}
 /* footer icons */
 .lp-icon {
 	display:inline-block;

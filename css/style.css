@@ -20,10 +20,8 @@ body {
 	cursor:pointer;
 }
 .search button {
-	line-height:2em;
 	height:2.56em;
 	width:56px;
-	padding:0 10px;
 	border:1px solid #cccccc;
 	cursor:pointer;
 }

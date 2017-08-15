@@ -81,6 +81,11 @@ $alphawikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	),
+	'rainbowsix' => array (
+		'name' => 'Rainbow 6',
+		'background-color' => '',
+		'api' => $baseurl . '/rainbowsix/api.php',
+	),
 );
 $miscwikis = array (
 	'commons' => array (
@@ -129,11 +134,6 @@ $otherwikis = array (
 		'name' => 'Quake',
 		'background-color' => '',
 		'api' => $baseurl . '/quake/api.php',
-	),
-	'rainbowsix' => array (
-		'name' => 'Rainbow 6',
-		'background-color' => '',
-		'api' => $baseurl . '/rainbowsix/api.php',
 	),
 );
 

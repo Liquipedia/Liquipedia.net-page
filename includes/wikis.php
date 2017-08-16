@@ -82,7 +82,7 @@ $alphawikis = array (
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	),
 	'rainbowsix' => array (
-		'name' => 'Rainbow 6',
+		'name' => 'Rainbow Six',
 		'background-color' => '',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	),

@@ -125,7 +125,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 			<div class="content other-wikis">
 				<div class="other-wikis-left">
 					<h3>Commons Wiki</h3>
-					<p>This is the file repository for all our wikis, to add an image this is where you upload it and then you can use it on any of the wikis.</p>
+					<p>This is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis.</p>
 					<ul>
 						<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
 						<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>

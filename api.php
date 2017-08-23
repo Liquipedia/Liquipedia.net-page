@@ -44,6 +44,7 @@ if($action == 'listwikis') {
 	<body>
 	<?php
 	echo '<h1>Liquipedia API</h1>';
+	echo '<p>Please keep the <a target="_blank" href="http://www.teamliquid.net/forum/hidden/491339-liquipedia-api-usage-guidelines">API guidelines</a> in mind.</p>';
 	echo '<p>The wiki APIs are at:</p>';
 	echo '<ul>';
 	foreach($wikis as $wiki_key => $wiki) {

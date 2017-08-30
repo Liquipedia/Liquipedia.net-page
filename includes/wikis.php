@@ -135,6 +135,11 @@ $otherwikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/quake/api.php',
 	),
+	'pugb' => array (
+		'name' => 'PLAYERUNKOWN\'S BATTLEGROUNDS',
+		'background-color' => '',
+		'api' => $baseurl . '/pugb/api.php',
+	),
 );
 
 ?>

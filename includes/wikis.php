@@ -86,6 +86,11 @@ $alphawikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	),
+	'quake' => array (
+		'name' => 'Quake',
+		'background-color' => '',
+		'api' => $baseurl . '/quake/api.php',
+	),
 );
 $miscwikis = array (
 	'commons' => array (
@@ -129,11 +134,6 @@ $otherwikis = array (
 		'name' => 'Pokémon',
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
-	),
-	'quake' => array (
-		'name' => 'Quake',
-		'background-color' => '',
-		'api' => $baseurl . '/quake/api.php',
 	),
 );
 

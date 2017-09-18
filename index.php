@@ -97,7 +97,7 @@ foreach ($wikis as $wiki_key => $wiki) {
 					} ?>
 					<option value="commons">Commons</option>
 				</select><!--
-				--><input aria-label="Search for" type="search" name="search" placeholder="Search..." autofocus><!--
+				--><input aria-label="Search for" type="search" name="search" placeholder="Search..."><!--
 				--><button type="submit">Search</button>
 			</form>
 		</div>

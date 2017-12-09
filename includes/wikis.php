@@ -135,10 +135,10 @@ $otherwikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
 	),
-	'pugb' => array (
+	'pubg' => array (
 		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
 		'background-color' => '',
-		'api' => $baseurl . '/pugb/api.php',
+		'api' => $baseurl . '/pubg/api.php',
 	),
 );
 

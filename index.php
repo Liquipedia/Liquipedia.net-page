@@ -20,7 +20,7 @@ while ($row = mysql_fetch_assoc ($r))
 	$title = $row['title'];
 	$url = $row['page'];
 
-	if (preg_match ("/^http:\/\/wiki\.teamliquid\.net\/(" . implode ("|", array_keys ($wikis)) . ")\/(.+)$/", $url, $m))
+	if (preg_match ("/^http:\/\/liquipedia\.net\/(" . implode ("|", array_keys ($wikis)) . ")\/(.+)$/", $url, $m))
 	{
 		$title = str_replace ("_", " ", $title);
 

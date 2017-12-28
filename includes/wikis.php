@@ -6,7 +6,7 @@
  */
 
 $protocol = 'http://';
-$baseurl = $protocol . 'wiki.teamliquid.net';
+$baseurl = $protocol . 'liquipedia.net';
 
 $wikis = array (
 	'dota2' => array (

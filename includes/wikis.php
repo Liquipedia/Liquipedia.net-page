@@ -56,40 +56,40 @@ $wikis = array (
 	),
 );
 $alphawikis = array (
-	'warcraft' => array (
-		'name' => 'Warcraft III',
-		'background-color' => '',
-		'api' => $baseurl . '/warcraft/api.php',
-	),
-	'fighters' => array (
-		'name' => 'Fighting Games',
-		'background-color' => '',
-		'api' => $baseurl . '/fighters/api.php',
-	),
-	'teamfortress' => array (
-		'name' => 'Team Fortress',
-		'background-color' => '',
-		'api' => $baseurl . '/teamfortress/api.php',
-	),
-	'worldofwarcraft' => array (
-		'name' => 'World of Warcraft',
-		'background-color' => '',
-		'api' => $baseurl . '/worldofwarcraft/api.php',
-	),
 	'leagueoflegends' => array (
 		'name' => 'League of Legends',
-		'background-color' => '',
+		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
+	),
+	'warcraft' => array (
+		'name' => 'Warcraft III',
+		'background-color' => '#aab9b7',
+		'api' => $baseurl . '/warcraft/api.php',
 	),
 	'rainbowsix' => array (
 		'name' => 'Rainbow Six',
-		'background-color' => '',
+		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	),
 	'quake' => array (
 		'name' => 'Quake',
-		'background-color' => '',
+		'background-color' => '#dd986e',
 		'api' => $baseurl . '/quake/api.php',
+	),
+	'teamfortress' => array (
+		'name' => 'Team Fortress',
+		'background-color' => '#cca96b',
+		'api' => $baseurl . '/teamfortress/api.php',
+	),
+	'worldofwarcraft' => array (
+		'name' => 'World of Warcraft',
+		'background-color' => '#d1e2f1',
+		'api' => $baseurl . '/worldofwarcraft/api.php',
+	),
+	'fighters' => array (
+		'name' => 'Fighting Games',
+		'background-color' => '#ffcb66',
+		'api' => $baseurl . '/fighters/api.php',
 	),
 );
 $miscwikis = array (

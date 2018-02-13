@@ -1,41 +1,49 @@
 <?php
+
 $no_session = true;
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/connect.php');
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/../public_html/includes/functions.php');
-require_once ('includes/wikis.php');
+require_once( 'includes/wikis.php' );
+require_once( '../config/db_config.php' );
 
-$expire = gmdate ('D, d M Y H:i:s \G\M\T', time() + 60);
+$expire = gmdate( 'D, d M Y H:i:s \G\M\T', time() + 60 );
 
-header ("Content-Type: text/html; charset=utf-8");
-header ("Cache-Control: s-maxage=60");
-header ("Expires: $expire");
+header( 'Content-Type: text/html; charset=utf-8' );
+header( 'Cache-Control: s-maxage=60' );
+header( 'Expires: ' . $expire );
 
 $col_number = 3;
 
-$hot_links = array ();
+$hot_links = array();
 
-$r = mysql_queryS ("SELECT * FROM liquid.wiki_hot ORDER BY hits DESC");
-while ($row = mysql_fetch_assoc ($r))
-{
-	$title = $row['title'];
+$pdo = null;
+try {
+	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass );
+	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
+	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
+} catch( PDOException $e ) {
+	// echo 'Connection Error: ' . $e->getMessage();
+}
+
+$selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
+$selectstmt->execute();
+while( $row = $selectstmt->fetch() ) {
+	$title = str_replace( '_', ' ', $row['title'] );
 	$url = $row['page'];
+	$wiki = $row['wiki'];
 
-	if (preg_match ("/^http:\/\/liquipedia\.net\/(" . implode ("|", array_keys ($wikis)) . ")\/(.+)$/", $url, $m))
-	{
-		$title = str_replace ("_", " ", $title);
-
-		if (count ($hot_links[$m[1]]) < 5)
-		{
-			$hot_links[$m[1]][] = array (
-				'title' => $title,
-				'href' => $url
-			);
-		}
+	if( count( $hot_links[$wiki] ) < 5 ) {
+		$hot_links[$wiki][] = array(
+			'title' => $title,
+			'href' => $url
+		);
 	}
 }
 
 $keywords = '';
-foreach ($wikis as $wiki_key => $wiki) {
+foreach( $wikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki['name'];
+}
+foreach( $alphawikis as $wiki_key => $wiki ) {
 	$keywords .= ', ' . $wiki['name'];
 }
 
@@ -60,15 +68,18 @@ foreach ($wikis as $wiki_key => $wiki) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
-		<meta name="keywords" content="esports, wiki<?php echo $keywords; ?>" />
-		<link href="./css/style.css" rel="stylesheet" type="text/css" />
+		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
+		<link href="./css/style.css?c=1" rel="stylesheet" type="text/css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="./favicon.ico" rel="icon" />
 		<link href="/manifest.json" rel="manifest" />
 		<meta name="theme-color" content="#5496cf">
 		<style>
 		<?php
-			foreach ($wikis as $wiki_key => $wiki) {
+			foreach( $wikis as $wiki_key => $wiki ) {
+				echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki['background-color'] . " }\n";
+			}
+			foreach( $alphawikis as $wiki_key => $wiki ) {
 				echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki['background-color'] . " }\n";
 			}
 		?>
@@ -88,10 +99,10 @@ foreach ($wikis as $wiki_key => $wiki) {
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<form id="search" class="search" action="/dota2/index.php">
 				<select id="wikiselect" aria-label="Select a Wiki to search">
-					<?php foreach ($wikis as $wiki_key => $wiki) {
+					<?php foreach( $wikis as $wiki_key => $wiki ) {
 						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
 					}
-					foreach ($alphawikis as $wiki_key => $wiki) {
+					foreach( $alphawikis as $wiki_key => $wiki ) {
 						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
 					} ?>
 					<option value="commons">Commons</option>
@@ -101,47 +112,64 @@ foreach ($wikis as $wiki_key => $wiki) {
 			</form>
 		</div>
 		<div class="whitebox">
+			<div class="content">
+				<a class="banner" target="_blank" href="http://www.teamliquid.net/forum/tl-community/531155-liquipedia-achievements">
+					We're introducing a new achievements system for our contributors! Read more...
+				</a>
+			</div>
 			<div class="box-wrap">
-				<?php foreach ($wikis as $wiki_key => $wiki) { ?>
+				<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
 						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
-							<?php if (isset($hot_links[$wiki_key]) && is_array($hot_links[$wiki_key])) {
-							foreach ($hot_links[$wiki_key] as $h) { ?>
-								<a href="<?php echo $h['href']; ?>" title="<?=$h['title']?>"><?php echo $h['title']; ?></a><br />
+							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
+							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
+								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo $hot_link['title']; ?>"><?php echo $hot_link['title']; ?></a><br />
 							<?php }
-							}?>
+							} ?>
 						 </p>
 					</div>
 				<?php } ?>
 			</div>
 		</div>
-		<h1>Other wikis</h1>
-		<h2>Other wikis operated by the Liquipedia community</h2>
+		<h1>Commons Wiki</h1>
+		<h2>The commons wiki is a wiki used to help operate the other wikis</h2>
 		<div class="whitebox">
-			<div class="content other-wikis">
-				<div class="other-wikis-left">
-					<h3>Commons Wiki</h3>
-					<p>This is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis.</p>
-					<ul>
-						<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
-						<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>
-						<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
-						<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
-						<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
-					</ul>
-				</div>
-				<div class="other-wikis-right">
-					<h3>Liquipedia Alpha Wikis</h3>
-					<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below, fill in <a target="_blank" href="http://goo.gl/forms/kF0dCtJzHT">this form</a>.</p>
-					<ul>
-						<?php foreach ($alphawikis as $wiki_key => $wiki) {
-							echo '<li><a href="' . $baseurl . '/' . $wiki_key . '/Main_Page">' . $wiki['name'] . '</a></li>';
-						} ?>
-					</ul>
-				</div>
+			<div class="content">
+				<p>The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
+				<ul class="flatlist">
+					<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
+					<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>
+					<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
+					<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
+					<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
+				</ul>
+			</div>
+		</div>
+		<h1>Alpha Wikis</h1>
+		<h2>Alpha wikis are wikis that are still in the building process</h2>
+		<div class="whitebox">
+			<div class="content">
+				<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below:</p>
+				<p class="btn-wrap"><a class="btn" target="_blank" href="https://goo.gl/forms/kF0dCtJzHT">Fill in this form</a></p>
+			</div>
+			<div class="box-wrap">
+				<?php foreach( $alphawikis as $wiki_key => $wiki ) { ?>
+					<div class="<?php echo $wiki_key; ?>-box game-box">
+						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
+						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
+						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
+						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
+							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
+							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
+								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo $hot_link['title']; ?>"><?php echo $hot_link['title']; ?></a><br />
+							<?php }
+							} ?>
+						 </p>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 		<h1>How To Contribute</h1>

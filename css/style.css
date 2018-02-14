@@ -7,10 +7,13 @@ body {
 	margin:0px;
 	font-family:Verdana, Geneva, Ubuntu, sans-serif;
 }
+.content.searchwrap {
+	padding:20px 5px;
+}
 .search {
 	text-align:center;
-	padding:20px 0;
 	box-sizing:border-box;
+	box-shadow:0 5px 2px rgba(0, 0, 0, .16)
 }
 .search select {
 	height:2.56em;
@@ -51,7 +54,7 @@ body {
 		width:150px;
 	}
 	.search input {
-		width:605px;
+		width:601px;
 	}
 }
 @media(min-width:1225px) {
@@ -72,28 +75,20 @@ div.top {
 	margin-top:-4px;
 	padding-top:10px;
 	z-index:2;
-	background:-moz-linear-gradient(top,  rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* FF3.6+ */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,22,44,0.7)), color-stop(100%,rgba(0,22,44,0))); /* Chrome,Safari4+ */
-	background:-webkit-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* Chrome10+,Safari5.1+ */
-	background:-o-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* Opera 11.10+ */
-	background:-ms-linear-gradient(top, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* IE10+ */
-	background:linear-gradient(to bottom, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%); /* W3C */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b300162c', endColorstr='#0000162c', GradientType=0); /* IE6-9 */
+	background:linear-gradient(to bottom, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%);
 }
 #logo img {
 	width:90%;
 	max-width:506px;
 	margin:0px 5% 5px;
-	-webkit-filter:drop-shadow(0px 5px 2px #000);
+	-webkit-filter:drop-shadow(0px 5px 2px rgba(0, 0, 0, .16));
 	filter:url(../images/shadow.svg#drop-shadow);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
-	filter:"progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=5, Color='#000')";
 }
 h1,
 h2 {
-	font-family:Roboto, Verdana, Arial, sans-serif;
-	text-shadow:0px 5px 2px #000;
-	color:#FFF;
+	font-family:'Roboto', Verdana, Arial, sans-serif;
+	text-shadow:0px 5px 2px rgba(0, 0, 0, .16);
+	color:#ffffff;
 	text-align:center;
 	width:90%;
 	margin:0 5% 10px;

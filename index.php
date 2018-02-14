@@ -97,19 +97,21 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
 			<div id="logo"><img src="./images/lp-logo-bg.png" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
-			<form id="search" class="search" action="/dota2/index.php">
-				<select id="wikiselect" aria-label="Select a Wiki to search">
-					<?php foreach( $wikis as $wiki_key => $wiki ) {
-						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
-					}
-					foreach( $alphawikis as $wiki_key => $wiki ) {
-						echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
-					} ?>
-					<option value="commons">Commons</option>
-				</select><!--
-				--><input aria-label="Search for" type="search" name="search" placeholder="Search..."><!--
-				--><button type="submit">Search</button>
-			</form>
+			<div class="content searchwrap">
+				<form id="search" class="search" action="/dota2/index.php">
+					<select id="wikiselect" aria-label="Select a Wiki to search">
+						<?php foreach( $wikis as $wiki_key => $wiki ) {
+							echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
+						}
+						foreach( $alphawikis as $wiki_key => $wiki ) {
+							echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
+						} ?>
+						<option value="commons">Commons</option>
+					</select><!--
+					--><input aria-label="Search for" type="search" name="search" placeholder="Search..."><!--
+					--><button type="submit">Search</button>
+				</form>
+			</div>
 		</div>
 		<div class="whitebox">
 			<div class="content">
@@ -225,7 +227,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<script type="text/javascript">
-			window.addEventListener("DOMContentLoaded", function() {
+			window.addEventListener('DOMContentLoaded', function() {
 				if(!document.cookie.includes('liquipedia_last_wiki_search')) {
 					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys($wikis)[0]; ?>';
 				}

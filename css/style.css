@@ -31,7 +31,7 @@ body {
 .search input {
 	line-height:2em;
 	height:2.56em;
-	width:calc(100% - 162px);
+	width:calc(100% - 156px);
 	padding:0 10px;
 	border:1px solid #cccccc;
 }
@@ -65,7 +65,7 @@ body {
 		width:150px;
 	}
 	body.column-4 .search input {
-		width:907px;
+		width:895px;
 	}
 }
 .global-nav {
@@ -85,7 +85,8 @@ div.top {
 	filter:url(../images/shadow.svg#drop-shadow);
 }
 h1,
-h2 {
+h2,
+h3 {
 	font-family:'Roboto', Verdana, Arial, sans-serif;
 	text-shadow:0px 5px 2px rgba(0, 0, 0, .16);
 	color:#ffffff;
@@ -93,13 +94,20 @@ h2 {
 	width:90%;
 	margin:0 5% 10px;
 }
-h1 {
+h1,
+h2 {
 	font-weight:400;
 	font-size:110%;
 }
-h2 {
+h3 {
 	font-weight:400;
 	font-size:90%;
+}
+h4 {
+	font-weight:700;
+	font-size:1.17em;
+	margin-block-start:1em;
+	margin-block-end:1em;
 }
 .top h1 {
 	font-size:45%;
@@ -109,6 +117,7 @@ h2 {
 }
 .top h2 {
 	display:none;
+	font-weight:400;
 }
 div.whitebox {
 	background:#ffffff repeat;
@@ -159,7 +168,7 @@ a:active {
 .game-box {
 	width:100%;
 	font-size:25px;
-	font-family:Roboto, Verdana, Geneva, Ubuntu, sans-serif;
+	font-family:'Roboto', Verdana, Geneva, Ubuntu, sans-serif;
 	font-weight:400;
 	margin:0 auto 5px auto;
 	padding-bottom:1px;
@@ -272,11 +281,12 @@ input[type=checkbox] {
 		font-size:30px;
 		font-weight:300;
 	}
-	h1 {
+	h1,
+	h2 {
 		font-size:180%;
 		font-weight:300;
 	}
-	h2 {
+	h3 {
 		font-size:110%;
 	}
 	body {
@@ -305,10 +315,11 @@ input[type=checkbox] {
 		padding-top:10px;
 		padding-bottom:5px;
 	}
-	h1 {
+	h1,
+	h2 {
 		font-size:200%;
 	}
-	h2 {
+	h3 {
 		font-size:125%;
 	}
 	.game-box > p {
@@ -353,10 +364,11 @@ input[type=checkbox] {
 	.top h2 {
 		font-size:110%;
 	}
-	h1 {
+	h1,
+	h2 {
 		font-size:224%;
 	}
-	h2 {
+	h3 {
 		font-size:140%;
 	}
 }

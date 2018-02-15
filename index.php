@@ -136,8 +136,8 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<?php } ?>
 			</div>
 		</div>
-		<h1>Commons Wiki</h1>
-		<h2>The commons wiki is a wiki used to help operate the other wikis</h2>
+		<h2 id="commons-wiki">Commons Wiki</h2>
+		<h3>The commons wiki is a wiki used to help operate the other wikis</h3>
 		<div class="whitebox">
 			<div class="content">
 				<p>The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
@@ -150,8 +150,8 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				</ul>
 			</div>
 		</div>
-		<h1>Alpha Wikis</h1>
-		<h2>Alpha wikis are wikis that are still in the building process</h2>
+		<h2 id="alpha-wikis">Alpha Wikis</h2>
+		<h3>Alpha wikis are wikis that are still in the building process</h3>
 		<div class="whitebox">
 			<div class="content">
 				<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below:</p>
@@ -174,8 +174,8 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<?php } ?>
 			</div>
 		</div>
-		<h1>How To Contribute</h1>
-		<h2>It's easy, fun, and rewarding to help esports</h2>
+		<h2 id="how-to-contribute">How To Contribute</h2>
+		<h3>It's easy, fun, and rewarding to help esports</h3>
 		<div class="whitebox">
 			<div class="content how-to">
 				<p>Contributing to the wiki is actually pretty easy and keep in mind that every more-correct-than-wrong contribution is valuable no matter how small. </p>
@@ -183,13 +183,13 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account&mdash;if you don't have one already&mdash;log in, click edit, find and fix the typo, click save, and you are done.</p>
 				<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
 				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="http://liquipedia.net/discord" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
-				<h3>Logging in and registering</h3>
+				<h4>Logging in and registering</h4>
 				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="http://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration.<br />
 				Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
-				<h3>Editing</h3>
+				<h4>Editing</h4>
 				<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. <br />
 				When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="http://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
-				<h3>Areas to help out with</h3>
+				<h4>Areas to help out with</h4>
 				<p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
 				<ul>
 					<li>List an interview a player has done on the player's page.</li>

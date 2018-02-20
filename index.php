@@ -70,10 +70,22 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="./css/style.css?c=1" rel="stylesheet" type="text/css" />
-		<link href="//fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="./favicon.ico" rel="icon" />
 		<link href="/manifest.json" rel="manifest" />
-		<meta name="theme-color" content="#5496cf">
+		<meta name="theme-color" content="#5496cf" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@LiquipediaNet" />
+		<meta name="twitter:title" content="Liquipedia" />
+		<meta name="twitter:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
+		<meta name="twitter:image:src" content="<?php echo $baseurl; ?>/images/lp-logo-bg.png" />
+		<meta name="twitter:domain" content="<?php echo str_replace( 'http://', '', $baseurl ); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="<?php echo $baseurl; ?>/images/lp-logo-bg.png" />
+		<meta property="og:url" content="<?php echo $baseurl; ?>" />
+		<meta property="og:title" content="Liquipedia" />
+		<meta property="og:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
+		<meta property="og:site_name" content="Liquipedia" />
 		<style>
 		<?php
 			foreach( $wikis as $wiki_key => $wiki ) {

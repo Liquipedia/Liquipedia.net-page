@@ -215,7 +215,7 @@ span#full-intro {
 	display:none !important;
 }
 .wiki-header {
-	width:calc(100% - 37px);
+	width:calc(100% - 30px);
 }
 .toggle-button-label:after {
 	float:right;

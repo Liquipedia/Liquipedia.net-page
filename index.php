@@ -140,7 +140,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
 							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo $hot_link['title']; ?>"><?php echo $hot_link['title']; ?></a><br />
+								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a><br />
 							<?php }
 							} ?>
 						 </p>
@@ -178,7 +178,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
 							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo $hot_link['title']; ?>"><?php echo $hot_link['title']; ?></a><br />
+								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a><br />
 							<?php }
 							} ?>
 						 </p>

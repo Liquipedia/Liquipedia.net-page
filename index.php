@@ -126,11 +126,11 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<div class="whitebox">
-			<div class="content">
-				<a class="banner" target="_blank" href="http://www.teamliquid.net/forum/tl-community/531155-liquipedia-achievements">
-					We're introducing a new achievements system for our contributors! Read more...
+			<!--<div class="content">
+				<a class="banner" target="_blank" href="http://liquipedia.net">
+					Liquipedia
 				</a>
-			</div>
+			</div>-->
 			<div class="box-wrap">
 				<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">

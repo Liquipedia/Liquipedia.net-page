@@ -101,8 +101,8 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<div class="global-nav">
 			<span><a href="https://www.teamliquidpro.com/">TeamLiquidPro</a></span>
 			<span><a href="http://www.liquidlegends.net/">LiquidLegends</a></span>
-			<span><a href="http://www.liquidhearth.com/">LiquidHearth</a></span>
-			<span><a href="http://www.liquiddota.com/">LiquidDota</a></span>
+			<span><a href="https://www.liquidhearth.com/">LiquidHearth</a></span>
+			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
 			<span><a href="http://www.teamliquid.net">TeamLiquid</a></span>
 		</div>
 		<div class="top">

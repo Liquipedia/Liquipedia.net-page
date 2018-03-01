@@ -140,6 +140,31 @@ $otherwikis = array (
 		'background-color' => '',
 		'api' => $baseurl . '/pubg/api.php',
 	),
+	'artifact' => array (
+		'name' => 'Artifact',
+		'background-color' => '',
+		'api' => $baseurl . '/artifact/api.php',
+	),
+	'paladins' => array (
+		'name' => 'Paladins',
+		'background-color' => '',
+		'api' => $baseurl . '/paladins/api.php',
+	),
+	'battalion' => array (
+		'name' => 'Battalion 1944',
+		'background-color' => '',
+		'api' => $baseurl . '/battalion/api.php',
+	),
+	'fortnite' => array (
+		'name' => 'Fortnite',
+		'background-color' => '',
+		'api' => $baseurl . '/fortnite/api.php',
+	),
+	'arenaofvalor' => array (
+		'name' => 'Arena of Valor',
+		'background-color' => '',
+		'api' => $baseurl . '/arenaofvalor/api.php',
+	),
 );
 
 ?>

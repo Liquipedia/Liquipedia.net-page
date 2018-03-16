@@ -302,7 +302,7 @@ input[type=checkbox] {
 		font-size:13px;
 	}
 }
-@media only screen and (min-width:400) {
+@media only screen and (min-width:400px) {
 	.top h1 {
 		font-size:110%;
 		margin-bottom:8px;

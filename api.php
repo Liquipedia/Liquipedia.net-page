@@ -1,13 +1,13 @@
 <?php
-require_once('includes/wikis.php');
+require_once( 'includes/wikis.php' );
 
-if(isset($_GET['action'])) {
-	$action = htmlspecialchars($_GET['action']);
+if( isset( $_GET['action'] ) ) {
+	$action = htmlspecialchars( $_GET['action'] );
 } else {
 	$action = null;
 }
-if($action == 'listwikis') {
-	header('Content-Type: application/json');
+if( $action == 'listwikis' ) {
+	header( 'Content-Type: application/json' );
 
 	$return = array();
 
@@ -16,9 +16,9 @@ if($action == 'listwikis') {
 	$return['alphawikis'] = $alphawikis;
 	$return['miscwikis'] = $miscwikis;
 	$return['otherwikis'] = $otherwikis;
-	$return['allwikis'] = array_merge($wikis, $alphawikis, $miscwikis, $otherwikis);
+	$return['allwikis'] = array_merge( $wikis, $alphawikis, $miscwikis, $otherwikis );
 
-	echo json_encode($return);
+	echo json_encode( $return );
 } else { ?>
 <!DOCTYPE html>
 <!-- 
@@ -47,13 +47,13 @@ if($action == 'listwikis') {
 	echo '<p>Please keep the <a target="_blank" href="http://www.teamliquid.net/forum/hidden/491339-liquipedia-api-usage-guidelines">API guidelines</a> in mind.</p>';
 	echo '<p>The wiki APIs are at:</p>';
 	echo '<ul>';
-	foreach($wikis as $wiki_key => $wiki) {
+	foreach( $wikis as $wiki_key => $wiki ) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
-	foreach($alphawikis as $wiki_key => $wiki) {
+	foreach( $alphawikis as $wiki_key => $wiki ) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
-	foreach($miscwikis as $wiki_key => $wiki) {
+	foreach( $miscwikis as $wiki_key => $wiki ) {
 		echo '<li>' . $wiki['name'] . ': <a target="_blank" href="' . $wiki['api'] . '">' . $wiki['api'] . '</a></li>';
 	}
 	echo '</ul>';

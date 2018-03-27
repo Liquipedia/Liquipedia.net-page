@@ -1,606 +1,632 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+    box-sizing: border-box;
+    color: rgb(39, 39, 39);
+    font-family:"Open Sans", sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
 body {
-	background:url(../images/lp-hex-bg.png) repeat;
-	background-size:25%;
-	margin:0px;
-	font-family:Verdana, Geneva, Ubuntu, sans-serif;
+    margin:0;
 }
-.content.searchwrap {
-	padding:20px 5px;
+
+/* general, and reset styles */
+*, *::before, *::after {
+    box-sizing: inherit;
 }
-.search {
-	text-align:center;
-	box-sizing:border-box;
-	box-shadow:0 5px 2px rgba(0, 0, 0, .16)
+
+a, article, aside, body, blockquote, button, code, div, dl, dt, dd, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, input, label, main, nav, ol, optgroup, option, section, select, span, strong, table, tbody, td, textarea, thead, tr, ul {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1;
 }
-.search select {
-	height:2.56em;
-	width:100px;
-	padding:0 10px;
-	border:1px solid #cccccc;
-	cursor:pointer;
+
+a, dt, dd, em, figcaption, p, span, strong, td, label {
+    line-height: 1.5625;
 }
-.search button {
-	height:2.56em;
-	width:56px;
-	border:1px solid #cccccc;
-	cursor:pointer;
+
+header, section {
+    margin: 0 auto;
+    margin-bottom: 10em;
+    max-width: 83.5em;
+    padding: 0 1.875rem;
+    text-align: center;
+    width: 100%;
 }
-.search input {
-	line-height:2em;
-	height:2.56em;
-	width:calc(100% - 156px);
-	padding:0 10px;
-	border:1px solid #cccccc;
+
+@media screen and (max-width: 51.125em) {
+    header, section {
+        margin-bottom: 5em;
+        padding: 0 0.625rem;
+    }
 }
-@media(min-width:620px) {
-	.search select {
-		width:100px;
-	}
-	.search button {
-		width:100px;
-	}
-	.search input {
-		width:400px;
-	}
+
+@media screen and (min-width: 96em) {
+    header, section {
+        max-width: 94em;
+    }
 }
-@media(min-width:930px) {
-	.search select {
-		width:150px;
-	}
-	.search button {
-		width:150px;
-	}
-	.search input {
-		width:601px;
-	}
+
+.screen-reader-text {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
 }
-@media(min-width:1225px) {
-	body.column-4 .search select {
-		width:150px;
-	}
-	body.column-4 .search button {
-		width:150px;
-	}
-	body.column-4 .search input {
-		width:895px;
-	}
+
+.svg-container {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
 }
-.global-nav {
-	display:none;
-}
-div.top {
-	margin-top:-4px;
-	padding-top:10px;
-	z-index:2;
-	background:linear-gradient(to bottom, rgba(0,22,44,0.7) 0%, rgba(0,22,44,0) 100%);
-}
-#logo img {
-	width:90%;
-	max-width:509px;
-	margin:0px 5% 5px;
-	filter:drop-shadow(0px 5px 2px rgba(0, 0, 0, .16));
-}
-h1,
-h2,
-h3 {
-	font-family:'Roboto', Verdana, Arial, sans-serif;
-	text-shadow:0px 5px 2px rgba(0, 0, 0, .16);
-	color:#ffffff;
-	text-align:center;
-	width:90%;
-	margin:0 5% 10px;
-}
-h2 {
-	margin-top:15px;
-}
-h1,
-h2 {
-	font-weight:400;
-	font-size:110%;
-}
-h3 {
-	font-weight:400;
-	font-size:90%;
-}
-h4 {
-	font-weight:700;
-	font-size:1.17em;
-	margin-block-start:1em;
-	margin-block-end:1em;
-}
-.top h1 {
-	font-size:45%;
-	margin-top:3px;
-	margin-bottom:2px;
-	font-weight:400;
-}
-.top h2 {
-	display:none;
-	font-weight:400;
-}
-div.whitebox {
-	background-color:#ffffff;
-	border-top:5px solid #8eaec2;
-	border-bottom:5px solid #8eaec2;
-	border-left:0px;
-	border-right:0px;
-	width:100%;
-	margin:0px;
-	z-index:2;
-	-webkit-box-shadow:2px 5px 0px rgba(0, 0, 0, .16);
-	box-shadow:0px 5px 2px rgba(0, 0, 0, .16);
-	padding-bottom:0;
-	padding-left:0;
-	padding-right:0;
-	padding-top:5px;
-}
-a:link {
-	color:#002bb8; text-decoration:none;
-}
-a:visited {
-	color:#5a3696; text-decoration:none;
-}
-a:hover {
-	text-decoration:underline;
-}
-a:active {
-	color:#faa700;
-}
-.game-box a:link {
-	text-decoration:none;
-	color:#000000;
-}
-.game-box a:visited {
-	text-decoration:none;
-	color:#000000;
-}
-.game-box a:active {
-	text-decoration:underline;
-}
-.game-box a:hover {
-	text-decoration:underline;
-}
-.wiki-header {
-	font-size:25px
-}
-/* This describes the boxes */
-.game-box {
-	width:100%;
-	font-size:25px;
-	font-family:'Roboto', Verdana, Geneva, Ubuntu, sans-serif;
-	font-weight:400;
-	margin:0 auto 5px auto;
-	padding-bottom:1px;
-	padding-top:1px;
-	font-size:15px;
-}
-.game-box > p {
-	font-size:12px;
-	display:none;
-	margin-left:5%;
-	line-height: 2.5em;
-	margin-right:5%;
-	margin-top:0.5em;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
-.box-wrap {
-	width:100%;
-}
-.content {
-	margin:0 5%;
-	font-size:90%;
-}
-.footer {
-	min-height:100px;
-	background-color:#8eaec2;
-	padding-top:10px;
-}
-.disclaimer {
-	font-size:12px;
-	width:100%;
-}
-.icon-list{
-	width:100%;
-	float:right;
-}
-span#full-intro {
-	display:none;
-}
-.toggle-button {
-	display:none !important;
-}
-.wiki-header {
-	width:calc(100% - 30px);
-}
-.toggle-button-label:after {
-	float:right;
-	width:30px;
-	font-size:25px;
-	font-weight:400;
-	line-height:1.1em;
-}
-.toggle-button:not(:checked) ~ .game-box-content {
-	display:none;
-}
-.toggle-button:checked ~ .game-box-content {
-	display:block;
-}
-.toggle-button:not(:checked) + .toggle-button-label:after {
-	content:"+";
-}
-.toggle-button:checked + .toggle-button-label:after {
-	content:"\2212";
-}
-.wiki-header {
-	margin-left:5%;
-	text-align:left;
-}
-ul {
-	padding-left:15px;
-}
-li {
-	margin-bottom:5px;
-}
+
 p {
-	margin-top:0px;
-	margin-bottom:1em;
-}
-input[type=checkbox] {
-	display:none;
+    margin-bottom: 2.5em;
+    margin-top: 0;
 }
 
-@media only screen and (min-width:450px) {
-	.icon-list {
-		width:225px;
-		margin:0 auto;
-	}
-}
-@media only screen and (min-width:280px) {
-	.top h1 {
-		font-size:80%;
-		margin-bottom:4px;
-	}
-	.game-box p {
-		font-size:12px;
-	}
-}
-@media only screen and (min-width:310px) {
-	.top h1 {
-		font-size:90%;
-		margin-bottom:6px;
-	}
-	.top h2 {
-		font-size:70%;
-		width:90%;
-		display:block;
-	}
-	.wiki-header {
-		font-size:30px;
-		font-weight:300;
-	}
-	h1,
-	h2 {
-		font-size:180%;
-		font-weight:300;
-	}
-	h3 {
-		font-size:110%;
-	}
-	body {
-		background-size:auto;
-	}
-	.toggle-button-label:after {
-		font-size:30px;
-		font-weight:300;
-	}
-	.game-box p {
-		font-size:13px;
-	}
-}
-@media only screen and (min-width:400px) {
-	.top h1 {
-		font-size:110%;
-		margin-bottom:8px;
-	}
-	.top h2 {
-		font-size:80%;
-		width:94%;
-		margin:0 3% 12px;
-		display:block;
-	}
-	div.whitebox {
-		padding-top:10px;
-		padding-bottom:5px;
-	}
-	h1,
-	h2 {
-		font-size:200%;
-	}
-	h3 {
-		font-size:125%;
-	}
-	.game-box > p {
-		font-size:14px;
-	}
-}
-@media only screen and (min-width:480px) {
-	.top h1 {
-		font-size:130%;
-		margin-bottom:10px;
-		font-weight:300;
-	}
-	.top h2 {
-		font-size:100%;
-		width:96%;
-		margin:0 2% 14px;
-		display:block;
-	}
-	.wiki-header {
-		font-size:40px;
-	}
-	div.whitebox {
-		padding-top:15px;
-		padding-bottom:10px;
-	}
-	.toggle-button-label:after {
-		font-size:40px;
-	}
-	.game-box > p {
-		font-size:15px;
-	}
-}
-@media only screen and (min-width:560px) {
-	#logo img {
-		margin-left:auto;
-		margin-right:auto;
-		display:block;
-	}
-	.top h1 {
-		font-size:150%;
-	}
-	.top h2 {
-		font-size:110%;
-	}
-	h1,
-	h2 {
-		font-size:224%;
-	}
-	h3 {
-		font-size:140%;
-	}
-}
-@media only screen and (min-width:620px) {
-	div.top {
-		margin-top:0px;
-	}
-	.box-wrap {
-		width:600px;
-		margin:0 auto;
-	}
-	.game-box {
-		width:297px;
-		height:183px;
-		display:inline-block;
-		vertical-align:top;
-	}
-	.game-box > p {
-		display:block;
-		font-size:12px;
-		line-height:1.8em;
-		text-align:left;
-		margin-top:15px;
-		margin-bottom:22px;
-		margin-left:22px;
-		margin-right:22px;
-		white-space:nowrap;
-		overflow:hidden;
-		text-overflow:ellipsis;
-	}
-	.wiki-header {
-		font-size:30px;
-		margin-top:10px;
-		text-align:center;
-		margin-right:5%;
-	}
-	.wiki-header a {
-		display:inline;
-	}
-	.content {
-		max-width:604px;
-		padding:0 5px;
-		margin:0 auto;
-	}
-	.disclaimer {
-		float:left;
-		width:50%;
-		padding:0 0 0 0px;
-	}
-	.top h1 {
-		font-size:170%;
-		margin-top:18px;
-	}
-	.top h2 {
-		font-size:125%;
-		max-width:620px;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	.toggle-button:not(:checked) ~ .game-box-content {
-		display:block;
-	}
-	.toggle-button-label:after {
-		display:none;
-	}
-	.how-to {
-		-moz-column-count:2;
-		column-count:2;
-		-moz-column-gap:3em;
-		column-gap:3em;
-		-moz-column-rule:1px solid #dddddd;
-		column-rule:1px solid #dddddd;
-	}
-}
-@media only screen and (min-width:650px) {
-	.top h1 {
-		font-size:180%;
-		font-style:normal;
-	}
-	.global-nav {
-		display:inline-block;
-		height:24px;
-		width:100%;
-		background:#00162c;
-		margin:0px 0px 0px 0px;
-		position:absolute;
-		top:0px;
-		left:0px;
-		text-align:right;
-	}
-	.global-nav a:link,
-	.global-nav a:hover,
-	.global-nav a:active,
-	.global-nav a:visited {
-		color:#ffffff;
-		text-decoration:none;
-		font-size:12px;
-		font-family:Verdana, Geneva, Ubuntu, sans-serif;
-		font-weight:bold;
-		margin-right:20px;
-	}
-	.global-nav span {
-		float:right;
-		padding-right:20px;
-		line-height:18px;
-	}
-}
-@media only screen and (min-width:700px) {
-	.top h1 {
-		font-size:190%;
-	}
-}
-@media only screen and (min-width:930px) {
-	.box-wrap {
-		width:903px;
-		margin:0 auto;
-	}
-	.content {
-		width:901px;
-		max-width:901px;
-	}
-	.top h1 {
-		font-size:220%;
-		width:901px;
-		margin-left:auto;
-		margin-right:auto;
-		text-align:center;
-	}
-	.top h2 {
-		font-size:140%;
-		max-width:930px;
-	}
-	.how-to {
-		-moz-column-count:3;
-		column-count:3;
-		-moz-column-gap:3em;
-		column-gap:3em;
-		-moz-column-rule:1px solid #dddddd;
-		column-rule:1px solid #dddddd;
-	}
-	.how-to .double {
-		-moz-column-span:2;
-		-webkit-column-span:2;
-		column-span:2;
-	}
-}
-@media only screen and (min-width:1225px) {
-	body.column-4 .box-wrap {
-		width:1206px;
-		margin:0 auto;
-	}
-	body.column-4 .content {
-		width:1195px;
-		max-width:1195px;
-	}
-	body.column-4 .how-to {
-		-moz-column-count:2;
-		column-count:2;
-		-moz-column-gap:3em;
-		column-gap:3em;
-		-moz-column-rule:1px solid #dddddd;
-		column-rule:1px solid #dddddd;
-	}
-}
-.toggle-button-label::after {
-	cursor:pointer;
+
+/* heading styles */
+.frontpage {
+    position: relative;
 }
 
-@media(min-width:930px) {
-	.flatlist {
-		padding:0;
-		display:flex;
-		justify-content:space-around;
-		list-style-type:none;
-	}
+.frontpage::after  {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg.svg) no-repeat;
+    background-position: center top;
+    z-index: -1;
 }
 
-/* footer icons */
-.lp-icon {
-	display:inline-block;
-	width:32px;
-	height:32px;
-	overflow:hidden;
-	background-size:32px 64px;
-	vertical-align:middle;
-	background-position:0 -32px;
-}
-.lp-icon:hover {
-	background-position:0 0;
-}
-.lp-icon.lp-discord {
-	background-image:url(../images/InfoboxIcon_Discord.png);
-}
-.lp-icon.lp-facebook {
-	background-image:url(../images/InfoboxIcon_Facebook.png);
-}
-.lp-icon.lp-github {
-	background-image:url(../images/InfoboxIcon_GitHub.png);
-}
-.lp-icon.lp-twitch {
-	background-image:url(../images/InfoboxIcon_Twitch.png);
-}
-.lp-icon.lp-twitter {
-	background-image:url(../images/InfoboxIcon_Twitter.png);
-}
-.lp-icon.lp-youtube {
-	background-image:url(../images/InfoboxIcon_YouTube.png);
+@media screen and (min-width: 100.375em) {
+   .frontpage::after {
+        opacity: 0.6;
+    }
 }
 
-.btn-wrap {
-	text-align:center;
-}
-.btn {
-	color:#f5f5f5 !important;
-	background-color:#0081ff;
-	border-radius:0;
-	border:1px solid #0061ff;
-	padding:10px 50px;
-	display:inline-block;
-}
-.btn:hover {
-	background-color:#0061ff;
-	text-decoration:none;
+[role=region] > h1 {
+    font-size: 3em;
+    margin-bottom: 2.5rem;
 }
 
+@media screen and (max-width: 30em) {
+    [role=region] > h1 {
+        font-size: 2em;
+    }
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.about {
+    font-size: 1.125em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 44em;
+    text-align: left;
+    width: 100%
+}
+
+@media screen and (max-width: 30em) {
+    .about {
+        font-size: 1em;
+    }
+}
+
+
+/* link styles */
+a, .footer-link {
+    color: rgb(56, 99, 186);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(108, 82, 204);
+}
+
+.button {
+    display: inline-block;
+}
+
+.button:hover, .button:focus {
+    text-decoration: none;
+}
+
+.button--action {
+    background: rgb(56, 99, 186);
+    color: rgb(255, 255, 255);
+    padding: 1em 3em;
+}
+
+.button--action:visited {
+    color: rgb(255, 255, 255);
+}
+
+
+.button--action:hover, .button--action:focus {
+    background: rgb(49, 81, 156);
+}
+
+
+/* list styles */
+ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 0.375em;
+}
+
+.list-inline {
+    padding: 0;
+}
+
+@media screen and (max-width: 51.125em) {
+    .list-inline {
+        text-align: left;
+    }
+}
+
+.list-inline li {
+    display: inline-block;
+    margin: 0 1em 0 1em;
+}
+
+@media screen and (max-width: 51.125em) {
+    .list-inline li {
+        display: block;
+        margin-left: 0;
+        line-height: 2.5;
+    }
+}
+
+.card-content, .display-list  {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-content li, .display-list li {
+    margin-bottom: 0em;
+}
+
+@media screen and (max-width: 51.125em) {
+    .card-content li {
+        line-height: 2;
+    }
+}
+
+
+/* banner styles */
 .banner {
-	display:block;
-	padding:15px;
-	border-left:5px solid #0081ff;
-	color:#000000;
-	background-color:#eeeeee;
-	margin-bottom:15px;
+    padding: 0;
+    text-align: center;
+}
+
+.wiki-logo {
+    margin: 12.5em auto 4em auto;
+    max-width: 43.75em;
+    width: 100%;
+}
+
+@media screen and (max-width: 51.25em) {
+    .wiki-logo {
+        margin: 4em auto 2em auto;
+        max-width: 90%;
+    }
+}
+
+
+/* wiki card styles */
+.card-container {
+    text-align: left;
+}
+
+@media screen and (max-width: 96em) {
+    .card-container {
+        margin-left: 7vw;
+    }
+}
+
+@media screen and (max-width: 83em) {
+    .card-container {
+        margin-left: 6vw;
+    }
+}
+
+@media screen and (max-width: 78em) {
+    .card-container {
+        margin-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 74.375em) {
+    .card-container {
+        margin-left: 16vw;
+    }
+}
+
+@media screen and (max-width: 68em) {
+    .card-container {
+        margin-left: 12vw;
+    }
+}
+
+@media screen and (max-width: 65em) {
+    .card-container {
+        margin-left: 10vw;
+    }
+}
+
+@media screen and (max-width: 58em) {
+    .card-container {
+        margin-left: 6vw;
+    }
+}
+
+@media screen and (max-width: 56em) {
+    .card-container {
+        margin-left: 3vw;
+    }
+}
+
+@media screen and (max-width: 51.125em) {
+    .card-container {
+        margin-left: 0vw;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .card-container {
+        margin-left: 0vw;
+    }
+}
+
+
+/* future-facing grid breakpoints 1606 1212 818*/
+.wiki-card {
+    background: rgb(255, 255, 255);
+    border: 0.0625em solid rgb(211, 211, 211);
+    display: inline-block;
+    margin: 0.8rem 0.625rem;
+    max-width: 21em;
+    padding: 1.875em;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+}
+
+/* 818 breakpoint*/
+@media screen and (max-width: 51.125em) {
+    .wiki-card {
+        max-width: 100%;
+        margin: 0.3125em 0;
+        padding: 1.25em;
+    }
+}
+
+/* 480 breakpoint*/
+@media screen and (max-width: 30em) {
+    .wiki-card {
+        padding: 0.875em 1.25em;
+    }
+}
+
+.wiki-card h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-left: -0.1875rem;
+}
+
+@media screen and (max-width: 51.125em) {
+    .wiki-card h1 {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .wiki-card h1 {
+        font-size: 1.25em;
+    }
+}
+
+.wiki-card a {
+    color: rgb(72, 72, 72);
+}
+
+.card-controls {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.875em;
+    font-weight: 700;
+    position: absolute;
+    top: 1.875rem;
+    right: 1.875rem;
+    z-index: 1;
+}
+
+.card-controls button.is-removed {
+    display: none;
+}
+
+@media screen and (max-width: 51.125em) {
+    .card-controls {
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .card-controls {
+        top: 0.875rem;
+    }
+}
+
+.card-controls button {
+    background: none;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.card-controls [aria-expanded=true] {
+    position: relative;
+    top: -0.125rem;
+}
+
+.card-header {
+    white-space: nowrap;
+    margin: 0;
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 30em) {
+    .card-header span {
+        position: relative;
+        top: 4px;
+    }
+
+    .card-header .card-icon {
+        top: 8px;
+    }
+}
+
+.card-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.25em;
+}
+
+.game-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.wiki-card--bw .game-icon {
+    width: 3.125rem;
+}
+
+@media screen and (max-width: 30em) {
+    .game-icon {
+        height: 1.25em;
+        width: 1.25em;
+    }
+}
+
+/* per-wiki color changes*/
+.alpha-wiki {
+    position: absolute;
+    left: 2.6rem;
+    height: 0.875rem;
+    width: 1.125rem;
+}
+
+@media screen and (max-width: 30em) {
+    .alpha-wiki {
+        height: 0.4375rem;
+        width: 0.5625rem;
+        left: 1.7rem;
+    }
+}
+
+.wiki-card--alpha .card-icon, .wiki-card--alpha .card-icon {
+    margin-right: 1.125rem;
+}
+
+@media screen and (max-width: 30em) {
+    .wiki-card--alpha .card-header span, .wiki-card--alpha .card-header span {
+        margin-right: 0.5rem;
+    }
+}
+
+.wiki-card--fighters .alpha-wiki {
+    color: rgb(177, 42, 42);
+}
+
+.wiki-card--quake .alpha-wiki {
+    color: rgb(122, 90, 29);
+}
+
+.wiki-card--rainbowsix .alpha-wiki {
+    color: rgb(25, 107, 107);
+}
+
+.wiki-card--leagueoflegends .alpha-wiki {
+    color: rgb(25, 107, 107);
+}
+
+.wiki-card--teamfortress .alpha-wiki {
+    color: rgb(149, 86, 35);
+}
+
+.wiki-card--warcraft .alpha-wiki {
+    color: rgb(84, 113, 27);
+}
+
+.wiki-card--worldofwarcraft .alpha-wiki {
+    color: rgb(49, 81, 156);
+}
+
+.card-content {
+    width: 100%;
+    margin: 1.875em 0;
+}
+
+@media screen and (max-width: 51.125em) {
+    .card-content {
+        margin: 0.9375em 0 1.875em 0;
+    }
+
+    .card-content[aria-hidden=true] {
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 0;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .card-content[aria-hidden=false] {
+        position: initial;
+        clip: auto;
+    }
+}
+
+.card-content li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* column styles */
+p ~ .card-container, .button ~ .card-container {
+    margin-top: 5.25em;
+}
+
+.text-container {
+    text-align: left;
+    font-size: 1.125em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 44em;
+    text-align: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 30em) {
+    .text-container {
+        font-size: 1em;
+    }
+}
+
+/* footer styles */
+footer {
+    color: rgb(97, 97, 97);
+    background: rgb(249, 249, 249);
+    border-top: 0.0625rem solid rgb(211, 211, 211);
+    font-size: 0.875em;
+    padding-bottom: 4rem;
+    text-align: left;
+    padding-top: 3rem;
+}
+
+footer a, footer a:visited {
+    color: rgb(97, 97, 97);
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 83.5rem;
+    width: 100%;
+    padding: 0 1.875rem;
+}
+
+@media screen and (max-width: 51.125em) {
+    .footer-content {
+        padding: 0 0.875rem;
+    }
+}
+
+@media screen and (max-width: 51.125em) {
+    .footer-block, .footer-block ~ .footer-block  {
+        width: 100%;
+    }
+}
+
+.footer-group {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 3rem;
+    width: 16.6666%;
+    padding-right: 2.5rem;
+}
+
+
+@media screen and (max-width: 68.75em) {
+    .footer-group {
+        width: 25%;
+    }
+}
+
+
+@media screen and (max-width: 51.125em) {
+    .footer-group {
+        width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .footer-group {
+        width: 50%;
+    }
+}
+
+/* 370w */
+@media screen and (max-width: 23.125em) {
+    .footer-group {
+        width: 100%;
+    }
+}
+
+.footer-group > a {
+    display: block;
+    margin-bottom: 3em;
+}
+
+.footer-logo {
+    width: 8rem;
+}
+
+@media screen and (max-width: 30em) {
+    .footer-logo {
+        margin-bottom: 0;
+    }
+}
+
+.footer-group h1 {
+    font-size: 1rem;
+    font-weight: 700;
 }

@@ -49,10 +49,10 @@
 			--><div class="footer-group">
 				<h1 id="about-us">Liquipedia</h1>
 				<ul class="display-list" aria-labeledby="about-us">
-					<li id="footer-places-about"><a href="/counterstrike/Liquipedia:About" title="Liquipedia:About">About</a></li>
+					<li id="footer-places-about"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:About" title="Liquipedia:About">About</a></li>
 					<li><a href="<?php echo $baseurl; ?>/discord" target="_blank" rel="noopener noreferrer">Chat with Us</a></li>
-					<li id="footer-places-disclaimer"><a href="/counterstrike/Liquipedia:General_disclaimer" title="Liquipedia:General disclaimer">Disclaimers</a></li>
-					<li id="footer-places-privacy"><a href="/counterstrike/Liquipedia:Privacy_policy" title="Liquipedia:Privacy policy">Privacy policy</a></li>
+					<li id="footer-places-disclaimer"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:General_disclaimer" title="Liquipedia:General disclaimer">Disclaimers</a></li>
+					<li id="footer-places-privacy"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:Privacy_policy" title="Liquipedia:Privacy policy">Privacy policy</a></li>
 					<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread">Post Feedback</a></li>
 					<li><a href="mailto:liquipedia@teamliquid.net">Send us an Email</a></li>
 				</ul>
@@ -69,10 +69,7 @@
 			</div>
 		</div>
 		<div class="footer-block">
-			<p>
-			<?php $page = 'home'; ?>
-			<?php if($page === 'other') { ?>
-			This page was last modified on 15 June 2017, at 21:42<br/><?php } ?>Text/code is available under the license <a class="footer-link" href="/dota2/Liquipedia:Copyrights" title="Liquipedia:Copyrights">CC BY-SA</a>. Licenses for other media varies.</p>
+			<p>Text/code is available under the license <a class="footer-link" href="<?php echo $baseurl; ?>/dota2/Liquipedia:Copyrights" title="Liquipedia:Copyrights">CC BY-SA</a>. Licenses for other media varies.</p>
 		</div>
 	</div>
 </footer>

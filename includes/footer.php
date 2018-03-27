@@ -12,28 +12,18 @@
 		--><div class="footer-group">
 				<h1 id="primary-wikis">Wikis</h1>
 				<ul class="display-list" aria-labeledby="primary-wikis">
-					<li><a href="<?php echo $baseurl; ?>/commons/">Commons</a></li>
-					<li><a href="<?php echo $baseurl; ?>/starcraft/">Brood War</a></li>
-					<li><a href="<?php echo $baseurl; ?>/counterstrike/">Counter-Strike</a></li>
-					<li><a href="<?php echo $baseurl; ?>/dota2/">Dota 2</a></li>
-					<li><a href="<?php echo $baseurl; ?>/hearthstone/">Hearthstone</a></li>
-					<li><a href="<?php echo $baseurl; ?>/heroes/">Heroes of the Storm</a></li>
-					<li><a href="<?php echo $baseurl; ?>/overwatch/">Overwatch</a></li>
-					<li><a href="<?php echo $baseurl; ?>/rocketleague/">Rocket League</a></li>
-					<li><a href="<?php echo $baseurl; ?>/smash/">Smash</a></li>
-					<li><a href="<?php echo $baseurl; ?>/starcraft2/">StarCraft II</a></li>
+					<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
+						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></li>
+					<?php } ?>
+						<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons</a></li>
 				</ul>
 			</div><!--
 			--><div class="footer-group">
 				<h1 id="alpha-wikis">Alpha Wikis</h1>
 				<ul class="display-list" aria-labeledby="alpha-wikis">
-					<li><a href="<?php echo $baseurl; ?>/fighters/">Fighting Games</a></li>
-					<li><a href="<?php echo $baseurl; ?>/leagueoflegends/">League of Legends</a></li>
-					<li><a href="<?php echo $baseurl; ?>/quake/">Quake</a></li>
-					<li><a href="<?php echo $baseurl; ?>/rainbowsix/">Rainbow Six</a></li>
-					<li><a href="<?php echo $baseurl; ?>/teamfortress/">Team Fortress</a></li>
-					<li><a href="<?php echo $baseurl; ?>/warcraft/">Warcraft III</a></li>
-					<li><a href="<?php echo $baseurl; ?>/worldofwarcraft/">World of Warcraft</a></li>
+					<?php foreach( $alphawikis as $wiki_key => $wiki ) { ?>
+						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></li>
+					<?php } ?>
 				</ul>
 			</div><!--
 			--><div class="footer-group">

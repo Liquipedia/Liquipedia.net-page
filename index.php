@@ -1,5 +1,4 @@
 <?php
-
 $no_session = true;
 require_once( 'includes/wikis.php' );
 require_once( '../config/db_config.php' );
@@ -12,7 +11,7 @@ header( 'Expires: ' . $expire );
 
 $col_number = 3;
 
-$hot_links = array();
+$hot_links = [];
 
 $pdo = null;
 try {
@@ -20,42 +19,44 @@ try {
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
-} catch( PDOException $e ) {
+} catch ( PDOException $e ) {
 	// echo 'Connection Error: ' . $e->getMessage();
 }
 
 $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
-while( $row = $selectstmt->fetch() ) {
-	$title = str_replace( '_', ' ', $row['title'] );
-	$url = $row['page'];
-	$wiki = $row['wiki'];
+while ( $row = $selectstmt->fetch() ) {
+	$title = str_replace( '_', ' ', $row[ 'title' ] );
+	$url = $row[ 'page' ];
+	$wiki = $row[ 'wiki' ];
 
-	if( count( $hot_links[$wiki] ) < 5 ) {
-		$hot_links[$wiki][] = array(
+	if ( !isset( $hot_links[ $wiki ] ) ) {
+		$hot_links[ $wiki ] = [];
+	}
+	if ( count( $hot_links[ $wiki ] ) < 5 ) {
+		$hot_links[ $wiki ][] = [
 			'title' => $title,
 			'href' => $url
-		);
+		];
 	}
 }
 
 $keywords = '';
-foreach( $wikis as $wiki_key => $wiki ) {
-	$keywords .= ', ' . $wiki['name'];
+foreach ( $wikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki[ 'name' ];
 }
-foreach( $alphawikis as $wiki_key => $wiki ) {
-	$keywords .= ', ' . $wiki['name'];
+foreach ( $alphawikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki[ 'name' ];
 }
-
 ?>
 <!DOCTYPE html>
-<!-- 
-	 _ _             _                _ _       
-	| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ 
+<!--
+	 _ _             _                _ _
+	| (_) __ _ _   _(_)_ __   ___  __| (_) __ _
 	| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |
 	| | | (_| | |_| | | |_) |  __/ (_| | | (_| |
 	|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|
-	        |_|       |_|                       
+		|_|       |_|
 
 	Hi you, yes you who's looking at our source code! Are you a website specialist?
 	We are looking for people to help us with our templates, especially with mobile development.
@@ -87,14 +88,14 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<meta property="og:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta property="og:site_name" content="Liquipedia" />
 		<style>
-		<?php
-			foreach( $wikis as $wiki_key => $wiki ) {
-				echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki['background-color'] . " }\n";
-			}
-			foreach( $alphawikis as $wiki_key => $wiki ) {
-				echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki['background-color'] . " }\n";
-			}
-		?>
+<?php
+foreach ( $wikis as $wiki_key => $wiki ) {
+	echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki[ 'background-color' ] . " }\n";
+}
+foreach ( $alphawikis as $wiki_key => $wiki ) {
+	echo "\t\t\t." . $wiki_key . '-box { background-color:' . $wiki[ 'background-color' ] . " }\n";
+}
+?>
 		</style>
 	</head>
 	<body class="column-<?php echo $col_number; ?>">
@@ -112,12 +113,14 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			<div class="content searchwrap">
 				<form id="search" class="search" action="/dota2/index.php">
 					<select id="wikiselect" aria-label="Select a Wiki to search">
-						<?php foreach( $wikis as $wiki_key => $wiki ) {
-							echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
+						<?php
+						foreach ( $wikis as $wiki_key => $wiki ) {
+							echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
 						}
-						foreach( $alphawikis as $wiki_key => $wiki ) {
-							echo '<option value="' . $wiki_key . '">' . $wiki['name'] . '</option>';
-						} ?>
+						foreach ( $alphawikis as $wiki_key => $wiki ) {
+							echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
+						}
+						?>
 						<option value="commons">Commons</option>
 					</select><!--
 					--><input aria-label="Search for" type="search" name="search" placeholder="Search..."><!--
@@ -132,18 +135,22 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				</a>
 			</div>-->
 			<div class="box-wrap">
-				<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
+				<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
+						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
-							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
-							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a><br />
-							<?php }
-							} ?>
-						 </p>
+							<?php
+							if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+								foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+									?>
+									<a href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>"><?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?></a><br />
+									<?php
+								}
+							}
+							?>
+						</p>
 					</div>
 				<?php } ?>
 			</div>
@@ -170,18 +177,22 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<p class="btn-wrap"><a class="btn" target="_blank" href="https://goo.gl/forms/kF0dCtJzHT">Fill in this form</a></p>
 			</div>
 			<div class="box-wrap">
-				<?php foreach( $alphawikis as $wiki_key => $wiki ) { ?>
+				<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></div>
+						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
-							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
-							foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-								<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a><br />
-							<?php }
-							} ?>
-						 </p>
+							<?php
+							if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+								foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+									?>
+									<a href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>"><?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?></a><br />
+									<?php
+								}
+							}
+							?>
+						</p>
 					</div>
 				<?php } ?>
 			</div>
@@ -197,10 +208,10 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="http://liquipedia.net/discord" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
 				<h4>Logging in and registering</h4>
 				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="http://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration.<br />
-				Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
+					Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
 				<h4>Editing</h4>
 				<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. <br />
-				When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="http://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
+					When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="http://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
 				<h4>Areas to help out with</h4>
 				<p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
 				<ul>
@@ -239,24 +250,31 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<script type="text/javascript">
-			window.addEventListener('DOMContentLoaded', function() {
-				if(!document.cookie.includes('liquipedia_last_wiki_search')) {
-					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys($wikis)[0]; ?>';
+			window.addEventListener('DOMContentLoaded', function () {
+				if (!document.cookie.includes('liquipedia_last_wiki_search')) {
+					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
 				}
 				var startwiki = document.cookie.replace(/(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1")
 				document.getElementById('wikiselect').value = startwiki;
 				document.getElementById('search').action = '/' + startwiki + '/index.php';
-				document.getElementById('wikiselect').onchange = function() {
+				document.getElementById('wikiselect').onchange = function () {
 					document.cookie = 'liquipedia_last_wiki_search=' + this.value;
 					document.getElementById('search').action = '/' + this.value + '/index.php';
 				}
 			});
 		</script>
 		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 			ga('set', 'anonymizeIp', true);
 			ga('create', 'UA-576564-4', 'auto');
@@ -266,7 +284,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<script type="text/javascript">
 			var _qevents = _qevents || [];
 
-			(function() {
+			(function () {
 				var elem = document.createElement('script');
 				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
 				elem.async = true;
@@ -275,13 +293,13 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				scpt.parentNode.insertBefore(elem, scpt);
 			})();
 			_qevents.push({
-				qacct:"p-c4R4Uj3EI2IsY"
+				qacct: "p-c4R4Uj3EI2IsY"
 			});
 		</script>
 		<noscript>
-			<div style="display:none;">
-				<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
-			</div>
+		<div style="display:none;">
+			<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
+		</div>
 		</noscript>
 		<!-- End Quantcast tag -->
 	</body>

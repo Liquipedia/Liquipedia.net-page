@@ -8,163 +8,161 @@
 $protocol = 'http://';
 $baseurl = $protocol . 'liquipedia.net';
 
-$wikis = array (
-	'dota2' => array (
+$wikis = [
+	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
 		'api' => $baseurl . '/dota2/api.php',
-	),
-	'counterstrike' => array (
+	],
+	'counterstrike' => [
 		'name' => 'Counter-Strike',
 		'background-color' => '#cde5b6',
 		'api' => $baseurl . '/counterstrike/api.php',
-	),
-	'starcraft2' => array (
+	],
+	'starcraft2' => [
 		'name' => 'StarCraft II',
 		'background-color' => '#b6cfe5',
 		'api' => $baseurl . '/starcraft2/api.php',
-	),
-	'overwatch' => array (
+	],
+	'overwatch' => [
 		'name' => 'Overwatch',
 		'background-color' => '#e5b6c0',
 		'api' => $baseurl . '/overwatch/api.php',
-	),
-	'hearthstone' => array (
+	],
+	'hearthstone' => [
 		'name' => 'Hearthstone',
 		'background-color' => '#e5d8b6',
 		'api' => $baseurl . '/hearthstone/api.php',
-	),
-	'smash' => array (
+	],
+	'smash' => [
 		'name' => 'Smash',
 		'background-color' => '#b6e5c7',
 		'api' => $baseurl . '/smash/api.php',
-	),
-	'heroes' => array (
+	],
+	'heroes' => [
 		'name' => 'Heroes',
 		'background-color' => '#b9b6e5',
 		'api' => $baseurl . '/heroes/api.php',
-	),
-	'starcraft' => array (
+	],
+	'starcraft' => [
 		'name' => 'Brood War',
 		'background-color' => '#dbe1e5',
 		'api' => $baseurl . '/starcraft/api.php',
-	),
-	'rocketleague' => array (
+	],
+	'rocketleague' => [
 		'name' => 'Rocket League',
 		'background-color' => '#ffdaae',
 		'api' => $baseurl . '/rocketleague/api.php',
-	),
-);
-$alphawikis = array (
-	'leagueoflegends' => array (
+	],
+];
+$alphawikis = [
+	'leagueoflegends' => [
 		'name' => 'League of Legends',
 		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
-	),
-	'warcraft' => array (
+	],
+	'warcraft' => [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
-	),
-	'rainbowsix' => array (
+	],
+	'rainbowsix' => [
 		'name' => 'Rainbow Six',
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
-	),
-	'quake' => array (
+	],
+	'quake' => [
 		'name' => 'Quake',
 		'background-color' => '#dd986e',
 		'api' => $baseurl . '/quake/api.php',
-	),
-	'teamfortress' => array (
+	],
+	'teamfortress' => [
 		'name' => 'Team Fortress',
 		'background-color' => '#cca96b',
 		'api' => $baseurl . '/teamfortress/api.php',
-	),
-	'worldofwarcraft' => array (
+	],
+	'worldofwarcraft' => [
 		'name' => 'World of Warcraft',
 		'background-color' => '#d1e2f1',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
-	),
-	'fighters' => array (
+	],
+	'fighters' => [
 		'name' => 'Fighting Games',
 		'background-color' => '#ffcb66',
 		'api' => $baseurl . '/fighters/api.php',
-	),
-);
-$miscwikis = array (
-	'commons' => array (
+	],
+];
+$miscwikis = [
+	'commons' => [
 		'name' => 'Liquipedia Commons',
 		'background-color' => '',
 		'api' => $baseurl . '/commons/api.php',
-	),
-);
-$otherwikis = array (
-	'clashroyale' => array (
+	],
+];
+$otherwikis = [
+	'clashroyale' => [
 		'name' => 'Clash Royale',
 		'background-color' => '',
 		'api' => $baseurl . '/clashroyale/api.php',
-	),
-	'trackmania' => array (
+	],
+	'trackmania' => [
 		'name' => 'TrackMania',
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
-	),
-	'diabotical' => array (
+	],
+	'diabotical' => [
 		'name' => 'Diabotical',
 		'background-color' => '',
 		'api' => $baseurl . '/diabotical/api.php',
-	),
-	'battlerite' => array (
+	],
+	'battlerite' => [
 		'name' => 'Battlerite',
 		'background-color' => '',
 		'api' => $baseurl . '/battlerite/api.php',
-	),
-	'crossfire' => array (
+	],
+	'crossfire' => [
 		'name' => 'CrossFire',
 		'background-color' => '',
 		'api' => $baseurl . '/crossfire/api.php',
-	),
-	'fifa' => array (
+	],
+	'fifa' => [
 		'name' => 'FIFA',
 		'background-color' => '',
 		'api' => $baseurl . '/fifa/api.php',
-	),
-	'pokemon' => array (
+	],
+	'pokemon' => [
 		'name' => 'Pokémon',
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
-	),
-	'pubg' => array (
+	],
+	'pubg' => [
 		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
 		'background-color' => '',
 		'api' => $baseurl . '/pubg/api.php',
-	),
-	'artifact' => array (
+	],
+	'artifact' => [
 		'name' => 'Artifact',
 		'background-color' => '',
 		'api' => $baseurl . '/artifact/api.php',
-	),
-	'paladins' => array (
+	],
+	'paladins' => [
 		'name' => 'Paladins',
 		'background-color' => '',
 		'api' => $baseurl . '/paladins/api.php',
-	),
-	'battalion' => array (
+	],
+	'battalion' => [
 		'name' => 'Battalion 1944',
 		'background-color' => '',
 		'api' => $baseurl . '/battalion/api.php',
-	),
-	'fortnite' => array (
+	],
+	'fortnite' => [
 		'name' => 'Fortnite',
 		'background-color' => '',
 		'api' => $baseurl . '/fortnite/api.php',
-	),
-	'arenaofvalor' => array (
+	],
+	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '',
 		'api' => $baseurl . '/arenaofvalor/api.php',
-	),
-);
-
-?>
+	],
+];

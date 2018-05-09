@@ -1,5 +1,4 @@
 <?php
-
 $no_session = true;
 require_once( 'includes/wikis.php' );
 require_once( '../config/db_config.php' );
@@ -20,19 +19,22 @@ try {
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
-} catch( PDOException $e ) {
+} catch ( PDOException $e ) {
 	// echo 'Connection Error: ' . $e->getMessage();
 }
 
 $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
-while( $row = $selectstmt->fetch() ) {
-	$title = str_replace( '_', ' ', $row['title'] );
-	$url = $row['page'];
-	$wiki = $row['wiki'];
+while ( $row = $selectstmt->fetch() ) {
+	$title = str_replace( '_', ' ', $row[ 'title' ] );
+	$url = $row[ 'page' ];
+	$wiki = $row[ 'wiki' ];
 
-	if( count( $hot_links[$wiki] ) < 5 ) {
-		$hot_links[$wiki][] = [
+	if ( !isset( $hot_links[ $wiki ] ) ) {
+		$hot_links[ $wiki ] = [];
+	}
+	if ( count( $hot_links[ $wiki ] ) < 5 ) {
+		$hot_links[ $wiki ][] = [
 			'title' => $title,
 			'href' => $url
 		];
@@ -40,13 +42,12 @@ while( $row = $selectstmt->fetch() ) {
 }
 
 $keywords = '';
-foreach( $wikis as $wiki_key => $wiki ) {
-	$keywords .= ', ' . $wiki['name'];
+foreach ( $wikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki[ 'name' ];
 }
-foreach( $alphawikis as $wiki_key => $wiki ) {
-	$keywords .= ', ' . $wiki['name'];
+foreach ( $alphawikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki[ 'name' ];
 }
-
 ?>
 <!DOCTYPE html>
 <!--
@@ -55,7 +56,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 	| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |
 	| | | (_| | |_| | | |_) |  __/ (_| | | (_| |
 	|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|
-	        |_|       |_|
+		|_|       |_|
 
 	Hi you, yes you who's looking at our source code! Are you a website specialist?
 	We are looking for people to help us with our templates, especially with mobile development.
@@ -94,7 +95,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<header role="banner">
 			<div>
 				<svg class="wiki-logo" viewBox="0 0 700 133.89" aria-hidden="true">
-					<use xlink:href="images/logo_horiz.svg#brand" />
+				<use xlink:href="images/logo_horiz.svg#brand" />
 				</svg>
 			</div>
 			<span class="screen-reader-text">Liquipedia Logo</span>
@@ -104,31 +105,35 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 			<!--begin main content-->
 			<section role="region" aria-label="primary wikis">
 				<div class="card-container">
-					<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
-					<article class="wiki-card wiki-card--<?php echo $wiki_key; ?>">
-						<div class="card-controls">
-							<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
-						</div>
-						<h1 class="card-header">
-							<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
-								<span class="card-icon">
-									<svg class="game-icon">
+					<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
+						<article class="wiki-card wiki-card--<?php echo $wiki_key; ?>">
+							<div class="card-controls">
+								<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
+							</div>
+							<h1 class="card-header">
+								<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
+									<span class="card-icon">
+										<svg class="game-icon">
 										<use xlink:href="#<?php echo $wiki_key; ?>"/>
-									</svg>
-								</span>
-								<span><?php echo $wiki['name']; ?></span>
-							</a>
-						</h1>
-						<ul class="card-content" data-accordion="<?php echo $wiki_key; ?>" aria-hidden="false" aria-label="recent trending pages">
-							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
-								foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-									<li>
-										<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a>
-									</li>
-							<?php }
-							} ?>
-						</ul>
-					</article>
+										</svg>
+									</span>
+									<span><?php echo $wiki[ 'name' ]; ?></span>
+								</a>
+							</h1>
+							<ul class="card-content" data-accordion="<?php echo $wiki_key; ?>" aria-hidden="false" aria-label="recent trending pages">
+								<?php
+								if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+									foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+										?>
+										<li>
+											<a href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>"><?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?></a>
+										</li>
+										<?php
+									}
+								}
+								?>
+							</ul>
+						</article>
 					<?php } ?>
 				</div>
 			</section>
@@ -148,34 +153,38 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				<p class="about">Alpha wikis are branches of Liquipedia that are still in the process of being built. We have a few in progress right now, but if you’re looking for help in setting up a new wiki on our server that’s not listed below, please use the link below to fill out a request.</p>
 				<a class="button button--action" href="https://goo.gl/forms/kF0dCtJzHT" target="_blank" rel="noopener noreferrer">Alpha Wiki Request Form</a>
 				<div class="card-container">
-					<?php foreach( $alphawikis as $wiki_key => $wiki ) { ?>
-					<article class="wiki-card wiki-card--<?php echo $wiki_key; ?> wiki-card--alpha">
-						<div class="card-controls">
-							<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
-						</div>
-						<h1 class="card-header">
-							<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
-								<span class="card-icon">
-									<svg class="game-icon">
+					<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
+						<article class="wiki-card wiki-card--<?php echo $wiki_key; ?> wiki-card--alpha">
+							<div class="card-controls">
+								<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
+							</div>
+							<h1 class="card-header">
+								<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
+									<span class="card-icon">
+										<svg class="game-icon">
 										<use xlink:href="#<?php echo $wiki_key; ?>" />
-									</svg>
-									<svg class="alpha-wiki">
+										</svg>
+										<svg class="alpha-wiki">
 										<use xlink:href="#alpha" />
-									</svg>
-								</span>
-								<span><?php echo $wiki['name']; ?></span>
-							</a>
-						</h1>
-						<ul class="card-content" data-accordion="<?php echo $wiki_key; ?>" aria-hidden="false" aria-label="recent trending pages">
-							<?php if( isset( $hot_links[$wiki_key] ) && is_array( $hot_links[$wiki_key] ) ) {
-								foreach( $hot_links[$wiki_key] as $hot_link ) { ?>
-									<li>
-										<a href="<?php echo $hot_link['href']; ?>" title="<?php echo htmlspecialchars( $hot_link['title'] ); ?>"><?php echo htmlspecialchars( $hot_link['title'] ); ?></a>
-									</li>
-							<?php }
-							} ?>
-						</ul>
-					</article>
+										</svg>
+									</span>
+									<span><?php echo $wiki[ 'name' ]; ?></span>
+								</a>
+							</h1>
+							<ul class="card-content" data-accordion="<?php echo $wiki_key; ?>" aria-hidden="false" aria-label="recent trending pages">
+								<?php
+								if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+									foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+										?>
+										<li>
+											<a href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>"><?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?></a>
+										</li>
+										<?php
+									}
+								}
+								?>
+							</ul>
+						</article>
 					<?php } ?>
 				</div>
 			</section>
@@ -225,142 +234,149 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 
 		<!-- Page Scripts -->
 		<script>
-		'use strict';
-		/* ====================================================================
-		 * Set Aria-accordion attributes
-		 * ====================================================================
-		 * on DOM load, detect and set state
-		 */
-		document.addEventListener('DOMContentLoaded', function() {
-			var breakpoint = window.matchMedia('(max-width: 818px)').matches;
-			var triggers = document.querySelectorAll('[data-accordion-trigger]');
-			var accordions = document.querySelectorAll('[data-accordion]');
-
-			if(breakpoint) {
-				triggers.forEach(function(item) {
-					item.setAttribute('aria-expanded', 'false');
-					item.classList.remove('is-removed');
-				});
-
-				accordions.forEach(function(item) {
-					item.setAttribute('aria-hidden', 'true');
-				});
-			}
-		}, false);
-
-
-		/* ====================================================================
-		 * RAF-Throttled Accordion Resize
-		 * ====================================================================
-		 * request animation frame throttled resize function to swap aria
-		 * attributes
-		 */
-		(function() {
-			var running = false,
-				prevWidth = window.innerWidth;
-
-			function onResize() {
-				if(!running) {
-					running = true;
-					window.requestAnimationFrame(update);
-				}
-			}
-
-			//main function, single state capture
-			function update() {
-				var width = window.innerWidth;
+			'use strict';
+			/* ====================================================================
+			 * Set Aria-accordion attributes
+			 * ====================================================================
+			 * on DOM load, detect and set state
+			 */
+			document.addEventListener('DOMContentLoaded', function () {
 				var breakpoint = window.matchMedia('(max-width: 818px)').matches;
 				var triggers = document.querySelectorAll('[data-accordion-trigger]');
 				var accordions = document.querySelectorAll('[data-accordion]');
 
-				if(width > prevWidth) {
-					if(!breakpoint) {
-						triggers.forEach(function(item) {
+				if (breakpoint) {
+					triggers.forEach(function (item) {
+						item.setAttribute('aria-expanded', 'false');
+						item.classList.remove('is-removed');
+					});
+
+					accordions.forEach(function (item) {
+						item.setAttribute('aria-hidden', 'true');
+					});
+				}
+			}, false);
+
+
+			/* ====================================================================
+			 * RAF-Throttled Accordion Resize
+			 * ====================================================================
+			 * request animation frame throttled resize function to swap aria
+			 * attributes
+			 */
+			(function () {
+				var running = false,
+					prevWidth = window.innerWidth;
+
+				function onResize() {
+					if (!running) {
+						running = true;
+						window.requestAnimationFrame(update);
+					}
+				}
+
+				//main function, single state capture
+				function update() {
+					var width = window.innerWidth;
+					var breakpoint = window.matchMedia('(max-width: 818px)').matches;
+					var triggers = document.querySelectorAll('[data-accordion-trigger]');
+					var accordions = document.querySelectorAll('[data-accordion]');
+
+					if (width > prevWidth) {
+						if (!breakpoint) {
+							triggers.forEach(function (item) {
 								item.setAttribute('aria-expanded', 'true');
 								item.classList.add('is-removed');
 								item.innerHTML = '&ndash;';
 							});
-						accordions.forEach(function(item) {
-							item.setAttribute('aria-hidden', 'false');
-						});
-					}
-				} else if(prevWidth > 818 && breakpoint) {
-					triggers.forEach(function(item) {
+							accordions.forEach(function (item) {
+								item.setAttribute('aria-hidden', 'false');
+							});
+						}
+					} else if (prevWidth > 818 && breakpoint) {
+						triggers.forEach(function (item) {
 							item.setAttribute('aria-expanded', 'false');
 							item.classList.remove('is-removed');
 							item.innerHTML = '+';
 						});
-					accordions.forEach(function(item) {
-						item.setAttribute('aria-hidden', 'true');
-					});
-				} else {
-					//no function
+						accordions.forEach(function (item) {
+							item.setAttribute('aria-hidden', 'true');
+						});
+					} else {
+						//no function
+					}
+
+					//reset to head
+					prevWidth = window.innerWidth;
+					running = false;
 				}
 
-				//reset to head
-				prevWidth = window.innerWidth;
-				running = false;
+				window.addEventListener('resize', onResize, false);
+			})();
+
+
+			/* ====================================================================
+			 * Accordion Function
+			 * ====================================================================
+			 * A single-target expand & collapse function. Collects all triggers,
+			 * and adjusts aria-expanded, and aria-hidden attributes as necessary
+			 */
+			function toggleAccordion(triggers, accordions) {
+				var buttons = Array.prototype.slice.call(document.querySelectorAll(triggers));
+				var targets = Array.prototype.slice.call(document.querySelectorAll(accordions));
+
+				buttons.forEach(function (item) {
+					item.addEventListener('click', function () {
+						toggleAccordionState(this, targets);
+					}, false);
+				});
 			}
 
-			window.addEventListener('resize', onResize, false);
-		})();
+			function toggleAccordionState(target, list) {
+				var value = target.getAttribute('data-accordion-trigger');
 
+				if (target.getAttribute('aria-expanded') === 'false') {
+					target.setAttribute('aria-expanded', 'true');
+					target.innerHTML = '&ndash;';
+				} else {
+					target.setAttribute('aria-expanded', 'false');
+					target.innerHTML = '+';
+				}
 
-		/* ====================================================================
-		 * Accordion Function
-		 * ====================================================================
-		 * A single-target expand & collapse function. Collects all triggers,
-		 * and adjusts aria-expanded, and aria-hidden attributes as necessary
-		 */
-		function toggleAccordion(triggers, accordions) {
-			var buttons = Array.prototype.slice.call(document.querySelectorAll(triggers));
-			var targets = Array.prototype.slice.call(document.querySelectorAll(accordions));
-
-			buttons.forEach(function(item) {
-				item.addEventListener('click', function() {
-					toggleAccordionState(this, targets);
-				}, false);
-			});
-		}
-
-		function toggleAccordionState(target, list) {
-			var value = target.getAttribute('data-accordion-trigger');
-
-			if(target.getAttribute('aria-expanded') === 'false') {
-				target.setAttribute('aria-expanded', 'true');
-				target.innerHTML = '&ndash;';
-			} else {
-				target.setAttribute('aria-expanded', 'false');
-				target.innerHTML = '+';
+				updateAccordionPanel(target, value, list);
 			}
 
-			updateAccordionPanel(target, value, list);
-		}
-
-		function updateAccordionPanel(target, value, list) {
-			for(var i = 0; i < list.length; i += 1) {
-				if (value === list[i].getAttribute('data-accordion')) {
-					if(target.getAttribute('aria-expanded') === 'true') {
-						list[i].setAttribute('aria-hidden', 'false');
-					} else {
-						list[i].setAttribute('aria-hidden', 'true');
+			function updateAccordionPanel(target, value, list) {
+				for (var i = 0; i < list.length; i += 1) {
+					if (value === list[i].getAttribute('data-accordion')) {
+						if (target.getAttribute('aria-expanded') === 'true') {
+							list[i].setAttribute('aria-hidden', 'false');
+						} else {
+							list[i].setAttribute('aria-hidden', 'true');
+						}
 					}
 				}
 			}
-		}
 
-		toggleAccordion('[data-accordion-trigger]', '[data-accordion]');
+			toggleAccordion('[data-accordion-trigger]', '[data-accordion]');
 		</script>
 		<!-- End Page Scripts -->
 
 		<!-- Analytics -->
 		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-+			ga('set', 'anonymizeIp', true);
+			+ga('set', 'anonymizeIp', true);
 			ga('create', 'UA-576564-4', 'auto');
 			ga('send', 'pageview');
 		</script>
@@ -370,7 +386,7 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 		<script type="text/javascript">
 			var _qevents = _qevents || [];
 
-			(function() {
+			(function () {
 				var elem = document.createElement('script');
 				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
 				elem.async = true;
@@ -379,13 +395,13 @@ foreach( $alphawikis as $wiki_key => $wiki ) {
 				scpt.parentNode.insertBefore(elem, scpt);
 			})();
 			_qevents.push({
-				qacct:"p-c4R4Uj3EI2IsY"
+				qacct: "p-c4R4Uj3EI2IsY"
 			});
 		</script>
 		<noscript>
-			<div style="display:none;">
-				<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
-			</div>
+		<div style="display:none;">
+			<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
+		</div>
 		</noscript>
 		<!-- End Quantcast Tag -->
 	</body>

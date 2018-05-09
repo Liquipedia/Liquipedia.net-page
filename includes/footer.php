@@ -2,27 +2,27 @@
 	<div class="footer-content">
 		<div class="footer-block">
 			<div class="footer-group">
-			<a href="<?php echo $baseurl; ?>">
-				<svg class="footer-logo" viewBox="0 0 128 116.18">
+				<a href="<?php echo $baseurl; ?>">
+					<svg class="footer-logo" viewBox="0 0 128 116.18">
 					<use xlink:href="<?php echo $baseurl; ?>/images/logo_vert.svg#brand"/>
-				</svg>
-				<span class="screen-reader-text">Go To Liquipedia Homepage</span>
-			</a>
-		</div><!--
-		--><div class="footer-group">
+					</svg>
+					<span class="screen-reader-text">Go To Liquipedia Homepage</span>
+				</a>
+			</div><!--
+			--><div class="footer-group">
 				<h1 id="primary-wikis">Wikis</h1>
 				<ul class="display-list" aria-labeledby="primary-wikis">
-					<?php foreach( $wikis as $wiki_key => $wiki ) { ?>
-						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></li>
+					<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
+						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></li>
 					<?php } ?>
-						<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons</a></li>
+					<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons</a></li>
 				</ul>
 			</div><!--
 			--><div class="footer-group">
 				<h1 id="alpha-wikis">Alpha Wikis</h1>
 				<ul class="display-list" aria-labeledby="alpha-wikis">
-					<?php foreach( $alphawikis as $wiki_key => $wiki ) { ?>
-						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki['name']; ?></a></li>
+					<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
+						<li><a href="<?php echo $baseurl; ?>/<?php echo $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></li>
 					<?php } ?>
 				</ul>
 			</div><!--

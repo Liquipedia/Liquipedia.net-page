@@ -80,7 +80,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<meta name="twitter:title" content="Liquipedia" />
 		<meta name="twitter:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="twitter:image:src" content="<?php echo $baseurl; ?>/images/512.png" />
-		<meta name="twitter:domain" content="<?php echo str_replace( 'http://', '', $baseurl ); ?>" />
+		<meta name="twitter:domain" content="<?php echo str_replace( 'https://', '', $baseurl ); ?>" />
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="<?php echo $baseurl; ?>/images/512.png" />
 		<meta property="og:url" content="<?php echo $baseurl; ?>" />

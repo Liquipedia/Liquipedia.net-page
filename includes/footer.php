@@ -33,7 +33,7 @@
 					<li><a href="http://www.teamliquid.net" target="_blank" rel="noopener noreferrer">TeamLiquid.net</a></li>
 					<li><a href="https://www.liquiddota.com/" target="_blank" rel="noopener noreferrer">LiquidDota.com</a></li>
 					<li><a href="https://www.liquidhearth.com/" target="_blank" rel="noopener noreferrer">LiquidHearth.com</a></li>
-					<li><a href="http://www.liquidlegends.net/" target="_blank" rel="noopener noreferrer">LiquidLegends.net</a></li>
+					<li><a href="https://www.liquidlegends.net/" target="_blank" rel="noopener noreferrer">LiquidLegends.net</a></li>
 				</ul>
 			</div><!--
 			--><div class="footer-group">

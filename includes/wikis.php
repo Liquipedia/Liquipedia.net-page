@@ -5,7 +5,7 @@
  * $wikis are the big boxes, $alphawikis are the text links in the other wikis section.
  */
 
-$protocol = 'http://';
+$protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [

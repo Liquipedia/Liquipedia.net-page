@@ -1,11 +1,40 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Roboto'),
+		local('Roboto-Regular'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#iefix') format('embedded-opentype'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff') format('woff'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2'),
+		url('https://fonts.gstatic.com/l/font?kit=KFOmCnqEu92Fr1Mu4mxN&skey=a0a0114a1dcab3ac&v=v18#Roboto') format('svg'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		local('Roboto Light'),
+		local('Roboto-Light'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#iefix') format('embedded-opentype'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff') format('woff'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2') format('woff2'),
+		url('https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmSU5fBBc_&skey=11ce8ad5f54705ca&v=v18#Roboto') format('svg'),
+		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf') format('truetype');
+}
+
 body {
-	background:url(../images/lp-hex-bg.png) repeat;
+	background:#062543 url(../images/lp-hex-bg.png) repeat;
 	background-size:25%;
 	margin:0px;
-	font-family:Verdana, Geneva, Ubuntu, sans-serif;
+	font-family: Arial, Geneva, Ubuntu, sans-serif;
 }
 .content.searchwrap {
 	padding:20px 5px;
@@ -86,7 +115,7 @@ div.top {
 h1,
 h2,
 h3 {
-	font-family:'Roboto', Verdana, Arial, sans-serif;
+	font-family:'Roboto', Arial, sans-serif;
 	text-shadow:0px 5px 2px rgba(0, 0, 0, .16);
 	color:#ffffff;
 	text-align:center;
@@ -170,7 +199,7 @@ a:active {
 .game-box {
 	width:100%;
 	font-size:25px;
-	font-family:'Roboto', Verdana, Geneva, Ubuntu, sans-serif;
+	font-family:'Roboto', Arial, Geneva, Ubuntu, sans-serif;
 	font-weight:400;
 	margin:0 auto 5px auto;
 	padding-bottom:1px;

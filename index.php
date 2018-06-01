@@ -9,6 +9,9 @@ header( 'Content-Type: text/html; charset=utf-8' );
 header( 'Cache-Control: s-maxage=60' );
 header( 'Expires: ' . $expire );
 
+// Preload / push key files
+header( 'Link: </css/style.min.css?c=1>; as=style; rel=preload' );
+
 $col_number = 3;
 
 $hot_links = [];
@@ -68,10 +71,9 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
+		<link href="./css/style.min.css?c=1" rel="stylesheet" type="text/css" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
-		<link href="./css/style.css?c=1" rel="stylesheet" type="text/css" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400%7CRoboto:300" rel="stylesheet" type="text/css" />
 		<link href="./favicon.ico" rel="icon" />
 		<link href="/manifest.json" rel="manifest" />
 		<meta name="theme-color" content="#5496cf" />

@@ -76,15 +76,16 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="./favicon.ico" rel="icon" />
 		<link href="/manifest.json" rel="manifest" />
+		<link href="<?php echo $baseurl; ?>" rel="canonical" />
 		<meta name="theme-color" content="#5496cf" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@LiquipediaNet" />
 		<meta name="twitter:title" content="Liquipedia" />
 		<meta name="twitter:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
-		<meta name="twitter:image:src" content="<?php echo $baseurl; ?>/images/lp-logo-bg.png" />
+		<meta name="twitter:image:src" content="<?php echo $baseurl; ?>/images/liquipedia_logo.png" />
 		<meta name="twitter:domain" content="<?php echo str_replace( 'https://', '', $baseurl ); ?>" />
-		<meta property="og:type" content="article" />
-		<meta property="og:image" content="<?php echo $baseurl; ?>/images/lp-logo-bg.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="<?php echo $baseurl; ?>/images/liquipedia_logo.png" />
 		<meta property="og:url" content="<?php echo $baseurl; ?>" />
 		<meta property="og:title" content="Liquipedia" />
 		<meta property="og:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
@@ -251,6 +252,23 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				</div>
 			</div>
 		</div>
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "Liquipedia",
+			"url": "https://liquipedia.net",
+			"logo": "https://liquipedia.net/images/liquipedia_logo.png",
+			"foundingDate": "2009-06-05",
+			"sameAs": [
+				"https://twitter.com/LiquipediaNet",
+				"https://www.facebook.com/Liquipedia",
+				"https://www.youtube.com/user/Liquipedia",
+				"https://www.twitch.tv/liquipedia",
+				"https://github.com/Liquipedia"
+			]
+		}
+		</script>
 		<script type="text/javascript">
 			window.addEventListener('DOMContentLoaded', function () {
 				if (!document.cookie.includes('liquipedia_last_wiki_search')) {

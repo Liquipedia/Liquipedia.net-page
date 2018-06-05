@@ -112,7 +112,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 								<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
 							</div>
 							<h1 class="card-header">
-								<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
+								<a href="<?php echo '/' . $wiki_key; ?>/Main_Page">
 									<span class="card-icon">
 										<svg class="game-icon">
 										<use xlink:href="#<?php echo $wiki_key; ?>"/>
@@ -142,11 +142,11 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				<h1>Liquipedia Commons</h1>
 				<p class="about">The commons wiki is used to help operate the other wikis. It's a general file repository for all our wiki branches; images and other files uploaded here can be used across all of the wikis. The same holds true for any commonly used templates that are uploaded here.</p>
 				<ul class="list-inline" aria-label="liquipedia commons links">
-					<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
+					<li><a href="/commons/Main_Page">Commons Wiki</a></li>
+					<li><a href="/commons/Special:Upload">File Upload</a></li>
+					<li><a href="/commons/Copyrights_Repository">Copyrights Repository</a></li>
+					<li><a href="/commons/Special:RunQuery/Find_images">Find Images</a></li>
+					<li><a href="/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
 				</ul>
 			</section>
 			<section role="region">
@@ -160,7 +160,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 								<button class="is-removed" data-accordion-trigger="<?php echo $wiki_key; ?>" aria-controls="<?php echo $wiki_key; ?>" aria-expanded="true">+</button>
 							</div>
 							<h1 class="card-header">
-								<a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page">
+								<a href="<?php echo '/' . $wiki_key; ?>/Main_Page">
 									<span class="card-icon">
 										<svg class="game-icon">
 										<use xlink:href="#<?php echo $wiki_key; ?>" />

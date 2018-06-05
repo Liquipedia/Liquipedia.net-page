@@ -33,6 +33,8 @@ while ( $row = $selectstmt->fetch() ) {
 	$url = $row[ 'page' ];
 	$wiki = $row[ 'wiki' ];
 
+	$url = str_replace ( $baseurl, '', $url );
+
 	if ( !isset( $hot_links[ $wiki ] ) ) {
 		$hot_links[ $wiki ] = [];
 	}
@@ -142,7 +144,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
+						<div class="wiki-header"><a href="<?php echo '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php
 							if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
@@ -164,11 +166,11 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			<div class="content">
 				<p>The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
 				<ul class="flatlist">
-					<li><a href="<?php echo $baseurl; ?>/commons/Main_Page">Commons Wiki</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Special:Upload">File Upload</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Copyrights_Repository">Copyrights Repository</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Special:RunQuery/Find_images">Find Images</a></li>
-					<li><a href="<?php echo $baseurl; ?>/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
+					<li><a href="/commons/Main_Page">Commons Wiki</a></li>
+					<li><a href="/commons/Special:Upload">File Upload</a></li>
+					<li><a href="/commons/Copyrights_Repository">Copyrights Repository</a></li>
+					<li><a href="/commons/Special:RunQuery/Find_images">Find Images</a></li>
+					<li><a href="/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
 				</ul>
 			</div>
 		</div>
@@ -184,7 +186,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<div class="<?php echo $wiki_key; ?>-box game-box">
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="<?php echo $baseurl . '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
+						<div class="wiki-header"><a href="<?php echo '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
 						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
 							<?php
 							if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {

@@ -72,7 +72,7 @@ $alphawikis = [
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
 	'pubg' => [
-		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
+		'name' => 'PUBG',
 		'background-color' => '',
 		'api' => $baseurl . '/pubg/api.php',
 	],

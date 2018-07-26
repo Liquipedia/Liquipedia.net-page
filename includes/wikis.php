@@ -71,6 +71,11 @@ $alphawikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
+	'pubg' => [
+		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
+		'background-color' => '',
+		'api' => $baseurl . '/pubg/api.php',
+	],
 	'quake' => [
 		'name' => 'Quake',
 		'background-color' => '#dd986e',
@@ -134,11 +139,6 @@ $otherwikis = [
 		'name' => 'Pokémon',
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
-	],
-	'pubg' => [
-		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
-		'background-color' => '',
-		'api' => $baseurl . '/pubg/api.php',
 	],
 	'artifact' => [
 		'name' => 'Artifact',

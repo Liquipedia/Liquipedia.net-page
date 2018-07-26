@@ -73,7 +73,7 @@ $alphawikis = [
 	],
 	'pubg' => [
 		'name' => 'PUBG',
-		'background-color' => '',
+		'background-color' => '#edc951',
 		'api' => $baseurl . '/pubg/api.php',
 	],
 	'quake' => [

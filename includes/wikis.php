@@ -91,6 +91,11 @@ $alphawikis = [
 		'background-color' => '#ffcb66',
 		'api' => $baseurl . '/fighters/api.php',
 	],
+	'clashroyale' => [
+		'name' => 'Clash Royale',
+		'background-color' => '#ffa800',
+		'api' => $baseurl . '/clashroyale/api.php',
+	],
 ];
 $miscwikis = [
 	'commons' => [
@@ -100,11 +105,6 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'clashroyale' => [
-		'name' => 'Clash Royale',
-		'background-color' => '',
-		'api' => $baseurl . '/clashroyale/api.php',
-	],
 	'trackmania' => [
 		'name' => 'TrackMania',
 		'background-color' => '',

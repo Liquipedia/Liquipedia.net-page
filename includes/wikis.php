@@ -98,7 +98,7 @@ $alphawikis = [
 	],
 	'clashroyale' => [
 		'name' => 'Clash Royale',
-		'background-color' => '#ffa800',
+		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/clashroyale/api.php',
 	],
 ];

@@ -54,6 +54,11 @@ $wikis = [
 		'background-color' => '#ffdaae',
 		'api' => $baseurl . '/rocketleague/api.php',
 	],
+	'rainbowsix' => [
+		'name' => 'Rainbow Six',
+		'background-color' => '#f0e0a4',
+		'api' => $baseurl . '/rainbowsix/api.php',
+	],
 ];
 $alphawikis = [
 	'leagueoflegends' => [
@@ -65,11 +70,6 @@ $alphawikis = [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
-	],
-	'rainbowsix' => [
-		'name' => 'Rainbow Six',
-		'background-color' => '#f0e0a4',
-		'api' => $baseurl . '/rainbowsix/api.php',
 	],
 	'quake' => [
 		'name' => 'Quake',

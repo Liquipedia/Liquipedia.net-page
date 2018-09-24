@@ -29,26 +29,6 @@ $wikis = [
 		'background-color' => '#e5b6c0',
 		'api' => $baseurl . '/overwatch/api.php',
 	],
-	'hearthstone' => [
-		'name' => 'Hearthstone',
-		'background-color' => '#e5d8b6',
-		'api' => $baseurl . '/hearthstone/api.php',
-	],
-	'smash' => [
-		'name' => 'Smash',
-		'background-color' => '#b6e5c7',
-		'api' => $baseurl . '/smash/api.php',
-	],
-	'heroes' => [
-		'name' => 'Heroes',
-		'background-color' => '#b9b6e5',
-		'api' => $baseurl . '/heroes/api.php',
-	],
-	'starcraft' => [
-		'name' => 'Brood War',
-		'background-color' => '#dbe1e5',
-		'api' => $baseurl . '/starcraft/api.php',
-	],
 	'rocketleague' => [
 		'name' => 'Rocket League',
 		'background-color' => '#ffdaae',
@@ -58,6 +38,26 @@ $wikis = [
 		'name' => 'Rainbow Six',
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
+	],
+	'starcraft' => [
+		'name' => 'Brood War',
+		'background-color' => '#dbe1e5',
+		'api' => $baseurl . '/starcraft/api.php',
+	],
+	'hearthstone' => [
+		'name' => 'Hearthstone',
+		'background-color' => '#e5d8b6',
+		'api' => $baseurl . '/hearthstone/api.php',
+	],
+	'heroes' => [
+		'name' => 'Heroes',
+		'background-color' => '#b9b6e5',
+		'api' => $baseurl . '/heroes/api.php',
+	],
+	'smash' => [
+		'name' => 'Smash',
+		'background-color' => '#b6e5c7',
+		'api' => $baseurl . '/smash/api.php',
 	],
 ];
 $alphawikis = [

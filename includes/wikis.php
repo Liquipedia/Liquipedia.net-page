@@ -76,6 +76,11 @@ $alphawikis = [
 		'background-color' => '#edc951',
 		'api' => $baseurl . '/pubg/api.php',
 	],
+	'fortnite' => [
+		'name' => 'Fortnite',
+		'background-color' => '#fbf2df',
+		'api' => $baseurl . '/fortnite/api.php',
+	],
 	'quake' => [
 		'name' => 'Quake',
 		'background-color' => '#dd986e',
@@ -154,11 +159,6 @@ $otherwikis = [
 		'name' => 'Battalion 1944',
 		'background-color' => '',
 		'api' => $baseurl . '/battalion/api.php',
-	],
-	'fortnite' => [
-		'name' => 'Fortnite',
-		'background-color' => '',
-		'api' => $baseurl . '/fortnite/api.php',
 	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',

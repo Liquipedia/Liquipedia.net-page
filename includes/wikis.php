@@ -71,6 +71,16 @@ $alphawikis = [
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
 	],
+	'pubg' => [
+		'name' => 'PUBG',
+		'background-color' => '#edc951',
+		'api' => $baseurl . '/pubg/api.php',
+	],
+	'fortnite' => [
+		'name' => 'Fortnite',
+		'background-color' => '#fbf2df',
+		'api' => $baseurl . '/fortnite/api.php',
+	],
 	'quake' => [
 		'name' => 'Quake',
 		'background-color' => '#dd986e',
@@ -135,11 +145,6 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
 	],
-	'pubg' => [
-		'name' => 'PLAYERUNKNOWN\'S BATTLEGROUNDS',
-		'background-color' => '',
-		'api' => $baseurl . '/pubg/api.php',
-	],
 	'artifact' => [
 		'name' => 'Artifact',
 		'background-color' => '',
@@ -154,11 +159,6 @@ $otherwikis = [
 		'name' => 'Battalion 1944',
 		'background-color' => '',
 		'api' => $baseurl . '/battalion/api.php',
-	],
-	'fortnite' => [
-		'name' => 'Fortnite',
-		'background-color' => '',
-		'api' => $baseurl . '/fortnite/api.php',
 	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',

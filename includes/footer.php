@@ -30,7 +30,7 @@
 				<h1 id="affiliates">Affiliate Sites</h1>
 				<ul class="display-list" aria-labeledby="affiliates">
 					<li><a href="https://www.teamliquidpro.com/" target="_blank" rel="noopener noreferrer">TeamLiquidPro.com</a></li>
-					<li><a href="http://www.teamliquid.net" target="_blank" rel="noopener noreferrer">TeamLiquid.net</a></li>
+					<li><a href="https://www.teamliquid.net" target="_blank" rel="noopener noreferrer">TeamLiquid.net</a></li>
 					<li><a href="https://www.liquiddota.com/" target="_blank" rel="noopener noreferrer">LiquidDota.com</a></li>
 					<li><a href="https://www.liquidhearth.com/" target="_blank" rel="noopener noreferrer">LiquidHearth.com</a></li>
 					<li><a href="https://www.liquidlegends.net/" target="_blank" rel="noopener noreferrer">LiquidLegends.net</a></li>
@@ -43,7 +43,7 @@
 					<li><a href="<?php echo $baseurl; ?>/discord" target="_blank" rel="noopener noreferrer">Chat with Us</a></li>
 					<li id="footer-places-disclaimer"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:General_disclaimer" title="Liquipedia:General disclaimer">Disclaimers</a></li>
 					<li id="footer-places-privacy"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:Privacy_policy" title="Liquipedia:Privacy policy">Privacy policy</a></li>
-					<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread">Post Feedback</a></li>
+					<li><a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread">Post Feedback</a></li>
 					<li><a href="mailto:liquipedia@teamliquid.net">Send us an Email</a></li>
 				</ul>
 			</div><!--

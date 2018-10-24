@@ -193,7 +193,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				<h1>How To Contribute</h1>
 				<div class="text-container">
 					<h2>Creating an Account, Logging In</h2>
-					<p>To edit Liquipedia you'll need a TeamLiquid.net account. To register an account, click on the <a href="http://www.teamliquid.net/mytlnet/register" target="_blank" rel="noopener noreferrer">create account</a> link here, or in the top navigation bar; just remember to follow the instructions and complete your registration.</p>
+					<p>To edit Liquipedia you'll need a TeamLiquid.net account. To register an account, click on the <a href="https://www.teamliquid.net/mytlnet/register" target="_blank" rel="noopener noreferrer">create account</a> link here, or in the top navigation bar; just remember to follow the instructions and complete your registration.</p>
 					<p>Once you have an account go click on the log in box in the top right and enter your details, or if logged in on any of our affiliate sites just click on the TL quick log in link.</p>
 
 					<h2>Contributing</h2>
@@ -224,7 +224,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 						<li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
 						<li>Help other contributors in our IRC channel, especially newer ones.</li>
 						<li>Spread the word that everyone can help grow Liquipedia.</li>
-						<li>Give us <a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank" rel="noopener noreferrer">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
+						<li>Give us <a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank" rel="noopener noreferrer">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
 						<li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow, and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
 					</ul>
 				</div>
@@ -241,22 +241,22 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			 * ====================================================================
 			 * on DOM load, detect and set state
 			 */
-			document.addEventListener('DOMContentLoaded', function () {
-				var breakpoint = window.matchMedia('(max-width: 818px)').matches;
-				var triggers = document.querySelectorAll('[data-accordion-trigger]');
-				var accordions = document.querySelectorAll('[data-accordion]');
+			document.addEventListener( 'DOMContentLoaded', function() {
+				var breakpoint = window.matchMedia( '(max-width: 818px)' ).matches;
+				var triggers = document.querySelectorAll( '[data-accordion-trigger]' );
+				var accordions = document.querySelectorAll( '[data-accordion]' );
 
-				if (breakpoint) {
-					triggers.forEach(function (item) {
-						item.setAttribute('aria-expanded', 'false');
-						item.classList.remove('is-removed');
-					});
+				if ( breakpoint ) {
+					triggers.forEach( function( item ) {
+						item.setAttribute( 'aria-expanded', 'false' );
+						item.classList.remove( 'is-removed' );
+					} );
 
-					accordions.forEach(function (item) {
-						item.setAttribute('aria-hidden', 'true');
-					});
+					accordions.forEach( function( item ) {
+						item.setAttribute( 'aria-hidden', 'true' );
+					} );
 				}
-			}, false);
+			}, false );
 
 
 			/* ====================================================================
@@ -265,44 +265,44 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			 * request animation frame throttled resize function to swap aria
 			 * attributes
 			 */
-			(function () {
+			( function() {
 				var running = false,
 					prevWidth = window.innerWidth;
 
 				function onResize() {
-					if (!running) {
+					if ( !running ) {
 						running = true;
-						window.requestAnimationFrame(update);
+						window.requestAnimationFrame( update );
 					}
 				}
 
 				//main function, single state capture
 				function update() {
 					var width = window.innerWidth;
-					var breakpoint = window.matchMedia('(max-width: 818px)').matches;
-					var triggers = document.querySelectorAll('[data-accordion-trigger]');
-					var accordions = document.querySelectorAll('[data-accordion]');
+					var breakpoint = window.matchMedia( '(max-width: 818px)' ).matches;
+					var triggers = document.querySelectorAll( '[data-accordion-trigger]' );
+					var accordions = document.querySelectorAll( '[data-accordion]' );
 
-					if (width > prevWidth) {
-						if (!breakpoint) {
-							triggers.forEach(function (item) {
-								item.setAttribute('aria-expanded', 'true');
-								item.classList.add('is-removed');
+					if ( width > prevWidth ) {
+						if ( !breakpoint ) {
+							triggers.forEach( function( item ) {
+								item.setAttribute( 'aria-expanded', 'true' );
+								item.classList.add( 'is-removed' );
 								item.innerHTML = '&ndash;';
-							});
-							accordions.forEach(function (item) {
-								item.setAttribute('aria-hidden', 'false');
-							});
+							} );
+							accordions.forEach( function( item ) {
+								item.setAttribute( 'aria-hidden', 'false' );
+							} );
 						}
-					} else if (prevWidth > 818 && breakpoint) {
-						triggers.forEach(function (item) {
-							item.setAttribute('aria-expanded', 'false');
-							item.classList.remove('is-removed');
+					} else if ( prevWidth > 818 && breakpoint ) {
+						triggers.forEach( function( item ) {
+							item.setAttribute( 'aria-expanded', 'false' );
+							item.classList.remove( 'is-removed' );
 							item.innerHTML = '+';
-						});
-						accordions.forEach(function (item) {
-							item.setAttribute('aria-hidden', 'true');
-						});
+						} );
+						accordions.forEach( function( item ) {
+							item.setAttribute( 'aria-hidden', 'true' );
+						} );
 					} else {
 						//no function
 					}
@@ -312,8 +312,8 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					running = false;
 				}
 
-				window.addEventListener('resize', onResize, false);
-			})();
+				window.addEventListener( 'resize', onResize, false );
+			} )();
 
 
 			/* ====================================================================
@@ -322,44 +322,44 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			 * A single-target expand & collapse function. Collects all triggers,
 			 * and adjusts aria-expanded, and aria-hidden attributes as necessary
 			 */
-			function toggleAccordion(triggers, accordions) {
-				var buttons = Array.prototype.slice.call(document.querySelectorAll(triggers));
-				var targets = Array.prototype.slice.call(document.querySelectorAll(accordions));
+			function toggleAccordion( triggers, accordions ) {
+				var buttons = Array.prototype.slice.call( document.querySelectorAll( triggers ) );
+				var targets = Array.prototype.slice.call( document.querySelectorAll( accordions ) );
 
-				buttons.forEach(function (item) {
-					item.addEventListener('click', function () {
-						toggleAccordionState(this, targets);
-					}, false);
-				});
+				buttons.forEach( function( item ) {
+					item.addEventListener( 'click', function() {
+						toggleAccordionState( this, targets );
+					}, false );
+				} );
 			}
 
-			function toggleAccordionState(target, list) {
-				var value = target.getAttribute('data-accordion-trigger');
+			function toggleAccordionState( target, list ) {
+				var value = target.getAttribute( 'data-accordion-trigger' );
 
-				if (target.getAttribute('aria-expanded') === 'false') {
-					target.setAttribute('aria-expanded', 'true');
+				if ( target.getAttribute( 'aria-expanded' ) === 'false' ) {
+					target.setAttribute( 'aria-expanded', 'true' );
 					target.innerHTML = '&ndash;';
 				} else {
-					target.setAttribute('aria-expanded', 'false');
+					target.setAttribute( 'aria-expanded', 'false' );
 					target.innerHTML = '+';
 				}
 
-				updateAccordionPanel(target, value, list);
+				updateAccordionPanel( target, value, list );
 			}
 
-			function updateAccordionPanel(target, value, list) {
-				for (var i = 0; i < list.length; i += 1) {
-					if (value === list[i].getAttribute('data-accordion')) {
-						if (target.getAttribute('aria-expanded') === 'true') {
-							list[i].setAttribute('aria-hidden', 'false');
+			function updateAccordionPanel( target, value, list ) {
+				for ( var i = 0; i < list.length; i += 1 ) {
+					if ( value === list[i].getAttribute( 'data-accordion' ) ) {
+						if ( target.getAttribute( 'aria-expanded' ) === 'true' ) {
+							list[i].setAttribute( 'aria-hidden', 'false' );
 						} else {
-							list[i].setAttribute('aria-hidden', 'true');
+							list[i].setAttribute( 'aria-hidden', 'true' );
 						}
 					}
 				}
 			}
 
-			toggleAccordion('[data-accordion-trigger]', '[data-accordion]');
+			toggleAccordion( '[data-accordion-trigger]', '[data-accordion]' );
 		</script>
 		<script type="application/ld+json">
 			{
@@ -382,39 +382,39 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 
 		<!-- Analytics -->
 		<script>
-			(function (i, s, o, g, r, a, m) {
+			( function( i, s, o, g, r, a, m ) {
 				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function () {
-					(i[r].q = i[r].q || []).push(arguments);
+				i[r] = i[r] || function() {
+					( i[r].q = i[r].q || [ ] ).push( arguments );
 				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-					m = s.getElementsByTagName(o)[0];
+				a = s.createElement( o ),
+					m = s.getElementsByTagName( o )[0];
 				a.async = 1;
 				a.src = g;
-				m.parentNode.insertBefore(a, m);
-			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+				m.parentNode.insertBefore( a, m );
+			} )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
 
-			+ga('set', 'anonymizeIp', true);
-			ga('create', 'UA-576564-4', 'auto');
-			ga('send', 'pageview');
+			+ga( 'set', 'anonymizeIp', true );
+			ga( 'create', 'UA-576564-4', 'auto' );
+			ga( 'send', 'pageview' );
 		</script>
 		<!-- End Analytics -->
 
 		<!-- Quantcast Tag -->
 		<script type="text/javascript">
-			var _qevents = _qevents || [];
+			var _qevents = _qevents || [ ];
 
-			(function () {
-				var elem = document.createElement('script');
-				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+			( function() {
+				var elem = document.createElement( 'script' );
+				elem.src = ( document.location.protocol == "https:" ? "https://secure" : "http://edge" ) + ".quantserve.com/quant.js";
 				elem.async = true;
 				elem.type = "text/javascript";
-				var scpt = document.getElementsByTagName('script')[0];
-				scpt.parentNode.insertBefore(elem, scpt);
-			})();
-			_qevents.push({
+				var scpt = document.getElementsByTagName( 'script' )[0];
+				scpt.parentNode.insertBefore( elem, scpt );
+			} )();
+			_qevents.push( {
 				qacct: "p-c4R4Uj3EI2IsY"
-			});
+			} );
 		</script>
 		<noscript>
 		<div style="display:none;">

@@ -33,7 +33,7 @@ while ( $row = $selectstmt->fetch() ) {
 	$url = $row[ 'page' ];
 	$wiki = $row[ 'wiki' ];
 
-	$url = str_replace ( $baseurl, '', $url );
+	$url = str_replace( $baseurl, '', $url );
 
 	if ( !isset( $hot_links[ $wiki ] ) ) {
 		$hot_links[ $wiki ] = [];
@@ -109,7 +109,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
 			<span><a href="https://www.liquidhearth.com/">LiquidHearth</a></span>
 			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
-			<span><a href="http://www.teamliquid.net">TeamLiquid</a></span>
+			<span><a href="https://www.teamliquid.net">TeamLiquid</a></span>
 		</div>
 		<div class="top">
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
@@ -234,7 +234,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
 					<li>Help other contributors in our IRC channel, especially newer ones.</li>
 					<li>Spread the word that everyone can help grow Liquipedia.</li>
-					<li>Give us <a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
+					<li>Give us <a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
 					<li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
 				</ul>
 			</div>
@@ -255,7 +255,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<script type="application/ld+json">
-		{
+			{
 			"@context": "http://schema.org",
 			"@type": "Organization",
 			"name": "Liquipedia",
@@ -263,60 +263,60 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			"logo": "https://liquipedia.net/images/liquipedia_logo.png",
 			"foundingDate": "2009-06-05",
 			"sameAs": [
-				"https://twitter.com/LiquipediaNet",
-				"https://www.facebook.com/Liquipedia",
-				"https://www.youtube.com/user/Liquipedia",
-				"https://www.twitch.tv/liquipedia",
-				"https://github.com/Liquipedia"
+			"https://twitter.com/LiquipediaNet",
+			"https://www.facebook.com/Liquipedia",
+			"https://www.youtube.com/user/Liquipedia",
+			"https://www.twitch.tv/liquipedia",
+			"https://github.com/Liquipedia"
 			]
-		}
+			}
 		</script>
 		<script type="text/javascript">
-			window.addEventListener('DOMContentLoaded', function () {
-				if (!document.cookie.includes('liquipedia_last_wiki_search')) {
+			window.addEventListener( 'DOMContentLoaded', function() {
+				if ( !document.cookie.includes( 'liquipedia_last_wiki_search' ) ) {
 					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
 				}
-				var startwiki = document.cookie.replace(/(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-				document.getElementById('wikiselect').value = startwiki;
-				document.getElementById('search').action = '/' + startwiki + '/index.php';
-				document.getElementById('wikiselect').onchange = function () {
+				var startwiki = document.cookie.replace( /(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1" );
+				document.getElementById( 'wikiselect' ).value = startwiki;
+				document.getElementById( 'search' ).action = '/' + startwiki + '/index.php';
+				document.getElementById( 'wikiselect' ).onchange = function() {
 					document.cookie = 'liquipedia_last_wiki_search=' + this.value;
-					document.getElementById('search').action = '/' + this.value + '/index.php';
+					document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
 				}
-			});
+			} );
 		</script>
 		<script>
-			(function (i, s, o, g, r, a, m) {
+			( function( i, s, o, g, r, a, m ) {
 				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function () {
-					(i[r].q = i[r].q || []).push(arguments);
+				i[r] = i[r] || function() {
+					( i[r].q = i[r].q || [ ] ).push( arguments );
 				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-					m = s.getElementsByTagName(o)[0];
+				a = s.createElement( o ),
+					m = s.getElementsByTagName( o )[0];
 				a.async = 1;
 				a.src = g;
-				m.parentNode.insertBefore(a, m);
-			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+				m.parentNode.insertBefore( a, m );
+			} )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
 
-			ga('set', 'anonymizeIp', true);
-			ga('create', 'UA-576564-4', 'auto');
-			ga('send', 'pageview');
+			ga( 'set', 'anonymizeIp', true );
+			ga( 'create', 'UA-576564-4', 'auto' );
+			ga( 'send', 'pageview' );
 		</script>
 		<!-- Quantcast Tag -->
 		<script type="text/javascript">
-			var _qevents = _qevents || [];
+			var _qevents = _qevents || [ ];
 
-			(function () {
-				var elem = document.createElement('script');
-				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+			( function() {
+				var elem = document.createElement( 'script' );
+				elem.src = ( document.location.protocol == "https:" ? "https://secure" : "http://edge" ) + ".quantserve.com/quant.js";
 				elem.async = true;
 				elem.type = "text/javascript";
-				var scpt = document.getElementsByTagName('script')[0];
-				scpt.parentNode.insertBefore(elem, scpt);
-			})();
-			_qevents.push({
+				var scpt = document.getElementsByTagName( 'script' )[0];
+				scpt.parentNode.insertBefore( elem, scpt );
+			} )();
+			_qevents.push( {
 				qacct: "p-c4R4Uj3EI2IsY"
-			});
+			} );
 		</script>
 		<noscript>
 		<div style="display:none;">

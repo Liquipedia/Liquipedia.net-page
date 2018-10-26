@@ -54,6 +54,11 @@ $wikis = [
 		'background-color' => '#b9b6e5',
 		'api' => $baseurl . '/heroes/api.php',
 	],
+	'warcraft' => [
+		'name' => 'Warcraft III',
+		'background-color' => '#aab9b7',
+		'api' => $baseurl . '/warcraft/api.php',
+	],
 	'smash' => [
 		'name' => 'Smash',
 		'background-color' => '#b6e5c7',
@@ -65,11 +70,6 @@ $alphawikis = [
 		'name' => 'League of Legends',
 		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
-	],
-	'warcraft' => [
-		'name' => 'Warcraft III',
-		'background-color' => '#aab9b7',
-		'api' => $baseurl . '/warcraft/api.php',
 	],
 	'pubg' => [
 		'name' => 'PUBG',

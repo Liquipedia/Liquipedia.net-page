@@ -105,11 +105,12 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 	</head>
 	<body class="column-<?php echo $col_number; ?>">
 		<div class="global-nav">
-			<span><a href="https://www.teamliquidpro.com/">TeamLiquidPro</a></span>
+			<span><a href="https://drawtwo.gg/">DrawTwo</a></span>
+			<span><a href="https://masterleague.net/">Master League</a></span>
 			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
 			<span><a href="https://www.liquidhearth.com/">LiquidHearth</a></span>
 			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
-			<span><a href="https://www.teamliquid.net">TeamLiquid</a></span>
+			<span><a href="https://www.teamliquid.net">TLnet</a></span>
 		</div>
 		<div class="top">
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>

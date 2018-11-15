@@ -29,11 +29,12 @@
 			--><div class="footer-group">
 				<h1 id="affiliates">Affiliate Sites</h1>
 				<ul class="display-list" aria-labeledby="affiliates">
-					<li><a href="https://www.teamliquidpro.com/" target="_blank" rel="noopener noreferrer">TeamLiquidPro.com</a></li>
-					<li><a href="https://www.teamliquid.net" target="_blank" rel="noopener noreferrer">TeamLiquid.net</a></li>
-					<li><a href="https://www.liquiddota.com/" target="_blank" rel="noopener noreferrer">LiquidDota.com</a></li>
-					<li><a href="https://www.liquidhearth.com/" target="_blank" rel="noopener noreferrer">LiquidHearth.com</a></li>
-					<li><a href="https://www.liquidlegends.net/" target="_blank" rel="noopener noreferrer">LiquidLegends.net</a></li>
+					<li><a href="https://www.teamliquid.net" target="_blank" rel="noopener">TeamLiquid.net</a></li>
+					<li><a href="https://www.liquiddota.com/" target="_blank" rel="noopener">LiquidDota.com</a></li>
+					<li><a href="https://www.liquidhearth.com/" target="_blank" rel="noopener">LiquidHearth.com</a></li>
+					<li><a href="https://www.liquidlegends.net/" target="_blank" rel="noopener">LiquidLegends.net</a></li>
+					<li><a href="https://masterleague.net/" target="_blank" rel="noopener">Master League</a></li>
+					<li><a href="https://drawtwo.gg/" target="_blank" rel="noopener">DrawTwo</a></li>
 				</ul>
 			</div><!--
 			--><div class="footer-group">

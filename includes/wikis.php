@@ -106,6 +106,11 @@ $alphawikis = [
 		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/clashroyale/api.php',
 	],
+	'arenaofvalor' => [
+		'name' => 'Arena of Valor',
+		'background-color' => '',
+		'api' => $baseurl . '/arenaofvalor/api.php',
+	],
 ];
 $miscwikis = [
 	'commons' => [

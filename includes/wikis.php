@@ -108,7 +108,7 @@ $alphawikis = [
 	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
-		'background-color' => '',
+		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/arenaofvalor/api.php',
 	],
 ];

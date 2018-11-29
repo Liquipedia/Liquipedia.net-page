@@ -39,6 +39,11 @@ $wikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
+	'artifact' => [
+		'name' => 'Artifact',
+		'background-color' => '#fbf6df',
+		'api' => $baseurl . '/artifact/api.php',
+	],
 	'starcraft' => [
 		'name' => 'Brood War',
 		'background-color' => '#dbe1e5',
@@ -149,11 +154,6 @@ $otherwikis = [
 		'name' => 'Pokémon',
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
-	],
-	'artifact' => [
-		'name' => 'Artifact',
-		'background-color' => '',
-		'api' => $baseurl . '/artifact/api.php',
 	],
 	'paladins' => [
 		'name' => 'Paladins',

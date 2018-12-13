@@ -135,11 +135,11 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<div class="whitebox">
-			<!--<div class="content">
-				<a class="banner" target="_blank" href="https://liquipedia.net">
-					Liquipedia
+			<div class="content">
+				<a class="banner" target="_blank" href="https://www.teamliquidpro.com/news/2018/12/10/were-hiring-liquipedia-developers">
+					We are hiring! Check out our developer job postings and work in esports!
 				</a>
-			</div>-->
+			</div>
 			<div class="box-wrap">
 				<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">

@@ -628,8 +628,8 @@ input[type=checkbox] {
 .banner {
 	display:block;
 	padding:15px;
-	border-left:5px solid #0081ff;
+	border-left:5px solid #0000ff;
 	color:#000000;
-	background-color:#eeeeee;
+	background-color:#ccccff;
 	margin-bottom:15px;
 }

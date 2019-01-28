@@ -1,7 +1,7 @@
 <?php
 $no_session = true;
-require_once( 'includes/wikis.php' );
-require_once( '../config/db_config.php' );
+require_once( __DIR__ . '/includes/wikis.php' );
+require_once( __DIR__ . '/../config/db_config.php' );
 
 $expire = gmdate( 'D, d M Y H:i:s \G\M\T', time() + 60 );
 
@@ -26,7 +26,7 @@ try {
 $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
 while ( $row = $selectstmt->fetch() ) {
-	$title = str_replace( '_', ' ', $row[ 'title' ] );
+	$title = strip_tags( str_replace( '_', ' ', $row[ 'title' ] ) );
 	$url = $row[ 'page' ];
 	$wiki = $row[ 'wiki' ];
 

@@ -39,6 +39,11 @@ $wikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
+	'leagueoflegends' => [
+		'name' => 'League of Legends',
+		'background-color' => '#f4db96',
+		'api' => $baseurl . '/leagueoflegends/api.php',
+	],
 	'artifact' => [
 		'name' => 'Artifact',
 		'background-color' => '#fbf6df',
@@ -71,11 +76,6 @@ $wikis = [
 	],
 ];
 $alphawikis = [
-	'leagueoflegends' => [
-		'name' => 'League of Legends',
-		'background-color' => '#f4db96',
-		'api' => $baseurl . '/leagueoflegends/api.php',
-	],
 	'pubg' => [
 		'name' => 'PUBG',
 		'background-color' => '#edc951',

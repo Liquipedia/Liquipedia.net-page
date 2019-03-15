@@ -39,20 +39,30 @@ $wikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
+	'pubg' => [
+		'name' => 'PUBG',
+		'background-color' => '#edc951',
+		'api' => $baseurl . '/pubg/api.php',
+	],
 	'leagueoflegends' => [
 		'name' => 'League of Legends',
 		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	],
-	'artifact' => [
-		'name' => 'Artifact',
-		'background-color' => '#fbf6df',
-		'api' => $baseurl . '/artifact/api.php',
+	'smash' => [
+		'name' => 'Smash',
+		'background-color' => '#b6e5c7',
+		'api' => $baseurl . '/smash/api.php',
 	],
 	'starcraft' => [
 		'name' => 'Brood War',
 		'background-color' => '#dbe1e5',
 		'api' => $baseurl . '/starcraft/api.php',
+	],
+	'warcraft' => [
+		'name' => 'Warcraft III',
+		'background-color' => '#aab9b7',
+		'api' => $baseurl . '/warcraft/api.php',
 	],
 	'hearthstone' => [
 		'name' => 'Hearthstone',
@@ -64,23 +74,13 @@ $wikis = [
 		'background-color' => '#b9b6e5',
 		'api' => $baseurl . '/heroes/api.php',
 	],
-	'warcraft' => [
-		'name' => 'Warcraft III',
-		'background-color' => '#aab9b7',
-		'api' => $baseurl . '/warcraft/api.php',
-	],
-	'smash' => [
-		'name' => 'Smash',
-		'background-color' => '#b6e5c7',
-		'api' => $baseurl . '/smash/api.php',
+	'artifact' => [
+		'name' => 'Artifact',
+		'background-color' => '#fbf6df',
+		'api' => $baseurl . '/artifact/api.php',
 	],
 ];
 $alphawikis = [
-	'pubg' => [
-		'name' => 'PUBG',
-		'background-color' => '#edc951',
-		'api' => $baseurl . '/pubg/api.php',
-	],
 	'fortnite' => [
 		'name' => 'Fortnite',
 		'background-color' => '#fbf2df',

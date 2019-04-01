@@ -165,4 +165,24 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/battalion/api.php',
 	],
+	'criticalops' => [
+		'name' => 'Critical Ops',
+		'background-color' => '',
+		'api' => $baseurl . '/criticalops/api.php',
+	],
+	'magic' => [
+		'name' => 'Magic: The Gathering',
+		'background-color' => '',
+		'api' => $baseurl . '/magic/api.php',
+	],
+	'callofduty' => [
+		'name' => 'Call of Duty',
+		'background-color' => '',
+		'api' => $baseurl . '/callofduty/api.php',
+	],
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '',
+		'api' => $baseurl . '/apexlegends/api.php',
+	],
 ];

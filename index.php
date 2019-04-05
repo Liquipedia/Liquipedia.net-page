@@ -110,7 +110,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
 			<span><a href="https://www.liquidhearth.com/">LiquidHearth</a></span>
 			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
-			<span><a href="https://www.teamliquid.net">TLnet</a></span>
+			<span><a href="https://tl.net">TLnet</a></span>
 		</div>
 		<div class="top">
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
@@ -213,7 +213,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
 				<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="https://liquipedia.net/discord" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
 				<h4>Logging in and registering</h4>
-				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://www.teamliquid.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration.<br />
+				<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://tl.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration.<br />
 					Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
 				<h4>Editing</h4>
 				<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. <br />
@@ -235,7 +235,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
 					<li>Help other contributors in our IRC channel, especially newer ones.</li>
 					<li>Spread the word that everyone can help grow Liquipedia.</li>
-					<li>Give us <a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
+					<li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
 					<li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
 				</ul>
 			</div>

@@ -86,6 +86,11 @@ $alphawikis = [
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
 	],
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '#ffa993',
+		'api' => $baseurl . '/apexlegends/api.php',
+	],
 	'quake' => [
 		'name' => 'Quake',
 		'background-color' => '#dd986e',
@@ -179,10 +184,5 @@ $otherwikis = [
 		'name' => 'Call of Duty',
 		'background-color' => '',
 		'api' => $baseurl . '/callofduty/api.php',
-	],
-	'apexlegends' => [
-		'name' => 'Apex Legends',
-		'background-color' => '',
-		'api' => $baseurl . '/apexlegends/api.php',
 	],
 ];

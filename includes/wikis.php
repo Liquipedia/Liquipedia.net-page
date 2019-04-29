@@ -121,6 +121,11 @@ $alphawikis = [
 		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/arenaofvalor/api.php',
 	],
+	'paladins' => [
+		'name' => 'Paladins',
+		'background-color' => '#dee3ef',
+		'api' => $baseurl . '/paladins/api.php',
+	],
 ];
 $miscwikis = [
 	'commons' => [
@@ -159,11 +164,6 @@ $otherwikis = [
 		'name' => 'Pokémon',
 		'background-color' => '',
 		'api' => $baseurl . '/pokemon/api.php',
-	],
-	'paladins' => [
-		'name' => 'Paladins',
-		'background-color' => '',
-		'api' => $baseurl . '/paladins/api.php',
 	],
 	'battalion' => [
 		'name' => 'Battalion 1944',

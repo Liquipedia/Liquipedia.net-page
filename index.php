@@ -113,7 +113,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		</div>
 		<div class="top">
 			<h1>TeamLiquid welcomes you to the esports wiki</h1>
-			<div id="logo"><img src="./images/lp-logo-bg.png" alt="liquipedia" /></div>
+			<div id="logo"><img src="./images/lp-logo.svg" alt="liquipedia" /></div>
 			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
 			<div class="content searchwrap">
 				<form id="search" class="search" action="/dota2/index.php">

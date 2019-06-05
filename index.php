@@ -76,7 +76,11 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<link href="./css/style.min.css?c=1" rel="stylesheet" type="text/css" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
-		<link href="./favicon.ico" rel="icon" />
+		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-196x196.png" rel="icon" type="image/png" sizes="196x196">
+		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-128x128.png" rel="icon" type="image/png" sizes="128x128">
+		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
 		<link href="/manifest.json" rel="manifest" />
 		<link href="<?php echo $baseurl; ?>" rel="canonical" />
 		<meta name="theme-color" content="#5496cf" />

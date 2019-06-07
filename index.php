@@ -277,15 +277,27 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		</script>
 		<script type="text/javascript">
 			window.addEventListener( 'DOMContentLoaded', function() {
-				if ( !document.cookie.includes( 'liquipedia_last_wiki_search' ) ) {
-					document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
-				}
-				var startwiki = document.cookie.replace( /(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1" );
-				document.getElementById( 'wikiselect' ).value = startwiki;
-				document.getElementById( 'search' ).action = '/' + startwiki + '/index.php';
-				document.getElementById( 'wikiselect' ).onchange = function() {
-					document.cookie = 'liquipedia_last_wiki_search=' + this.value;
-					document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
+				if ('localStorage' in window) {
+					if (localStorage['lastWikiSearch'] == undefined) {
+						localStorage['lastWikiSearch'] = '<?php echo array_keys( $wikis )[ 0 ]; ?>';
+					}
+					document.getElementById( 'wikiselect' ).value = localStorage['lastWikiSearch'];
+					document.getElementById( 'search' ).action = '/' + localStorage['lastWikiSearch'] + '/index.php';
+					document.getElementById( 'wikiselect' ).onchange = function() {
+						localStorage['lastWikiSearch'] = this.value;
+						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
+					}
+				} else {
+					if ( !document.cookie.includes( 'liquipedia_last_wiki_search' ) ) {
+						document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
+					}
+					var startwiki = document.cookie.replace( /(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1" );
+					document.getElementById( 'wikiselect' ).value = startwiki;
+					document.getElementById( 'search' ).action = '/' + startwiki + '/index.php';
+					document.getElementById( 'wikiselect' ).onchange = function() {
+						document.cookie = 'liquipedia_last_wiki_search=' + this.value;
+						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
+					}
 				}
 			} );
 		</script>

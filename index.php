@@ -259,7 +259,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<script type="application/ld+json">
-		{
+			{
 			"@context": "http://schema.org",
 			"@type": "Organization",
 			"name": "Liquipedia",
@@ -267,18 +267,18 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			"logo": "https://liquipedia.net/images/liquipedia_logo.png",
 			"foundingDate": "2009-06-05",
 			"sameAs": [
-				"https://twitter.com/LiquipediaNet",
-				"https://www.facebook.com/Liquipedia",
-				"https://www.youtube.com/user/Liquipedia",
-				"https://www.twitch.tv/liquipedia",
-				"https://github.com/Liquipedia"
+			"https://twitter.com/LiquipediaNet",
+			"https://www.facebook.com/Liquipedia",
+			"https://www.youtube.com/user/Liquipedia",
+			"https://www.twitch.tv/liquipedia",
+			"https://github.com/Liquipedia"
 			]
-		}
+			}
 		</script>
 		<script>
 			window.addEventListener( 'DOMContentLoaded', function() {
-				if ('localStorage' in window) {
-					if (localStorage['lastWikiSearch'] == undefined) {
+				if ( 'localStorage' in window ) {
+					if ( localStorage['lastWikiSearch'] == undefined ) {
 						localStorage['lastWikiSearch'] = '<?php echo array_keys( $wikis )[ 0 ]; ?>';
 					}
 					document.getElementById( 'wikiselect' ).value = localStorage['lastWikiSearch'];
@@ -301,11 +301,13 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				}
 			} );
 
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-576564-4', { 'anonymize_ip': true });
-			gtag('config', 'UA-576564-21' { 'anonymize_ip': true });
+			window.dataLayer = window.dataLayer || [ ];
+			function gtag() {
+				dataLayer.push( arguments );
+			}
+			gtag( 'js', new Date() );
+			gtag( 'config', 'UA-576564-4', { 'anonymize_ip': true } );
+			gtag( 'config', 'UA-576564-21', { 'anonymize_ip': true } );
 		</script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-576564-4"></script>
 	</body>

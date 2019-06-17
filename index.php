@@ -259,7 +259,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<script type="application/ld+json">
-			{
+		{
 			"@context": "http://schema.org",
 			"@type": "Organization",
 			"name": "Liquipedia",
@@ -267,15 +267,15 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			"logo": "https://liquipedia.net/images/liquipedia_logo.png",
 			"foundingDate": "2009-06-05",
 			"sameAs": [
-			"https://twitter.com/LiquipediaNet",
-			"https://www.facebook.com/Liquipedia",
-			"https://www.youtube.com/user/Liquipedia",
-			"https://www.twitch.tv/liquipedia",
-			"https://github.com/Liquipedia"
+				"https://twitter.com/LiquipediaNet",
+				"https://www.facebook.com/Liquipedia",
+				"https://www.youtube.com/user/Liquipedia",
+				"https://www.twitch.tv/liquipedia",
+				"https://github.com/Liquipedia"
 			]
-			}
+		}
 		</script>
-		<script type="text/javascript">
+		<script>
 			window.addEventListener( 'DOMContentLoaded', function() {
 				if ('localStorage' in window) {
 					if (localStorage['lastWikiSearch'] == undefined) {
@@ -300,45 +300,12 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					}
 				}
 			} );
-		</script>
-		<script>
-			( function( i, s, o, g, r, a, m ) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function() {
-					( i[r].q = i[r].q || [ ] ).push( arguments );
-				}, i[r].l = 1 * new Date();
-				a = s.createElement( o ),
-					m = s.getElementsByTagName( o )[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore( a, m );
-			} )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
 
-			ga( 'set', 'anonymizeIp', true );
-			ga( 'create', 'UA-576564-4', 'auto' );
-			ga( 'send', 'pageview' );
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-576564-4', { 'anonymize_ip': true });
 		</script>
-		<!-- Quantcast Tag -->
-		<script type="text/javascript">
-			var _qevents = _qevents || [ ];
-
-			( function() {
-				var elem = document.createElement( 'script' );
-				elem.src = ( document.location.protocol == "https:" ? "https://secure" : "http://edge" ) + ".quantserve.com/quant.js";
-				elem.async = true;
-				elem.type = "text/javascript";
-				var scpt = document.getElementsByTagName( 'script' )[0];
-				scpt.parentNode.insertBefore( elem, scpt );
-			} )();
-			_qevents.push( {
-				qacct: "p-c4R4Uj3EI2IsY"
-			} );
-		</script>
-		<noscript>
-		<div style="display:none;">
-			<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
-		</div>
-		</noscript>
-		<!-- End Quantcast tag -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-576564-4"></script>
 	</body>
 </html>

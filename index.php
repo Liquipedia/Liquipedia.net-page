@@ -305,6 +305,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'UA-576564-4', { 'anonymize_ip': true });
+			gtag('config', 'UA-576564-21' { 'anonymize_ip': true });
 		</script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-576564-4"></script>
 	</body>

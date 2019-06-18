@@ -278,15 +278,15 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<script>
 			window.addEventListener( 'DOMContentLoaded', function() {
 				if ( 'localStorage' in window ) {
-					if ( localStorage['lastWikiSearch'] == undefined ) {
-						localStorage['lastWikiSearch'] = '<?php echo array_keys( $wikis )[ 0 ]; ?>';
+					if ( localStorage[ 'lastWikiSearch' ] === undefined ) {
+						localStorage[ 'lastWikiSearch' ] = '<?php echo array_keys( $wikis )[ 0 ]; ?>';
 					}
-					document.getElementById( 'wikiselect' ).value = localStorage['lastWikiSearch'];
-					document.getElementById( 'search' ).action = '/' + localStorage['lastWikiSearch'] + '/index.php';
+					document.getElementById( 'wikiselect' ).value = localStorage[ 'lastWikiSearch' ];
+					document.getElementById( 'search' ).action = '/' + localStorage[ 'lastWikiSearch' ] + '/index.php';
 					document.getElementById( 'wikiselect' ).onchange = function() {
-						localStorage['lastWikiSearch'] = this.value;
+						localStorage[ 'lastWikiSearch' ] = this.value;
 						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
-					}
+					};
 				} else {
 					if ( !document.cookie.includes( 'liquipedia_last_wiki_search' ) ) {
 						document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
@@ -297,7 +297,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					document.getElementById( 'wikiselect' ).onchange = function() {
 						document.cookie = 'liquipedia_last_wiki_search=' + this.value;
 						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
-					}
+					};
 				}
 			} );
 

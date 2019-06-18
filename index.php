@@ -113,7 +113,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			<span><a href="https://masterleague.net/">Master League</a></span>
 			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
 			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
-			<span><a href="https://tl.net">TLnet</a></span>
+			<span><a href="https://tl.net/">TLnet</a></span>
 		</div>
 		<div class="top">
 			<h1>Team Liquid welcomes you to the esports wiki</h1>

@@ -111,6 +111,11 @@ $alphawikis = [
 		'background-color' => '#ffcb66',
 		'api' => $baseurl . '/fighters/api.php',
 	],
+	'fifa' => [
+		'name' => 'FIFA',
+		'background-color' => '#fbf2df',
+		'api' => $baseurl . '/fifa/api.php',
+	],
 	'clashroyale' => [
 		'name' => 'Clash Royale',
 		'background-color' => '#e6e6e6',
@@ -154,11 +159,6 @@ $otherwikis = [
 		'name' => 'CrossFire',
 		'background-color' => '',
 		'api' => $baseurl . '/crossfire/api.php',
-	],
-	'fifa' => [
-		'name' => 'FIFA',
-		'background-color' => '',
-		'api' => $baseurl . '/fifa/api.php',
 	],
 	'pokemon' => [
 		'name' => 'Pokémon',

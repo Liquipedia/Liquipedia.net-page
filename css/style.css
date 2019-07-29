@@ -56,6 +56,10 @@ body {
 	width:56px;
 	border:1px solid #cccccc;
 	cursor:pointer;
+	background-color:#dedede;
+}
+.search button:hover {
+	background-color:#eeeeee;
 }
 .search input {
 	line-height:2em;

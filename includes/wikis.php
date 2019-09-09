@@ -185,4 +185,29 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/callofduty/api.php',
 	],
+	'autochess' => [
+		'name' => 'Auto Chess',
+		'background-color' => '',
+		'api' => $baseurl . '/autochess/api.php',
+	],
+	'simracing' => [
+		'name' => 'Sim Racing',
+		'background-color' => '',
+		'api' => $baseurl . '/simracing/api.php',
+	],
+	'underlords' => [
+		'name' => 'Dota Underlords',
+		'background-color' => '',
+		'api' => $baseurl . '/underlords/api.php',
+	],
+	'teamfighttactics' => [
+		'name' => 'Teamfight Tactics',
+		'background-color' => '',
+		'api' => $baseurl . '/teamfighttactics/api.php',
+	],
+	'brawlstars' => [
+		'name' => 'Brawl Stars',
+		'background-color' => '',
+		'api' => $baseurl . '/brawlstars/api.php',
+	],
 ];

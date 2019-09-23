@@ -60,7 +60,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 
 	Hi you, yes you who's looking at our source code! Are you a website specialist?
 	We are looking for people to help us with our templates, especially with mobile development.
-	If you want to help, be sure to visit us us on discord (<?php echo $baseurl; ?>/discord), or send us
+	If you want to help, be sure to visit us us on discord (https://discord.gg/liquipedia), or send us
 	an email to liquipedia <at> teamliquid <dot> net!
 -->
 <html lang="en">
@@ -193,7 +193,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				<h1>How To Contribute</h1>
 				<div class="text-container">
 					<h2>Creating an Account, Logging In</h2>
-					<p>To edit Liquipedia you'll need a TeamLiquid.net account. To register an account, click on the <a href="https://www.teamliquid.net/mytlnet/register" target="_blank" rel="noopener noreferrer">create account</a> link here, or in the top navigation bar; just remember to follow the instructions and complete your registration.</p>
+					<p>To edit Liquipedia you'll need a TeamLiquid.net account. To register an account, click on the <a href="https://tl.net/mytlnet/register" target="_blank" rel="noopener noreferrer">create account</a> link here, or in the top navigation bar; just remember to follow the instructions and complete your registration.</p>
 					<p>Once you have an account go click on the log in box in the top right and enter your details, or if logged in on any of our affiliate sites just click on the TL quick log in link.</p>
 
 					<h2>Contributing</h2>
@@ -201,7 +201,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<p>When you visit Liquipedia, consider adding to it or correcting something. It doesn't have to take up much of your time and effort, and it will help other visitors like yourself and Liquipedia as a whole.</p>
 					<p>Many people start by fixing typos; this is the easiest way to contribute. Simply log in, click edit, find and fix the typo, click save, and you are done.</p>
 					<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times these pages are already set up by one of the more experienced contributors and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. Once you’re logged in, click on edit, find the bracket, update the scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself.</p>
-					<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced feel free to browse our "How to contribute" sections. You can find this in the main menu. You can also  <a href="<?php echo $baseurl; ?>/discord" target="_blank" rel="noopener noreferrer">find us on our Discord server</a> where other contributors can help you.</p>
+					<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced feel free to browse our "How to contribute" sections. You can find this in the main menu. You can also  <a href="https://discord.gg/liquipedia" target="_blank" rel="noopener noreferrer">find us on our Discord server</a> where other contributors can help you.</p>
 
 					<h2>Editing</h2>
 					<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headings; this allows you to edit the specific section you are on.</p>
@@ -382,45 +382,15 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 
 		<!-- Analytics -->
 		<script>
-			( function( i, s, o, g, r, a, m ) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function() {
-					( i[r].q = i[r].q || [ ] ).push( arguments );
-				}, i[r].l = 1 * new Date();
-				a = s.createElement( o ),
-					m = s.getElementsByTagName( o )[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore( a, m );
-			} )( window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga' );
-
-			+ga( 'set', 'anonymizeIp', true );
-			ga( 'create', 'UA-576564-4', 'auto' );
-			ga( 'send', 'pageview' );
+			window.dataLayer = window.dataLayer || [ ];
+			function gtag() {
+				dataLayer.push( arguments );
+			}
+			gtag( 'js', new Date() );
+			gtag( 'config', 'UA-576564-4', { 'anonymize_ip': true } );
+			gtag( 'config', 'UA-576564-21', { 'anonymize_ip': true } );
 		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-576564-4"></script>
 		<!-- End Analytics -->
-
-		<!-- Quantcast Tag -->
-		<script type="text/javascript">
-			var _qevents = _qevents || [ ];
-
-			( function() {
-				var elem = document.createElement( 'script' );
-				elem.src = ( document.location.protocol == "https:" ? "https://secure" : "http://edge" ) + ".quantserve.com/quant.js";
-				elem.async = true;
-				elem.type = "text/javascript";
-				var scpt = document.getElementsByTagName( 'script' )[0];
-				scpt.parentNode.insertBefore( elem, scpt );
-			} )();
-			_qevents.push( {
-				qacct: "p-c4R4Uj3EI2IsY"
-			} );
-		</script>
-		<noscript>
-		<div style="display:none;">
-			<img src="//pixel.quantserve.com/pixel/p-c4R4Uj3EI2IsY.gif" style="border:0;" height="1" width="1" alt="Quantcast"/>
-		</div>
-		</noscript>
-		<!-- End Quantcast Tag -->
 	</body>
 </html>

@@ -83,7 +83,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
 		<link href="/manifest.json" rel="manifest" />
 		<link href="<?php echo $baseurl; ?>" rel="canonical" />
-		<meta name="theme-color" content="#5496cf" />
+		<meta name="theme-color" content="#00162c" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@LiquipediaNet" />
 		<meta name="twitter:title" content="Liquipedia" />

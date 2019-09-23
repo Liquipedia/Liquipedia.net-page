@@ -236,7 +236,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					<li>Give the wiki the right to display your photographs and upload them to the wiki.</li>
 					<li>Develop new templates to make our wikis look good and make contributing easier.</li>
 					<li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
-					<li>Help other contributors in our IRC channel, especially newer ones.</li>
+					<li>Help other contributors in our <a href="https://discord.gg/liquipedia" target="_blank">Discord server</a>, especially newer ones.</li>
 					<li>Spread the word that everyone can help grow Liquipedia.</li>
 					<li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
 					<li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>

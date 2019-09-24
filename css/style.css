@@ -49,12 +49,15 @@ body {
 	width:100px;
 	padding:0 10px;
 	border:1px solid #cccccc;
+	border-radius:0;
 	cursor:pointer;
+	background-color:#dedede;
 }
 .search button {
 	height:2.56em;
 	width:56px;
 	border:1px solid #cccccc;
+	border-radius:0;
 	cursor:pointer;
 	background-color:#dedede;
 }
@@ -67,6 +70,10 @@ body {
 	width:calc(100% - 156px);
 	padding:0 10px;
 	border:1px solid #cccccc;
+	border-radius:0;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	appearance:none;
 }
 @media(min-width:620px) {
 	.search select {

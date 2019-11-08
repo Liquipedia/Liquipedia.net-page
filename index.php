@@ -18,7 +18,7 @@ $hot_links = [];
 
 $pdo = null;
 try {
-	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass );
+	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" ]);
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
@@ -30,10 +30,10 @@ $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
 while ( $row = $selectstmt->fetch() ) {
 	$title = strip_tags( str_replace( '_', ' ', $row[ 'title' ] ) );
-	$url = $row[ 'page' ];
+	$page = $row[ 'page' ];
 	$wiki = $row[ 'wiki' ];
 
-	$url = str_replace( $baseurl, '', $url );
+	$url = "/$wiki/$page";
 
 	if ( !isset( $hot_links[ $wiki ] ) ) {
 		$hot_links[ $wiki ] = [];

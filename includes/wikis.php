@@ -210,4 +210,9 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/brawlstars/api.php',
 	],
+	'runeterra' => [
+		'name' => 'Runeterra',
+		'background-color' => '',
+		'api' => $baseurl . '/runeterra/api.php',
+	],
 ];

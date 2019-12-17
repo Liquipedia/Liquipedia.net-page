@@ -24,6 +24,11 @@ $wikis = [
 		'background-color' => '#b6cfe5',
 		'api' => $baseurl . '/starcraft2/api.php',
 	],
+	'pubg' => [
+		'name' => 'PUBG',
+		'background-color' => '#edc951',
+		'api' => $baseurl . '/pubg/api.php',
+	],
 	'overwatch' => [
 		'name' => 'Overwatch',
 		'background-color' => '#e5b6c0',
@@ -39,11 +44,6 @@ $wikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
-	'pubg' => [
-		'name' => 'PUBG',
-		'background-color' => '#edc951',
-		'api' => $baseurl . '/pubg/api.php',
-	],
 	'leagueoflegends' => [
 		'name' => 'League of Legends',
 		'background-color' => '#f4db96',
@@ -54,15 +54,20 @@ $wikis = [
 		'background-color' => '#b6e5c7',
 		'api' => $baseurl . '/smash/api.php',
 	],
-	'starcraft' => [
-		'name' => 'Brood War',
-		'background-color' => '#dbe1e5',
-		'api' => $baseurl . '/starcraft/api.php',
-	],
 	'warcraft' => [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
+	],
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '#ffa993',
+		'api' => $baseurl . '/apexlegends/api.php',
+	],
+	'starcraft' => [
+		'name' => 'Brood War',
+		'background-color' => '#dbe1e5',
+		'api' => $baseurl . '/starcraft/api.php',
 	],
 	'hearthstone' => [
 		'name' => 'Hearthstone',
@@ -85,11 +90,6 @@ $alphawikis = [
 		'name' => 'Fortnite',
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
-	],
-	'apexlegends' => [
-		'name' => 'Apex Legends',
-		'background-color' => '#ffa993',
-		'api' => $baseurl . '/apexlegends/api.php',
 	],
 	'quake' => [
 		'name' => 'Quake',

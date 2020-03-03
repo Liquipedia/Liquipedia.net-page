@@ -91,6 +91,11 @@ $alphawikis = [
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
 	],
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '#ffa993',
+		'api' => $baseurl . '/apexlegends/api.php',
+	],
 	'arenafps' => [
 		'name' => 'Arena FPS',
 		'background-color' => '#dd986e',
@@ -209,5 +214,10 @@ $otherwikis = [
 		'name' => 'Runeterra',
 		'background-color' => '',
 		'api' => $baseurl . '/runeterra/api.php',
+	],
+	'valorant' => [
+		'name' => 'VALORANT',
+		'background-color' => '',
+		'api' => $baseurl . '/valorant/api.php',
 	],
 ];

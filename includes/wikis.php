@@ -91,10 +91,10 @@ $alphawikis = [
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
 	],
-	'quake' => [
-		'name' => 'Quake',
+	'arenafps' => [
+		'name' => 'Arena FPS',
 		'background-color' => '#dd986e',
-		'api' => $baseurl . '/quake/api.php',
+		'api' => $baseurl . '/arenafps/api.php',
 	],
 	'teamfortress' => [
 		'name' => 'Team Fortress',
@@ -144,11 +144,6 @@ $otherwikis = [
 		'name' => 'TrackMania',
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
-	],
-	'diabotical' => [
-		'name' => 'Diabotical',
-		'background-color' => '',
-		'api' => $baseurl . '/diabotical/api.php',
 	],
 	'battlerite' => [
 		'name' => 'Battlerite',

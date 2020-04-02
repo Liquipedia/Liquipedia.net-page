@@ -29,15 +29,15 @@ $wikis = [
 		'background-color' => '#edc951',
 		'api' => $baseurl . '/pubg/api.php',
 	],
-	'overwatch' => [
-		'name' => 'Overwatch',
-		'background-color' => '#e5b6c0',
-		'api' => $baseurl . '/overwatch/api.php',
-	],
 	'rocketleague' => [
 		'name' => 'Rocket League',
 		'background-color' => '#ffdaae',
 		'api' => $baseurl . '/rocketleague/api.php',
+	],
+	'overwatch' => [
+		'name' => 'Overwatch',
+		'background-color' => '#e5b6c0',
+		'api' => $baseurl . '/overwatch/api.php',
 	],
 	'rainbowsix' => [
 		'name' => 'Rainbow Six',
@@ -214,5 +214,10 @@ $otherwikis = [
 		'name' => 'VALORANT',
 		'background-color' => '',
 		'api' => $baseurl . '/valorant/api.php',
+	],
+	'freefire' => [
+		'name' => 'Free Fire',
+		'background-color' => '',
+		'api' => $baseurl . '/freefire/api.php',
 	],
 ];

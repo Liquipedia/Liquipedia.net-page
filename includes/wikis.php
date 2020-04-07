@@ -86,6 +86,11 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'valorant' => [
+		'name' => 'VALORANT',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/valorant/api.php',
+	],
 	'fortnite' => [
 		'name' => 'Fortnite',
 		'background-color' => '#fbf2df',
@@ -209,11 +214,6 @@ $otherwikis = [
 		'name' => 'Runeterra',
 		'background-color' => '',
 		'api' => $baseurl . '/runeterra/api.php',
-	],
-	'valorant' => [
-		'name' => 'VALORANT',
-		'background-color' => '',
-		'api' => $baseurl . '/valorant/api.php',
 	],
 	'freefire' => [
 		'name' => 'Free Fire',

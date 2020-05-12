@@ -18,7 +18,7 @@ $hot_links = [];
 
 $pdo = null;
 try {
-	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" ]);
+	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" ] );
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
@@ -73,7 +73,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
-		<link href="./css/style.min.css?c=1" rel="stylesheet" type="text/css" />
+		<link href="./css/style.min.css?c=2" rel="stylesheet" type="text/css" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="/commons/extensions/TeamLiquidIntegration/resources/favicon/favicon-196x196.png" rel="icon" type="image/png" sizes="196x196">
@@ -145,7 +145,10 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 			--><div class="box-wrap">
 				<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
-					<div class="<?php echo $wiki_key; ?>-box game-box">
+					<div class="<?php echo $wiki_key; ?>-box game-box<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
+						<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+							<div class="badge-new">NEW!</div>
+						<?php } ?>
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
 						<div class="wiki-header"><a href="<?php echo '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
@@ -300,7 +303,6 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 					};
 				}
 			} );
-
 			window.dataLayer = window.dataLayer || [ ];
 			function gtag() {
 				dataLayer.push( arguments );

@@ -13,6 +13,7 @@ $wikis = [
 		'name' => 'VALORANT',
 		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/valorant/api.php',
+		'new' => true,
 	],
 	'dota2' => [
 		'name' => 'Dota 2',

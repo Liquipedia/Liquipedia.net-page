@@ -216,6 +216,8 @@ a:active {
 	padding-bottom:1px;
 	padding-top:1px;
 	font-size:15px;
+	overflow:hidden;
+	position:relative;
 }
 .game-box > p {
 	font-size:12px;
@@ -643,4 +645,36 @@ input[type=checkbox] {
 	color:#000000;
 	background-color:#ccccff;
 	margin-bottom:15px;
+}
+
+.badge-new {
+	height:100%;
+	background-color:#008000;
+	color:#ffffff;
+	text-align:center;
+	font-weight:bold;
+	writing-mode:vertical-rl;
+	transform:rotate(180deg);
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:12px;
+}
+@media only screen and (min-width:310px) {
+	.badge-new {
+		font-size:unset;
+	}
+}
+@media only screen and (min-width:620px) {
+	.badge-new {
+		width:100px;
+		height:20px;
+		margin-bottom:-22px;
+		padding-top:2px;
+		writing-mode:initial;
+		transform:rotate(-45deg);
+		position:relative;
+		top:14px;
+		left:-23px;
+	}
 }

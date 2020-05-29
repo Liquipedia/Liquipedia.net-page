@@ -10,7 +10,7 @@ header( 'Cache-Control: s-maxage=60' );
 header( 'Expires: ' . $expire );
 
 // Preload / push key files
-header( 'Link: </css/style.min.css?c=2>; as=style; rel=preload' );
+header( 'Link: </css/style.min.css?c=2>; as=style; rel=preload, </images/lp-logo.svg>; as=image; type=image/svg+xml; rel=preload' );
 
 $col_number = 3;
 

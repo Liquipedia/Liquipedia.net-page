@@ -9,12 +9,6 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
-	'valorant' => [
-		'name' => 'VALORANT',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/valorant/api.php',
-		'new' => true,
-	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
@@ -49,6 +43,11 @@ $wikis = [
 		'name' => 'Rainbow Six',
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
+	],
+	'valorant' => [
+		'name' => 'VALORANT',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/valorant/api.php',
 	],
 	'leagueoflegends' => [
 		'name' => 'League of Legends',

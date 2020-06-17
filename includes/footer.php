@@ -45,7 +45,7 @@
 					<li id="footer-places-disclaimer"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:General_disclaimer" title="Liquipedia:General disclaimer">Disclaimers</a></li>
 					<li id="footer-places-privacy"><a href="<?php echo $baseurl; ?>/counterstrike/Liquipedia:Privacy_policy" title="Liquipedia:Privacy policy">Privacy policy</a></li>
 					<li><a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread">Post Feedback</a></li>
-					<li><a href="mailto:liquipedia@teamliquid.net">Send us an Email</a></li>
+					<li><a href="mailto:contact@liquipedia.net">Send us an Email</a></li>
 				</ul>
 			</div><!--
 			--><div class="footer-group">

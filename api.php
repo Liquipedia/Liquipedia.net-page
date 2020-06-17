@@ -34,7 +34,7 @@ if ( $action == 'listwikis' ) {
 		We are looking for people to help us with our templates, especially with mobile development.
 		If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet,
 		join us on discord (https://liquipedia.net/discord), or send us an email to
-		liquipedia <at> teamliquid <dot> net!
+		contact <at> liquipedia <dot> net!
 	-->
 	<html lang="en">
 		<head>

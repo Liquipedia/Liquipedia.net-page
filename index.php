@@ -61,7 +61,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 	Hi you, yes you who's looking at our source code! Are you a website specialist?
 	We are looking for people to help us with our templates, especially with mobile development.
 	If you want to help, be sure to visit us us on discord (https://discord.gg/liquipedia), or send us
-	an email to liquipedia <at> teamliquid <dot> net!
+	an email to contact <at> liquipedia <dot> net!
 -->
 <html lang="en">
 	<head>

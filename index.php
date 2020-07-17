@@ -53,6 +53,12 @@ foreach ( $wikis as $wiki_key => $wiki ) {
 foreach ( $alphawikis as $wiki_key => $wiki ) {
 	$keywords .= ', ' . $wiki[ 'name' ];
 }
+
+$banner = [
+	'link' => 'https://www.teamliquid.com/news/2018/12/10/were-hiring-liquipedia-developers',
+	'text' => 'We are hiring! Check out our developer job postings and work in esports!',
+];
+$banner = null;
 ?>
 <!DOCTYPE html>
 <!--
@@ -138,12 +144,14 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</div>
 		<div class="whitebox">
-			<!--<div class="content">
-				<a class="banner" target="_blank" href="https://www.teamliquid.com/news/2018/12/10/were-hiring-liquipedia-developers">
-					We are hiring! Check out our developer job postings and work in esports!
-				</a>
-			</div>
-			--><div class="box-wrap">
+			<?php if ( !is_null( $banner ) ) { ?>
+				<div class="content">
+					<a class="banner" target="_blank" href="<?php echo $banner[ 'link' ]; ?>">
+						<?php echo $banner[ 'text' ]; ?>
+					</a>
+				</div>
+			<?php } ?>
+			<div class="box-wrap">
 				<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
 						<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>

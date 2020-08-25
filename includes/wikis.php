@@ -141,6 +141,11 @@ $alphawikis = [
 		'background-color' => '#fbecdf',
 		'api' => $baseurl . '/freefire/api.php',
 	],
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'background-color' => '#aac9e5',
+		'api' => $baseurl . '/ageofempires/api.php',
+	],
 ];
 $miscwikis = [
 	'commons' => [
@@ -219,10 +224,5 @@ $otherwikis = [
 		'name' => 'Runeterra',
 		'background-color' => '',
 		'api' => $baseurl . '/runeterra/api.php',
-	],
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'background-color' => '',
-		'api' => $baseurl . '/ageofempires/api.php',
 	],
 ];

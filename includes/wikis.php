@@ -225,4 +225,9 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/runeterra/api.php',
 	],
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '',
+		'api' => $baseurl . '/wildrift/api.php',
+	],
 ];

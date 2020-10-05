@@ -91,60 +91,65 @@ $wikis = [
 	],
 ];
 $alphawikis = [
-	'fortnite' => [
-		'name' => 'Fortnite',
-		'background-color' => '#fbf2df',
-		'api' => $baseurl . '/fortnite/api.php',
-	],
-	'arenafps' => [
-		'name' => 'Arena FPS',
-		'background-color' => '#dd986e',
-		'api' => $baseurl . '/arenafps/api.php',
-	],
-	'teamfortress' => [
-		'name' => 'Team Fortress',
-		'background-color' => '#cca96b',
-		'api' => $baseurl . '/teamfortress/api.php',
-	],
-	'worldofwarcraft' => [
-		'name' => 'World of Warcraft',
-		'background-color' => '#d1e2f1',
-		'api' => $baseurl . '/worldofwarcraft/api.php',
-	],
-	'fighters' => [
-		'name' => 'Fighting Games',
-		'background-color' => '#ffcb66',
-		'api' => $baseurl . '/fighters/api.php',
-	],
-	'fifa' => [
-		'name' => 'FIFA',
-		'background-color' => '#fbf2df',
-		'api' => $baseurl . '/fifa/api.php',
-	],
-	'clashroyale' => [
-		'name' => 'Clash Royale',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/clashroyale/api.php',
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'background-color' => '#aac9e5',
+		'api' => $baseurl . '/ageofempires/api.php',
 	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '#e6e6e6',
 		'api' => $baseurl . '/arenaofvalor/api.php',
 	],
-	'paladins' => [
-		'name' => 'Paladins',
-		'background-color' => '#dee3ef',
-		'api' => $baseurl . '/paladins/api.php',
+	'fighters' => [
+		'name' => 'Fighting Games',
+		'background-color' => '#ffcb66',
+		'api' => $baseurl . '/fighters/api.php',
+	],
+	'arenafps' => [
+		'name' => 'Arena FPS',
+		'background-color' => '#dd986e',
+		'api' => $baseurl . '/arenafps/api.php',
+	],
+	'clashroyale' => [
+		'name' => 'Clash Royale',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/clashroyale/api.php',
+	],
+	'fortnite' => [
+		'name' => 'Fortnite',
+		'background-color' => '#fbf2df',
+		'api' => $baseurl . '/fortnite/api.php',
+	],
+	'callofduty' => [
+		'name' => 'Call of Duty',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/callofduty/api.php',
+	],
+	'teamfortress' => [
+		'name' => 'Team Fortress',
+		'background-color' => '#cca96b',
+		'api' => $baseurl . '/teamfortress/api.php',
 	],
 	'freefire' => [
 		'name' => 'Free Fire',
 		'background-color' => '#fbecdf',
 		'api' => $baseurl . '/freefire/api.php',
 	],
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'background-color' => '#aac9e5',
-		'api' => $baseurl . '/ageofempires/api.php',
+	'worldofwarcraft' => [
+		'name' => 'World of Warcraft',
+		'background-color' => '#d1e2f1',
+		'api' => $baseurl . '/worldofwarcraft/api.php',
+	],
+	'fifa' => [
+		'name' => 'FIFA',
+		'background-color' => '#fbf2df',
+		'api' => $baseurl . '/fifa/api.php',
+	],
+	'paladins' => [
+		'name' => 'Paladins',
+		'background-color' => '#dee3ef',
+		'api' => $baseurl . '/paladins/api.php',
 	],
 ];
 $miscwikis = [
@@ -189,11 +194,6 @@ $otherwikis = [
 		'name' => 'Magic: The Gathering',
 		'background-color' => '',
 		'api' => $baseurl . '/magic/api.php',
-	],
-	'callofduty' => [
-		'name' => 'Call of Duty',
-		'background-color' => '',
-		'api' => $baseurl . '/callofduty/api.php',
 	],
 	'autochess' => [
 		'name' => 'Auto Chess',

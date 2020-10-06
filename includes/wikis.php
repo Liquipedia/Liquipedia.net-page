@@ -19,20 +19,25 @@ $wikis = [
 		'background-color' => '#cde5b6',
 		'api' => $baseurl . '/counterstrike/api.php',
 	],
-	'starcraft2' => [
-		'name' => 'StarCraft II',
-		'background-color' => '#b6cfe5',
-		'api' => $baseurl . '/starcraft2/api.php',
-	],
 	'pubg' => [
 		'name' => 'PUBG',
 		'background-color' => '#edc951',
 		'api' => $baseurl . '/pubg/api.php',
 	],
+	'starcraft2' => [
+		'name' => 'StarCraft II',
+		'background-color' => '#b6cfe5',
+		'api' => $baseurl . '/starcraft2/api.php',
+	],
 	'rocketleague' => [
 		'name' => 'Rocket League',
 		'background-color' => '#ffdaae',
 		'api' => $baseurl . '/rocketleague/api.php',
+	],
+	'valorant' => [
+		'name' => 'VALORANT',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/valorant/api.php',
 	],
 	'overwatch' => [
 		'name' => 'Overwatch',
@@ -44,35 +49,30 @@ $wikis = [
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
-	'valorant' => [
-		'name' => 'VALORANT',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/valorant/api.php',
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '#ffa993',
+		'api' => $baseurl . '/apexlegends/api.php',
 	],
 	'leagueoflegends' => [
 		'name' => 'League of Legends',
 		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	],
-	'smash' => [
-		'name' => 'Smash',
-		'background-color' => '#b6e5c7',
-		'api' => $baseurl . '/smash/api.php',
-	],
 	'warcraft' => [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
 	],
-	'apexlegends' => [
-		'name' => 'Apex Legends',
-		'background-color' => '#ffa993',
-		'api' => $baseurl . '/apexlegends/api.php',
-	],
 	'starcraft' => [
 		'name' => 'Brood War',
 		'background-color' => '#dbe1e5',
 		'api' => $baseurl . '/starcraft/api.php',
+	],
+	'smash' => [
+		'name' => 'Smash',
+		'background-color' => '#b6e5c7',
+		'api' => $baseurl . '/smash/api.php',
 	],
 	'hearthstone' => [
 		'name' => 'Hearthstone',

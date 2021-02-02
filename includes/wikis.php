@@ -9,6 +9,12 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'background-color' => '#aac9e5',
+		'api' => $baseurl . '/ageofempires/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
@@ -63,11 +69,6 @@ $wikis = [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
-	],
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'background-color' => '#aac9e5',
-		'api' => $baseurl . '/ageofempires/api.php',
 	],
 	'smash' => [
 		'name' => 'Smash',
@@ -150,11 +151,13 @@ $alphawikis = [
 		'name' => 'Pokémon',
 		'background-color' => '#fbdfdf',
 		'api' => $baseurl . '/pokemon/api.php',
+		'new' => true,
 	],
 	'wildrift' => [
 		'name' => 'Wild Rift',
 		'background-color' => '#dbeded',
 		'api' => $baseurl . '/wildrift/api.php',
+		'new' => true,
 	],
 	'paladins' => [
 		'name' => 'Paladins',

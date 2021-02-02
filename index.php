@@ -196,6 +196,9 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 			<div class="box-wrap">
 				<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
 					<div class="<?php echo $wiki_key; ?>-box game-box">
+						<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+							<div class="badge-new">NEW!</div>
+						<?php } ?>
 						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
 						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
 						<div class="wiki-header"><a href="<?php echo '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>

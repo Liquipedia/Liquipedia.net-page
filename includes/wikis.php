@@ -64,6 +64,11 @@ $wikis = [
 		'background-color' => '#aab9b7',
 		'api' => $baseurl . '/warcraft/api.php',
 	],
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'background-color' => '#aac9e5',
+		'api' => $baseurl . '/ageofempires/api.php',
+	],
 	'smash' => [
 		'name' => 'Smash',
 		'background-color' => '#b6e5c7',
@@ -91,11 +96,6 @@ $wikis = [
 	],
 ];
 $alphawikis = [
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'background-color' => '#aac9e5',
-		'api' => $baseurl . '/ageofempires/api.php',
-	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '#e6e6e6',
@@ -146,6 +146,16 @@ $alphawikis = [
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fifa/api.php',
 	],
+	'pokemon' => [
+		'name' => 'Pokémon',
+		'background-color' => '#fbdfdf',
+		'api' => $baseurl . '/pokemon/api.php',
+	],
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/wildrift/api.php',
+	],
 	'paladins' => [
 		'name' => 'Paladins',
 		'background-color' => '#dee3ef',
@@ -164,16 +174,6 @@ $otherwikis = [
 		'name' => 'TrackMania',
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
-	],
-	'pokemon' => [
-		'name' => 'Pokémon',
-		'background-color' => '',
-		'api' => $baseurl . '/pokemon/api.php',
-	],
-	'wildrift' => [
-		'name' => 'Wild Rift',
-		'background-color' => '',
-		'api' => $baseurl . '/wildrift/api.php',
 	],
 	'simracing' => [
 		'name' => 'Sim Racing',

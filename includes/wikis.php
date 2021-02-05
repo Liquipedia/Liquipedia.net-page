@@ -97,6 +97,18 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'pokemon' => [
+		'name' => 'Pokémon',
+		'background-color' => '#fbdfdf',
+		'api' => $baseurl . '/pokemon/api.php',
+		'new' => true,
+	],
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/wildrift/api.php',
+		'new' => true,
+	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '#e6e6e6',
@@ -146,18 +158,6 @@ $alphawikis = [
 		'name' => 'FIFA',
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fifa/api.php',
-	],
-	'pokemon' => [
-		'name' => 'Pokémon',
-		'background-color' => '#fbdfdf',
-		'api' => $baseurl . '/pokemon/api.php',
-		'new' => true,
-	],
-	'wildrift' => [
-		'name' => 'Wild Rift',
-		'background-color' => '#dbeded',
-		'api' => $baseurl . '/wildrift/api.php',
-		'new' => true,
 	],
 	'paladins' => [
 		'name' => 'Paladins',

@@ -9,12 +9,6 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'background-color' => '#aac9e5',
-		'api' => $baseurl . '/ageofempires/api.php',
-		'new' => true,
-	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
@@ -65,6 +59,11 @@ $wikis = [
 		'background-color' => '#f4db96',
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	],
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'background-color' => '#aac9e5',
+		'api' => $baseurl . '/ageofempires/api.php',
+	],
 	'warcraft' => [
 		'name' => 'Warcraft III',
 		'background-color' => '#aab9b7',
@@ -97,18 +96,6 @@ $wikis = [
 	],
 ];
 $alphawikis = [
-	'pokemon' => [
-		'name' => 'Pokémon',
-		'background-color' => '#fbdfdf',
-		'api' => $baseurl . '/pokemon/api.php',
-		'new' => true,
-	],
-	'wildrift' => [
-		'name' => 'Wild Rift',
-		'background-color' => '#dbeded',
-		'api' => $baseurl . '/wildrift/api.php',
-		'new' => true,
-	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '#e6e6e6',
@@ -154,10 +141,20 @@ $alphawikis = [
 		'background-color' => '#d1e2f1',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
 	],
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/wildrift/api.php',
+	],
 	'fifa' => [
 		'name' => 'FIFA',
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fifa/api.php',
+	],
+	'pokemon' => [
+		'name' => 'Pokémon',
+		'background-color' => '#fbdfdf',
+		'api' => $baseurl . '/pokemon/api.php',
 	],
 	'paladins' => [
 		'name' => 'Paladins',

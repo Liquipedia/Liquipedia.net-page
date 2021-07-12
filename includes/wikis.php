@@ -19,6 +19,11 @@ $wikis = [
 		'background-color' => '#cde5b6',
 		'api' => $baseurl . '/counterstrike/api.php',
 	],
+	'valorant' => [
+		'name' => 'VALORANT',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/valorant/api.php',
+	],
 	'pubg' => [
 		'name' => 'PUBG',
 		'background-color' => '#edc951',
@@ -29,30 +34,25 @@ $wikis = [
 		'background-color' => '#ffdaae',
 		'api' => $baseurl . '/rocketleague/api.php',
 	],
+	'apexlegends' => [
+		'name' => 'Apex Legends',
+		'background-color' => '#ffa993',
+		'api' => $baseurl . '/apexlegends/api.php',
+	],
 	'starcraft2' => [
 		'name' => 'StarCraft II',
 		'background-color' => '#b6cfe5',
 		'api' => $baseurl . '/starcraft2/api.php',
-	],
-	'valorant' => [
-		'name' => 'VALORANT',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/valorant/api.php',
-	],
-	'overwatch' => [
-		'name' => 'Overwatch',
-		'background-color' => '#e5b6c0',
-		'api' => $baseurl . '/overwatch/api.php',
 	],
 	'rainbowsix' => [
 		'name' => 'Rainbow Six',
 		'background-color' => '#f0e0a4',
 		'api' => $baseurl . '/rainbowsix/api.php',
 	],
-	'apexlegends' => [
-		'name' => 'Apex Legends',
-		'background-color' => '#ffa993',
-		'api' => $baseurl . '/apexlegends/api.php',
+	'overwatch' => [
+		'name' => 'Overwatch',
+		'background-color' => '#e5b6c0',
+		'api' => $baseurl . '/overwatch/api.php',
 	],
 	'leagueoflegends' => [
 		'name' => 'League of Legends',
@@ -96,6 +96,21 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'freefire' => [
+		'name' => 'Free Fire',
+		'background-color' => '#fbecdf',
+		'api' => $baseurl . '/freefire/api.php',
+	],
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/wildrift/api.php',
+	],
+	'callofduty' => [
+		'name' => 'Call of Duty',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/callofduty/api.php',
+	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'background-color' => '#e6e6e6',
@@ -106,55 +121,40 @@ $alphawikis = [
 		'background-color' => '#ffcb66',
 		'api' => $baseurl . '/fighters/api.php',
 	],
-	'arenafps' => [
-		'name' => 'Arena FPS',
-		'background-color' => '#dd986e',
-		'api' => $baseurl . '/arenafps/api.php',
-	],
-	'callofduty' => [
-		'name' => 'Call of Duty',
-		'background-color' => '#dbeded',
-		'api' => $baseurl . '/callofduty/api.php',
-	],
-	'freefire' => [
-		'name' => 'Free Fire',
-		'background-color' => '#fbecdf',
-		'api' => $baseurl . '/freefire/api.php',
-	],
-	'clashroyale' => [
-		'name' => 'Clash Royale',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/clashroyale/api.php',
-	],
 	'fortnite' => [
 		'name' => 'Fortnite',
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
 	],
-	'teamfortress' => [
-		'name' => 'Team Fortress',
-		'background-color' => '#cca96b',
-		'api' => $baseurl . '/teamfortress/api.php',
+	'arenafps' => [
+		'name' => 'Arena FPS',
+		'background-color' => '#dd986e',
+		'api' => $baseurl . '/arenafps/api.php',
 	],
 	'worldofwarcraft' => [
 		'name' => 'World of Warcraft',
 		'background-color' => '#d1e2f1',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
 	],
-	'wildrift' => [
-		'name' => 'Wild Rift',
-		'background-color' => '#dbeded',
-		'api' => $baseurl . '/wildrift/api.php',
+	'clashroyale' => [
+		'name' => 'Clash Royale',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/clashroyale/api.php',
+	],
+	'pokemon' => [
+		'name' => 'Pokémon',
+		'background-color' => '#fbdfdf',
+		'api' => $baseurl . '/pokemon/api.php',
 	],
 	'fifa' => [
 		'name' => 'FIFA',
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fifa/api.php',
 	],
-	'pokemon' => [
-		'name' => 'Pokémon',
-		'background-color' => '#fbdfdf',
-		'api' => $baseurl . '/pokemon/api.php',
+	'teamfortress' => [
+		'name' => 'Team Fortress',
+		'background-color' => '#cca96b',
+		'api' => $baseurl . '/teamfortress/api.php',
 	],
 	'paladins' => [
 		'name' => 'Paladins',
@@ -175,16 +175,6 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
 	],
-	'simracing' => [
-		'name' => 'Sim Racing',
-		'background-color' => '',
-		'api' => $baseurl . '/simracing/api.php',
-	],
-	'runeterra' => [
-		'name' => 'Runeterra',
-		'background-color' => '',
-		'api' => $baseurl . '/runeterra/api.php',
-	],
 	'brawlstars' => [
 		'name' => 'Brawl Stars',
 		'background-color' => '',
@@ -195,10 +185,25 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/teamfighttactics/api.php',
 	],
+	'simracing' => [
+		'name' => 'Sim Racing',
+		'background-color' => '',
+		'api' => $baseurl . '/simracing/api.php',
+	],
 	'crossfire' => [
 		'name' => 'CrossFire',
 		'background-color' => '',
 		'api' => $baseurl . '/crossfire/api.php',
+	],
+	'squadrons' => [
+		'name' => 'Squadrons',
+		'background-color' => '',
+		'api' => $baseurl . '/squadrons/api.php',
+	],
+	'runeterra' => [
+		'name' => 'Runeterra',
+		'background-color' => '',
+		'api' => $baseurl . '/runeterra/api.php',
 	],
 	'battalion' => [
 		'name' => 'Battalion 1944',
@@ -220,14 +225,14 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/magic/api.php',
 	],
-	'criticalops' => [
-		'name' => 'Critical Ops',
-		'background-color' => '',
-		'api' => $baseurl . '/criticalops/api.php',
-	],
 	'battlerite' => [
 		'name' => 'Battlerite',
 		'background-color' => '',
 		'api' => $baseurl . '/battlerite/api.php',
+	],
+	'criticalops' => [
+		'name' => 'Critical Ops',
+		'background-color' => '',
+		'api' => $baseurl . '/criticalops/api.php',
 	],
 ];

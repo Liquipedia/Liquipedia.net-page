@@ -9,6 +9,12 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'wildrift' => [
+		'name' => 'Wild Rift',
+		'background-color' => '#dbeded',
+		'api' => $baseurl . '/wildrift/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
@@ -100,11 +106,6 @@ $alphawikis = [
 		'name' => 'Free Fire',
 		'background-color' => '#fbecdf',
 		'api' => $baseurl . '/freefire/api.php',
-	],
-	'wildrift' => [
-		'name' => 'Wild Rift',
-		'background-color' => '#dbeded',
-		'api' => $baseurl . '/wildrift/api.php',
 	],
 	'callofduty' => [
 		'name' => 'Call of Duty',

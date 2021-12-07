@@ -240,4 +240,19 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/criticalops/api.php',
 	],
+	'splitgate' => [
+		'name' => 'Splitgate',
+		'background-color' => '',
+		'api' => $baseurl . '/splitgate/api.php',
+	],
+	'mobilelegends' => [
+		'name' => 'Mobile Legends: Bang Bang',
+		'background-color' => '',
+		'api' => $baseurl . '/mobilelegends/api.php',
+	],
+	'sideswipe' => [
+		'name' => 'Rocket League Sideswipe',
+		'background-color' => '',
+		'api' => $baseurl . '/sideswipe/api.php',
+	],
 ];

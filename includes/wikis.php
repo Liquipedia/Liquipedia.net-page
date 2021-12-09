@@ -101,6 +101,12 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'brawlstars' => [
+		'name' => 'Brawl Stars',
+		'background-color' => '',
+		'api' => $baseurl . '/brawlstars/api.php',
+		'new' => true,
+	],
 	'freefire' => [
 		'name' => 'Free Fire',
 		'background-color' => '#fbecdf',
@@ -174,11 +180,6 @@ $otherwikis = [
 		'name' => 'TrackMania',
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
-	],
-	'brawlstars' => [
-		'name' => 'Brawl Stars',
-		'background-color' => '',
-		'api' => $baseurl . '/brawlstars/api.php',
 	],
 	'teamfighttactics' => [
 		'name' => 'Teamfight Tactics',

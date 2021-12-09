@@ -103,7 +103,7 @@ $wikis = [
 $alphawikis = [
 	'brawlstars' => [
 		'name' => 'Brawl Stars',
-		'background-color' => '',
+		'background-color' => '#ffc7ae',
 		'api' => $baseurl . '/brawlstars/api.php',
 		'new' => true,
 	],

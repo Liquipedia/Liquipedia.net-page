@@ -101,6 +101,12 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'halo' => [
+		'name' => 'Halo',
+		'background-color' => '#bac2d5',
+		'api' => $baseurl . '/halo/api.php',
+		'new' => true,
+	],
 	'brawlstars' => [
 		'name' => 'Brawl Stars',
 		'background-color' => '#ffc7ae',
@@ -210,11 +216,6 @@ $otherwikis = [
 		'name' => 'Battalion 1944',
 		'background-color' => '',
 		'api' => $baseurl . '/battalion/api.php',
-	],
-	'halo' => [
-		'name' => 'Halo',
-		'background-color' => '',
-		'api' => $baseurl . '/halo/api.php',
 	],
 	'underlords' => [
 		'name' => 'Dota Underlords',

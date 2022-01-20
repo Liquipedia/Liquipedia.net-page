@@ -61,6 +61,8 @@ $banner = [
 $banner = null;
 ?>
 <!DOCTYPE html>
+<html lang="en">
+	<head>
 <!--
 	************************************************
 	*  _ _             _                _ _        *
@@ -71,8 +73,6 @@ $banner = null;
 	*         |_|       |_|                        *
 	************************************************
 -->
-<html lang="en">
-	<head>
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />

@@ -109,6 +109,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 }
 ?>
 		</style>
+		<script async src="https://s.nitropay.com/ads-90.js"></script>
 	</head>
 	<body class="column-<?php echo $col_number; ?>">
 		<div class="global-nav">

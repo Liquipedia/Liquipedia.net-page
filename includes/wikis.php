@@ -190,10 +190,10 @@ $otherwikis = [
 		'background-color' => '',
 		'api' => $baseurl . '/trackmania/api.php',
 	],
-	'teamfighttactics' => [
+	'tft' => [
 		'name' => 'Teamfight Tactics',
 		'background-color' => '',
-		'api' => $baseurl . '/teamfighttactics/api.php',
+		'api' => $baseurl . '/tft/api.php',
 	],
 	'runeterra' => [
 		'name' => 'Runeterra',

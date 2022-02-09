@@ -101,6 +101,18 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'mobilelegends' => [
+		'name' => 'Mobile Legends: Bang Bang',
+		'background-color' => '',
+		'api' => $baseurl . '/mobilelegends/api.php',
+		'new' => true,
+	],
+	'sideswipe' => [
+		'name' => 'Rocket League Sideswipe',
+		'background-color' => '',
+		'api' => $baseurl . '/sideswipe/api.php',
+		'new' => true,
+	],
 	'freefire' => [
 		'name' => 'Free Fire',
 		'background-color' => '#fbecdf',
@@ -180,11 +192,6 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'mobilelegends' => [
-		'name' => 'Mobile Legends: Bang Bang',
-		'background-color' => '',
-		'api' => $baseurl . '/mobilelegends/api.php',
-	],
 	'trackmania' => [
 		'name' => 'TrackMania',
 		'background-color' => '',
@@ -204,11 +211,6 @@ $otherwikis = [
 		'name' => 'Sim Racing',
 		'background-color' => '',
 		'api' => $baseurl . '/simracing/api.php',
-	],
-	'sideswipe' => [
-		'name' => 'Rocket League Sideswipe',
-		'background-color' => '',
-		'api' => $baseurl . '/sideswipe/api.php',
 	],
 	'crossfire' => [
 		'name' => 'CrossFire',

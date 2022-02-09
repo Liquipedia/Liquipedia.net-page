@@ -108,7 +108,7 @@ $alphawikis = [
 		'new' => true,
 	],
 	'sideswipe' => [
-		'name' => 'Rocket League Sideswipe',
+		'name' => 'Sideswipe',
 		'background-color' => '#7498d8',
 		'api' => $baseurl . '/sideswipe/api.php',
 		'new' => true,

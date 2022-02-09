@@ -102,14 +102,14 @@ $wikis = [
 ];
 $alphawikis = [
 	'mobilelegends' => [
-		'name' => 'Mobile Legends: Bang Bang',
-		'background-color' => '',
+		'name' => 'Mobile Legends',
+		'background-color' => '#ffe982',
 		'api' => $baseurl . '/mobilelegends/api.php',
 		'new' => true,
 	],
 	'sideswipe' => [
 		'name' => 'Rocket League Sideswipe',
-		'background-color' => '',
+		'background-color' => '#7498d8',
 		'api' => $baseurl . '/sideswipe/api.php',
 		'new' => true,
 	],

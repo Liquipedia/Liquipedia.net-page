@@ -113,8 +113,6 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 	</head>
 	<body class="column-<?php echo $col_number; ?>">
 		<div class="global-nav">
-			<span><a href="https://qihl.gg/">qihl</a></span>
-			<span><a href="https://masterleague.net/">Master League</a></span>
 			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
 			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
 			<span><a href="https://tl.net/">TLnet</a></span>

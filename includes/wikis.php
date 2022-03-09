@@ -9,6 +9,12 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'pubgmobile' => [
+		'name' => 'PUBG Mobile',
+		'background-color' => '#8cb5b5',
+		'api' => $baseurl . '/pubgmobile/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'background-color' => '#e5ccb6',
@@ -101,22 +107,15 @@ $wikis = [
 	],
 ];
 $alphawikis = [
-	'mobilelegends' => [
-		'name' => 'Mobile Legends',
-		'background-color' => '#ffe982',
-		'api' => $baseurl . '/mobilelegends/api.php',
-		'new' => true,
-	],
-	'sideswipe' => [
-		'name' => 'Sideswipe',
-		'background-color' => '#7498d8',
-		'api' => $baseurl . '/sideswipe/api.php',
-		'new' => true,
-	],
 	'freefire' => [
 		'name' => 'Free Fire',
 		'background-color' => '#fbecdf',
 		'api' => $baseurl . '/freefire/api.php',
+	],
+	'mobilelegends' => [
+		'name' => 'Mobile Legends',
+		'background-color' => '#ffe982',
+		'api' => $baseurl . '/mobilelegends/api.php',
 	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
@@ -177,6 +176,11 @@ $alphawikis = [
 		'name' => 'Team Fortress',
 		'background-color' => '#cca96b',
 		'api' => $baseurl . '/teamfortress/api.php',
+	],
+	'sideswipe' => [
+		'name' => 'Sideswipe',
+		'background-color' => '#7498d8',
+		'api' => $baseurl . '/sideswipe/api.php',
 	],
 	'paladins' => [
 		'name' => 'Paladins',
@@ -256,5 +260,10 @@ $otherwikis = [
 		'name' => 'Battlerite',
 		'background-color' => '',
 		'api' => $baseurl . '/battlerite/api.php',
+	],
+	'brawlhalla' => [
+		'name' => 'Brawlhalla',
+		'background-color' => '',
+		'api' => $baseurl . '/brawlhalla/api.php',
 	],
 ];

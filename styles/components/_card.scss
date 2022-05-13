@@ -1,0 +1,262 @@
+.card {
+    $_card-image-height-default: 5rem;
+    $_card-image-height-small: 3.75rem;
+    $_card-image-scale: 1.05;
+    $_card-padding-default: 1.5rem;
+    $_card-padding-small: 1rem;
+    $_card-scale: 1.015;
+    $_card-box-shadow-default: 0 2.5rem 4rem rgba(#0C223F, 0.5);
+    $_card-box-shadow-focus: 0 0 0 0.25rem rgba(#0C223F, 0.5);
+    //min-width: 17.5rem;
+    border-radius: 0.625rem;
+
+    background-color: $bright-gray;
+    box-shadow: $_card-box-shadow-default;
+    position: relative;
+    color: white;
+    flex: 1;
+    z-index: 1;
+    text-decoration: none;
+    transition:
+        background-color $transition-fast,
+        box-shadow $transition-fast,
+        transform $transition-fast,
+        opacity $transition-fast;
+
+    &:hover {
+        background-color: rgba($bright-gray, 0.75);
+        opacity: 1;
+
+        @include breakpoint($breakpoint-xsmall) {
+            transform: scale($_card-scale);
+        }
+
+        .card__image img {
+            @include breakpoint($breakpoint-xsmall) {
+                transform: scale($_card-image-scale);
+            }
+        }
+    }
+
+    &:focus-within {
+        opacity: 1;
+        outline: none;
+        box-shadow: $_card-box-shadow-focus, $_card-box-shadow-default;
+
+        @include breakpoint($breakpoint-xsmall) {
+            transform: scale($_card-scale);
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        width: 100%;
+        height: $_card-image-height-small;
+        letter-spacing: $letter-spacing-small;
+        font-size: $font-size-default;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-medium;
+
+        @include breakpoint($breakpoint-xxsmall) {
+            font-size: $font-size-medium;
+        }
+
+        @include breakpoint($breakpoint-xsmall) {
+            height: $_card-image-height-default;
+        }
+    }
+
+    .card__title-link {
+        color: $humming-bird;
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+
+        @include breakpoint(null, $breakpoint-xxsmall) {
+            padding-left: 4.5rem;
+        }
+
+        @include breakpoint($breakpoint-xsmall) {
+            padding: 3rem $_card-padding-default 0 $_card-padding-default;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        &:focus {
+            outline: none
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        height: $_card-image-height-small;
+        border-radius: $border-radius-medium $border-radius-medium 0 0;
+        overflow: hidden;
+
+        @include breakpoint($breakpoint-xsmall) {
+            height: $_card-image-height-default;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(225deg, rgba(black, 0) 0%, rgba(black, 0.5) 60%);
+        }
+
+        img {
+            transition: transform $transition-fast;
+            width: 100%;
+            min-width: 22.5rem;
+            min-height: 5rem;
+        }
+    }
+
+    &__game-icon {
+        $_size-default: 3.75rem;
+        $_size-small: 3.125rem;
+        display: flex;
+        height: $_size-small;
+        width: $_size-small;
+        position: absolute;
+        z-index: 2;
+        background-color: $royal-blue;
+        box-shadow: inset 0 0.0625rem 0.0625rem rgba(white, 0.2);
+        border-radius: 100%;
+        right: $_card-padding-default;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-1.875rem);
+
+        @include breakpoint(null, $breakpoint-xxsmall) {
+            right: unset;
+            left: 1rem;
+            transform: translateY(-2.5rem);
+        }
+
+        @include breakpoint($breakpoint-xsmall) {
+            height: $_size-default;
+            width: $_size-default;
+            transform: translateY(-2.5rem);
+        }
+
+        .icon {
+            max-height: 1.5rem;
+            max-width: 1.5rem;
+
+            @include breakpoint($breakpoint-xsmall) {
+                max-height: 1.875rem;
+                max-width: 1.875rem;
+            }
+        }
+    }
+
+    &__line {
+        display: flex;
+        background-color: $royal-blue;
+        position: relative;
+        height: 0.25rem;
+        width: 100%;
+
+        @include breakpoint(null, $breakpoint-xxsmall) {
+            border-radius: 0 0 $border-radius-small $border-radius-small;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgba(black, 0) 0%, rgba(black, 0.1) 100%);
+        }
+    }
+
+    &__list {
+        margin: $_card-padding-small;
+        font-size: $font-size-small;
+        position: relative;
+        z-index: 5;
+
+        @include breakpoint($breakpoint-xxsmall) {
+            margin: $_card-padding-default;
+        }
+
+        &.is-hidden {
+            border: 2px solid pink;
+        }
+
+        &-item {
+            list-style: none;
+        }
+
+        &-link {
+            text-decoration: none;
+            padding: 0.25rem 0;
+            display: inline-flex;
+            word-break: break-word;
+            position: relative;
+            transition: transform 0.2s ease;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 0.0625rem;
+                background: transparent;
+                transition: background $transition-fast;
+            }
+
+            &:hover {
+                transform: translateY(-0.0625rem);
+
+                &::before {
+                    background: currentColor;
+                }
+            }
+
+            &:focus:not(:focus-visible) {
+                outline: none;
+
+                &::before {
+                    background: transparent;
+                }
+            }
+
+            &:focus-visible {
+                outline: 0.0625rem dotted white;
+                outline-offset: 0.125rem;
+
+                &::before {
+                    background: white;
+                }
+            }
+        }
+    }
+}

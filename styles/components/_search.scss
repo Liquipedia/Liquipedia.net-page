@@ -1,0 +1,41 @@
+.search {
+    margin-top: 1.5rem;
+
+    &__form {
+        border-radius: $border-radius-medium;
+        overflow: hidden;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+
+        @include themed() {
+            background-color: t( $search-bg-color );
+        }
+
+        &-select {
+            width: 10rem;
+            background-color: transparent;
+            border: 0;
+            color: $humming-bird;
+            height: 100%;
+            padding: 0 1rem;
+        }
+
+        &-input {
+            flex-grow: 1;
+            background-color: transparent;
+            border: 0;
+            height: 100%;
+        }
+
+        &-button {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: $border-radius-small;
+            color: $humming-bird;
+            background-color: $royal-blue;
+            border: 0;
+            margin-right: 0.25rem;
+        }
+    }
+}

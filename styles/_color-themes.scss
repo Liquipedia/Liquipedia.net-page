@@ -1,0 +1,29 @@
+$body-bg-color: 'body-bg-color';
+$text-color: 'text-color';
+$link-color: 'link-color';
+$header-bg-color: 'header-bg-color';
+$header-border-color: 'header-border-color';
+$header-text-color: 'header-text-color';
+$search-bg-color: 'search-bg-color';
+
+$themes: (
+    default: (
+        body-bg-color: $bg--default,
+        text-color: $text-color--default,
+        link-color: $link-color--default,
+        header-bg-color: $header-bg-color--default,
+        header-border-color: $header-border-color--default,
+        header-text-color: $header-text-color--default,
+        search-bg-color: $search-bg-color--default,
+
+    ),
+    dark: (
+        body-bg-color: $bg--dark,
+        text-color: $text-color--dark,
+        link-color: $link-color--dark,
+        header-bg-color: $header-bg-color--dark,
+        header-border-color: $header-border-color--dark,
+        header-text-color: $header-text-color--dark,
+        search-bg-color: $search-bg-color--dark,
+    )
+);

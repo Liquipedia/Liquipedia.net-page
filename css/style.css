@@ -1,41 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@font-face {
-	font-display: swap;
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	src:
-		local('Roboto'),
-		local('Roboto-Regular'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#iefix') format('embedded-opentype'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff') format('woff'),
-		url('https://fonts.gstatic.com/l/font?kit=KFOmCnqEu92Fr1Mu4mxN&skey=a0a0114a1dcab3ac&v=v18#Roboto') format('svg'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf') format('truetype');
-}
-@font-face {
-	font-display: swap;
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 300;
-	src:
-		local('Roboto Light'),
-		local('Roboto-Light'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#iefix') format('embedded-opentype'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2') format('woff2'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff') format('woff'),
-		url('https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmSU5fBBc_&skey=11ce8ad5f54705ca&v=v18#Roboto') format('svg'),
-		url('https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf') format('truetype');
-}
-
-body {
-	background:#082c4c url(../images/lp-hex-bg.png) repeat;
-	background-size:25%;
-	margin:0px;
-	font-family: Arial, Geneva, Ubuntu, sans-serif;
-}
 .content.searchwrap {
 	padding:20px 5px;
 }
@@ -189,50 +154,11 @@ a:hover {
 a:active {
 	color:#faa700;
 }
-.game-box a:link {
-	text-decoration:none;
-	color:#000000;
-}
-.game-box a:visited {
-	text-decoration:none;
-	color:#000000;
-}
-.game-box a:active {
-	text-decoration:underline;
-}
-.game-box a:hover {
-	text-decoration:underline;
-}
+
 .wiki-header {
 	font-size:25px
 }
-/* This describes the boxes */
-.game-box {
-	width:100%;
-	font-size:25px;
-	font-family:'Roboto', Arial, Geneva, Ubuntu, sans-serif;
-	font-weight:400;
-	margin:0 auto 5px auto;
-	padding-bottom:1px;
-	padding-top:1px;
-	font-size:15px;
-	overflow:hidden;
-	position:relative;
-}
-.game-box > p {
-	font-size:12px;
-	display:none;
-	margin-left:5%;
-	line-height: 2.5em;
-	margin-right:5%;
-	margin-top:0.5em;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
-.box-wrap {
-	width:100%;
-}
+
 .content {
 	margin:0 5%;
 	font-size:90%;
@@ -306,9 +232,6 @@ input[type=checkbox] {
 	.top h1 {
 		font-size:80%;
 		margin-bottom:4px;
-	}
-	.game-box p {
-		font-size:12px;
 	}
 }
 @media only screen and (min-width:310px) {
@@ -420,29 +343,6 @@ input[type=checkbox] {
 	div.top {
 		margin-top:0px;
 	}
-	.box-wrap {
-		width:600px;
-		margin:0 auto;
-	}
-	.game-box {
-		width:297px;
-		height:183px;
-		display:inline-block;
-		vertical-align:top;
-	}
-	.game-box > p {
-		display:block;
-		font-size:12px;
-		line-height:1.8em;
-		text-align:left;
-		margin-top:15px;
-		margin-bottom:22px;
-		margin-left:22px;
-		margin-right:22px;
-		white-space:nowrap;
-		overflow:hidden;
-		text-overflow:ellipsis;
-	}
 	.wiki-header {
 		font-size:30px;
 		margin-top:10px;
@@ -526,10 +426,6 @@ input[type=checkbox] {
 	}
 }
 @media only screen and (min-width:930px) {
-	.box-wrap {
-		width:903px;
-		margin:0 auto;
-	}
 	.content {
 		width:901px;
 		max-width:901px;
@@ -560,10 +456,7 @@ input[type=checkbox] {
 	}
 }
 @media only screen and (min-width:1225px) {
-	body.column-4 .box-wrap {
-		width:1206px;
-		margin:0 auto;
-	}
+
 	body.column-4 .content {
 		width:1195px;
 		max-width:1195px;

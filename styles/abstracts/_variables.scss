@@ -1,0 +1,73 @@
+$black-pearl: #020712;
+$ebony-clay: #212936;
+$bright-gray: #394150;
+$humming-bird: #C5EFF7;
+$royal-blue: #2B63E6;
+$perano: #A3B1F0;
+$wild-blue-yonder: #7E8FB4;
+
+$bg--default: #e5e5e5;
+$bg--dark: #020712;
+$text-color--default: #000000;
+$text-color--dark: $humming-bird;
+$link-color--default: #000000;
+$link-color--dark: $perano;
+$global-nav-bg-color--default: #00162c;
+$global-nav-bg-color--dark: $black-pearl;
+$header-bg-color--default: #082c4c;
+$header-bg-color--dark: $ebony-clay;
+$header-border-color--default: #8eaec2;
+$header-border-color--dark: $wild-blue-yonder;
+$header-text-color--default: #ffffff;
+$header-text-color--dark: $humming-bird;
+$search-bg-color--default: #ffffff;
+$search-bg-color--dark: $black-pearl;
+
+/**
+ * Breakpoints
+ */
+$breakpoint-xxsmall: 23.75em; // 380px
+$breakpoint-xsmall: 40em; // 640px
+$breakpoint-small: 60em; // 960px
+$breakpoint-medium: 75em; // 1200px
+$breakpoint-large: 90em; // 1440px
+
+/**
+ * Border-radius
+ */
+$border-radius-small: 0.25rem;
+$border-radius-medium: 0.625rem;
+
+/**
+ * Font-size
+ */
+$base-font-size: 16px;
+$font-size-xxsmall: 0.5625rem;
+$font-size-xsmall: 0.6875rem;
+$font-size-small: 0.8125rem;
+$font-size-default: 1rem;
+$font-size-medium: 1.125rem;
+
+/**
+ * Font-weight
+ */
+$font-weight-default: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/**
+ * Letter-spacing
+ */
+$letter-spacing-small: 0.03125rem;
+
+/**
+ * Line-height
+ */
+$line-height-small: 1.2;
+$line-height-medium: 1.5;
+$line-height-default: 1.7;
+
+/**
+ * Transitions
+ */
+$transition-fast: 0.4s ease;

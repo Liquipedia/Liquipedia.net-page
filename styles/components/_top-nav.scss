@@ -1,0 +1,23 @@
+.top-nav {
+    height: 1.875rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: $font-size-xsmall;
+
+    &__list {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        li {
+            list-style: none;
+            padding: 0 1.25rem;
+
+            a {
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@function starts-with($string, $find) {
+    @if str-index($string, $find) == 1 {
+        @return true;
+    }
+
+    @else {
+        @return false;
+    }
+}
+
+@function t( $key ) {
+    @return map-get( $theme-map, $key );
+}

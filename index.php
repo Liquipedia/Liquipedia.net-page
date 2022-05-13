@@ -12,8 +12,6 @@ header( 'Expires: ' . $expire );
 // Preload / push key files
 header( 'Link: </css/style.min.css?c=2>; as=style; rel=preload, </images/lp-logo.svg>; as=image; type=image/svg+xml; rel=preload' );
 
-$col_number = 3;
-
 $hot_links = [];
 
 $pdo = null;
@@ -61,7 +59,7 @@ $banner = [
 $banner = null;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme--dark">
 	<head>
 <!--
 	************************************************
@@ -76,12 +74,10 @@ $banner = null;
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
-		<link href="./css/style.min.css?c=2" rel="stylesheet" type="text/css" />
+		<link href="./css/base.css" rel="stylesheet" type="text/css" />
+<!--		<link href="./css/style.min.css?c=2" rel="stylesheet" type="text/css" />-->
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
-		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-196x196.png" rel="icon" type="image/png" sizes="196x196">
-		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-128x128.png" rel="icon" type="image/png" sizes="128x128">
-		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
 		<link href="/manifest.json" rel="manifest" />
@@ -111,68 +107,84 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		</style>
 		<script async src="https://s.nitropay.com/ads-90.js"></script>
 	</head>
-	<body class="column-<?php echo $col_number; ?>">
-		<div class="global-nav">
-			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
-			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
-			<span><a href="https://tl.net/">TLnet</a></span>
+	<body>
+		<div class="top-nav">
+            <ul class="top-nav__list">
+                <li><a href="https://www.liquidlegends.net/" rel="external noopener noreferrer" target="_blank">LiquidLegends</a></li>
+                <li><a href="https://www.liquiddota.com/" rel="external noopener noreferrer" target="_blank">LiquidDota</a></li>
+                <li><a href="https://tl.net/" rel="external noopener noreferrer" target="_blank">TLnet</a></li>
+            </ul>
 		</div>
-		<div class="top">
-			<h1>Team Liquid welcomes you to the esports wiki</h1>
-			<div id="logo"><img src="./images/lp-logo.svg" alt="liquipedia" /></div>
-			<h2>Made by the esports community for the esports community. <span id="full-intro"> The best resource for live updated results, tournament overview, team &amp; player profiles, game information, and more&hellip;</span></h2>
-			<div class="content searchwrap">
-				<form id="search" class="search" action="/dota2/index.php">
-					<select id="wikiselect" aria-label="Select a Wiki to search">
-						<?php
-						foreach ( $wikis as $wiki_key => $wiki ) {
-							echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
-						}
-						foreach ( $alphawikis as $wiki_key => $wiki ) {
-							echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
-						}
-						?>
-						<option value="commons">Commons</option>
-					</select><!--
-					--><input aria-label="Search for" type="search" name="search" placeholder="Search..."><!--
-					--><button type="submit">Search</button>
-				</form>
-			</div>
-		</div>
-		<div class="whitebox">
-			<?php if ( !is_null( $banner ) ) { ?>
-				<div class="content">
-					<a class="banner" target="_blank" href="<?php echo $banner[ 'link' ]; ?>">
-						<?php echo $banner[ 'text' ]; ?>
-					</a>
-				</div>
-			<?php } ?>
-			<div class="box-wrap">
+		<header class="header header--top">
+            <div class="container container--header">
+                <img class="header__logo" src="./images/lp-logo.svg" alt="liquipedia" />
+                <h1 class="header__title">Made by the esports community for the esports community.</h1>
+                <div class="search">
+                    <form id="search" class="search__form" action="/dota2/index.php">
+                        <select id="wikiselect" class="search__form-select" aria-label="Select a Wiki to search">
+							<?php
+							foreach ( $wikis as $wiki_key => $wiki ) {
+								echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
+							}
+							foreach ( $alphawikis as $wiki_key => $wiki ) {
+								echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
+							}
+							?>
+                            <option value="commons">Commons</option>
+                        </select>
+                        <input class="search__form-input" aria-label="Search for" type="search" name="search" placeholder="Search...">
+                        <button class="search__form-button" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+		</header>
+        <?php if ( !is_null( $banner ) ) { ?>
+            <div class="content">
+                <a class="banner" target="_blank" href="<?php echo $banner[ 'link' ]; ?>">
+                    <?php echo $banner[ 'text' ]; ?>
+                </a>
+            </div>
+        <?php } ?>
+        <section class="section">
+            <div class="container container--cards">
 				<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
-					<div class="<?php echo $wiki_key; ?>-box game-box<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
+                    <div class="card<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
 						<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
-							<div class="badge-new">NEW!</div>
+                            <div class="badge-new">NEW!</div>
 						<?php } ?>
-						<input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
-						<label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
-						<div class="wiki-header"><a href="<?php echo '/' . $wiki_key; ?>/Main_Page"><?php echo $wiki[ 'name' ]; ?></a></div>
-						<p id="<?php echo $wiki_key; ?>" class="game-box-content">
+                        <input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
+                        <label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
+                        <h2 class="card__title">
+                            <a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
+								<?php echo $wiki[ 'name' ]; ?>
+                            </a>
+                        </h2>
+                        <div class="card__image">
+                            <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+                        </div>
+                        <div class="card__game-icon"></div>
+                        <div class="card__line"></div>
+                        <ul id="<?php echo $wiki_key; ?>" class="card__list">
 							<?php
 							if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
 								foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
 									?>
-									<a href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>"><?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?></a><br />
+                                    <li class="card__list-item">
+                                        <a class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
+											<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
+                                        </a>
+                                    </li>
 									<?php
 								}
 							}
 							?>
-						</p>
-					</div>
+                        </ul>
+                    </div>
 				<?php } ?>
-			</div>
-		</div>
+            </div>
+        </section>
 		<h2 id="commons-wiki">Commons Wiki</h2>
-		<h3>The commons wiki is a wiki used to help operate the other wikis</h3>
+		<p>The commons wiki is a wiki used to help operate the other wikis</p>
 		<div class="whitebox">
 			<div class="content">
 				<p>The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
@@ -253,21 +265,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 				</ul>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="content">
-				<div class="icon-list">
-					<a aria-label="Discord" rel="noopener" href="https://discord.gg/liquipedia" target="_blank"><i class="lp-icon lp-discord"></i></a>
-					<a aria-label="Twitter" rel="noopener" href="https://twitter.com/LiquipediaNet" target="_blank"><i class="lp-icon lp-twitter"></i></a>
-					<a aria-label="Facebook" rel="noopener" href="https://www.facebook.com/Liquipedia" target="_blank"><i class="lp-icon lp-facebook"></i></a>
-					<a aria-label="YouTube" rel="noopener" href="https://www.youtube.com/user/Liquipedia" target="_blank"><i class="lp-icon lp-youtube"></i></a>
-					<a aria-label="Twitch" rel="noopener" href="https://www.twitch.tv/liquipedia" target="_blank"><i class="lp-icon lp-twitch"></i></a>
-					<a aria-label="GitHub" rel="noopener" href="https://github.com/Liquipedia" target="_blank"><i class="lp-icon lp-github"></i></a>
-				</div>
-				<div class="disclaimer">
-					<p>Our <a href="https://liquipedia.net/commons/Liquipedia:Privacy_policy">Privacy Policy</a>. Text is licensed under <a rel="noopener" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>.<br />Files have varied licenses. Click on an image to see the image's page for more details.</p>
-				</div>
-			</div>
-		</div>
+        <?php require_once('components/footer.php') ?>
 		<script type="application/ld+json">
 			{
 			"@context": "http://schema.org",

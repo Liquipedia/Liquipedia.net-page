@@ -1,3 +1,13 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
 .card {
     $_card-image-height-default: 5rem;
     $_card-image-height-small: 3.75rem;
@@ -17,6 +27,7 @@
     flex: 1;
     z-index: 1;
     text-decoration: none;
+    height: 100%;
     transition:
         background-color $transition-fast,
         box-shadow $transition-fast,

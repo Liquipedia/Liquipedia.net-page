@@ -1,0 +1,12 @@
+.commons-links {
+    display: flex;
+    list-style: none;
+    align-self: center;
+    width: 100%;
+    margin-top: 1rem;
+    max-width: 50rem;
+
+    li {
+        flex: 1 1 auto;
+    }
+}

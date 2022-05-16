@@ -1,5 +1,6 @@
 .header {
-    padding: 2.5rem 0;
+    padding: 0.625rem 0;
+    border-top: 0.3125rem solid;
     border-bottom: 0.3125rem solid;
 
     @include themed() {
@@ -10,6 +11,8 @@
 
     &--top {
         height: 16.25rem;
+        border-top: 0;
+        padding: 2.5rem 0;
     }
 
     &__logo {
@@ -18,8 +21,9 @@
         margin: 0 auto 1rem auto;
     }
 
-    &__title {
-        font-size: $font-size-medium;
+    &__display,
+    &__title,
+    &__subtitle {
         text-align: center;
     }
 }

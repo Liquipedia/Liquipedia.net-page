@@ -1,0 +1,10 @@
+.contribution-content {
+    columns: 3;
+    column-gap: 2.5rem;
+    column-rule: 0.0625rem solid currentColor;
+    margin-top: 2.5rem;
+
+    ul {
+        padding-left: 1rem;
+    }
+}

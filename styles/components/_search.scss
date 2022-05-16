@@ -1,5 +1,6 @@
 .search {
     margin-top: 1.5rem;
+    width: 100%;
 
     &__form {
         border-radius: $border-radius-medium;
@@ -12,6 +13,16 @@
             background-color: t( $search-bg-color );
         }
 
+        ::placeholder {
+            color: $humming-bird;
+            opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder,
+        ::-ms-input-placeholder {
+            color: $humming-bird;
+        }
+
         &-select {
             width: 10rem;
             background-color: transparent;
@@ -19,6 +30,9 @@
             color: $humming-bird;
             height: 100%;
             padding: 0 1rem;
+            font-weight: $font-weight-bold;
+            font-family: inherit;
+            font-size: $font-size-small;
         }
 
         &-input {
@@ -26,6 +40,10 @@
             background-color: transparent;
             border: 0;
             height: 100%;
+            padding: 0 1rem;
+            color: $humming-bird;
+            font-family: inherit;
+            font-size: $font-size-small;
         }
 
         &-button {

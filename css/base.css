@@ -1,18 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-display: swap;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#iefix") format("embedded-opentype"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff") format("woff"), url("https://fonts.gstatic.com/l/font?kit=KFOmCnqEu92Fr1Mu4mxN&skey=a0a0114a1dcab3ac&v=v18#Roboto") format("svg"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf") format("truetype");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#iefix") format("embedded-opentype"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2") format("woff2"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff") format("woff"), url("https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmSU5fBBc_&skey=11ce8ad5f54705ca&v=v18#Roboto") format("svg"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf") format("truetype");
-}
 /**
  * Breakpoints
  */
@@ -45,6 +31,37 @@
  * @param min-width
  * @param max-width
  */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot?#iefix") format("embedded-opentype"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff") format("woff"), url("https://fonts.gstatic.com/l/font?kit=KFOmCnqEu92Fr1Mu4mxN&skey=a0a0114a1dcab3ac&v=v18#Roboto") format("svg"), url("https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot?#iefix") format("embedded-opentype"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2") format("woff2"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff") format("woff"), url("https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmSU5fBBc_&skey=11ce8ad5f54705ca&v=v18#Roboto") format("svg"), url("https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf") format("truetype");
+}
+.title--display {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+.title--headline {
+  font-size: 2.25rem;
+  font-weight: 200;
+  line-height: 1.2;
+}
+.title--subtitle {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+.title--heading {
+  font-weight: 700;
+}
+
 html {
   font-size: 16px;
   line-height: 1.7;
@@ -115,26 +132,21 @@ a:hover {
   text-decoration: none;
 }
 
-.section {
-  padding: 2.5rem 0;
+.fd-column {
+  flex-direction: column;
+}
+
+.mt-1 {
+  margin-top: 1rem;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 75rem;
   margin: 0 auto;
-  padding: 0 0.5rem;
-}
-.container--header {
-  flex-direction: column;
-}
-.container--cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  align-items: center;
 }
 
 div.top {
@@ -539,8 +551,18 @@ input[type=checkbox] {
     left: -23px;
   }
 }
+.section {
+  padding: 0 0 2.5rem 0;
+}
+.section__intro {
+  text-align: center;
+  max-width: 50rem;
+  margin-top: 2rem;
+}
+
 .header {
-  padding: 2.5rem 0;
+  padding: 0.625rem 0;
+  border-top: 0.3125rem solid;
   border-bottom: 0.3125rem solid;
 }
 html.theme--default .header {
@@ -555,15 +577,26 @@ html.theme--dark .header {
 }
 .header--top {
   height: 16.25rem;
+  border-top: 0;
+  padding: 2.5rem 0;
 }
 .header__logo {
   max-width: 15rem;
   height: auto;
   margin: 0 auto 1rem auto;
 }
-.header__title {
-  font-size: 1.125rem;
+.header__display, .header__title, .header__subtitle {
   text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  width: 100%;
+  margin-top: 2.5rem;
 }
 
 .card {
@@ -575,6 +608,7 @@ html.theme--dark .header {
   flex: 1;
   z-index: 1;
   text-decoration: none;
+  height: 100%;
   transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
 }
 .card:hover {
@@ -823,6 +857,7 @@ html.theme--dark .header {
 
 .search {
   margin-top: 1.5rem;
+  width: 100%;
 }
 .search__form {
   border-radius: 0.625rem;
@@ -837,18 +872,35 @@ html.theme--default .search__form {
 html.theme--dark .search__form {
   background-color: #020712;
 }
+.search__form ::placeholder {
+  color: #C5EFF7;
+  opacity: 1;
+  /* Firefox */
+}
+.search__form :-ms-input-placeholder,
+.search__form ::-ms-input-placeholder {
+  color: #C5EFF7;
+}
 .search__form-select {
   width: 10rem;
   background-color: transparent;
   border: 0;
   color: #C5EFF7;
   height: 100%;
+  padding: 0 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 0.8125rem;
 }
 .search__form-input {
   flex-grow: 1;
   background-color: transparent;
   border: 0;
   height: 100%;
+  padding: 0 1rem;
+  color: #C5EFF7;
+  font-family: inherit;
+  font-size: 0.8125rem;
 }
 .search__form-button {
   width: 2.5rem;
@@ -858,4 +910,22 @@ html.theme--dark .search__form {
   background-color: #2B63E6;
   border: 0;
   margin-right: 0.25rem;
+}
+
+.commons-links {
+  display: flex;
+  list-style: none;
+  align-self: center;
+  width: 100%;
+  margin-top: 1rem;
+  max-width: 50rem;
+}
+.commons-links li {
+  flex: 1 1 auto;
+}
+
+.contribution-content {
+  columns: 3;
+  column-gap: 1rem;
+  column-rule: 0.0625rem solid currentColor;
 }

@@ -14,7 +14,7 @@
         }
 
         ::placeholder {
-            color: $humming-bird;
+            color: $clr-malibu;
             opacity: 1; /* Firefox */
         }
 
@@ -27,12 +27,15 @@
             width: 10rem;
             background-color: transparent;
             border: 0;
-            color: $humming-bird;
             height: 100%;
             padding: 0 1rem;
             font-weight: $font-weight-bold;
             font-family: inherit;
             font-size: $font-size-small;
+
+            @include themed() {
+                background-color: t( $search-select-color );
+            }
         }
 
         &-input {
@@ -47,13 +50,15 @@
         }
 
         &-button {
-            width: 2.5rem;
             height: 2.5rem;
             border-radius: $border-radius-small;
-            color: $humming-bird;
-            background-color: $royal-blue;
             border: 0;
             margin-right: 0.25rem;
+
+            @include themed() {
+                background-color: t( $button-bg-color );
+                color: t( $button-text-color );
+            }
         }
     }
 }

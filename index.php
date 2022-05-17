@@ -107,10 +107,18 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 ?>
 		</style>
 		<script async src="https://s.nitropay.com/ads-90.js"></script>
+<!--		<script src="js/script.js"></script>-->
 	</head>
 	<body>
 		<div class="top-nav">
             <ul class="top-nav__list">
+                <li>
+                    <button type="button" class="top-nav__switch" data-component="theme-switch">
+                        <span class="top-nav__switch-dark">Dark</span>
+                        <span class="top-nav__switch-light">Light</span>
+                        theme
+                    </button>
+                </li>
                 <li><a href="https://www.liquidlegends.net/" rel="external noopener noreferrer" target="_blank">LiquidLegends</a></li>
                 <li><a href="https://www.liquiddota.com/" rel="external noopener noreferrer" target="_blank">LiquidDota</a></li>
                 <li><a href="https://tl.net/" rel="external noopener noreferrer" target="_blank">TLnet</a></li>

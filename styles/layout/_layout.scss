@@ -87,6 +87,29 @@ a {
     align-items: center;
 }
 
+.btn {
+    display: inline-flex;
+    padding: 0.625rem 3.125rem;
+    border-radius: $border-radius-small;
+    border: 0;
+    text-decoration: none;
+
+    @include themed() {
+        background-color: t( $button-bg-color );
+        color: t( $button-text-color );
+    }
+}
+
+.btn:hover {
+    text-decoration:none;
+
+    @include themed() {
+        background-color: t( $button-bg-color-hover );
+    }
+}
+
+
+
 .toggle-button {
     display:none !important;
 }
@@ -129,19 +152,6 @@ input[type=checkbox] {
 
 .toggle-button-label::after {
     cursor:pointer;
-}
-
-.btn {
-    color:#f5f5f5 !important;
-    background-color:#0081ff;
-    border-radius:0;
-    border:1px solid #0061ff;
-    padding:10px 50px;
-    display:inline-block;
-}
-.btn:hover {
-    background-color:#0061ff;
-    text-decoration:none;
 }
 
 .badge-new {

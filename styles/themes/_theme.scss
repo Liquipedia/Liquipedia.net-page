@@ -1,29 +1,52 @@
 $body-bg-color: 'body-bg-color';
 $text-color: 'text-color';
 $link-color: 'link-color';
+$link-color-hover: 'link-color-hover';
+$button-text-color: 'button-text-color';
+$button-bg-color: 'button-bg-color';
+$button-bg-color-hover: 'button-bg-color-hover';
+$button-bg-color-focus: 'button-bg-color-focus';
+$button-bg-color-active: 'button-bg-color-active';
+$global-nav-bg-color: 'global-nav-bg-color';
 $header-bg-color: 'header-bg-color';
 $header-border-color: 'header-border-color';
 $header-text-color: 'header-text-color';
 $search-bg-color: 'search-bg-color';
+$search-select-color: 'search-select-color';
 
 $themes: (
     default: (
         body-bg-color: $bg--default,
         text-color: $text-color--default,
         link-color: $link-color--default,
+        link-color-hover: $link-color-hover--default,
+        button-text-color: $button-text-color--default,
+        button-bg-color: $button-bg-color--default,
+        button-bg-color-hover: $button-bg-color-hover--default,
+        button-bg-color-focus: $button-bg-color-focus--default,
+        button-bg-color-active: $button-bg-color-active--default,
+        global-nav-bg-color: $global-nav-bg-color--default,
         header-bg-color: $header-bg-color--default,
         header-border-color: $header-border-color--default,
         header-text-color: $header-text-color--default,
         search-bg-color: $search-bg-color--default,
-
+        search-select-color: $search-select-color--default,
     ),
     dark: (
         body-bg-color: $bg--dark,
         text-color: $text-color--dark,
         link-color: $link-color--dark,
+        link-color-hover: $link-color-hover--dark,
+        button-text-color: $button-text-color--dark,
+        button-bg-color: $button-bg-color--dark,
+        button-bg-color-hover: $button-bg-color-hover--dark,
+        button-bg-color-focus: $button-bg-color-focus--dark,
+        button-bg-color-active: $button-bg-color-active--dark,
+        global-nav-bg-color: $global-nav-bg-color--dark,
         header-bg-color: $header-bg-color--dark,
         header-border-color: $header-border-color--dark,
         header-text-color: $header-text-color--dark,
         search-bg-color: $search-bg-color--dark,
+        search-select-color: $search-select-color--dark,
     )
 );

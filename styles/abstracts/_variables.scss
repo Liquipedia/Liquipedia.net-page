@@ -5,23 +5,58 @@ $humming-bird: #C5EFF7;
 $royal-blue: #2B63E6;
 $perano: #A3B1F0;
 $wild-blue-yonder: #7E8FB4;
+$clr-malibu: #90CAF9;
+$clr-cod-gray: #121212;
+
+$clr-primary: $clr-malibu;
+$clr-dp-00: $clr-cod-gray;
+$clr-dp-01: mix(white, $clr-cod-gray, 5%);
+$clr-dp-02: mix(white, $clr-cod-gray, 7%);
+$clr-dp-03: mix(white, $clr-cod-gray, 8%);
+$clr-dp-04: mix(white, $clr-cod-gray, 9%);
+$clr-dp-06: mix(white, $clr-cod-gray, 11%);
+$clr-dp-08: mix(white, $clr-cod-gray, 12%);
+$clr-dp-12: mix(white, $clr-cod-gray, 14%);
+$clr-dp-16: mix(white, $clr-cod-gray, 15%);
+$clr-dp-24: mix(white, $clr-cod-gray, 16%);
+
+$clr-high-emphasis: mix(white, $clr-cod-gray, 87%);
+$clr-medium-emphasis: mix(white, $clr-cod-gray, 60%);
+$clr-disabled: mix(white, $clr-cod-gray, 38%);
 
 $bg--default: #e5e5e5;
-$bg--dark: #020712;
+$bg--dark: $clr-dp-00;
 $text-color--default: #000000;
-$text-color--dark: $humming-bird;
+$text-color--dark: $clr-medium-emphasis;
+
 $link-color--default: #000000;
-$link-color--dark: $perano;
+$link-color--dark: $clr-malibu;
+$link-color-hover--default: #000000;
+$link-color-hover--dark: mix(white, $clr-malibu, 4%);
+
+$button-text-color--default: #ffffff;
+$button-text-color--dark: #000000;
+$button-bg-color--default: #0081ff;
+$button-bg-color--dark: $clr-malibu;
+$button-bg-color-hover--default: mix(white, #0081ff, 4%);
+$button-bg-color-hover--dark: mix(white, $clr-malibu, 4%);
+$button-bg-color-focus--default: mix(white, #0081ff, 12%);
+$button-bg-color-focus--dark: mix(white, $clr-malibu, 12%);
+$button-bg-color-active--default: mix(white, #0081ff, 8%);
+$button-bg-color-active--dark: mix(white, $clr-malibu, 8%);
+
 $global-nav-bg-color--default: #00162c;
-$global-nav-bg-color--dark: $black-pearl;
+$global-nav-bg-color--dark: $clr-dp-00;
 $header-bg-color--default: #082c4c;
-$header-bg-color--dark: $ebony-clay;
+$header-bg-color--dark: $clr-dp-02;
 $header-border-color--default: #8eaec2;
-$header-border-color--dark: $wild-blue-yonder;
+$header-border-color--dark: $clr-dp-08;
 $header-text-color--default: #ffffff;
-$header-text-color--dark: $humming-bird;
+$header-text-color--dark: $clr-high-emphasis;
 $search-bg-color--default: #ffffff;
-$search-bg-color--dark: $black-pearl;
+$search-bg-color--dark: $clr-dp-00;
+$search-select-color--default: $link-color--default;
+$search-select-color--dark: $link-color--dark;
 
 /**
  * Breakpoints

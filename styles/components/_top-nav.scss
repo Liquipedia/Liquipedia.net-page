@@ -4,9 +4,64 @@
     padding: 0;
     display: flex;
     font-size: $font-size-xsmall;
+    font-weight: $font-weight-bold;
+
+    @include themed() {
+        background-color: t( $clr-surface );
+    }
 
     &__switch {
-        .theme--default & {
+        background-color: transparent;
+        position: relative;
+        border: 0;
+        display: flex;
+        align-items: center;
+        font-size: $font-size-xsmall;
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+
+        @include themed() {
+            color: t( $clr-surface-high-emphasis );
+        }
+
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+        }
+
+        &::before {
+            $_height: 1.125rem;
+            width: 2rem;
+            height: $_height;
+            border-radius: $_height;
+            margin-right: 0.5rem;
+
+            @include themed() {
+                background-color: t( $clr-primary );
+            }
+        }
+
+        &::after {
+            $_height: 0.875rem;
+            width: 0.875rem;
+            height: $_height;
+            position: absolute;
+            left: 0.5rem;
+            border-radius: $_height;
+            transition: left $transition-fast;
+
+            @include themed() {
+                background-color: t( $clr-primary-high-emphasis );
+            }
+        }
+
+        &-text {
+            margin-left: 0.25rem;
+        }
+
+        .theme--light & {
             .top-nav__switch-light {
                 display: block;
             }
@@ -16,6 +71,10 @@
         }
 
         .theme--dark & {
+            &::after {
+                left: 1.375rem;
+            }
+
             .top-nav__switch-light {
                 display: none;
             }
@@ -28,11 +87,12 @@
     &__list {
         margin-left: auto;
         display: flex;
-        align-items: center;
 
         li {
             list-style: none;
             padding: 0 1.25rem;
+            display: flex;
+            align-items: center;
 
             a {
                 font-weight: $font-weight-bold;

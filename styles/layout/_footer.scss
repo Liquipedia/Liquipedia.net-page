@@ -1,0 +1,54 @@
+.footer {
+    padding: 1.5rem 0;
+
+    @include themed() {
+        background-color: t( $clr-dp-04 );
+    }
+
+    &__logo {
+        width: auto;
+        max-height: 2rem;
+        margin-bottom: 1rem;
+        margin-right: auto;
+    }
+
+    &__group {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+
+        li:not(:first-child) {
+            margin-left: 0.75rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li:not(:first-child) {
+            margin-left: 0.75rem;
+        }
+
+        a {
+            @include themed() {
+                color: t( $clr-surface-high-emphasis );
+            }
+        }
+    }
+
+    &__text {
+        font-size: $font-size-xsmall;
+    }
+}

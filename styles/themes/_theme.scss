@@ -1,52 +1,109 @@
-$body-bg-color: 'body-bg-color';
-$text-color: 'text-color';
+$clr-primary: 'clr-primary';
+$clr-primary-high-emphasis: 'clr-primary-high-emphasis';
+$clr-primary-medium-emphasis: 'clr-primary-medium-emphasis';
+$clr-primary-disabled: 'clr-primary-disabled';
+$clr-secondary: 'clr-secondary';
+$clr-background: 'clr-background';
+$clr-surface: 'clr-surface';
+$clr-surface-high-emphasis: 'clr-surface-high-emphasis';
+$clr-surface-medium-emphasis: 'clr-surface-medium-emphasis';
+$clr-surface-disabled: 'clr-surface-disabled';
+$clr-error: 'clr-error';
+$clr-on-primary: 'clr-on-primary';
+$clr-on-secondary: 'clr-on-secondary';
+$clr-on-background: 'clr-on-background';
+$clr-on-surface: 'clr-on-surface';
+$clr-on-error: 'clr-on-error';
+$clr-done: 'clr-done';
+$clr-dp-00: 'clr-dp-00';
+$clr-dp-01: 'clr-dp-01';
+$clr-dp-02: 'clr-dp-02';
+$clr-dp-03: 'clr-dp-03';
+$clr-dp-04: 'clr-dp-04';
+$clr-dp-06: 'clr-dp-06';
+$clr-dp-08: 'clr-dp-08';
+$clr-dp-12: 'clr-dp-12';
+$clr-dp-16: 'clr-dp-16';
+$clr-dp-24: 'clr-dp-24';
 $link-color: 'link-color';
 $link-color-hover: 'link-color-hover';
-$button-text-color: 'button-text-color';
-$button-bg-color: 'button-bg-color';
 $button-bg-color-hover: 'button-bg-color-hover';
 $button-bg-color-focus: 'button-bg-color-focus';
 $button-bg-color-active: 'button-bg-color-active';
-$global-nav-bg-color: 'global-nav-bg-color';
-$header-bg-color: 'header-bg-color';
-$header-border-color: 'header-border-color';
-$header-text-color: 'header-text-color';
-$search-bg-color: 'search-bg-color';
-$search-select-color: 'search-select-color';
+$clr-logo-1: 'clr-logo-1';
+$clr-logo-2: 'clr-logo-2';
 
 $themes: (
-    default: (
-        body-bg-color: $bg--default,
-        text-color: $text-color--default,
-        link-color: $link-color--default,
-        link-color-hover: $link-color-hover--default,
-        button-text-color: $button-text-color--default,
-        button-bg-color: $button-bg-color--default,
-        button-bg-color-hover: $button-bg-color-hover--default,
-        button-bg-color-focus: $button-bg-color-focus--default,
-        button-bg-color-active: $button-bg-color-active--default,
-        global-nav-bg-color: $global-nav-bg-color--default,
-        header-bg-color: $header-bg-color--default,
-        header-border-color: $header-border-color--default,
-        header-text-color: $header-text-color--default,
-        search-bg-color: $search-bg-color--default,
-        search-select-color: $search-select-color--default,
+    light: (
+        clr-primary: $clr-primary--light,
+        clr-primary-high-emphasis: $clr-primary-high-emphasis--light,
+        clr-primary-medium-emphasis: $clr-primary-medium-emphasis--light,
+        clr-primary-disabled: $clr-primary-disabled--light,
+        clr-secondary: $clr-secondary--light,
+        clr-background: $clr-background--light,
+        clr-surface: $clr-surface--light,
+        clr-surface-high-emphasis: $clr-surface-high-emphasis--light,
+        clr-surface-medium-emphasis: $clr-surface-medium-emphasis--light,
+        clr-surface-disabled: $clr-surface-disabled--light,
+        clr-error: $clr-error--light,
+        clr-on-primary: $clr-on-primary--light,
+        clr-on-secondary: $clr-on-secondary--light,
+        clr-on-background: $clr-on-background--light,
+        clr-on-surface: $clr-on-surface--light,
+        clr-on-error: $clr-on-error--light,
+        clr-dp-00: $clr-dp-00--light,
+        clr-dp-01: $clr-dp-01--light,
+        clr-dp-02: $clr-dp-02--light,
+        clr-dp-03: $clr-dp-03--light,
+        clr-dp-04: $clr-dp-04--light,
+        clr-dp-06: $clr-dp-06--light,
+        clr-dp-08: $clr-dp-08--light,
+        clr-dp-12: $clr-dp-12--light,
+        clr-dp-16: $clr-dp-16--light,
+        clr-dp-24: $clr-dp-24--light,
+
+        link-color: $link-color--light,
+        link-color-hover: $link-color-hover--light,
+        button-bg-color-hover: $button-bg-color-hover--light,
+        button-bg-color-focus: $button-bg-color-focus--light,
+        button-bg-color-active: $button-bg-color-active--light,
+        clr-logo-1: $clr-logo-1--light,
+        clr-logo-2: $clr-logo-2--light,
     ),
     dark: (
-        body-bg-color: $bg--dark,
-        text-color: $text-color--dark,
+        clr-primary: $clr-primary--dark,
+        clr-primary-high-emphasis: $clr-primary-high-emphasis--dark,
+        clr-primary-medium-emphasis: $clr-primary-medium-emphasis--dark,
+        clr-primary-disabled: $clr-primary-disabled--dark,
+        clr-secondary: $clr-secondary--dark,
+        clr-background: $clr-background--dark,
+        clr-surface: $clr-surface--dark,
+        clr-surface-high-emphasis: $clr-surface-high-emphasis--dark,
+        clr-surface-medium-emphasis: $clr-surface-medium-emphasis--dark,
+        clr-surface-disabled: $clr-surface-disabled--dark,
+        clr-error: $clr-error--dark,
+        clr-on-primary: $clr-on-primary--dark,
+        clr-on-secondary: $clr-on-secondary--dark,
+        clr-on-background: $clr-on-background--dark,
+        clr-on-surface: $clr-on-surface--dark,
+        clr-on-error: $clr-on-error--dark,
+        clr-dp-00: $clr-dp-00--dark,
+        clr-dp-01: $clr-dp-01--dark,
+        clr-dp-02: $clr-dp-02--dark,
+        clr-dp-03: $clr-dp-03--dark,
+        clr-dp-04: $clr-dp-04--dark,
+        clr-dp-06: $clr-dp-06--dark,
+        clr-dp-08: $clr-dp-08--dark,
+        clr-dp-12: $clr-dp-12--dark,
+        clr-dp-16: $clr-dp-16--dark,
+        clr-dp-24: $clr-dp-24--dark,
+
         link-color: $link-color--dark,
         link-color-hover: $link-color-hover--dark,
-        button-text-color: $button-text-color--dark,
-        button-bg-color: $button-bg-color--dark,
         button-bg-color-hover: $button-bg-color-hover--dark,
         button-bg-color-focus: $button-bg-color-focus--dark,
         button-bg-color-active: $button-bg-color-active--dark,
-        global-nav-bg-color: $global-nav-bg-color--dark,
-        header-bg-color: $header-bg-color--dark,
-        header-border-color: $header-border-color--dark,
-        header-text-color: $header-text-color--dark,
-        search-bg-color: $search-bg-color--dark,
-        search-select-color: $search-select-color--dark,
+        clr-logo-1: $clr-logo-1--dark,
+        clr-logo-2: $clr-logo-2--dark,
     )
 );

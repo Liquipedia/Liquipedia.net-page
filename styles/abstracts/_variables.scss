@@ -8,55 +8,85 @@ $wild-blue-yonder: #7E8FB4;
 $clr-malibu: #90CAF9;
 $clr-cod-gray: #121212;
 
-$clr-primary: $clr-malibu;
-$clr-dp-00: $clr-cod-gray;
-$clr-dp-01: mix(white, $clr-cod-gray, 5%);
-$clr-dp-02: mix(white, $clr-cod-gray, 7%);
-$clr-dp-03: mix(white, $clr-cod-gray, 8%);
-$clr-dp-04: mix(white, $clr-cod-gray, 9%);
-$clr-dp-06: mix(white, $clr-cod-gray, 11%);
-$clr-dp-08: mix(white, $clr-cod-gray, 12%);
-$clr-dp-12: mix(white, $clr-cod-gray, 14%);
-$clr-dp-16: mix(white, $clr-cod-gray, 15%);
-$clr-dp-24: mix(white, $clr-cod-gray, 16%);
+/** Color scheme **/
+$clr-primary--light: $royal-blue;
+$clr-primary--dark: $clr-malibu;
+$clr-primary-high-emphasis--light: mix(black, $clr-primary--light, 100%);
+$clr-primary-high-emphasis--dark: mix(black, $clr-primary--dark, 100%);
+$clr-primary-medium-emphasis--light: mix(black, $clr-primary--light, 74%);
+$clr-primary-medium-emphasis--dark: mix(black, $clr-primary--dark, 74%);
+$clr-primary-disabled--light: mix(black, $clr-primary--light,38%);
+$clr-primary-disabled--dark: mix(black, $clr-primary--dark, 38%);
+$clr-primary-variant: #0027B3;
+$clr-secondary--light: #BBC8CE;
+$clr-secondary--dark: #BBC8CE;
+$clr-background--light: #ffffff;
+$clr-background--dark: #121212;
+$clr-surface--light: #ffffff;
+$clr-surface--dark: #121212;
+$clr-surface-high-emphasis--light: mix(black, $clr-surface--light, 87%);
+$clr-surface-high-emphasis--dark: mix(white, $clr-surface--dark, 87%);
+$clr-surface-medium-emphasis--light: mix(black, $clr-surface--light, 60%);
+$clr-surface-medium-emphasis--dark: mix(white, $clr-surface--dark, 60%);
+$clr-surface-disabled--light: mix(black, $clr-surface--light,38%);
+$clr-surface-disabled--dark: mix(white, $clr-surface--dark, 38%);
+$clr-error--light: #CF6679;
+$clr-error--dark: #CF6679;
+$clr-on-primary--light: #ffffff;
+$clr-on-primary--dark: #000000;
+$clr-on-secondary--light: #ffffff;
+$clr-on-secondary--dark: #000000;
+$clr-on-background--light: #ffffff;
+$clr-on-background--dark: #000000;
+$clr-on-surface--light: #ffffff;
+$clr-on-surface--dark: #000000;
+$clr-on-error--light: #ffffff;
+$clr-on-error--dark: #000000;
+$clr-done--light: #66CF77;
+$clr-done--dark: #66CF77;
+
+/** Elevation **/
+$clr-dp-00--light: $clr-surface--light;
+$clr-dp-01--light: mix(black, $clr-surface--light, 5%);
+$clr-dp-02--light: mix(black, $clr-surface--light, 7%);
+$clr-dp-03--light: mix(black, $clr-surface--light, 8%);
+$clr-dp-04--light: mix(black, $clr-surface--light, 9%);
+$clr-dp-06--light: mix(black, $clr-surface--light, 11%);
+$clr-dp-08--light: mix(black, $clr-surface--light, 12%);
+$clr-dp-12--light: mix(black, $clr-surface--light, 14%);
+$clr-dp-16--light: mix(black, $clr-surface--light, 15%);
+$clr-dp-24--light: mix(black, $clr-surface--light, 16%);
+$clr-dp-00--dark: $clr-surface--dark;
+$clr-dp-01--dark: mix(white, $clr-surface--dark, 5%);
+$clr-dp-02--dark: mix(white, $clr-surface--dark, 7%);
+$clr-dp-03--dark: mix(white, $clr-surface--dark, 8%);
+$clr-dp-04--dark: mix(white, $clr-surface--dark, 9%);
+$clr-dp-06--dark: mix(white, $clr-surface--dark, 11%);
+$clr-dp-08--dark: mix(white, $clr-surface--dark, 12%);
+$clr-dp-12--dark: mix(white, $clr-surface--dark, 14%);
+$clr-dp-16--dark: mix(white, $clr-surface--dark, 15%);
+$clr-dp-24--dark: mix(white, $clr-surface--dark, 16%);
 
 $clr-high-emphasis: mix(white, $clr-cod-gray, 87%);
 $clr-medium-emphasis: mix(white, $clr-cod-gray, 60%);
 $clr-disabled: mix(white, $clr-cod-gray, 38%);
 
-$bg--default: #e5e5e5;
-$bg--dark: $clr-dp-00;
-$text-color--default: #000000;
-$text-color--dark: $clr-medium-emphasis;
-
-$link-color--default: #000000;
-$link-color--dark: $clr-malibu;
-$link-color-hover--default: #000000;
+$link-color--light: $clr-primary--light;
+$link-color--dark: $clr-primary--dark;
+$link-color-hover--light: #000000;
 $link-color-hover--dark: mix(white, $clr-malibu, 4%);
 
-$button-text-color--default: #ffffff;
-$button-text-color--dark: #000000;
-$button-bg-color--default: #0081ff;
-$button-bg-color--dark: $clr-malibu;
-$button-bg-color-hover--default: mix(white, #0081ff, 4%);
-$button-bg-color-hover--dark: mix(white, $clr-malibu, 4%);
-$button-bg-color-focus--default: mix(white, #0081ff, 12%);
-$button-bg-color-focus--dark: mix(white, $clr-malibu, 12%);
-$button-bg-color-active--default: mix(white, #0081ff, 8%);
-$button-bg-color-active--dark: mix(white, $clr-malibu, 8%);
+$button-bg-color-hover--light: mix(white, $clr-primary--light, 4%);
+$button-bg-color-hover--dark: mix(white, $clr-primary--dark, 4%);
+$button-bg-color-focus--light: mix(white, $clr-primary--light, 12%);
+$button-bg-color-focus--dark: mix(white, $clr-primary--dark, 12%);
+$button-bg-color-active--light: mix(white, $clr-primary--light, 8%);
+$button-bg-color-active--dark: mix(white, $clr-primary--dark, 8%);
 
-$global-nav-bg-color--default: #00162c;
-$global-nav-bg-color--dark: $clr-dp-00;
-$header-bg-color--default: #082c4c;
-$header-bg-color--dark: $clr-dp-02;
-$header-border-color--default: #8eaec2;
-$header-border-color--dark: $clr-dp-08;
-$header-text-color--default: #ffffff;
-$header-text-color--dark: $clr-high-emphasis;
-$search-bg-color--default: #ffffff;
-$search-bg-color--dark: $clr-dp-00;
-$search-select-color--default: $link-color--default;
-$search-select-color--dark: $link-color--dark;
+$clr-logo-1--light: #042B4C;
+$clr-logo-1--dark: $clr-surface-high-emphasis--dark;
+$clr-logo-2--light: #ffffff;
+$clr-logo-2--dark: $clr-dp-02--dark;
 
 /**
  * Breakpoints
@@ -71,6 +101,7 @@ $breakpoint-large: 90em; // 1440px
  * Border-radius
  */
 $border-radius-small: 0.25rem;
+$border-radius-default: 0.375rem;
 $border-radius-medium: 0.625rem;
 
 /**
@@ -78,7 +109,7 @@ $border-radius-medium: 0.625rem;
  */
 $base-font-size: 16px;
 $font-size-xxsmall: 0.5625rem;
-$font-size-xsmall: 0.6875rem;
+$font-size-xsmall: 0.75rem;
 $font-size-small: 0.8125rem;
 $font-size-default: 1rem;
 $font-size-medium: 1.125rem;

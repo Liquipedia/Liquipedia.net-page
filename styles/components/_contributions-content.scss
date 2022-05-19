@@ -4,6 +4,18 @@
     column-rule: 0.0625rem solid currentColor;
     margin-top: 2.5rem;
 
+    &__title {
+        margin-bottom: 1rem;
+
+        @include themed() {
+            color: t( $clr-surface-high-emphasis );
+        }
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
     ul {
         padding-left: 1rem;
     }

@@ -15,13 +15,8 @@
     $_card-padding-default: 1.5rem;
     $_card-padding-small: 1rem;
     $_card-scale: 1.015;
-    $_card-box-shadow-default: 0 2.5rem 4rem rgba(#0C223F, 0.5);
-    $_card-box-shadow-focus: 0 0 0 0.25rem rgba(#0C223F, 0.5);
     //min-width: 17.5rem;
     border-radius: 0.625rem;
-
-    background-color: $clr-dp-01;
-    box-shadow: $_card-box-shadow-default;
     position: relative;
     color: white;
     flex: 1;
@@ -30,9 +25,12 @@
     height: 100%;
     transition:
         background-color $transition-fast,
-        box-shadow $transition-fast,
         transform $transition-fast,
         opacity $transition-fast;
+
+    @include themed() {
+        background-color: t( $clr-dp-01 );
+    }
 
     &:hover {
         background-color: rgba($bright-gray, 0.75);
@@ -52,7 +50,6 @@
     &:focus-within {
         opacity: 1;
         outline: none;
-        box-shadow: $_card-box-shadow-focus, $_card-box-shadow-default;
 
         @include breakpoint($breakpoint-xsmall) {
             transform: scale($_card-scale);
@@ -74,6 +71,32 @@
 
         @include breakpoint($breakpoint-xsmall) {
             height: $_card-image-height-default;
+        }
+    }
+
+    &__label {
+        text-transform: uppercase;
+        font-size: $font-size-xxsmall;
+        padding: 0.125rem 0.25rem;
+        position: absolute;
+        top: 0;
+        left: 0.25rem;
+        z-index: 3;
+        border-radius: $border-radius-small;
+
+        @include themed() {
+            background-color: t( $clr-primary );
+            color: t( $clr-primary-high-emphasis );
+        }
+
+        @include breakpoint(null, $breakpoint-xsmall) {
+            transform: rotate(-15deg);
+        }
+        @include breakpoint($breakpoint-xsmall) {
+            top: 1rem;
+            left: 1rem;
+            font-size: $font-size-small;
+            padding: 0.125rem 0.5rem;
         }
     }
 
@@ -153,13 +176,16 @@
         width: $_size-small;
         position: absolute;
         z-index: 2;
-        background-color: $royal-blue;
         box-shadow: inset 0 0.0625rem 0.0625rem rgba(white, 0.2);
         border-radius: 100%;
         right: $_card-padding-default;
         justify-content: center;
         align-items: center;
         transform: translateY(-1.875rem);
+
+        @include themed() {
+            background-color: t( $clr-primary );
+        }
 
         @include breakpoint(null, $breakpoint-xxsmall) {
             right: unset;
@@ -186,10 +212,13 @@
 
     &__line {
         display: flex;
-        background-color: $royal-blue;
         position: relative;
         height: 0.25rem;
         width: 100%;
+
+        @include themed() {
+            background-color: t( $clr-primary );
+        }
 
         @include breakpoint(null, $breakpoint-xxsmall) {
             border-radius: 0 0 $border-radius-small $border-radius-small;

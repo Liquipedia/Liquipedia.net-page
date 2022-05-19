@@ -1,0 +1,36 @@
+.btn {
+    display: inline-flex;
+    padding: 0 3.125rem;
+    min-height: 2.5rem;
+    border-radius: $border-radius-small;
+    border: 0.625rem solid  transparent;
+    text-decoration: none;
+
+    @include themed() {
+        background-color: t( $clr-primary );
+        color: t( $clr-primary-high-emphasis );
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        @include themed() {
+            background-color: t( $button-bg-color-hover );
+            color: t( $clr-primary-high-emphasis );
+        }
+    }
+    &:focus {
+        border-color: #ffffff;
+
+        @include themed() {
+            background-color: t( $button-bg-color-focus );
+            color: t( $clr-primary-high-emphasis );
+        }
+    }
+    &:active {
+        @include themed() {
+            background-color: t( $button-bg-color-active );
+            color: t( $clr-primary-high-emphasis );
+        }
+    }
+}

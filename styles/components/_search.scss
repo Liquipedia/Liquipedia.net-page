@@ -4,23 +4,27 @@
 
     &__form {
         border-radius: $border-radius-medium;
-        overflow: hidden;
         height: 3rem;
         display: flex;
         align-items: center;
 
         @include themed() {
-            background-color: t( $search-bg-color );
+            background-color: t( $clr-surface );
         }
 
         ::placeholder {
-            color: $clr-malibu;
             opacity: 1; /* Firefox */
+
+            @include themed() {
+                color: t( $clr-surface-high-emphasis );
+            }
         }
 
         :-ms-input-placeholder,
         ::-ms-input-placeholder {
-            color: $humming-bird;
+            @include themed() {
+                color: t( $clr-surface-high-emphasis );
+            }
         }
 
         &-select {
@@ -32,9 +36,31 @@
             font-weight: $font-weight-bold;
             font-family: inherit;
             font-size: $font-size-small;
+            border-radius: $border-radius-medium;
 
             @include themed() {
-                background-color: t( $search-select-color );
+                color: t( $clr-primary );
+            }
+
+            &:hover {
+                @include themed() {
+                    background-color: t( $clr-dp-01 );
+                }
+            }
+
+            &:focus {
+                outline: 0;
+
+                @include themed() {
+                    box-shadow: inset 0 -0.125rem 0 0 t( $clr-primary );
+                }
+            }
+            &:active {}
+
+            option {
+                @include themed() {
+                    background-color: t( $clr-surface );
+                }
             }
         }
 
@@ -44,20 +70,41 @@
             border: 0;
             height: 100%;
             padding: 0 1rem;
-            color: $humming-bird;
             font-family: inherit;
             font-size: $font-size-small;
+
+            @include themed() {
+                color: t( $clr-primary );
+            }
+
+            &:focus {
+                outline: 0;
+
+                @include themed() {
+                    box-shadow: inset 0 -0.125rem 0 0 t( $clr-primary );
+                }
+            }
         }
 
         &-button {
             height: 2.5rem;
-            border-radius: $border-radius-small;
+            border-radius: $border-radius-default;
             border: 0;
             margin-right: 0.25rem;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
 
             @include themed() {
-                background-color: t( $button-bg-color );
-                color: t( $button-text-color );
+                background-color: t( $clr-primary );
+                color: t( $clr-primary-high-emphasis );
+            }
+
+            .icon {
+                width: 1rem;
+                height: 1rem;
+                display: block;
+                margin-left: 0.75rem;
             }
         }
     }

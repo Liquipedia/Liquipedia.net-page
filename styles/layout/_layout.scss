@@ -13,8 +13,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     @include themed() {
-        background-color: t( $body-bg-color );
-        color: t( $text-color );
+        background-color: t( $clr-background );
+        color: t( $clr-surface-medium-emphasis );
     }
 }
 
@@ -61,17 +61,19 @@ svg {
 }
 
 a {
+    text-decoration: none;
+
     @include themed() {
         color: t( $link-color );
     }
 
     &:hover {
         text-decoration: none;
-    }
-}
 
-.fd-column {
-    flex-direction: column;
+        @include themed() {
+            color: t( $link-color-hover );
+        }
+    }
 }
 
 .mt-1 {
@@ -87,28 +89,19 @@ a {
     align-items: center;
 }
 
-.btn {
-    display: inline-flex;
-    padding: 0.625rem 3.125rem;
-    border-radius: $border-radius-small;
-    border: 0;
-    text-decoration: none;
+.logo {
+    &--color-bg {
+        @include themed() {
+            color: t( $clr-logo-1 );
+        }
+    }
 
-    @include themed() {
-        background-color: t( $button-bg-color );
-        color: t( $button-text-color );
+    &--color-icon {
+        @include themed() {
+            color: t( $clr-logo-2 );
+        }
     }
 }
-
-.btn:hover {
-    text-decoration:none;
-
-    @include themed() {
-        background-color: t( $button-bg-color-hover );
-    }
-}
-
-
 
 .toggle-button {
     display:none !important;
@@ -152,36 +145,4 @@ input[type=checkbox] {
 
 .toggle-button-label::after {
     cursor:pointer;
-}
-
-.badge-new {
-    height:100%;
-    background-color:#008000;
-    color:#ffffff;
-    text-align:center;
-    font-weight:bold;
-    writing-mode:vertical-rl;
-    transform:rotate(180deg);
-    position:absolute;
-    top:0;
-    left:0;
-    font-size:12px;
-}
-@media only screen and (min-width:310px) {
-    .badge-new {
-        font-size:unset;
-    }
-}
-@media only screen and (min-width:620px) {
-    .badge-new {
-        width:100px;
-        height:20px;
-        margin-bottom:-22px;
-        padding-top:2px;
-        writing-mode:initial;
-        transform:rotate(-45deg);
-        position:relative;
-        top:14px;
-        left:-23px;
-    }
 }

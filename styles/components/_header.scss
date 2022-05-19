@@ -4,21 +4,19 @@
     border-bottom: 0.3125rem solid;
 
     @include themed() {
-        color: t( $header-text-color );
-        background-color: t( $header-bg-color );
-        border-color: t( $header-border-color );
+        color: t( $clr-surface-high-emphasis );
+        background-color: t( $clr-dp-02 );
+        border-color: t( $clr-dp-08 );
     }
 
     &--top {
-        height: 16.25rem;
         border-top: 0;
         padding: 2.5rem 0;
     }
 
     &__logo {
-        max-width: 15rem;
-        height: auto;
-        margin: 0 auto 1rem auto;
+        max-width: 15.625rem;
+        margin-bottom: 1rem;
     }
 
     &__display,

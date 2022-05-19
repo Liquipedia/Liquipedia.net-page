@@ -1,6 +1,6 @@
 @mixin toggleThemeContent ($property, $darkValue, $defaultValue: null) {
     @if ($defaultValue != null) {
-        html.theme--default & {
+        html.theme--light & {
             #{$property}: $defaultValue;
         }
     }

@@ -84,9 +84,15 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 75rem;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
+    padding: 0 1rem;
+
+    @include breakpoint($breakpoint-medium) {
+        width: 75rem;
+        padding: 0;
+    }
 }
 
 .logo {

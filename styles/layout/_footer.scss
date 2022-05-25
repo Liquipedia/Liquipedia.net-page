@@ -17,14 +17,25 @@
         width: 100%;
         margin-bottom: 1rem;
         justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint($breakpoint-small) {
+            flex-direction: row;
+        }
     }
 
     &__links {
         display: flex;
         list-style: none;
 
+        @include breakpoint(null, $breakpoint-xsmall) {
+            flex-direction: column;
+        }
+
         li:not(:first-child) {
-            margin-left: 0.75rem;
+            @include breakpoint($breakpoint-xsmall) {
+                margin-left: 0.75rem;
+            }
         }
 
         a {
@@ -37,11 +48,23 @@
         align-items: center;
         list-style: none;
 
+        @include breakpoint(null, $breakpoint-xsmall) {
+            margin-top: 1rem;
+        }
+
         li:not(:first-child) {
             margin-left: 0.75rem;
         }
 
         a {
+            @include breakpoint(null, $breakpoint-xsmall) {
+                width: 2.5rem;
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             @include themed() {
                 color: t( $clr-surface-high-emphasis );
             }

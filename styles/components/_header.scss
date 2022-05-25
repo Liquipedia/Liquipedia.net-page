@@ -11,17 +11,30 @@
 
     &--top {
         border-top: 0;
-        padding: 2.5rem 0;
+
+        @include breakpoint(null, $breakpoint-xsmall) {
+            padding: 3rem 0 1rem 0;
+        }
+
+        @include breakpoint($breakpoint-xsmall) {
+            padding: 2.5rem 0;
+        }
     }
 
     &__logo {
         max-width: 15.625rem;
         margin-bottom: 1rem;
+
+        @include breakpoint(null, $breakpoint-xsmall) {
+            max-height: 2.5rem;
+        }
     }
 
-    &__display,
-    &__title,
-    &__subtitle {
+    &__display {
         text-align: center;
+
+        @include breakpoint(null, $breakpoint-xsmall) {
+            font-size: 1rem;
+        }
     }
 }

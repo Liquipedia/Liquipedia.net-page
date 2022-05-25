@@ -110,6 +110,12 @@ foreach ( $wikis as $wiki_key => $wiki ) {
 	echo "\t\t\t." . $wiki_key . '-card { background-color:' . $wiki[ 'background-color' ] . " }\n";
 }
 foreach ( $alphawikis as $wiki_key => $wiki ) {
+	echo "\t\t\t" . 'html ' . '.' . $wiki_key . '-card .card__line { background-color:' . $wiki[ 'background-color' ] . " }\n";
+}
+foreach ( $alphawikis as $wiki_key => $wiki ) {
+	echo "\t\t\t" . 'html ' . '.' . $wiki_key . '-card .card__game-icon { background-color:' . $wiki[ 'background-color' ] . " }\n";
+}
+foreach ( $alphawikis as $wiki_key => $wiki ) {
 	echo "\t\t\t." . $wiki_key . '-card { background-color:' . $wiki[ 'background-color' ] . " }\n";
 }
 ?>
@@ -119,18 +125,21 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 	</head>
 	<body>
 		<div class="top-nav">
-            <ul class="top-nav__list">
-                <li>
-                    <button type="button" class="top-nav__switch" data-component="theme-switch">
-                        <span class="top-nav__switch-dark">Dark</span>
-                        <span class="top-nav__switch-light">Light</span>
-                        <span class="top-nav__switch-text">theme</span>
-                    </button>
-                </li>
-                <li><a href="https://www.liquidlegends.net/" rel="external noopener noreferrer" target="_blank">LiquidLegends</a></li>
-                <li><a href="https://www.liquiddota.com/" rel="external noopener noreferrer" target="_blank">LiquidDota</a></li>
-                <li><a href="https://tl.net/" rel="external noopener noreferrer" target="_blank">TLnet</a></li>
-            </ul>
+            <div class="container">
+                <ul class="top-nav__list">
+                    <li>
+                        <button type="button" class="top-nav__switch" data-component="theme-switch">
+                            <span class="top-nav__switch-dark">Dark</span>
+                            <span class="top-nav__switch-light">Light</span>
+                            <span class="top-nav__switch-text">theme</span>
+                        </button>
+                    </li>
+                    <li><a href="https://www.liquidlegends.net/" rel="external noopener noreferrer" target="_blank">LiquidLegends</a></li>
+                    <li><a href="https://www.liquiddota.com/" rel="external noopener noreferrer" target="_blank">LiquidDota</a></li>
+                    <li><a href="https://tl.net/" rel="external noopener noreferrer" target="_blank">TLnet</a></li>
+                </ul>
+            </div>
+
 		</div>
 		<header class="header header--top">
             <div class="container">
@@ -155,7 +164,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
                             <option value="commons">Commons</option>
                         </select>
                         <input class="search__form-input" aria-label="Search for" type="search" name="search" placeholder="What are you looking for?">
-                        <button class="search__form-button" type="submit">
+                        <button class="search__form-button btn" type="submit">
                             Search
                             <img src="images/svg/icon-search.svg" class="icon" alt="icon" />
                         </button>
@@ -175,8 +184,16 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
                 <div class="cards">
 					<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
                         <div class="card <?php echo $wiki_key; ?>-card<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
-                            <input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
-                            <label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
+                            <a
+                                    class="card__skip-link"
+                                    aria-label="Press the alt key and arrow down key to tab through the hotlinks of this wiki"
+                                    v-show="showSkip">
+                                Alt + &#8595; for wiki hotlinks
+                            </a>
+                            <button v-if="showCardToggle" @click="toggleCard" class="card__button" type="button" :class="{'is-open': isOpenCard}">
+                                <SvgIconArrowDown></SvgIconArrowDown>
+                                <span class="visually-hidden">Toggle card content</span>
+                            </button>
                             <h2 class="card__title">
 								<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
                                     <span class="card__label">New</span>
@@ -246,12 +263,10 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
                     <div class="cards">
 						<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
                             <div class="card <?php echo $wiki_key; ?>-card">
-								<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
-                                    <div class="badge-new">NEW!</div>
-								<?php } ?>
-                                <input type="checkbox" class="toggle-button" id="toggle-<?php echo $wiki_key; ?>" />
-                                <label for="toggle-<?php echo $wiki_key; ?>" class="toggle-button-label" id="toggle-<?php echo $wiki_key; ?>-label"></label>
                                 <h2 class="card__title">
+									<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+                                        <span class="card__label">New</span>
+									<?php } ?>
                                     <a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
 										<?php echo $wiki[ 'name' ]; ?>
                                     </a>

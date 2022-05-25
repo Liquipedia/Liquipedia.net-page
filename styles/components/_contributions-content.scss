@@ -1,8 +1,16 @@
 .contribution-content {
-    columns: 3;
+    columns: 1;
     column-gap: 2.5rem;
     column-rule: 0.0625rem solid currentColor;
     margin-top: 2.5rem;
+
+    @include breakpoint($breakpoint-xsmall) {
+        columns: 2;
+    }
+
+    @include breakpoint($breakpoint-small) {
+        columns: 3;
+    }
 
     &__title {
         margin-bottom: 1rem;

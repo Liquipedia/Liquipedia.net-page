@@ -10,6 +10,14 @@
         background-color: t( $clr-surface );
     }
 
+    @include breakpoint(null, $breakpoint-xsmall) {
+        position: absolute;
+        top: 0.25rem;
+        right: 0.25rem;
+        height: 2.5rem;
+        border-radius: $border-radius-default;
+    }
+
     &__switch {
         background-color: transparent;
         position: relative;
@@ -24,6 +32,10 @@
             color: t( $clr-surface-high-emphasis );
         }
 
+        @include breakpoint(null, $breakpoint-xsmall) {
+            height: 100%;
+            padding: 0 0.5rem;
+        }
 
         &::before,
         &::after {
@@ -87,12 +99,26 @@
     &__list {
         margin-left: auto;
         display: flex;
+        height: 100%;
 
         li {
             list-style: none;
-            padding: 0 1.25rem;
             display: flex;
             align-items: center;
+
+            @include breakpoint(null, $breakpoint-xsmall) {
+                padding: 0;
+            }
+
+            @include breakpoint($breakpoint-xsmall) {
+                padding: 0 1.25rem;
+            }
+
+            &:not(:first-child) {
+                @include breakpoint(null, $breakpoint-xsmall) {
+                    display: none;
+                }
+            }
 
             a {
                 font-weight: $font-weight-bold;

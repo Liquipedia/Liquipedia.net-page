@@ -1,6 +1,13 @@
 .search {
-    margin-top: 1.5rem;
     width: 100%;
+
+    @include breakpoint(null, $breakpoint-xsmall) {
+        margin-top: 1rem;
+    }
+
+    @include breakpoint($breakpoint-xsmall) {
+        margin-top: 1.5rem;
+    }
 
     &__form {
         border-radius: $border-radius-medium;
@@ -10,6 +17,13 @@
 
         @include themed() {
             background-color: t( $clr-surface );
+        }
+
+        @include breakpoint(null, $breakpoint-xsmall) {
+            flex-direction: column;
+            height: auto;
+            align-items: stretch;
+            padding: 1rem;
         }
 
         ::placeholder {
@@ -36,17 +50,18 @@
             font-weight: $font-weight-bold;
             font-family: inherit;
             font-size: $font-size-small;
-            border-radius: $border-radius-medium;
 
             @include themed() {
                 color: t( $clr-primary );
             }
 
-            &:hover {
-                @include themed() {
-                    background-color: t( $clr-dp-01 );
-                }
+            @include breakpoint(null, $breakpoint-xsmall) {
+                width: auto;
+                height: 2.5rem;
+                margin-bottom: 0.25rem;
             }
+
+            &:hover {}
 
             &:focus {
                 outline: 0;
@@ -77,6 +92,11 @@
                 color: t( $clr-primary );
             }
 
+            @include breakpoint(null, $breakpoint-xsmall) {
+                height: 2.5rem;
+                margin-bottom: 0.25rem;
+            }
+
             &:focus {
                 outline: 0;
 
@@ -93,12 +113,8 @@
             margin-right: 0.25rem;
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 0 1rem;
-
-            @include themed() {
-                background-color: t( $clr-primary );
-                color: t( $clr-primary-high-emphasis );
-            }
 
             .icon {
                 width: 1rem;

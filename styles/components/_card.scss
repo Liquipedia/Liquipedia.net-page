@@ -1,11 +1,23 @@
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     width: 100%;
     margin-top: 2.5rem;
+
+    @include breakpoint($breakpoint-xsmall) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint($breakpoint-small) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include breakpoint($breakpoint-medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .card {
@@ -56,6 +68,22 @@
         }
     }
 
+    &__skip-link {
+        position: absolute;
+        color: white;
+        padding: 0 0.375rem;
+        display: flex;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: $font-size-small;
+        z-index: 3;
+        border-radius: $border-radius-small;
+
+        @include themed() {
+            background-color: t( $clr-surface );
+        }
+    }
+
     &__title {
         margin-bottom: 0;
         width: 100%;
@@ -71,6 +99,43 @@
 
         @include breakpoint($breakpoint-xsmall) {
             height: $_card-image-height-default;
+        }
+    }
+
+    .card__title-link {
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+
+        @include themed() {
+            color: t( $clr-primary );
+        }
+
+        @include breakpoint(null, $breakpoint-xxsmall) {
+            padding-left: 4.5rem;
+        }
+
+        @include breakpoint($breakpoint-xsmall) {
+            padding: 3rem $_card-padding-default 0 $_card-padding-default;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        &:focus {
+            outline: none
         }
     }
 
@@ -100,37 +165,55 @@
         }
     }
 
-    .card__title-link {
-        color: $humming-bird;
-        text-decoration: none;
+    &__button {
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 3;
-        padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+        border: none;
+        height: $_card-image-height-small;
+        width: 2.75rem;
+        color: white;
+        border-radius: 0 $border-radius-medium 0 0;
+        z-index: 4;
 
-        @include breakpoint(null, $breakpoint-xxsmall) {
-            padding-left: 4.5rem;
+        @include themed() {
+            background-color: t( $clr-primary );
+            background:
+                linear-gradient(
+                        90deg,
+                        rgba(t( $clr-primary ), 0.5) 0%,
+                        rgba(t( $clr-primary ), 0.8) 100%
+                );
+            color: t( $clr-primary-high-emphasis );
         }
 
-        @include breakpoint($breakpoint-xsmall) {
-            padding: 3rem $_card-padding-default 0 $_card-padding-default;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 4;
+        @include breakpoint($breakpoint-xxsmall) {
+            display: none;
         }
 
         &:focus {
-            outline: none
+            outline: none;
+
+            @include themed() {
+                color: t( $clr-primary-high-emphasis );
+            }
+        }
+
+        .icon {
+            height: 0.625rem;
+            width: auto;
+            transform-origin: center;
+            transition: transform $transition-fast;
+        }
+
+        &.is-open {
+            .icon {
+                transform: rotate(180deg);
+            }
+
+            ~ .card__line {
+                border-radius: 0;
+            }
         }
     }
 

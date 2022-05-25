@@ -11,11 +11,11 @@ $clr-cod-gray: #121212;
 /** Color scheme **/
 $clr-primary--light: $royal-blue;
 $clr-primary--dark: $clr-malibu;
-$clr-primary-high-emphasis--light: mix(black, $clr-primary--light, 100%);
+$clr-primary-high-emphasis--light: mix(white, $clr-primary--light, 100%);
 $clr-primary-high-emphasis--dark: mix(black, $clr-primary--dark, 100%);
-$clr-primary-medium-emphasis--light: mix(black, $clr-primary--light, 74%);
+$clr-primary-medium-emphasis--light: mix(white, $clr-primary--light, 74%);
 $clr-primary-medium-emphasis--dark: mix(black, $clr-primary--dark, 74%);
-$clr-primary-disabled--light: mix(black, $clr-primary--light,38%);
+$clr-primary-disabled--light: mix(white, $clr-primary--light,38%);
 $clr-primary-disabled--dark: mix(black, $clr-primary--dark, 38%);
 $clr-primary-variant: #0027B3;
 $clr-secondary--light: #BBC8CE;

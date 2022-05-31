@@ -1,0 +1,13 @@
+.logo {
+    &--color-bg {
+        @include themed() {
+            color: t( $clr-logo-1 );
+        }
+    }
+
+    &--color-icon {
+        @include themed() {
+            color: t( $clr-logo-2 );
+        }
+    }
+}

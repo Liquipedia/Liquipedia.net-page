@@ -60,6 +60,10 @@ svg {
     }
 }
 
+.visually-hidden {
+    @include visuallyHidden;
+}
+
 a {
     text-decoration: none;
 
@@ -68,7 +72,7 @@ a {
     }
 
     &:hover {
-        text-decoration: none;
+        text-decoration: underline;
 
         @include themed() {
             color: t( $link-color-hover );
@@ -93,62 +97,4 @@ a {
         width: 75rem;
         padding: 0;
     }
-}
-
-.logo {
-    &--color-bg {
-        @include themed() {
-            color: t( $clr-logo-1 );
-        }
-    }
-
-    &--color-icon {
-        @include themed() {
-            color: t( $clr-logo-2 );
-        }
-    }
-}
-
-.toggle-button {
-    display:none !important;
-}
-.toggle-button-label:after {
-    float:right;
-    width:30px;
-    font-size:25px;
-    font-weight:400;
-    line-height:1.1em;
-}
-.toggle-button:not(:checked) ~ .game-box-content {
-    display:none;
-}
-.toggle-button:checked ~ .game-box-content {
-    display:block;
-}
-.toggle-button:not(:checked) + .toggle-button-label:after {
-    content:"+";
-}
-.toggle-button:checked + .toggle-button-label:after {
-    content:"\2212";
-}
-input[type=checkbox] {
-    display:none;
-}
-
-@media only screen and (min-width:480px) {
-    .toggle-button-label:after {
-        font-size:40px;
-    }
-}
-@media only screen and (min-width:620px) {
-    .toggle-button:not(:checked) ~ .game-box-content {
-        display:block;
-    }
-    .toggle-button-label:after {
-        display:none;
-    }
-}
-
-.toggle-button-label::after {
-    cursor:pointer;
 }

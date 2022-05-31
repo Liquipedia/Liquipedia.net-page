@@ -1,10 +1,4 @@
-$black-pearl: #020712;
-$ebony-clay: #212936;
-$bright-gray: #394150;
-$humming-bird: #C5EFF7;
 $royal-blue: #2B63E6;
-$perano: #A3B1F0;
-$wild-blue-yonder: #7E8FB4;
 $clr-malibu: #90CAF9;
 $clr-cod-gray: #121212;
 
@@ -76,8 +70,8 @@ $link-color--dark: $clr-primary--dark;
 $link-color-hover--light: #000000;
 $link-color-hover--dark: mix(white, $clr-malibu, 4%);
 
-$button-bg-color-hover--light: mix(white, $clr-primary--light, 4%);
-$button-bg-color-hover--dark: mix(white, $clr-primary--dark, 4%);
+$button-bg-color-hover--light: mix(white, $clr-primary--light, 25%);
+$button-bg-color-hover--dark: mix(white, $clr-primary--dark, 25%);
 $button-bg-color-focus--light: mix(white, $clr-primary--light, 12%);
 $button-bg-color-focus--dark: mix(white, $clr-primary--dark, 12%);
 $button-bg-color-active--light: mix(white, $clr-primary--light, 8%);
@@ -138,4 +132,5 @@ $line-height-default: 1.7;
 /**
  * Transitions
  */
+$transition-slow: 0.2s ease;
 $transition-fast: 0.4s ease;

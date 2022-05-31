@@ -27,6 +27,7 @@
         font-size: $font-size-xsmall;
         font-weight: $font-weight-bold;
         cursor: pointer;
+        padding: 0;
 
         @include themed() {
             color: t( $clr-surface-high-emphasis );
@@ -34,7 +35,18 @@
 
         @include breakpoint(null, $breakpoint-xsmall) {
             height: 100%;
-            padding: 0 0.5rem;
+        }
+
+        @media (hover: hover) {
+            &:hover::after {
+                @include themed() {
+                    background-color: t( $clr-primary-high-emphasis );
+                }
+            }
+        }
+
+        &:active {
+
         }
 
         &::before,
@@ -60,7 +72,7 @@
             width: 0.875rem;
             height: $_height;
             position: absolute;
-            left: 0.5rem;
+            left: 0.125rem;
             border-radius: $_height;
             transition: left $transition-fast;
 
@@ -77,6 +89,7 @@
             .top-nav__switch-light {
                 display: block;
             }
+
             .top-nav__switch-dark {
                 display: none;
             }
@@ -84,12 +97,13 @@
 
         .theme--dark & {
             &::after {
-                left: 1.375rem;
+                left: 1rem;
             }
 
             .top-nav__switch-light {
                 display: none;
             }
+
             .top-nav__switch-dark {
                 display: block;
             }

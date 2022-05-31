@@ -6,6 +6,7 @@
     border: 0.625rem solid  transparent;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color $transition-fast, color $transition-fast;
 
     @include themed() {
         background-color: t( $clr-primary );
@@ -20,14 +21,20 @@
             color: t( $clr-primary-high-emphasis );
         }
     }
+
     &:focus {
-        border-color: #ffffff;
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: none;
 
         @include themed() {
             background-color: t( $button-bg-color-focus );
             color: t( $clr-primary-high-emphasis );
         }
     }
+
     &:active {
         @include themed() {
             background-color: t( $button-bg-color-active );

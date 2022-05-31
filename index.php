@@ -55,11 +55,8 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 	$keywords .= ', ' . $wiki[ 'name' ];
 }
 
-$banner = [
-	'link' => 'https://www.teamliquid.com/news/2018/12/10/were-hiring-liquipedia-developers',
-	'text' => 'We are hiring! Check out our developer job postings and work in esports!',
-];
-$banner = null;
+$allwikis = $wikis + $alphawikis;
+ksort($allwikis);
 ?>
 <!DOCTYPE html>
 <html lang="en" class="theme--light">
@@ -121,7 +118,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 ?>
 		</style>
 		<script async src="https://s.nitropay.com/ads-90.js"></script>
-		<script src="js/script.js"></script>
+		<script type="module" src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="top-nav">
@@ -151,124 +148,52 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
                 </svg>
                 <h1 class="title title--display header__display">Made by the esports community for the esports community.</h1>
                 <div class="search">
-                    <form id="search" class="search__form" action="/dota2/index.php">
-                        <select id="wikiselect" class="search__form-select" aria-label="Select a Wiki to search">
-							<?php
-							foreach ( $wikis as $wiki_key => $wiki ) {
-								echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
-							}
-							foreach ( $alphawikis as $wiki_key => $wiki ) {
-								echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
-							}
-							?>
-                            <option value="commons">Commons</option>
-                        </select>
-                        <input class="search__form-input" aria-label="Search for" type="search" name="search" placeholder="What are you looking for?">
-                        <button class="search__form-button btn" type="submit">
+                    <form id="search" class="search__form" action="/dota2/index.php" data-component="search">
+                        <div class="search__select-wrapper">
+                            <select id="wikiselect" class="search__select" aria-label="Select a Wiki to search">
+								<?php
+								foreach ( $allwikis as $wiki_key => $wiki ) {
+									echo '<option value="' . $wiki_key . '">' . $wiki[ 'name' ] . '</option>';
+								}
+								?>
+                                <option value="commons">Commons</option>
+                            </select>
+                            <span class="search__select-icon">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
+                            </span>
+                        </div>
+                        <input class="search__input" aria-label="Search for" type="search" name="search" placeholder="What are you looking for?">
+                        <button class="search__button btn" type="submit">
                             Search
-                            <img src="images/svg/icon-search.svg" class="icon" alt="icon" />
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.147 9.494c1.959-2.712 1.304-6.467-1.463-8.387C6.918-.813 3.087-.172 1.13 2.54-.83 5.253-.175 9.008 2.592 10.928a6.24 6.24 0 0 0 6.667.27l4.525 4.41a1.303 1.303 0 0 0 1.816.046 1.242 1.242 0 0 0 0-1.826l-4.453-4.334Zm-5.013.411c-2.186 0-3.958-1.735-3.96-3.878 0-2.144 1.77-3.881 3.957-3.882 2.183 0 3.955 1.732 3.959 3.873.004 2.144-1.766 3.884-3.953 3.887h-.003Z" fill="currentColor"/></svg>
                         </button>
                     </form>
                 </div>
             </div>
 		</header>
-        <?php if ( !is_null( $banner ) ) { ?>
-            <div class="content">
-                <a class="banner" target="_blank" href="<?php echo $banner[ 'link' ]; ?>">
-                    <?php echo $banner[ 'text' ]; ?>
-                </a>
-            </div>
-        <?php } ?>
-        <section class="section">
-            <div class="container">
-                <div class="cards">
-					<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
-                        <div class="card <?php echo $wiki_key; ?>-card<?php echo ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ? ' game-box-new' : '' ) ?>">
-                            <a
-                                    class="card__skip-link"
-                                    aria-label="Press the alt key and arrow down key to tab through the hotlinks of this wiki"
-                                    v-show="showSkip">
-                                Alt + &#8595; for wiki hotlinks
-                            </a>
-                            <button v-if="showCardToggle" @click="toggleCard" class="card__button" type="button" :class="{'is-open': isOpenCard}">
-                                <SvgIconArrowDown></SvgIconArrowDown>
-                                <span class="visually-hidden">Toggle card content</span>
-                            </button>
-                            <h2 class="card__title">
-								<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
-                                    <span class="card__label">New</span>
-								<?php } ?>
-                                <a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
-									<?php echo $wiki[ 'name' ]; ?>
-                                </a>
-                            </h2>
-                            <div class="card__image">
-                                <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
-                            </div>
-                            <div class="card__game-icon">
-                                <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
-                            </div>
-                            <div class="card__line"></div>
-                            <ul id="<?php echo $wiki_key; ?>" class="card__list">
-								<?php
-								if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
-									foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
-										?>
-                                        <li class="card__list-item">
-                                            <a class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
-												<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
-                                            </a>
-                                        </li>
-										<?php
-									}
-								}
-								?>
-                            </ul>
-                        </div>
-					<?php } ?>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <header class="header">
-                <div class="container container--header">
-                    <h2 id="commons-wiki" class="header__title title title--headline">Commons Wiki</h2>
-                    <p class="header__subtitle title title--subtitle">The commons wiki is a wiki used to help operate the other wikis</p>
-                </div>
-            </header>
-            <div class="container">
-                <p class="section__intro">The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
-                <ul class="commons-links">
-                    <li><a href="/commons/Main_Page">Commons Wiki</a></li>
-                    <li><a href="/commons/Special:Upload">File Upload</a></li>
-                    <li><a href="/commons/Copyrights_Repository">Copyrights Repository</a></li>
-                    <li><a href="/commons/Special:RunQuery/Find_images">Find Images</a></li>
-                    <li><a href="/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="section alpha-wikis">
-            <header class="header">
-                <div class="container container--header">
-                    <h2 id="alpha-wiki" class="header__title title title--headline">Alpha Wiki</h2>
-                    <p class="header__subtitle title title--subtitle">Alpha wikis are wikis that are still in the building process</p>
-                </div>
-            </header>
-            <div class="container">
-                <div class="section__intro">
-                    <p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below:</p>
-                    <a class="btn mt-1" target="_blank" href="https://goo.gl/forms/kF0dCtJzHT">Fill in this form</a>
-                </div>
+        <main>
+            <section class="section">
                 <div class="container">
                     <div class="cards">
-						<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
-                            <div class="card <?php echo $wiki_key; ?>-card">
+                        <?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
+                            <div data-component="card" class="card <?php echo $wiki_key; ?>-card">
+                                <a
+                                        class="card__skip-link"
+                                        data-component="card-skip-link"
+                                        aria-label="Press the alt key and arrow down key to tab through the hotlinks of this wiki"
+                                        >
+                                    Alt + &#8595; for wiki hotlinks
+                                </a>
+                                <button class="card__button" type="button" data-component="card-button">
+                                    <svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
+                                    <span class="visually-hidden">Toggle card content</span>
+                                </button>
                                 <h2 class="card__title">
-									<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+                                    <?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
                                         <span class="card__label">New</span>
-									<?php } ?>
+                                    <?php } ?>
                                     <a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
-										<?php echo $wiki[ 'name' ]; ?>
+                                        <?php echo $wiki[ 'name' ]; ?>
                                     </a>
                                 </h2>
                                 <div class="card__image">
@@ -278,70 +203,151 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
                                     <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
                                 </div>
                                 <div class="card__line"></div>
-
-                                <ul id="<?php echo $wiki_key; ?>" class="card__list">
-									<?php
-									if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
-										foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
-											?>
+                                <ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
+                                    <?php
+                                    if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+                                        foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+                                            ?>
                                             <li class="card__list-item">
-                                                <a class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
-													<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
+                                                <a tabindex="-1" class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
+                                                    <?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
                                                 </a>
                                             </li>
-											<?php
-										}
-									}
-									?>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                 </ul>
                             </div>
-						<?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section">
-            <header class="header">
-                <div class="container container--header">
-                    <h2 id="how-to-contribute" class="header__title title title--headline">How To Contribute</h2>
-                    <p class="header__subtitle title title--subtitle">It's easy, fun, and rewarding to help esports</p>
-                </div>
-            </header>
-            <div class="container">
-                <div class="contribution-content">
-                    <h3 class="contribution-content__title title title--heading">Contributing</h3>
-                    <p>Contributing to the wiki is actually pretty easy and keep in mind that every more-correct-than-wrong contribution is valuable no matter how small. </p>
-                    <p>When you visit Liquipedia, consider adding to it or correcting something, it doesn't have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
-                    <p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account&mdash;if you don't have one already&mdash;log in, click edit, find and fix the typo, click save, and you are done.</p>
-                    <p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
-                    <p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="https://discord.gg/liquipedia" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
-                    <h3 class="contribution-content__title title title--heading">Logging in and registering</h3>
-                    <p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://tl.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration. Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
-                    <h3 class="contribution-content__title title title--heading">Editing</h3>
-                    <p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="https://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
-                    <h3 class="contribution-content__title title title--heading">Areas to help out with</h3>
-                    <p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
-                    <ul>
-                        <li>List an interview a player has done on the player's page.</li>
-                        <li>Add social media links on a team's or player's page.</li>
-                        <li>Fill out a player's page with information from interviews they've done and add references.</li>
-                        <li>Write part of the history of an organization, tournament, player, or team and add references.</li>
-                        <li>Update a player's or team's result pages with recent results.</li>
-                        <li>Add the times when a match starts to brackets or groups.</li>
-                        <li>Add general game information, either to an existing article or make a new one for a topic that is missing.</li>
-                        <li>Update strategy pages and create pages for new strategies.</li>
-                        <li>Create new pages for tournaments, players, or teams (if they meet the liquipedia notability guidelines for that game.)</li>
-                        <li>Give the wiki the right to display your photographs and upload them to the wiki.</li>
-                        <li>Develop new templates to make our wikis look good and make contributing easier.</li>
-                        <li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
-                        <li>Help other contributors in our <a href="https://discord.gg/liquipedia" target="_blank">Discord server</a>, especially newer ones.</li>
-                        <li>Spread the word that everyone can help grow Liquipedia.</li>
-                        <li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
-                        <li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
+            </section>
+            <section class="section">
+                <header class="header">
+                    <div class="container container--header">
+                        <h2 id="commons-wiki" class="header__title title title--headline">Commons Wiki</h2>
+                        <p class="header__subtitle title title--subtitle">The commons wiki is a wiki used to help operate the other wikis</p>
+                    </div>
+                </header>
+                <div class="container">
+                    <p class="section__intro">The commons wiki is the file repository for all our wikis. Images and other files uploaded here can be used across all of the wikis. The same holds true for templates uploaded here.</p>
+                    <ul class="commons-links">
+                        <li><a href="/commons/Main_Page">Commons Wiki</a></li>
+                        <li><a href="/commons/Special:Upload">File Upload</a></li>
+                        <li><a href="/commons/Copyrights_Repository">Copyrights Repository</a></li>
+                        <li><a href="/commons/Special:RunQuery/Find_images">Find Images</a></li>
+                        <li><a href="/commons/Liquipedia:Latest_Uploads">Latest Uploads</a></li>
                     </ul>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="section alpha-wikis">
+                <header class="header">
+                    <div class="container container--header">
+                        <h2 id="alpha-wiki" class="header__title title title--headline">Alpha Wiki</h2>
+                        <p class="header__subtitle title title--subtitle">Alpha wikis are wikis that are still in the building process</p>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="section__intro">
+                        <p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below:</p>
+                        <a class="btn mt-1" target="_blank" href="https://goo.gl/forms/kF0dCtJzHT">Fill in this form</a>
+                    </div>
+                    <div class="container">
+                        <div class="cards">
+                            <?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
+                                <div class="card <?php echo $wiki_key; ?>-card">
+                                    <a
+                                            class="card__skip-link"
+                                            data-card-skip-link
+                                            aria-label="Press the alt key and arrow down key to tab through the hotlinks of this wiki"
+                                    >
+                                        Alt + &#8595; for wiki hotlinks
+                                    </a>
+                                    <button class="card__button" type="button">
+                                        <svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
+                                        <span class="visually-hidden">Toggle card content</span>
+                                    </button>
+                                    <h2 class="card__title">
+										<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+                                            <span class="card__label">New</span>
+										<?php } ?>
+                                        <a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
+											<?php echo $wiki[ 'name' ]; ?>
+                                        </a>
+                                    </h2>
+                                    <div class="card__image">
+                                        <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+                                    </div>
+                                    <div class="card__game-icon">
+                                        <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
+                                    </div>
+                                    <div class="card__line"></div>
+
+                                    <ul id="<?php echo $wiki_key; ?>" class="card__list" data-component="card-list">
+                                        <?php
+                                        if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+                                            foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+                                                ?>
+                                                <li class="card__list-item">
+                                                    <a class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
+                                                        <?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
+                                                    </a>
+                                                </li>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </ul>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <header class="header">
+                    <div class="container container--header">
+                        <h2 id="how-to-contribute" class="header__title title title--headline">How To Contribute</h2>
+                        <p class="header__subtitle title title--subtitle">It's easy, fun, and rewarding to help esports</p>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="contribution-content">
+                        <h3 class="contribution-content__title title title--heading">Contributing</h3>
+                        <p>Contributing to the wiki is actually pretty easy and keep in mind that every more-correct-than-wrong contribution is valuable no matter how small. </p>
+                        <p>When you visit Liquipedia, consider adding to it or correcting something, it doesn't have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
+                        <p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account&mdash;if you don't have one already&mdash;log in, click edit, find and fix the typo, click save, and you are done.</p>
+                        <p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
+                        <p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="https://discord.gg/liquipedia" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
+                        <h3 class="contribution-content__title title title--heading">Logging in and registering</h3>
+                        <p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://tl.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration. Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
+                        <h3 class="contribution-content__title title title--heading">Editing</h3>
+                        <p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="https://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
+                        <h3 class="contribution-content__title title title--heading">Areas to help out with</h3>
+                        <p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
+                        <ul>
+                            <li>List an interview a player has done on the player's page.</li>
+                            <li>Add social media links on a team's or player's page.</li>
+                            <li>Fill out a player's page with information from interviews they've done and add references.</li>
+                            <li>Write part of the history of an organization, tournament, player, or team and add references.</li>
+                            <li>Update a player's or team's result pages with recent results.</li>
+                            <li>Add the times when a match starts to brackets or groups.</li>
+                            <li>Add general game information, either to an existing article or make a new one for a topic that is missing.</li>
+                            <li>Update strategy pages and create pages for new strategies.</li>
+                            <li>Create new pages for tournaments, players, or teams (if they meet the liquipedia notability guidelines for that game.)</li>
+                            <li>Give the wiki the right to display your photographs and upload them to the wiki.</li>
+                            <li>Develop new templates to make our wikis look good and make contributing easier.</li>
+                            <li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
+                            <li>Help other contributors in our <a href="https://discord.gg/liquipedia" target="_blank">Discord server</a>, especially newer ones.</li>
+                            <li>Spread the word that everyone can help grow Liquipedia.</li>
+                            <li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
+                            <li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container">
                 <svg class="footer__logo logo" viewBox="0 0 2560 490" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -415,26 +421,28 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 		</script>
 		<script>
 			window.addEventListener( 'DOMContentLoaded', function() {
+                const selectWikiElement = document.getElementById( 'wikiselect' );
+                const searchElement = document.getElementById( 'search' );
 				if ( 'localStorage' in window ) {
 					if ( localStorage[ 'lastWikiSearch' ] === undefined ) {
 						localStorage[ 'lastWikiSearch' ] = '<?php echo array_keys( $wikis )[ 0 ]; ?>';
 					}
-					document.getElementById( 'wikiselect' ).value = localStorage[ 'lastWikiSearch' ];
-					document.getElementById( 'search' ).action = '/' + localStorage[ 'lastWikiSearch' ] + '/index.php';
-					document.getElementById( 'wikiselect' ).onchange = function() {
+                    selectWikiElement.value = localStorage[ 'lastWikiSearch' ];
+                    searchElement.action = '/' + localStorage[ 'lastWikiSearch' ] + '/index.php';
+                    selectWikiElement.onchange = function() {
 						localStorage[ 'lastWikiSearch' ] = this.value;
-						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
+                        searchElement.action = '/' + this.value + '/index.php';
 					};
 				} else {
 					if ( !document.cookie.includes( 'liquipedia_last_wiki_search' ) ) {
 						document.cookie = 'liquipedia_last_wiki_search=<?php echo array_keys( $wikis )[ 0 ]; ?>';
 					}
 					var startwiki = document.cookie.replace( /(?:(?:^|.*;\s*)liquipedia_last_wiki_search\s*\=\s*([^;]*).*$)|^.*$/, "$1" );
-					document.getElementById( 'wikiselect' ).value = startwiki;
-					document.getElementById( 'search' ).action = '/' + startwiki + '/index.php';
-					document.getElementById( 'wikiselect' ).onchange = function() {
+                    selectWikiElement.value = startwiki;
+                    searchElement.action = '/' + startwiki + '/index.php';
+                    selectWikiElement.onchange = function() {
 						document.cookie = 'liquipedia_last_wiki_search=' + this.value;
-						document.getElementById( 'search' ).action = '/' + this.value + '/index.php';
+                        searchElement.action = '/' + this.value + '/index.php';
 					};
 				}
 			} );

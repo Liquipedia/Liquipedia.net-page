@@ -108,7 +108,7 @@ $wikis = [
 $alphawikis = [
 	'trackmania' => [
 		'name' => 'Trackmania',
-		'background-color' => '',
+		'background-color' => '#61a160',
 		'api' => $baseurl . '/trackmania/api.php',
 		'new' => true,
 	],

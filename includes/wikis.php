@@ -106,6 +106,12 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'trackmania' => [
+		'name' => 'Trackmania',
+		'background-color' => '',
+		'api' => $baseurl . '/trackmania/api.php',
+		'new' => true,
+	],
 	'mobilelegends' => [
 		'name' => 'Mobile Legends',
 		'background-color' => '#ffe982',
@@ -126,20 +132,15 @@ $alphawikis = [
 		'background-color' => '#dbeded',
 		'api' => $baseurl . '/callofduty/api.php',
 	],
-	'fighters' => [
-		'name' => 'Fighting Games',
-		'background-color' => '#ffcb66',
-		'api' => $baseurl . '/fighters/api.php',
-	],
 	'halo' => [
 		'name' => 'Halo',
 		'background-color' => '#bac2d5',
 		'api' => $baseurl . '/halo/api.php',
 	],
-	'brawlstars' => [
-		'name' => 'Brawl Stars',
-		'background-color' => '#ffc7ae',
-		'api' => $baseurl . '/brawlstars/api.php',
+	'fighters' => [
+		'name' => 'Fighting Games',
+		'background-color' => '#ffcb66',
+		'api' => $baseurl . '/fighters/api.php',
 	],
 	'pokemon' => [
 		'name' => 'Pokémon',
@@ -151,6 +152,11 @@ $alphawikis = [
 		'background-color' => '#fbf2df',
 		'api' => $baseurl . '/fortnite/api.php',
 	],
+	'brawlstars' => [
+		'name' => 'Brawl Stars',
+		'background-color' => '#ffc7ae',
+		'api' => $baseurl . '/brawlstars/api.php',
+	],
 	'fifa' => [
 		'name' => 'FIFA',
 		'background-color' => '#fbf2df',
@@ -161,15 +167,15 @@ $alphawikis = [
 		'background-color' => '#d1e2f1',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
 	],
-	'clashroyale' => [
-		'name' => 'Clash Royale',
-		'background-color' => '#e6e6e6',
-		'api' => $baseurl . '/clashroyale/api.php',
-	],
 	'arenafps' => [
 		'name' => 'Arena FPS',
 		'background-color' => '#dd986e',
 		'api' => $baseurl . '/arenafps/api.php',
+	],
+	'clashroyale' => [
+		'name' => 'Clash Royale',
+		'background-color' => '#e6e6e6',
+		'api' => $baseurl . '/clashroyale/api.php',
 	],
 	'sideswipe' => [
 		'name' => 'Sideswipe',
@@ -195,11 +201,6 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'trackmania' => [
-		'name' => 'TrackMania',
-		'background-color' => '',
-		'api' => $baseurl . '/trackmania/api.php',
-	],
 	'tft' => [
 		'name' => 'Teamfight Tactics',
 		'background-color' => '',

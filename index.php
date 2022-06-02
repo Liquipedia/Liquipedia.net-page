@@ -109,12 +109,9 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 }
 ?>
 		</style>
-		<script async src="https://s.nitropay.com/ads-90.js"></script>
 	</head>
 	<body class="column-<?php echo $col_number; ?>">
 		<div class="global-nav">
-			<span><a href="https://www.liquidlegends.net/">LiquidLegends</a></span>
-			<span><a href="https://www.liquiddota.com/">LiquidDota</a></span>
 			<span><a href="https://tl.net/">TLnet</a></span>
 		</div>
 		<div class="top">

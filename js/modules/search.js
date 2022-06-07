@@ -1,7 +1,7 @@
 export class Search {
     constructor( search ) {
         this.search = search;
-        this.searchSelect = this.search.querySelector( '#wikiselect' );
+        this.searchSelect = this.search.querySelector( '#searchWikiSelect' );
         this.classSelected = 'is--selected';
     }
 

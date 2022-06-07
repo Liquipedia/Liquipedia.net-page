@@ -1,7 +1,7 @@
 .section {
     padding: 0 0 1rem 0;
 
-    @include breakpoint($breakpoint-small) {
+    @include breakpoint( $breakpoint-small ) {
         padding: 0 0 2.5rem 0;
     }
 

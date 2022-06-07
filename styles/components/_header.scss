@@ -4,19 +4,19 @@
     border-bottom: 0.3125rem solid;
 
     @include themed() {
-        color: t( $clr-surface-high-emphasis );
-        background-color: t( $clr-dp-02 );
-        border-color: t( $clr-dp-08 );
+        color: t( $clr-on-surface );
+        background-color: t( $clr-surface-1 );
+        border-color: t( $clr-border );
     }
 
     &--top {
         border-top: 0;
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             padding: 3rem 0 1rem 0;
         }
 
-        @include breakpoint($breakpoint-xsmall) {
+        @include breakpoint( $breakpoint-xsmall ) {
             padding: 2.5rem 0;
         }
     }
@@ -25,7 +25,7 @@
         max-width: 15.625rem;
         margin-bottom: 1rem;
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             max-height: 2.5rem;
         }
     }
@@ -33,7 +33,7 @@
     &__display {
         text-align: center;
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             font-size: 1rem;
         }
     }

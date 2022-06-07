@@ -5,16 +5,14 @@ html {
 }
 
 body {
-    //background: #082c4c url(../images/lp-hex-bg.png) repeat;
-    //background-size: 25%;
+    font-family: $font-family;
     margin: 0;
-    font-family: 'Roboto', Arial, Geneva, Ubuntu, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     @include themed() {
-        background-color: t( $clr-background );
-        color: t( $clr-surface-medium-emphasis );
+        background-color: t( $clr-body-bg );
+        color: t( $clr-on-surface );
     }
 }
 
@@ -60,6 +58,10 @@ svg {
     }
 }
 
+input, textarea, button {
+    font-family: $font-family;
+}
+
 .visually-hidden {
     @include visuallyHidden;
 }
@@ -93,7 +95,7 @@ a {
     align-items: center;
     padding: 0 1rem;
 
-    @include breakpoint($breakpoint-medium) {
+    @include breakpoint( $breakpoint-medium ) {
         width: 75rem;
         padding: 0;
     }

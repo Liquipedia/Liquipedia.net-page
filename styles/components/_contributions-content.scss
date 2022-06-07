@@ -4,11 +4,11 @@
     column-rule: 0.0625rem solid currentColor;
     margin-top: 2.5rem;
 
-    @include breakpoint($breakpoint-xsmall) {
+    @include breakpoint( $breakpoint-xsmall ) {
         columns: 2;
     }
 
-    @include breakpoint($breakpoint-small) {
+    @include breakpoint( $breakpoint-small ) {
         columns: 3;
     }
 
@@ -16,7 +16,7 @@
         margin-bottom: 1rem;
 
         @include themed() {
-            color: t( $clr-surface-high-emphasis );
+            color: t( $clr-on-surface );
         }
     }
 

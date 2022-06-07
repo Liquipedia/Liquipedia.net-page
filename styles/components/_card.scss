@@ -7,15 +7,15 @@
     width: 100%;
     margin-top: 2.5rem;
 
-    @include breakpoint($breakpoint-xsmall) {
+    @include breakpoint( $breakpoint-xsmall ) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @include breakpoint($breakpoint-small) {
+    @include breakpoint( $breakpoint-small ) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @include breakpoint($breakpoint-medium) {
+    @include breakpoint( $breakpoint-medium) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
@@ -35,19 +35,20 @@
     text-decoration: none;
     height: 100%;
     transition: transform $transition-fast;
+    box-shadow: $box-shadow-elevation-2;
 
     @include themed() {
-        background-color: t( $clr-dp-01 );
+        background-color: t( $clr-surface-2 );
     }
 
     &:hover {
-        @include breakpoint($breakpoint-xsmall) {
-            transform: scale($_card-scale);
+        @include breakpoint( $breakpoint-xsmall ) {
+            transform: scale( $_card-scale);
         }
 
         .card__image img {
-            @include breakpoint($breakpoint-xsmall) {
-                transform: scale($_card-image-scale);
+            @include breakpoint( $breakpoint-xsmall ) {
+                transform: scale( $_card-image-scale);
             }
         }
     }
@@ -55,8 +56,8 @@
     &:focus-within {
         outline: none;
 
-        @include breakpoint($breakpoint-xsmall) {
-            transform: scale($_card-scale);
+        @include breakpoint( $breakpoint-xsmall ) {
+            transform: scale( $_card-scale);
         }
     }
 
@@ -86,11 +87,11 @@
         font-weight: $font-weight-bold;
         line-height: $line-height-medium;
 
-        @include breakpoint($breakpoint-xxsmall) {
+        @include breakpoint( $breakpoint-xxsmall ) {
             font-size: $font-size-medium;
         }
 
-        @include breakpoint($breakpoint-xsmall) {
+        @include breakpoint( $breakpoint-xsmall ) {
             height: $_card-image-height-default;
         }
     }
@@ -104,16 +105,17 @@
         left: 0;
         z-index: 3;
         padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+        color: white;
 
-        @include themed() {
-            color: t( $clr-primary );
-        }
+        //@include themed() {
+        //    color: t( $clr-primary );
+        //}
 
-        @include breakpoint(null, $breakpoint-xxsmall) {
+        @include breakpoint( null, $breakpoint-xxsmall ) {
             padding-left: 4.5rem;
         }
 
-        @include breakpoint($breakpoint-xsmall) {
+        @include breakpoint( $breakpoint-xsmall ) {
             padding: 3rem $_card-padding-default 0 $_card-padding-default;
         }
 
@@ -125,6 +127,12 @@
             bottom: 0;
             left: 0;
             z-index: 4;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: white;
+            }
         }
 
         &:focus {
@@ -143,7 +151,7 @@
         border-radius: $border-radius-small;
 
         @include themed() {
-            background-color: t( $clr-primary-high-emphasis );
+            background-color: t( $clr-on-primary );
             color: t( $clr-primary );
         }
 
@@ -178,7 +186,7 @@
                         rgba(t( $clr-primary ), 0.5) 0%,
                         rgba(t( $clr-primary ), 0.8) 100%
                 );
-            color: t( $clr-primary-high-emphasis );
+            color: t( $clr-on-primary );
         }
 
         @include breakpoint( $breakpoint-xxsmall ) {
@@ -189,7 +197,7 @@
             outline: none;
 
             @include themed() {
-                color: t( $clr-primary-high-emphasis );
+                color: t( $clr-on-primary );
             }
         }
 
@@ -221,7 +229,7 @@
         border-radius: $border-radius-medium $border-radius-medium 0 0;
         overflow: hidden;
 
-        @include breakpoint($breakpoint-xsmall) {
+        @include breakpoint( $breakpoint-xsmall ) {
             height: $_card-image-height-default;
         }
 
@@ -264,13 +272,13 @@
             background-color: t( $clr-primary );
         }
 
-        @include breakpoint(null, $breakpoint-xxsmall) {
+        @include breakpoint( null, $breakpoint-xxsmall ) {
             right: unset;
             left: 1rem;
             transform: translateY(-2.5rem);
         }
 
-        @include breakpoint($breakpoint-xsmall) {
+        @include breakpoint( $breakpoint-xsmall ) {
             height: $_size-default;
             width: $_size-default;
             transform: translateY(-2.5rem);
@@ -280,7 +288,7 @@
             max-height: 1.5rem;
             max-width: 1.5rem;
 
-            @include breakpoint($breakpoint-xsmall) {
+            @include breakpoint( $breakpoint-xsmall ) {
                 max-height: 1.875rem;
                 max-width: 1.875rem;
             }
@@ -297,7 +305,7 @@
             background-color: t( $clr-primary );
         }
 
-        @include breakpoint(null, $breakpoint-xxsmall) {
+        @include breakpoint( null, $breakpoint-xxsmall ) {
             border-radius: 0 0 $border-radius-small $border-radius-small;
         }
 
@@ -344,7 +352,7 @@
                 text-decoration: none;
 
                 @include themed() {
-                    background-color: t( $clr-dp-08 );
+                    background-color: rgba( t( $clr-primary ), 12% );
                 }
             }
 
@@ -353,7 +361,7 @@
             }
 
             &:focus-visible {
-                outline: 0.0625rem dotted white;
+                outline: 0.0625rem dotted red;
                 outline-offset: 0.125rem;
             }
         }

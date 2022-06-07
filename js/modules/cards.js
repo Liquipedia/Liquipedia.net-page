@@ -8,12 +8,11 @@ export class Cards {
     init() {
         for (let i = 0; i < this.cards.length; i++) {
             const card = this.cards[i];
-            const skipLink = card.querySelector( '[data-component="card-skip-link"]' );
             const button = card.querySelector( '[data-component="card-button"]' );
             const list = card.querySelector( '[data-component="card-list"]' );
 
             /**
-             * Open first card as default
+             * Open first card as default on mobile
              */
             if ( i === 0 ) {
                 this.showCardContent( list, button );
@@ -21,17 +20,6 @@ export class Cards {
 
             button.addEventListener( 'click', () => {
                 this.handleButtonEvent( list, button );
-            } );
-
-            card.addEventListener( 'keyup', ( event ) => {
-                console.log('keyup', event);
-                if (event.keyCode === 9) {
-                    skipLink.style.opacity = '1';
-                }
-            } );
-
-            card.addEventListener( 'keydown', () => {
-                skipLink.style.opacity = '0';
             } );
         }
     }

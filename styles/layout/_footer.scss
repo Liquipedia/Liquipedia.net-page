@@ -2,7 +2,7 @@
     padding: 1.5rem 0;
 
     @include themed() {
-        background-color: t( $clr-dp-04 );
+        background-color: t( $clr-surface-3 );
     }
 
     &__logo {
@@ -19,7 +19,7 @@
         justify-content: space-between;
         flex-direction: column;
 
-        @include breakpoint($breakpoint-small) {
+        @include breakpoint( $breakpoint-small ) {
             flex-direction: row;
         }
     }
@@ -28,12 +28,12 @@
         display: flex;
         list-style: none;
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             flex-direction: column;
         }
 
         li:not(:first-child) {
-            @include breakpoint($breakpoint-xsmall) {
+            @include breakpoint( $breakpoint-xsmall ) {
                 margin-left: 0.75rem;
             }
         }
@@ -44,7 +44,7 @@
         align-items: center;
         list-style: none;
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             margin-top: 1rem;
         }
 
@@ -53,16 +53,16 @@
         }
 
         a {
-            @include breakpoint(null, $breakpoint-xsmall) {
+            @include themed() {
+                color: t( $clr-on-surface );
+            }
+
+            @include breakpoint( null, $breakpoint-xsmall ) {
                 width: 2.5rem;
                 height: 2.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-
-            @include themed() {
-                color: t( $clr-surface-high-emphasis );
             }
         }
     }

@@ -30,14 +30,14 @@
             opacity: 1; /* Firefox */
 
             @include themed() {
-                color: t( $clr-surface-medium-emphasis );
+                color: t( $clr-on-surface );
             }
         }
 
         :-ms-input-placeholder,
         ::-ms-input-placeholder {
             @include themed() {
-                color: t( $clr-surface-medium-emphasis );
+                color: t( $clr-on-surface );
             }
         }
     }
@@ -51,13 +51,11 @@
     &__select {
         position: relative;
         z-index: 1;
-        width: 10rem;
+        width: 11rem;
         background-color: transparent;
-        border: 0;
         height: 100%;
         padding: 0 1rem;
         font-weight: $font-weight-bold;
-        font-family: inherit;
         font-size: $font-size-small;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -72,21 +70,12 @@
             margin-bottom: 0.25rem;
         }
 
-        &:hover {
-            //@include themed() {
-            //    background-color: t( $clr-primary-high-emphasis );
-            //}
-        }
-
         &:focus {
             outline: 0;
 
             @include themed() {
                 box-shadow: inset 0 -0.125rem 0 0 t( $clr-primary );
             }
-        }
-        &:active {
-            color: red;
         }
 
         &.is--selected {
@@ -107,7 +96,7 @@
         width: 0.75rem;
         height: 0.4375rem;
         top: 50%;
-        right: 0;
+        right: 1rem;
         transform: translateY(-50%);
         z-index: 0;
         display: flex;
@@ -127,10 +116,8 @@
     &__input {
         flex-grow: 1;
         background-color: transparent;
-        border: 0;
         height: 100%;
         padding: 0 1rem;
-        font-family: inherit;
         font-size: $font-size-small;
         transition: background-color $transition-fast;
 
@@ -141,14 +128,6 @@
         @include breakpoint( null, $breakpoint-xsmall ) {
             height: 2.5rem;
             margin-bottom: 0.25rem;
-        }
-
-        @media (hover: hover) {
-            &:hover {
-                @include themed() {
-                    background-color: t( $clr-dp-01 );
-                }
-            }
         }
 
         &:focus {

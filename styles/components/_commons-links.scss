@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include breakpoint($breakpoint-xsmall) {
+    @include breakpoint( $breakpoint-xsmall ) {
         flex-direction: row;
     }
 

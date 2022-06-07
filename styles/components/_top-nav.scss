@@ -10,7 +10,7 @@
         background-color: t( $clr-surface );
     }
 
-    @include breakpoint(null, $breakpoint-xsmall) {
+    @include breakpoint( null, $breakpoint-xsmall ) {
         position: absolute;
         top: 0.25rem;
         right: 0.25rem;
@@ -30,23 +30,24 @@
         padding: 0;
 
         @include themed() {
-            color: t( $clr-surface-high-emphasis );
+            color: t( $clr-on-surface );
         }
 
-        @include breakpoint(null, $breakpoint-xsmall) {
+        @include breakpoint( null, $breakpoint-xsmall ) {
             height: 100%;
         }
 
         @media (hover: hover) {
-            &:hover::after {
+            &:hover::before {
                 @include themed() {
-                    background-color: t( $clr-primary-high-emphasis );
+                    background-color: t( $clr-primary );
                 }
             }
-        }
-
-        &:active {
-
+            //&:hover::after {
+            //    @include themed() {
+            //        background-color: t( $clr-secondary );
+            //    }
+            //}
         }
 
         &::before,
@@ -61,6 +62,7 @@
             height: $_height;
             border-radius: $_height;
             margin-right: 0.5rem;
+            transition: background-color $transition-fast;
 
             @include themed() {
                 background-color: t( $clr-primary );
@@ -77,7 +79,7 @@
             transition: left $transition-fast;
 
             @include themed() {
-                background-color: t( $clr-primary-high-emphasis );
+                background-color: t( $clr-surface );
             }
         }
 
@@ -120,16 +122,16 @@
             display: flex;
             align-items: center;
 
-            @include breakpoint(null, $breakpoint-xsmall) {
+            @include breakpoint( null, $breakpoint-xsmall ) {
                 padding: 0;
             }
 
-            @include breakpoint($breakpoint-xsmall) {
-                padding: 0 1.25rem;
+            @include breakpoint( $breakpoint-xsmall ) {
+                padding: 0 0.75rem;
             }
 
             &:not(:first-child) {
-                @include breakpoint(null, $breakpoint-xsmall) {
+                @include breakpoint( null, $breakpoint-xsmall ) {
                     display: none;
                 }
             }

@@ -1,5 +1,5 @@
-@mixin toggleThemeContent ($property, $darkValue, $defaultValue: null) {
-    @if ($defaultValue != null) {
+@mixin toggleThemeContent ( $property, $darkValue, $defaultValue: null ) {
+    @if ( $defaultValue != null ) {
         html.theme--light & {
             #{$property}: $defaultValue;
         }
@@ -10,7 +10,7 @@
     }
 }
 
-@mixin themedContent($map, $theme) {
+@mixin themedContent( $map, $theme ) {
     $theme-map: () !global;
 
     @each $key, $submap in $map {
@@ -26,8 +26,8 @@
 
     @each $theme, $map in $themes {
         @if ( starts-with('#{&}', 'html') ) {
-            @at-root #{ str-insert($parent, '.theme--#{$theme}', 5) } {
-                @include themedContent($map, $theme) {
+            @at-root #{ str-insert( $parent, '.theme--#{$theme}', 5 ) } {
+                @include themedContent( $map, $theme ) {
                     @content;
                 }
             }
@@ -35,7 +35,7 @@
 
         @else {
             html.theme--#{$theme} & {
-                @include themedContent($map, $theme) {
+                @include themedContent( $map, $theme ) {
                     @content;
                 }
             }
@@ -47,28 +47,28 @@
  * Breakpoint mixin
  *
  * How to use:
- * @include breakpoint($small, $large) {} min-width and max-width
- * @include breakpoint($small) {} min-width only
- * @include breakpoint(null, $large) {} max-width only
+ * @include breakpoint( $small, $large ) {} min-width and max-width
+ * @include breakpoint( $small ) {} min-width only
+ * @include breakpoint( null, $large ) {} max-width only
  *
  * @param min-width
  * @param max-width
  */
-@mixin breakpoint($min-width: null, $max-width: null) {
+@mixin breakpoint( $min-width: null, $max-width: null ) {
     $_between-min-max-space: 0.0625em;
 
-    @if ($min-width and $max-width) {
-        @media (max-width: $max-width - $_between-min-max-space) and (min-width: $min-width) {
+    @if ( $min-width and $max-width ) {
+        @media ( max-width: $max-width - $_between-min-max-space ) and (min-width: $min-width) {
             @content;
         }
     }
-    @else if ($max-width) {
-        @media (max-width: $max-width - $_between-min-max-space) {
+    @else if ( $max-width ) {
+        @media ( max-width: $max-width - $_between-min-max-space ) {
             @content;
         }
     }
     @else {
-        @media (min-width: $min-width) {
+        @media ( min-width: $min-width ) {
             @content;
         }
     }

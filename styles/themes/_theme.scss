@@ -1,3 +1,4 @@
+$clr-liquipedia: 'clr-liquipedia';
 $clr-primary: 'clr-primary';
 $clr-on-primary: 'clr-on-primary';
 $clr-primary-container: 'clr-primary-container';
@@ -46,6 +47,7 @@ $clr-logo-2: 'clr-logo-2';
 
 $themes: (
     light: (
+        clr-liquipedia: $clr-liquipedia--light,
         clr-primary: $clr-primary--light,
         clr-on-primary: $clr-on-primary--light,
         clr-primary-container: $clr-primary-container--light,
@@ -93,6 +95,7 @@ $themes: (
         clr-logo-2: $clr-logo-2--light,
     ),
     dark: (
+        clr-liquipedia: $clr-liquipedia--dark,
         clr-primary: $clr-primary--dark,
         clr-on-primary: $clr-on-primary--dark,
         clr-primary-container: $clr-primary-container--dark,

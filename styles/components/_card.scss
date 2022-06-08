@@ -35,7 +35,7 @@
     text-decoration: none;
     height: 100%;
     transition: transform $transition-fast;
-    box-shadow: $box-shadow-elevation-2;
+    box-shadow: $box-shadow-elevation-1;
 
     @include themed() {
         background-color: t( $clr-surface-2 );
@@ -106,10 +106,6 @@
         z-index: 3;
         padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
         color: white;
-
-        //@include themed() {
-        //    color: t( $clr-primary );
-        //}
 
         @include breakpoint( null, $breakpoint-xxsmall ) {
             padding-left: 4.5rem;

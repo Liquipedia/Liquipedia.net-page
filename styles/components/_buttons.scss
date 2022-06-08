@@ -1,16 +1,17 @@
 .btn {
     display: inline-flex;
+    align-items: center;
     padding: 0 3.125rem;
     min-height: 2.5rem;
     border-radius: $border-radius-small;
-    border: 0.625rem solid  transparent;
+    border: 0;
     text-decoration: none;
     cursor: pointer;
     transition: background-color $transition-fast, color $transition-fast;
 
     @include themed() {
         background-color: t( $clr-primary );
-        color: t( $clr-primary-high-emphasis );
+        color: t( $clr-on-primary );
     }
 
     &:hover {
@@ -18,7 +19,7 @@
 
         @include themed() {
             background-color: t( $button-bg-color-hover );
-            color: t( $clr-primary-high-emphasis );
+            color: t( $clr-on-primary );
         }
     }
 
@@ -31,14 +32,24 @@
 
         @include themed() {
             background-color: t( $button-bg-color-focus );
-            color: t( $clr-primary-high-emphasis );
+            color: t( $clr-on-primary );
+            box-shadow:
+                inset 0 0 0 0.0625rem t( $button-bg-color-focus ),
+                inset 0 0 0 0.125rem rgba( t( $clr-surface ), 50% );
         }
     }
 
     &:active {
         @include themed() {
             background-color: t( $button-bg-color-active );
-            color: t( $clr-primary-high-emphasis );
+            color: t( $clr-on-primary );
+        }
+    }
+
+    &:disabled {
+        @include themed() {
+            background-color: t( $button-bg-color-disabled );
+            color: t( $clr-on-surface );
         }
     }
 }

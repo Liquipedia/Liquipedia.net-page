@@ -53,8 +53,9 @@
         }
 
         a {
+
             @include themed() {
-                color: t( $clr-on-surface );
+                color: t( $clr-liquipedia );
             }
 
             @include breakpoint( null, $breakpoint-xsmall ) {
@@ -63,6 +64,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            @media ( hover: hover ) {
+                &:hover {
+                    @include themed() {
+                        color: t( $clr-on-surface );
+                    }
+
+                    svg {
+                        transform: scale( 1.1 );
+                    }
+                }
+            }
+
+            svg {
+                transform: scale( 1 );
+                transition: color $transition-fast, transform $transition-fast;
             }
         }
     }

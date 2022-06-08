@@ -1,8 +1,10 @@
 $royal-blue: #2B63E6;
 $clr-malibu: #90CAF9;
-$clr-cod-gray: #121212;
+$clr-blue: #042B4C;
 
 /** Color scheme **/
+$clr-liquipedia--light: $clr-blue;
+$clr-liquipedia--dark: white;
 
 $clr-body-bg--light: rgba(black, 3%);
 $clr-body-bg--dark: $clr-surface--dark;
@@ -17,24 +19,24 @@ $clr-background--dark: #121212;
 $clr-surface--light: #ffffff;
 $clr-surface--dark: #121212;
 
+$clr-logo-1--light: $clr-liquipedia--light;
+$clr-logo-1--dark: $clr-on-surface--dark;
+$clr-logo-2--light: #ffffff;
+$clr-logo-2--dark: $clr-surface-1--dark;
+
 $link-color--light: $clr-primary--light;
 $link-color--dark: $clr-primary--dark;
 $link-color-hover--light: #000000;
 $link-color-hover--dark: mix(white, $clr-malibu, 4%);
 
-$button-bg-color-hover--light: mix(white, $clr-primary--light, 8%);
-$button-bg-color-hover--dark: mix(white, $clr-primary--dark, 8%);
+$button-bg-color-hover--light: mix(white, $clr-primary--light, 16%);
+$button-bg-color-hover--dark: mix(black, $clr-primary--dark, 16%);
 $button-bg-color-focus--light: mix(white, $clr-primary--light, 12%);
 $button-bg-color-focus--dark: mix(white, $clr-primary--dark, 12%);
 $button-bg-color-active--light: mix(white, $clr-primary--light, 8%);
 $button-bg-color-active--dark: mix(white, $clr-primary--dark, 8%);
 $button-bg-color-disabled--light: rgba(#1F1F1F, 12%);
 $button-bg-color-disabled--dark: rgba(#E3E3E3, 12%);
-
-$clr-logo-1--light: #042B4C;
-$clr-logo-1--dark: $clr-on-surface--dark;
-$clr-logo-2--light: #ffffff;
-$clr-logo-2--dark: $clr-surface-1--dark;
 
 /**
  * Breakpoints
@@ -92,5 +94,5 @@ $line-height-default: 1.7;
 /**
  * Transitions
  */
-$transition-slow: 0.2s ease;
-$transition-fast: 0.4s ease;
+$transition-slow: 0.4s ease;
+$transition-fast: 0.2s ease;

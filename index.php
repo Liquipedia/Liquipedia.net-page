@@ -1,7 +1,4 @@
 <?php
-// todo: remove init_)set for production
-ini_set('display_errors', 1);
-
 $no_session = true;
 require_once( __DIR__ . '/includes/wikis.php' );
 require_once( __DIR__ . '/../config/db_config.php' );
@@ -75,7 +72,6 @@ ksort($allwikis);
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
 		<link href="./css/base.css" rel="stylesheet" type="text/css" />
-<!--		<link href="./css/style.min.css?c=2" rel="stylesheet" type="text/css" />-->
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">

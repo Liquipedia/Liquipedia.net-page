@@ -1,5 +1,4 @@
 $royal-blue: #2B63E6;
-$clr-malibu: #90CAF9;
 $clr-blue: #042B4C;
 
 /** Color scheme **/
@@ -26,8 +25,8 @@ $clr-logo-2--dark: $clr-surface-1--dark;
 
 $link-color--light: $clr-primary--light;
 $link-color--dark: $clr-primary--dark;
-$link-color-hover--light: #000000;
-$link-color-hover--dark: mix(white, $clr-malibu, 4%);
+$link-color-hover--light: mix(white, $clr-primary--light, 16%);
+$link-color-hover--dark: mix(black, $clr-primary--dark, 16%);
 
 $button-bg-color-hover--light: mix(white, $clr-primary--light, 16%);
 $button-bg-color-hover--dark: mix(black, $clr-primary--dark, 16%);

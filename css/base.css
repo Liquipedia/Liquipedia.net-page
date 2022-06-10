@@ -165,10 +165,10 @@ a:hover {
   text-decoration: underline;
 }
 html.theme--light a:hover {
-  color: #000000;
+  color: #347ab3;
 }
 html.theme--dark a:hover {
-  color: #94ccf9;
+  color: #86a9d6;
 }
 
 .mt-1 {

@@ -10,7 +10,7 @@ header( 'Cache-Control: s-maxage=60' );
 header( 'Expires: ' . $expire );
 
 // Preload / push key files
-header( 'Link: </css/style.min.css?c=2>; as=style; rel=preload, </images/lp-logo.svg>; as=image; type=image/svg+xml; rel=preload' );
+header( 'Link: </css/base.css>; as=style; rel=preload, </images/logo/lp-logo.svg>; as=image; type=image/svg+xml; rel=preload' );
 
 $hot_links = [];
 
@@ -53,7 +53,7 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 }
 
 $allwikis = $wikis + $alphawikis;
-ksort($allwikis);
+ksort( $allwikis );
 ?>
 <!DOCTYPE html>
 <html lang="en" class="theme--light">
@@ -94,8 +94,10 @@ ksort($allwikis);
 		<style>
 <?php
 foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
-    echo "\t\t\t" . 'html ' . '.' . $wiki_key . '-card .card__line, html .' . $wiki_key .
-    '-card .card__game-icon, ' . $wiki_key . '-card { background-color:' . $wiki[ 'background-color' ] . " }\n";
+    echo "\t\t\t" . 'html.theme--light ' . '.' . $wiki_key . '-card .card__line, html.theme--light .' . $wiki_key .
+    '-card .card__game-icon, ' . $wiki_key . '-card { background-color:' . $wiki[ 'theme-light' ] . " }\n";
+    echo "\t\t\t" . 'html.theme--dark ' . '.' . $wiki_key . '-card .card__line, html.theme--dark .' . $wiki_key .
+    '-card .card__game-icon, ' . $wiki_key . '-card { background-color:' . $wiki[ 'theme-dark' ] . " }\n";
 }
 ?>
 		</style>
@@ -172,7 +174,9 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
                                     </a>
                                 </h2>
                                 <div class="card__image">
-                                    <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+                                    <?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
+                                        <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+                                    <?php } ?>
                                 </div>
                                 <div class="card__game-icon">
                                     <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
@@ -245,7 +249,9 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
                                         </a>
                                     </h2>
                                     <div class="card__image">
-                                        <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+										<?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
+                                            <img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+										<?php } ?>
                                     </div>
                                     <div class="card__game-icon">
                                         <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />

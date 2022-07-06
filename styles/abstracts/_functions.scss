@@ -1,5 +1,5 @@
-@function starts-with($string, $find) {
-    @if str-index($string, $find) == 1 {
+@function startsWith( $string, $find ) {
+    @if str-index( $string, $find ) == 1 {
         @return true;
     }
 

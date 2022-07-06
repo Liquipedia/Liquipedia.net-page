@@ -8,9 +8,9 @@ $clr-body-bg--dark: $clr-surface--dark;
 $clr-top-nav-bg--light: white;
 $clr-top-nav-bg--dark: $clr-surface--dark;
 
-$clr-primary-variant: #0027B3;
-$clr-secondary--light: #BBC8CE;
-$clr-secondary--dark: #BBC8CE;
+$clr-primary-variant: #0027b3;
+$clr-secondary--light: #bbc8ce;
+$clr-secondary--dark: #bbc8ce;
 $clr-background--light: #ffffff;
 $clr-background--dark: #121212;
 $clr-surface--light: #ffffff;
@@ -32,8 +32,8 @@ $button-bg-color-focus--light: mix(white, $clr-primary--light, 12%);
 $button-bg-color-focus--dark: mix(white, $clr-primary--dark, 12%);
 $button-bg-color-active--light: mix(white, $clr-primary--light, 8%);
 $button-bg-color-active--dark: mix(white, $clr-primary--dark, 8%);
-$button-bg-color-disabled--light: rgba(#1F1F1F, 12%);
-$button-bg-color-disabled--dark: rgba(#E3E3E3, 12%);
+$button-bg-color-disabled--light: rgba(#1f1f1f, 12%);
+$button-bg-color-disabled--dark: rgba(#e3e3e3, 12%);
 
 /**
  * Breakpoints

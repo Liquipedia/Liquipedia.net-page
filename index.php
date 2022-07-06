@@ -56,6 +56,7 @@ $allwikis = $wikis + $alphawikis;
 ksort( $allwikis );
 ?>
 <!DOCTYPE html>
+<!-- Set one of the themes as default -->
 <html lang="en" class="theme--light">
 	<head>
 <!--

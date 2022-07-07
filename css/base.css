@@ -683,9 +683,11 @@ html.theme--dark .card__button:focus {
 }
 html.theme--light .card__game-icon {
   background-color: #0d61a4;
+  color: #ffffff;
 }
 html.theme--dark .card__game-icon {
   background-color: #9fc9ff;
+  color: #121212;
 }
 @media (max-width: 23.6875em) {
   .card__game-icon {

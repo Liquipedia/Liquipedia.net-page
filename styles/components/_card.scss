@@ -266,6 +266,7 @@
 
         @include themed() {
             background-color: t( $clr-primary );
+            color: t( $clr-background);
         }
 
         @include breakpoint( null, $breakpoint-xxsmall ) {

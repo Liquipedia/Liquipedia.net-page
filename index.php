@@ -180,7 +180,10 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
                                     <?php } ?>
                                 </div>
                                 <div class="card__game-icon">
-                                    <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
+                                    <svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
+                                        <use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+                                             fill="currentColor"/>
+                                    </svg>
                                 </div>
                                 <div class="card__line"></div>
                                 <ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
@@ -255,7 +258,10 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
 										<?php } ?>
                                     </div>
                                     <div class="card__game-icon">
-                                        <img class="icon" src="images/game-icons/<?php echo $wiki_key; ?>.svg" alt="<?php echo $wiki_key; ?> icon" />
+                                        <svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
+                                            <use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+                                                 fill="currentColor"/>
+                                        </svg>
                                     </div>
                                     <div class="card__line"></div>
 

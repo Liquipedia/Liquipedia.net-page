@@ -239,8 +239,8 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
                     <div class="container">
                         <div class="cards">
                             <?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
-                                <div class="card <?php echo $wiki_key; ?>-card">
-                                    <button class="card__button" type="button">
+                                <div data-component="card" class="card <?php echo $wiki_key; ?>-card">
+                                    <button class="card__button" type="button" data-component="card-button">
                                         <svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
                                         <span class="visually-hidden">Toggle card content</span>
                                     </button>

@@ -1,0 +1,366 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    width: 100%;
+    margin-top: 2.5rem;
+
+    @include breakpoint( $breakpoint-xsmall ) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint( $breakpoint-small ) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include breakpoint( $breakpoint-medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    $_card-image-height-default: 5rem;
+    $_card-image-height-small: 3.75rem;
+    $_card-image-scale: 1.05;
+    $_card-padding-default: 1.5rem;
+    $_card-padding-small: 1rem;
+    $_card-scale: 1.015;
+    border-radius: 0.625rem;
+    position: relative;
+    color: white;
+    flex: 1;
+    z-index: 1;
+    text-decoration: none;
+    height: 100%;
+    transition: transform $transition-fast;
+    box-shadow: $box-shadow-elevation-1;
+
+    @include themed() {
+        background-color: t( $clr-surface-2 );
+    }
+
+    &:hover {
+        @include breakpoint( $breakpoint-xsmall ) {
+            transform: scale( $_card-scale);
+        }
+
+        .card__image img {
+            @include breakpoint( $breakpoint-xsmall ) {
+                transform: scale( $_card-image-scale);
+            }
+        }
+    }
+
+    &:focus-within {
+        outline: none;
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            transform: scale( $_card-scale);
+        }
+    }
+
+    &__skip-link {
+        opacity: 0;
+        position: absolute;
+        color: white;
+        padding: 0 0.375rem;
+        display: flex;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: $font-size-small;
+        z-index: 3;
+        border-radius: $border-radius-small;
+
+        @include themed() {
+            background-color: t( $clr-surface );
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        width: 100%;
+        height: $_card-image-height-small;
+        letter-spacing: $letter-spacing-small;
+        font-size: $font-size-default;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-medium;
+
+        @include breakpoint( $breakpoint-xxsmall ) {
+            font-size: $font-size-medium;
+        }
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            height: $_card-image-height-default;
+        }
+    }
+
+    .card__title-link {
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+        color: white;
+
+        @include breakpoint( null, $breakpoint-xxsmall ) {
+            padding-left: 4.5rem;
+        }
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            padding: 3rem $_card-padding-default 0 $_card-padding-default;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: white;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__label {
+        text-transform: uppercase;
+        font-size: $font-size-xxsmall;
+        padding: 0.125rem 0.25rem;
+        position: absolute;
+        top: 0;
+        left: 0.25rem;
+        z-index: 3;
+        border-radius: $border-radius-small;
+
+        @include themed() {
+            background-color: t( $clr-on-primary );
+            color: t( $clr-primary );
+        }
+
+        @include breakpoint( null, $breakpoint-xsmall ) {
+            transform: rotate(-15deg);
+        }
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            top: 1rem;
+            left: 1.5rem;
+            font-size: $font-size-small;
+            padding: 0.125rem 0.5rem;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        height: $_card-image-height-small;
+        width: 2.75rem;
+        color: white;
+        border-radius: 0 $border-radius-medium 0 0;
+        z-index: 4;
+
+        @include themed() {
+            background-color: t( $clr-primary );
+            background:
+                linear-gradient(
+                        90deg,
+                        rgba(t( $clr-primary ), 0.5) 0%,
+                        rgba(t( $clr-primary ), 0.8) 100%
+                );
+            color: t( $clr-on-primary );
+        }
+
+        @include breakpoint( $breakpoint-xxsmall ) {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+
+            @include themed() {
+                color: t( $clr-on-primary );
+            }
+        }
+
+        .icon {
+            height: 0.625rem;
+            width: auto;
+            transform-origin: center;
+            transition: transform $transition-fast;
+        }
+
+        &.is--open {
+            .icon {
+                transform: rotate(180deg);
+            }
+
+            ~ .card__line {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        height: $_card-image-height-small;
+        border-radius: $border-radius-medium $border-radius-medium 0 0;
+        overflow: hidden;
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            height: $_card-image-height-default;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(225deg, rgba(black, 0) 0%, rgba(black, 0.5) 60%);
+        }
+
+        img {
+            transition: transform $transition-fast;
+            width: 100%;
+            min-width: 22.5rem;
+            min-height: 5rem;
+        }
+    }
+
+    &__game-icon {
+        $_size-default: 3.75rem;
+        $_size-small: 3.125rem;
+        display: flex;
+        height: $_size-small;
+        width: $_size-small;
+        position: absolute;
+        z-index: 2;
+        box-shadow: inset 0 0.0625rem 0.0625rem rgba(white, 0.2);
+        border-radius: 100%;
+        right: $_card-padding-default;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-1.875rem);
+
+        @include themed() {
+            background-color: t( $clr-primary );
+            color: t( $clr-background );
+        }
+
+        @include breakpoint( null, $breakpoint-xxsmall ) {
+            right: unset;
+            left: 1rem;
+            transform: translateY(-2.5rem);
+        }
+
+        @include breakpoint( $breakpoint-xsmall ) {
+            height: $_size-default;
+            width: $_size-default;
+            transform: translateY(-2.5rem);
+        }
+
+        .icon {
+            max-height: 1.5rem;
+            max-width: 1.5rem;
+
+            @include breakpoint( $breakpoint-xsmall ) {
+                max-height: 1.875rem;
+                max-width: 1.875rem;
+            }
+        }
+    }
+
+    &__line {
+        display: flex;
+        position: relative;
+        height: 0.25rem;
+        width: 100%;
+
+        @include themed() {
+            background-color: t( $clr-primary );
+        }
+
+        @include breakpoint( null, $breakpoint-xxsmall ) {
+            border-radius: 0 0 $border-radius-small $border-radius-small;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgba(black, 0) 0%, rgba(black, 0.1) 100%);
+        }
+    }
+
+    &__list {
+        margin: $_card-padding-small 0;
+        font-size: $font-size-small;
+        position: relative;
+        z-index: 5;
+
+        @include breakpoint( $breakpoint-xxsmall ) {
+            margin: $_card-padding-default 0;
+        }
+
+        &.is--hidden {
+            @include breakpoint( null, $breakpoint-xxsmall ) {
+                @include visuallyHidden;
+            }
+        }
+
+        &-item {
+            list-style: none;
+        }
+
+        &-link {
+            text-decoration: none;
+            padding: 0.25rem 1.5rem;
+            display: flex;
+            word-break: break-word;
+            transition: background-color $transition-fast;
+
+            &:hover {
+                text-decoration: none;
+
+                @include themed() {
+                    background-color: rgba( t( $clr-primary ), 12% );
+                }
+            }
+
+            &:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            &:focus-visible {
+                outline: 0.0625rem dotted red;
+                outline-offset: 0.125rem;
+            }
+        }
+    }
+}

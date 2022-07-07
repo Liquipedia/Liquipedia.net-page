@@ -1,0 +1,41 @@
+%title {
+    line-height: $line-height-small;
+
+    &--display {
+        font-size: $font-size-medium;
+    }
+
+    &--headline {
+        font-size: $font-size-large;
+        font-weight: $font-weight-light;
+    }
+
+    &--subtitle {
+        font-size: $font-size-medium;
+    }
+
+    &--heading {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+    }
+}
+
+.title {
+    @extend %title;
+
+    &--display {
+        @extend %title--display;
+    }
+
+    &--headline {
+        @extend %title--headline;
+    }
+
+    &--subtitle {
+        @extend %title--subtitle;
+    }
+
+    &--heading {
+        @extend %title--heading;
+    }
+}

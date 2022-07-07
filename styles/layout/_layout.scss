@@ -1,0 +1,102 @@
+html {
+    font-size: $base-font-size;
+    line-height: $line-height-default;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include themed() {
+        background-color: t( $clr-body-bg );
+        color: t( $clr-on-surface );
+    }
+}
+
+*,
+*:before,
+*:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: $font-weight-default;
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+svg {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+
+    // Remove pointer event from all inline icons on buttons or links
+    a &,
+    button & {
+        pointer-events: none;
+    }
+}
+
+input, textarea, button {
+    font-family: $font-family;
+}
+
+.visually-hidden {
+    @include visuallyHidden;
+}
+
+a {
+    text-decoration: none;
+
+    @include themed() {
+        color: t( $link-color );
+    }
+
+    &:hover {
+        text-decoration: underline;
+
+        @include themed() {
+            color: t( $link-color-hover );
+        }
+    }
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 1rem;
+
+    @include breakpoint( $breakpoint-medium ) {
+        width: 75rem;
+        padding: 0;
+    }
+}

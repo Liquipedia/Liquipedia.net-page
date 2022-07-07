@@ -1,0 +1,18 @@
+.commons-links {
+    display: flex;
+    list-style: none;
+    align-self: center;
+    width: 100%;
+    margin-top: 1rem;
+    max-width: 50rem;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint( $breakpoint-xsmall ) {
+        flex-direction: row;
+    }
+
+    li {
+        flex: 1 1 auto;
+    }
+}

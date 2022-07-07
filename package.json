@@ -1,0 +1,19 @@
+{
+  "name": "liquipedia.net-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass styles:css --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liquipedia/Liquipedia.net-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liquipedia/Liquipedia.net-page/issues"
+  },
+  "homepage": "https://github.com/Liquipedia/Liquipedia.net-page#readme"
+}

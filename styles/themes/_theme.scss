@@ -1,0 +1,145 @@
+$clr-liquipedia: 'clr-liquipedia';
+$clr-primary: 'clr-primary';
+$clr-on-primary: 'clr-on-primary';
+$clr-primary-container: 'clr-primary-container';
+$clr-on-primary-container: 'clr-on-primary-container';
+$clr-secondary: 'clr-secondary';
+$clr-on-secondary: 'clr-on-secondary';
+$clr-secondary-container: 'clr-secondary-container';
+$clr-on-secondary-container: 'clr-on-secondary-container';
+$clr-tertiary: 'clr-tertiary';
+$clr-on-tertiary: 'clr-on-tertiary';
+$clr-tertiary-container: 'clr-tertiary-container';
+$clr-on-tertiary-container: 'clr-on-tertiary-container';
+$clr-error: 'clr-error';
+$clr-on-error: 'clr-on-error';
+$clr-error-container: 'clr-error-container';
+$clr-on-error-container: 'clr-on-error-container';
+$clr-background: 'clr-background';
+$clr-on-background: 'clr-on-background';
+$clr-surface: 'clr-surface';
+$clr-on-surface: 'clr-on-surface';
+$clr-surface-variant: 'clr-surface-variant';
+$clr-on-surface-variant: 'clr-on-surface-variant';
+$clr-outline: 'clr-outline';
+$clr-confirmed: 'clr-confirmed';
+$clr-on-confirmed: 'clr-on-confirmed';
+$clr-confirmed-container: 'clr-confirmed-container';
+$clr-on-confirmed-container: 'clr-on-confirmed-container';
+$clr-surface-1: 'clr-surface-1';
+$clr-surface-2: 'clr-surface-2';
+$clr-surface-3: 'clr-surface-3';
+$clr-surface-4: 'clr-surface-4';
+$clr-surface-5: 'clr-surface-5';
+$clr-border: 'clr-border';
+
+$clr-body-bg: 'clr-body-bg';
+$clr-top-nav-bg: 'clr-top-nav-bg';
+
+$link-color: 'link-color';
+$link-color-hover: 'link-color-hover';
+$button-bg-color-hover: 'button-bg-color-hover';
+$button-bg-color-focus: 'button-bg-color-focus';
+$button-bg-color-active: 'button-bg-color-active';
+$button-bg-color-disabled: 'button-bg-color-disabled';
+$clr-logo-1: 'clr-logo-1';
+$clr-logo-2: 'clr-logo-2';
+
+$themes: (
+    light: (
+        clr-liquipedia: $clr-liquipedia--light,
+        clr-primary: $clr-primary--light,
+        clr-on-primary: $clr-on-primary--light,
+        clr-primary-container: $clr-primary-container--light,
+        clr-on-primary-container: $clr-on-primary-container--light,
+        clr-secondary: $clr-secondary--light,
+        clr-on-secondary: $clr-on-secondary--light,
+        clr-secondary-container: $clr-secondary-container--light,
+        clr-on-secondary-container: $clr-on-secondary-container--light,
+        clr-tertiary: $clr-tertiary--light,
+        clr-on-tertiary: $clr-on-tertiary--light,
+        clr-tertiary-container: $clr-tertiary-container--light,
+        clr-on-tertiary-container: $clr-on-tertiary-container--light,
+        clr-error: $clr-error--light,
+        clr-on-error: $clr-on-error--light,
+        clr-error-container: $clr-error-container--light,
+        clr-on-error-container: $clr-on-error-container--light,
+        clr-background: $clr-background--light,
+        clr-on-background: $clr-on-background--light,
+        clr-surface: $clr-surface--light,
+        clr-on-surface: $clr-on-surface--light,
+        clr-surface-variant: $clr-surface-variant--light,
+        clr-on-surface-variant: $clr-on-surface-variant--light,
+        clr-outline: $clr-outline--light,
+        clr-confirmed: $clr-confirmed--light,
+        clr-on-confirmed: $clr-on-confirmed--light,
+        clr-confirmed-container: $clr-confirmed-container--light,
+        clr-on-confirmed-container: $clr-on-confirmed-container--light,
+        clr-surface-1: $clr-surface-1--light,
+        clr-surface-2: $clr-surface-2--light,
+        clr-surface-3: $clr-surface-3--light,
+        clr-surface-4: $clr-surface-4--light,
+        clr-surface-5: $clr-surface-5--light,
+        clr-border: $clr-border--light,
+
+        clr-body-bg: $clr-body-bg--light,
+        clr-top-nav-bg: $clr-top-nav-bg--light,
+
+        link-color: $link-color--light,
+        link-color-hover: $link-color-hover--light,
+        button-bg-color-hover: $button-bg-color-hover--light,
+        button-bg-color-focus: $button-bg-color-focus--light,
+        button-bg-color-active: $button-bg-color-active--light,
+        button-bg-color-disabled: $button-bg-color-disabled--light,
+        clr-logo-1: $clr-logo-1--light,
+        clr-logo-2: $clr-logo-2--light,
+    ),
+    dark: (
+        clr-liquipedia: $clr-liquipedia--dark,
+        clr-primary: $clr-primary--dark,
+        clr-on-primary: $clr-on-primary--dark,
+        clr-primary-container: $clr-primary-container--dark,
+        clr-on-primary-container: $clr-on-primary-container--dark,
+        clr-secondary: $clr-secondary--dark,
+        clr-on-secondary: $clr-on-secondary--dark,
+        clr-secondary-container: $clr-secondary-container--dark,
+        clr-on-secondary-container: $clr-on-secondary-container--dark,
+        clr-tertiary: $clr-tertiary--dark,
+        clr-on-tertiary: $clr-on-tertiary--dark,
+        clr-tertiary-container: $clr-tertiary-container--dark,
+        clr-on-tertiary-container: $clr-on-tertiary-container--dark,
+        clr-error: $clr-error--dark,
+        clr-on-error: $clr-on-error--dark,
+        clr-error-container: $clr-error-container--dark,
+        clr-on-error-container: $clr-on-error-container--dark,
+        clr-background: $clr-background--dark,
+        clr-on-background: $clr-on-background--dark,
+        clr-surface: $clr-surface--dark,
+        clr-on-surface: $clr-on-surface--dark,
+        clr-surface-variant: $clr-surface-variant--dark,
+        clr-on-surface-variant: $clr-on-surface-variant--dark,
+        clr-outline: $clr-outline--dark,
+        clr-confirmed: $clr-confirmed--dark,
+        clr-on-confirmed: $clr-on-confirmed--dark,
+        clr-confirmed-container: $clr-confirmed-container--dark,
+        clr-on-confirmed-container: $clr-on-confirmed-container--dark,
+        clr-surface-1: $clr-surface-1--dark,
+        clr-surface-2: $clr-surface-2--dark,
+        clr-surface-3: $clr-surface-3--dark,
+        clr-surface-4: $clr-surface-4--dark,
+        clr-surface-5: $clr-surface-5--dark,
+        clr-border: $clr-border--dark,
+
+        clr-body-bg: $clr-body-bg--dark,
+        clr-top-nav-bg: $clr-top-nav-bg--dark,
+
+        link-color: $link-color--dark,
+        link-color-hover: $link-color-hover--dark,
+        button-bg-color-hover: $button-bg-color-hover--dark,
+        button-bg-color-focus: $button-bg-color-focus--dark,
+        button-bg-color-active: $button-bg-color-active--dark,
+        button-bg-color-disabled: $button-bg-color-disabled--dark,
+        clr-logo-1: $clr-logo-1--dark,
+        clr-logo-2: $clr-logo-2--dark,
+    )
+);

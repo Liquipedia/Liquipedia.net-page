@@ -1,0 +1,95 @@
+/** Color scheme **/
+$clr-blue: #042B4C;
+$clr-liquipedia--light: $clr-blue;
+$clr-liquipedia--dark: white;
+
+$clr-body-bg--light: rgba(black, 3%);
+$clr-body-bg--dark: $clr-surface--dark;
+$clr-top-nav-bg--light: white;
+$clr-top-nav-bg--dark: $clr-surface--dark;
+
+$clr-primary-variant: #0027b3;
+$clr-secondary--light: #bbc8ce;
+$clr-secondary--dark: #bbc8ce;
+$clr-background--light: #ffffff;
+$clr-background--dark: #121212;
+$clr-surface--light: #ffffff;
+$clr-surface--dark: #121212;
+
+$clr-logo-1--light: $clr-liquipedia--light;
+$clr-logo-1--dark: $clr-on-surface--dark;
+$clr-logo-2--light: #ffffff;
+$clr-logo-2--dark: $clr-surface-1--dark;
+
+$link-color--light: $clr-primary--light;
+$link-color--dark: $clr-primary--dark;
+$link-color-hover--light: mix(white, $clr-primary--light, 16%);
+$link-color-hover--dark: mix(black, $clr-primary--dark, 16%);
+
+$button-bg-color-hover--light: mix(white, $clr-primary--light, 16%);
+$button-bg-color-hover--dark: mix(black, $clr-primary--dark, 16%);
+$button-bg-color-focus--light: mix(white, $clr-primary--light, 12%);
+$button-bg-color-focus--dark: mix(white, $clr-primary--dark, 12%);
+$button-bg-color-active--light: mix(white, $clr-primary--light, 8%);
+$button-bg-color-active--dark: mix(white, $clr-primary--dark, 8%);
+$button-bg-color-disabled--light: rgba(#1f1f1f, 12%);
+$button-bg-color-disabled--dark: rgba(#e3e3e3, 12%);
+
+/**
+ * Breakpoints
+ */
+$breakpoint-xxsmall: 23.75em; // 380px
+$breakpoint-xsmall: 40em; // 640px
+$breakpoint-small: 60em; // 960px
+$breakpoint-medium: 75em; // 1200px
+$breakpoint-large: 90em; // 1440px
+
+/**
+ * Border-radius
+ */
+$border-radius-small: 0.25rem;
+$border-radius-default: 0.375rem;
+$border-radius-medium: 0.625rem;
+
+/**
+ * Font-family
+ */
+
+$font-family: 'Roboto', Arial, Geneva, Ubuntu, sans-serif;
+
+/**
+ * Font-size
+ */
+$base-font-size: 16px;
+$font-size-xxsmall: 0.5625rem;
+$font-size-xsmall: 0.75rem;
+$font-size-small: 0.8125rem;
+$font-size-default: 1rem;
+$font-size-medium: 1.125rem;
+$font-size-large: 2.25rem;
+
+/**
+ * Font-weight
+ */
+$font-weight-light: 200;
+$font-weight-default: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/**
+ * Letter-spacing
+ */
+$letter-spacing-small: 0.03125rem;
+
+/**
+ * Line-height
+ */
+$line-height-small: 1.2;
+$line-height-medium: 1.5;
+$line-height-default: 1.7;
+
+/**
+ * Transitions
+ */
+$transition-slow: 0.4s ease;
+$transition-fast: 0.2s ease;

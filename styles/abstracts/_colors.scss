@@ -1,0 +1,109 @@
+/** Primary **/
+$clr-primary--light: #0d61a4;
+$clr-on-primary--light: #ffffff;
+$clr-primary-container--light: #d1e4ff;
+$clr-on-primary-container--light: #001c38;
+
+$clr-primary--dark: #9fc9ff;
+$clr-on-primary--dark: #00325b;
+$clr-primary-container--dark: #004880;
+$clr-on-primary-container--dark: #d1e4ff;
+
+/** Secondary **/
+$clr-secondary--light: #545f70;
+$clr-on-secondary--light: #ffffff;
+$clr-secondary-container--light: #d7e3f8;
+$clr-on-secondary-container--light: #101c2b;
+
+$clr-secondary--dark: #bbc7db;
+$clr-on-secondary--dark: #253141;
+$clr-secondary-container--dark: #3c4858;
+$clr-on-secondary-container--dark: #d7e3f8;
+
+/** Tertiary **/
+$clr-tertiary--light: #6c5778;
+$clr-on-tertiary--light: #ffffff;
+$clr-tertiary-container--light: #f4d9ff;
+$clr-on-tertiary-container--light: #251431;
+
+$clr-tertiary--dark: #d7bde4;
+$clr-on-tertiary--dark: #3c2948;
+$clr-tertiary-container--dark: #533f5f;
+$clr-on-tertiary-container--dark: #f4d9ff;
+
+/** Error **/
+$clr-error--light: #ba1b1b;
+$clr-on-error--light: #ffffff;
+$clr-error-container--light: #ffdad4;
+$clr-on-error-container--light: #410001;
+
+$clr-error--dark: #ffb4a9;
+$clr-on-error--dark: #680003;
+$clr-error-container--dark: #930006;
+$clr-on-error-container--dark: #ffdad4;
+
+/** Background/Surface **/
+$clr-background--light: #fdfcff;
+$clr-on-background--light: #1b1b1b;
+$clr-surface--light: #fdfcff;
+$clr-on-surface--light: #1b1b1b;
+
+$clr-background--dark: #1b1b1b;
+$clr-on-background--dark: #e2e2e6;
+$clr-surface--dark: #1b1b1b;
+$clr-on-surface--dark: #e2e2e6;
+
+/** Surface variant **/
+$clr-surface-variant--light: #dfe2eb;
+$clr-on-surface-variant--light: #43474e;
+$clr-outline--light: #73777f;
+
+$clr-surface-variant--dark: #43474e;
+$clr-on-surface-variant--dark: #c3c7d0;
+$clr-outline--dark: #8d9199;
+
+/** Confirmed **/
+$clr-confirmed--light: #106d34;
+$clr-on-confirmed--light: #ffffff;
+$clr-confirmed-container--light: #9ff6ae;
+$clr-on-confirmed-container--light: #002109;
+
+$clr-confirmed--dark: #84d994;
+$clr-on-confirmed--dark: #003915;
+$clr-confirmed-container--dark: #005322;
+$clr-on-confirmed-container--dark: #9ff6ae;
+
+/** Surface **/
+$clr-surface-1--light: #f1f4fa;
+$clr-surface-2--light: #eaf0f8;
+$clr-surface-3--light: #e3ebf5;
+$clr-surface-4--light: #e0e9f4;
+$clr-surface-5--light: #dbe6f2;
+
+$clr-surface-1--dark: #222426;
+$clr-surface-2--dark: #26292d;
+$clr-surface-3--dark: #2a2e34;
+$clr-surface-4--dark: #2b3036;
+$clr-surface-5--dark: #2d333b;
+
+$clr-border--light: rgba( #000000, 8% );
+$clr-border--dark: rgba( #ffffff, 8% );
+
+/**
+ * Shadows elevations
+ */
+$box-shadow-elevation-1:
+    0 0.0625rem 0.125rem rgba( 0, 0, 0, 0.3 ),
+    0 0.0625rem 0.1875rem 0.0625rem rgba( 0, 0, 0, 0.15 );
+$box-shadow-elevation-2:
+    0 0.0625rem 0.125rem rgba( 0, 0, 0, 0.3 ),
+    0 0.125rem 0.375rem 0.125rem rgba( 0, 0, 0, 0.15 );
+$box-shadow-elevation-3:
+    0 0.25rem 0.5rem 0.1875rem rgba( 0, 0, 0, 0.15 ),
+    0 0.0625rem 0.1875rem 0 rgba( 0, 0, 0, 0.3 );
+$box-shadow-elevation-4:
+    0 0.375rem 0.625rem 0.25rem rgba( 0, 0, 0, 0.15 ),
+    0 0.125rem 0.1875rem 0 rgba( 0, 0, 0, 0.3 );
+$box-shadow-elevation-5:
+    0 0.5rem 0.75rem 0.375rem rgba( 0, 0, 0, 0.15 ),
+    0 0.25rem 0.25rem 0 rgba( 0, 0, 0, 0.3 );

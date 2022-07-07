@@ -1,0 +1,14 @@
+input {
+    border: 0;
+
+    @media (hover: hover) {
+        &:hover {
+
+        }
+    }
+}
+
+select {
+    border: 0;
+    font-family: inherit;
+}

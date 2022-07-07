@@ -1,0 +1,169 @@
+.search {
+    width: 100%;
+
+    @include breakpoint( null, $breakpoint-xsmall ) {
+        margin-top: 1rem;
+    }
+
+    @include breakpoint( $breakpoint-xsmall ) {
+        margin-top: 1.5rem;
+    }
+
+    &__form {
+        border-radius: $border-radius-medium;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+
+        @include themed() {
+            background-color: t( $clr-surface );
+        }
+
+        @include breakpoint( null, $breakpoint-xsmall ) {
+            flex-direction: column;
+            height: auto;
+            align-items: stretch;
+            padding: 1rem;
+        }
+
+        ::placeholder {
+            opacity: 1; /* Firefox */
+
+            @include themed() {
+                color: t( $clr-on-surface );
+            }
+        }
+
+        :-ms-input-placeholder,
+        ::-ms-input-placeholder {
+            @include themed() {
+                color: t( $clr-on-surface );
+            }
+        }
+    }
+
+    &__select-wrapper {
+        position: relative;
+        display: flex;
+        height: 100%;
+    }
+
+    &__select {
+        position: relative;
+        z-index: 1;
+        width: 11rem;
+        background-color: transparent;
+        height: 100%;
+        padding: 0 1rem;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-small;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        @include themed() {
+            color: t( $clr-primary );
+        }
+
+        @include breakpoint( null, $breakpoint-xsmall ) {
+            width: 100%;
+            height: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &:focus {
+            outline: 0;
+
+            @include themed() {
+                box-shadow: inset 0 -0.125rem 0 0 t( $clr-primary );
+            }
+        }
+
+        &.is--selected {
+            + .search__select-icon > svg {
+                transform: rotate(-180deg);
+            }
+        }
+
+        option {
+            @include themed() {
+                background-color: t( $clr-surface );
+            }
+        }
+    }
+
+    &__select-icon {
+        position: absolute;
+        width: 0.75rem;
+        height: 0.4375rem;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        z-index: 0;
+        display: flex;
+
+        @include themed() {
+            color: t( $clr-primary );
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            transition: transform $transition-slow;
+            transform-origin: center;
+        }
+    }
+
+    &__input {
+        flex-grow: 1;
+        background-color: transparent;
+        height: 100%;
+        padding: 0 1rem;
+        font-size: $font-size-small;
+        transition: background-color $transition-fast;
+
+        @include themed() {
+            color: t( $clr-primary );
+        }
+
+        @include breakpoint( null, $breakpoint-xsmall ) {
+            height: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &:focus {
+            outline: 0;
+
+            @include themed() {
+                box-shadow: inset 0 -0.125rem 0 0 t( $clr-primary );
+            }
+        }
+
+        // removes autofill bg-color in chrome
+        &:-webkit-autofill,
+        &:-webkit-autofill:focus {
+            transition: background-color 600000s 0s, color 600000s 0s;
+        }
+    }
+
+    &__button {
+        height: 100%;
+        border-radius: 0 $border-radius-default $border-radius-default 0;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        font-weight: $font-weight-bold;
+
+        @include breakpoint( null, $breakpoint-xsmall ) {
+            border-radius: $border-radius-default;
+        }
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            margin-left: 0.75rem;
+        }
+    }
+}

@@ -10,7 +10,7 @@ header( 'Cache-Control: s-maxage=60' );
 header( 'Expires: ' . $expire );
 
 // Preload / push key files
-header( 'Link: </css/base.css>; as=style; rel=preload, </images/logo/lp-logo.svg>; as=image; type=image/svg+xml; rel=preload' );
+header( 'Link: </css/base.css>; as=style; rel=preload' );
 
 $hot_links = [];
 

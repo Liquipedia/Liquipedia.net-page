@@ -339,9 +339,9 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
                 </svg>
                 <div class="footer__group">
                     <ul class="footer__links">
-                        <li><a href="mailto:contact@liquipedia.net" target="">Send an email</a></li>
+                        <li><a href="mailto:contact@liquipedia.net">Send an email</a></li>
                         <li><a href="https://discord.gg/liquipedia" target="_blank">Chat with us</a></li>
-                        <li><a href="/commons/Contact" target="">Contact</a></li>
+                        <li><a href="/commons/Contact">Contact</a></li>
                         <li><a href="/commons/Liquipedia:Privacy_policy" class="mw-redirect" title="Liquipedia:Privacy policy">Privacy policy</a></li>
                     </ul>
                     <ul class="footer__social">

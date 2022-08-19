@@ -9,6 +9,13 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'mobilelegends' => [
+		'name' => 'Mobile Legends',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/mobilelegends/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
@@ -131,12 +138,6 @@ $alphawikis = [
 		'theme-dark' => '#5ae150',
 		'api' => $baseurl . '/trackmania/api.php',
 		'new' => true,
-	],
-	'mobilelegends' => [
-		'name' => 'Mobile Legends',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/mobilelegends/api.php',
 	],
 	'freefire' => [
 		'name' => 'Free Fire',

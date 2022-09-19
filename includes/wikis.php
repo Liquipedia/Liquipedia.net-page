@@ -323,4 +323,16 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/naraka/api.php',
 	],
+	'splatoon' => [
+		'name' => 'Splatoon',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/splatoon/api.php',
+	],
+	'stormgate' => [
+		'name' => 'Stormgate',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/stormgate/api.php',
+	],
 ];

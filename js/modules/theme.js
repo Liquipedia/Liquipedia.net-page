@@ -11,7 +11,7 @@ export class Theme {
     init() {
         this.darkModeActive = JSON.parse( this.checkLocalStorage() );
         if ( this.darkModeActive === null ) {
-            this.darkModeActive = false;
+            this.darkModeActive = this.htmlElement.classList.contains( this.darkThemeClass );
         }
         // this.toggleThemeClassOnBody();
 

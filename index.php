@@ -63,7 +63,7 @@ ksort( $allwikis );
 		/**
 		 * Quick check for dark theme
 		 */
-		if ( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) {
+		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) ) {
 			document.documentElement.classList.remove( 'theme--light' );
 			document.documentElement.classList.add( 'theme--dark' );
 		}

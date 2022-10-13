@@ -2,7 +2,7 @@ import { Theme } from './modules/theme.js';
 import { Cards } from './modules/cards.js';
 import { Search } from './modules/search.js';
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener( 'DOMContentLoaded', () => {
     const theme = new Theme( document.documentElement );
     theme.init();
 

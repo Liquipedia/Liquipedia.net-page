@@ -6,7 +6,7 @@ export class Cards {
     }
 
     init() {
-        for (let i = 0; i < this.cards.length; i++) {
+        for ( let i = 0; i < this.cards.length; i++ ) {
             const card = this.cards[i];
             const button = card.querySelector( '[data-component="card-button"]' );
             const list = card.querySelector( '[data-component="card-list"]' );

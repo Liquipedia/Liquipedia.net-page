@@ -1,5 +1,5 @@
 export class Theme {
-    constructor( htmlElement) {
+    constructor( htmlElement ) {
         this.htmlElement = htmlElement;
         this.darkModeActive = null;
         this.darkModeStorageKey = 'LiquipediaNetDarkMode';
@@ -10,29 +10,29 @@ export class Theme {
 
     init() {
         this.darkModeActive = JSON.parse( this.checkLocalStorage() );
-        if ( this.darkModeActive == null ) {
+        if ( this.darkModeActive === null ) {
             this.darkModeActive = false;
         }
-        this.toggleThemeClassOnBody();
+        // this.toggleThemeClassOnBody();
 
-        this.button.addEventListener('click', () => {
+        this.button.addEventListener( 'click', () => {
             this.darkModeActive = !this.darkModeActive;
             this.toggleThemeClassOnBody();
-        });
+        } );
     }
 
     setDarkMode() {
         this.htmlElement.classList.remove( this.lightThemeClass );
         this.htmlElement.classList.add( this.darkThemeClass );
-        this.setLocalStorage( 'true ');
-        //this.setAriaPressed( 'true' );
+        this.setLocalStorage();
+        // this.setAriaPressed( 'true' );
     }
 
     setLightMode() {
         this.htmlElement.classList.remove( this.darkThemeClass );
         this.htmlElement.classList.add( this.lightThemeClass );
-        this.setLocalStorage( 'false ');
-        //this.setAriaPressed( 'false' );
+        this.setLocalStorage();
+        // this.setAriaPressed( 'false' );
     }
 
     toggleThemeClassOnBody() {

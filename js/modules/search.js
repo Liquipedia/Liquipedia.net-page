@@ -6,7 +6,7 @@ export class Search {
     }
 
     init() {
-        this.searchSelect.addEventListener('click', () => {
+        this.searchSelect.addEventListener( 'click', () => {
             if ( this.searchSelect.classList.contains( this.classSelected ) ) {
                 this.searchSelect.classList.remove( this.classSelected );
             } else {

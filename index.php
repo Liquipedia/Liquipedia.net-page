@@ -59,6 +59,15 @@ ksort( $allwikis );
 <!-- Set one of the themes as default -->
 <html lang="en" class="theme--light">
 	<head>
+        <script>
+            /**
+             * Quick check for dark theme
+             */
+            if ( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) {
+                document.documentElement.classList.remove( 'theme--light' );
+                document.documentElement.classList.add( 'theme--dark' );
+            }
+        </script>
 <!--
 	************************************************
 	*  _ _             _                _ _        *

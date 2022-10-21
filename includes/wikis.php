@@ -166,7 +166,6 @@ $alphawikis = [
 		'theme-light' => '#006e00',
 		'theme-dark' => '#5ae150',
 		'api' => $baseurl . '/trackmania/api.php',
-		'new' => true,
 	],
 	'pokemon' => [
 		'name' => 'Pokémon',

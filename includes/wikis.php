@@ -333,4 +333,16 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/stormgate/api.php',
 	],
+	'zula' => [
+		'name' => 'Zula',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/zula/api.php',
+	],
+	'tetris' => [
+		'name' => 'Tetris',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/tetris/api.php',
+	],
 ];

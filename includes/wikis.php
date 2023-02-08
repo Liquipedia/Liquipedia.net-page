@@ -14,6 +14,7 @@ $wikis = [
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/brawlstars/api.php',
+		'new' => true,
 	],
 	'dota2' => [
 		'name' => 'Dota 2',

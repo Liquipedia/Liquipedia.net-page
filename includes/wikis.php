@@ -9,6 +9,13 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'brawlstars' => [
+		'name' => 'Brawl Stars',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/brawlstars/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
@@ -154,12 +161,6 @@ $alphawikis = [
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/callofduty/api.php',
-	],
-	'brawlstars' => [
-		'name' => 'Brawl Stars',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/brawlstars/api.php',
 	],
 	'trackmania' => [
 		'name' => 'Trackmania',

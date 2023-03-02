@@ -2,7 +2,7 @@ export class Theme {
     constructor( htmlElement ) {
         this.htmlElement = htmlElement;
         this.darkModeActive = null;
-        this.darkModeStorageKey = 'LiquipediaNetDarkMode';
+        this.darkModeStorageKey = 'LiquipediaDarkMode';
         this.lightThemeClass = 'theme--light';
         this.darkThemeClass = 'theme--dark';
         this.button = document.querySelector( '[data-component="theme-switch"]' );

@@ -63,7 +63,13 @@ ksort( $allwikis );
 		/**
 		 * Quick check for dark theme
 		 */
-		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) ) {
+		// Move to new localStorage key
+		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) !== null ) {
+			window.localStorage.getItem( 'LiquipediaDarkMode', window.localStorage.getItem( 'LiquipediaNetDarkMode' ) );
+			window.localStorage.removeItem( 'LiquipediaNetDarkMode' );
+
+		}
+		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaDarkMode' ) ) ) {
 			document.documentElement.classList.remove( 'theme--light' );
 			document.documentElement.classList.add( 'theme--dark' );
 		}

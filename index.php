@@ -65,7 +65,7 @@ ksort( $allwikis );
 		 */
 		// Move to new localStorage key
 		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) !== null ) {
-			window.localStorage.getItem( 'LiquipediaDarkMode', window.localStorage.getItem( 'LiquipediaNetDarkMode' ) );
+			window.localStorage.setItem( 'LiquipediaDarkMode', window.localStorage.getItem( 'LiquipediaNetDarkMode' ) );
 			window.localStorage.removeItem( 'LiquipediaNetDarkMode' );
 
 		}

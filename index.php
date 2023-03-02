@@ -64,7 +64,7 @@ ksort( $allwikis );
 		 * Quick check for dark theme
 		 */
 		// Move to new localStorage key
-		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) !== null ) {
+		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) !== null && window.localStorage.getItem( 'LiquipediaDarkMode' ) === null ) {
 			window.localStorage.setItem( 'LiquipediaDarkMode', window.localStorage.getItem( 'LiquipediaNetDarkMode' ) );
 			window.localStorage.removeItem( 'LiquipediaNetDarkMode' );
 

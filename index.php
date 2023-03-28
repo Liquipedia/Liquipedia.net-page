@@ -445,5 +445,13 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
 			gtag( 'config', 'UA-576564-21', { 'anonymize_ip': true } );
 		</script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-576564-4"></script>
+		<script>
+			var _paq = window._paq = window._paq || [];
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['setTrackerUrl', '/mm-tr']);
+			_paq.push(['setSiteId', '1']);
+		</script>
+		<script async src="/mm.js"></script>
 	</body>
 </html>

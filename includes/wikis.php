@@ -136,6 +136,16 @@ $wikis = [
 		'api' => $baseurl . '/artifact/api.php',
 	],
 ];
+$sportswikis = [
+	'formula1' => [
+		'name' => 'Formula 1',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#fad1d1',
+		'api' => $baseurl . '/formula1/api.php',
+		'new' => true,
+		'class' => 'card__wide',
+	],
+];
 $alphawikis = [
 	'fighters' => [
 		'name' => 'Fighting Games',

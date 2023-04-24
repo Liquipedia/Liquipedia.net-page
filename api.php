@@ -13,10 +13,11 @@ if ( $action == 'listwikis' ) {
 
 	$return[ 'baseurl' ] = $baseurl;
 	$return[ 'wikis' ] = $wikis;
+	$return[ 'sportswikis' ] = $sportswikis;
 	$return[ 'alphawikis' ] = $alphawikis;
 	$return[ 'miscwikis' ] = $miscwikis;
 	$return[ 'otherwikis' ] = $otherwikis;
-	$return[ 'allwikis' ] = array_merge( $wikis, $alphawikis, $miscwikis, $otherwikis );
+	$return[ 'allwikis' ] = array_merge( $wikis, $sportswikis, $alphawikis, $miscwikis, $otherwikis );
 
 	echo json_encode( $return );
 } else {
@@ -32,9 +33,8 @@ if ( $action == 'listwikis' ) {
 
 		Hi you, yes you who's looking at our source code! Are you a website specialist?
 		We are looking for people to help us with our templates, especially with mobile development.
-		If you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet,
-		join us on discord (https://liquipedia.net/discord), or send us an email to
-		contact <at> liquipedia <dot> net!
+		If you want to help, be sure to join us on discord (https://discord.gg/liquipedia),
+		or send us an email to contact <at> liquipedia <dot> net!
 	-->
 	<html lang="en">
 		<head>

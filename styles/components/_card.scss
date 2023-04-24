@@ -61,6 +61,16 @@
         }
     }
 
+    &__wide {
+        @include breakpoint( $breakpoint-xsmall ) {
+            grid-column: 1 / 3;
+        }
+
+        @include breakpoint( $breakpoint-medium) {
+            grid-column: 2 / 4;
+        }
+    }
+
     &__skip-link {
         opacity: 0;
         position: absolute;
@@ -263,6 +273,10 @@
         justify-content: center;
         align-items: center;
         transform: translateY(-1.875rem);
+
+        .sports-wikis & {
+            border-radius: 0.5rem;
+        }
 
         @include themed() {
             background-color: t( $clr-primary );

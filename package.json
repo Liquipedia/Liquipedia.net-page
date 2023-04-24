@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "sass": "*"
+  },
   "scripts": {
     "build-css": "sass styles:css --no-source-map"
   },

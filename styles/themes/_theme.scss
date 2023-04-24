@@ -44,6 +44,7 @@ $button-bg-color-active: 'button-bg-color-active';
 $button-bg-color-disabled: 'button-bg-color-disabled';
 $clr-logo-1: 'clr-logo-1';
 $clr-logo-2: 'clr-logo-2';
+$clr-highlighted-notice: 'clr-highlighted-notice';
 
 $themes: (
     light: (
@@ -93,6 +94,8 @@ $themes: (
         button-bg-color-disabled: $button-bg-color-disabled--light,
         clr-logo-1: $clr-logo-1--light,
         clr-logo-2: $clr-logo-2--light,
+
+        clr-highlighted-notice: $clr-highlighted-notice--light,
     ),
     dark: (
         clr-liquipedia: $clr-liquipedia--dark,
@@ -141,5 +144,7 @@ $themes: (
         button-bg-color-disabled: $button-bg-color-disabled--dark,
         clr-logo-1: $clr-logo-1--dark,
         clr-logo-2: $clr-logo-2--dark,
+
+        clr-highlighted-notice: $clr-highlighted-notice--dark,
     )
 );

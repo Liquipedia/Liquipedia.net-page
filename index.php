@@ -54,6 +54,9 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 
 $allwikis = $wikis + $alphawikis;
 ksort( $allwikis );
+
+// $noticeBar = null;
+$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/formula1.svg#formula1" fill="currentColor"></use></svg> <b>Formula 1 is here!</b> Get comprehensive info on drivers, teams, and race results on our brand new Sports Wiki. <a href="/formula1/Main_Page">Start Exploring</a>';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->
@@ -171,12 +174,13 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</header>
 		<main>
+			<?php if ( $noticeBar !== null ) { ?>
 			<div class="highlighted-notice">
 				<p>
-					<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/formula1.svg#formula1" fill="currentColor"></use></svg>
-					<b>Formula 1 is here!</b> Get comprehensive info on drivers, teams, and race results on our brand new Sports Wiki. <a href="/formula1/Main_Page">Start Exploring</a>
+					<?php echo $noticeBar; ?>
 				</p>
 			</div>
+			<?php } ?>
 			<section class="section">
 				<div class="container">
 					<div class="cards">

@@ -1,0 +1,20 @@
+.highlighted-notice {
+    @include themed() {
+        background-color: t( $clr-highlighted-notice );
+    }
+
+    svg {
+        height: 2.5rem;
+        width: auto;
+    }
+
+    p {
+        padding: 1rem;
+        text-align: center;
+
+        a {
+            color: currentColor;
+            text-decoration: underline;
+        }
+    }
+}

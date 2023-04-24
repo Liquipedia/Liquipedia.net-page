@@ -613,6 +613,14 @@ html.theme--dark .card__label {
   background-color: #00325b;
   color: #9fc9ff;
 }
+html.theme--light .sports-wikis .card__label {
+  background-color: #b81414;
+  color: #ffffff;
+}
+html.theme--dark .sports-wikis .card__label {
+  background-color: #fad1d1;
+  color: #2e0505;
+}
 @media (max-width: 39.9375em) {
   .card__label {
     transform: rotate(-15deg);

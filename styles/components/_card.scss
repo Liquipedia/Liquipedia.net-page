@@ -166,8 +166,15 @@
         border-radius: $border-radius-small;
 
         @include themed() {
-            background-color: t( $clr-on-primary );
-            color: t( $clr-primary );
+            background-color: t( $clr-card-badge-bg );
+            color: t( $clr-card-badge );
+        }
+
+        .sports-wikis & {
+            @include themed() {
+                background-color: t( $clr-card-badge-bg-sports );
+                color: t( $clr-card-badge-sports );
+            }
         }
 
         @include breakpoint( null, $breakpoint-xsmall ) {

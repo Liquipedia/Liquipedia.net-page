@@ -222,3 +222,6 @@ pip-log.txt
 #############
 
 .idea
+
+node_modules/
+package-lock.json

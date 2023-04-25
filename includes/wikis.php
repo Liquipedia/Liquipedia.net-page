@@ -137,6 +137,13 @@ $wikis = [
 	],
 ];
 $alphawikis = [
+	'tetris' => [
+		'name' => 'Tetris',
+		'theme-light' => '#466800',
+		'theme-dark' => '#a1d832',
+		'api' => $baseurl . '/tetris/api.php',
+		'new' => true,
+	],
 	'fighters' => [
 		'name' => 'Fighting Games',
 		'theme-light' => '#bc111d',
@@ -254,12 +261,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/brawlhalla/api.php',
-	],
-	'tetris' => [
-		'name' => 'Tetris',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/tetris/api.php',
 	],
 	'splatoon' => [
 		'name' => 'Splatoon',

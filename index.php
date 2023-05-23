@@ -10,7 +10,7 @@ header( 'Cache-Control: s-maxage=60' );
 header( 'Expires: ' . $expire );
 
 // Preload / push key files
-header( 'Link: </css/base.css>; as=style; rel=preload' );
+header( 'Link: </css/base.css?c=1>; as=style; rel=preload' );
 
 $hot_links = [];
 
@@ -89,7 +89,7 @@ $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 100
 		<title>Liquipedia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta charset="UTF-8" />
-		<link href="./css/base.css" rel="stylesheet" type="text/css" />
+		<link href="./css/base.css?c=1" rel="stylesheet" type="text/css" />
 		<meta name="description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">

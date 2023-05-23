@@ -143,8 +143,7 @@ input, textarea, button {
 
 .visually-hidden {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
   border: 0 !important;
@@ -423,9 +422,28 @@ html.theme--dark .header {
   }
 }
 
+html.theme--light .highlighted-notice {
+  background-color: #faecd1;
+}
+html.theme--dark .highlighted-notice {
+  background-color: #5c400a;
+}
+.highlighted-notice svg {
+  height: 2.5rem;
+  width: auto;
+}
+.highlighted-notice p {
+  padding: 1rem;
+  text-align: center;
+}
+.highlighted-notice p a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -434,17 +452,17 @@ html.theme--dark .header {
 }
 @media (min-width: 40em) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 60em) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 @media (min-width: 75em) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
@@ -458,6 +476,7 @@ html.theme--dark .header {
   height: 100%;
   transition: transform 0.2s ease;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15);
+  grid-column: span 2;
 }
 html.theme--light .card {
   background-color: #eaf0f8;
@@ -481,6 +500,24 @@ html.theme--dark .card {
 @media (min-width: 40em) {
   .card:focus-within {
     transform: scale(1.015);
+  }
+}
+.card__wide {
+  grid-column: span 4;
+}
+@media (min-width: 40em) {
+  .card__wide:only-child {
+    grid-column: 1/6;
+  }
+}
+@media (min-width: 60em) {
+  .card__wide:only-child {
+    grid-column: 2/6;
+  }
+}
+@media (min-width: 75em) {
+  .card__wide:only-child {
+    grid-column: 3/7;
   }
 }
 .card__skip-link {
@@ -575,6 +612,14 @@ html.theme--light .card__label {
 html.theme--dark .card__label {
   background-color: #00325b;
   color: #9fc9ff;
+}
+html.theme--light .sports-wikis .card__label {
+  background-color: #b81414;
+  color: #ffffff;
+}
+html.theme--dark .sports-wikis .card__label {
+  background-color: #fad1d1;
+  color: #2e0505;
 }
 @media (max-width: 39.9375em) {
   .card__label {
@@ -681,6 +726,9 @@ html.theme--dark .card__button:focus {
   align-items: center;
   transform: translateY(-1.875rem);
 }
+.sports-wikis .card__game-icon {
+  border-radius: 0.5rem;
+}
 html.theme--light .card__game-icon {
   background-color: #0d61a4;
   color: #ffffff;
@@ -754,8 +802,7 @@ html.theme--dark .card__line {
 @media (max-width: 23.6875em) {
   .card__list.is--hidden {
     position: absolute !important;
-    clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0 !important;
     border: 0 !important;
@@ -956,8 +1003,7 @@ html.theme--dark .search__form {
   }
 }
 .search__form ::placeholder {
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 html.theme--light .search__form ::placeholder {
   color: #1b1b1b;

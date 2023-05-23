@@ -1,6 +1,6 @@
 .cards {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat( 2, 1fr );
     grid-template-rows: auto;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
@@ -8,15 +8,15 @@
     margin-top: 2.5rem;
 
     @include breakpoint( $breakpoint-xsmall ) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat( 4, 1fr );
     }
 
     @include breakpoint( $breakpoint-small ) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat( 6, 1fr );
     }
 
     @include breakpoint( $breakpoint-medium) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat( 8, 1fr );
     }
 }
 
@@ -36,6 +36,7 @@
     height: 100%;
     transition: transform $transition-fast;
     box-shadow: $box-shadow-elevation-1;
+    grid-column: span 2;
 
     @include themed() {
         background-color: t( $clr-surface-2 );
@@ -58,6 +59,24 @@
 
         @include breakpoint( $breakpoint-xsmall ) {
             transform: scale( $_card-scale);
+        }
+    }
+
+    &__wide {
+        grid-column: span 4;
+
+        &:only-child {
+            @include breakpoint( $breakpoint-xsmall ) {
+                grid-column: 1 / 6;
+            }
+
+            @include breakpoint( $breakpoint-small ) {
+                grid-column: 2 / 6;
+            }
+
+            @include breakpoint( $breakpoint-medium) {
+                grid-column: 3 / 7;
+            }
         }
     }
 
@@ -147,8 +166,15 @@
         border-radius: $border-radius-small;
 
         @include themed() {
-            background-color: t( $clr-on-primary );
-            color: t( $clr-primary );
+            background-color: t( $clr-card-badge-bg );
+            color: t( $clr-card-badge );
+        }
+
+        .sports-wikis & {
+            @include themed() {
+                background-color: t( $clr-card-badge-bg-sports );
+                color: t( $clr-card-badge-sports );
+            }
         }
 
         @include breakpoint( null, $breakpoint-xsmall ) {
@@ -263,6 +289,10 @@
         justify-content: center;
         align-items: center;
         transform: translateY(-1.875rem);
+
+        .sports-wikis & {
+            border-radius: 0.5rem;
+        }
 
         @include themed() {
             background-color: t( $clr-primary );

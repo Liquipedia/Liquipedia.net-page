@@ -54,6 +54,9 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 
 $allwikis = $wikis + $alphawikis;
 ksort( $allwikis );
+
+// $noticeBar = null;
+$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/formula1.svg#formula1" fill="currentColor"></use></svg> <b>Formula 1 is here!</b> Get comprehensive info on drivers, teams, and race results on our brand new Sports Wiki. <a href="/formula1/Main_Page">Start Exploring</a>';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->
@@ -108,7 +111,7 @@ ksort( $allwikis );
 		<meta property="og:site_name" content="Liquipedia" />
 		<style>
 <?php
-foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
+foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 	echo "\t\t\t" . 'html.theme--light ' . '.' . $wiki_key . '-card .card__line, html.theme--light .' . $wiki_key .
 	'-card .card__game-icon, ' . $wiki_key . '-card { background-color:' . $wiki[ 'theme-light' ] . "; }\n";
 	echo "\t\t\t" . 'html.theme--dark ' . '.' . $wiki_key . '-card .card__line, html.theme--dark .' . $wiki_key .
@@ -171,11 +174,18 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
 			</div>
 		</header>
 		<main>
+			<?php if ( $noticeBar !== null ) { ?>
+			<div class="highlighted-notice">
+				<p>
+					<?php echo $noticeBar; ?>
+				</p>
+			</div>
+			<?php } ?>
 			<section class="section">
 				<div class="container">
 					<div class="cards">
 						<?php foreach ( $wikis as $wiki_key => $wiki ) { ?>
-							<div data-component="card" class="card <?php echo $wiki_key; ?>-card">
+							<div data-component="card" class="card <?php echo $wiki_key; ?>-card<?php echo ( array_key_exists( 'class', $wiki ) ? ( ' ' . $wiki[ 'class' ] ) : '' ); ?>">
 								<button class="card__button" type="button" data-component="card-button">
 									<svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
 									<span class="visually-hidden">Toggle card content</span>
@@ -200,6 +210,62 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
 									</svg>
 								</div>
 								<div class="card__line"></div>
+								<ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
+									<?php
+									if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
+										foreach ( $hot_links[ $wiki_key ] as $hot_link ) {
+											?>
+											<li class="card__list-item">
+												<a class="card__list-link" href="<?php echo $hot_link[ 'href' ]; ?>" title="<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>">
+													<?php echo htmlspecialchars( $hot_link[ 'title' ] ); ?>
+												</a>
+											</li>
+											<?php
+										}
+									}
+									?>
+								</ul>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
+			</section>
+			<section class="section sports-wikis">
+				<header class="header">
+					<div class="container container--header">
+						<h2 id="alpha-wiki" class="header__title title title--headline">Sports Wiki</h2>
+						<p class="header__subtitle title title--subtitle">These are wikis that cover traditional sports</p>
+					</div>
+				</header>
+				<div class="container">
+					<div class="cards">
+						<?php foreach ( $sportswikis as $wiki_key => $wiki ) { ?>
+							<div data-component="card" class="card <?php echo $wiki_key; ?>-card<?php echo ( array_key_exists( 'class', $wiki ) ? ( ' ' . $wiki[ 'class' ] ) : '' ); ?>">
+								<button class="card__button" type="button" data-component="card-button">
+									<svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
+									<span class="visually-hidden">Toggle card content</span>
+								</button>
+								<h2 class="card__title">
+									<?php if ( array_key_exists( 'new', $wiki ) && $wiki[ 'new' ] ) { ?>
+										<span class="card__label">New</span>
+									<?php } ?>
+									<a class="card__title-link" href="<?php echo '/' . $wiki_key; ?>/Main_Page">
+										<?php echo $wiki[ 'name' ]; ?>
+									</a>
+								</h2>
+								<div class="card__image">
+									<?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
+										<img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+									<?php } ?>
+								</div>
+								<div class="card__game-icon">
+									<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
+										<use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+											 fill="currentColor"/>
+									</svg>
+								</div>
+								<div class="card__line"></div>
+
 								<ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
 									<?php
 									if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
@@ -252,7 +318,7 @@ foreach ( $wikis + $alphawikis as $wiki_key => $wiki ) {
 					</div>
 					<div class="cards">
 						<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
-							<div data-component="card" class="card <?php echo $wiki_key; ?>-card">
+							<div data-component="card" class="card <?php echo $wiki_key; ?>-card<?php echo ( array_key_exists( 'class', $wiki ) ? ( ' ' . $wiki[ 'class' ] ) : '' ); ?>">
 								<button class="card__button" type="button" data-component="card-button">
 									<svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.468 6.804 5.34-5.298a.644.644 0 0 0 .192-.46.644.644 0 0 0-.192-.46l-.393-.39a.661.661 0 0 0-.928 0L6.002 4.643 1.513.19A.655.655 0 0 0 1.05 0a.655.655 0 0 0-.464.19L.192.58A.644.644 0 0 0 0 1.04c0 .175.068.339.192.461l5.345 5.303c.124.123.29.19.465.19a.655.655 0 0 0 .466-.19Z" fill="currentColor"/></svg>
 									<span class="visually-hidden">Toggle card content</span>

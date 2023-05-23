@@ -45,6 +45,13 @@ $button-bg-color-disabled: 'button-bg-color-disabled';
 $clr-logo-1: 'clr-logo-1';
 $clr-logo-2: 'clr-logo-2';
 
+$clr-card-badge: 'clr-card-badge';
+$clr-card-badge-bg: 'clr-card-badge-bg';
+$clr-card-badge-sports: 'clr-card-badge-sports';
+$clr-card-badge-bg-sports: 'clr-card-badge-bg-sports';
+
+$clr-highlighted-notice: 'clr-highlighted-notice';
+
 $themes: (
     light: (
         clr-liquipedia: $clr-liquipedia--light,
@@ -93,6 +100,13 @@ $themes: (
         button-bg-color-disabled: $button-bg-color-disabled--light,
         clr-logo-1: $clr-logo-1--light,
         clr-logo-2: $clr-logo-2--light,
+
+        clr-card-badge: $clr-card-badge--light,
+        clr-card-badge-bg: $clr-card-badge-bg--light,
+        clr-card-badge-sports: $clr-card-badge-sports--light,
+        clr-card-badge-bg-sports: $clr-card-badge-bg-sports--light,
+
+        clr-highlighted-notice: $clr-highlighted-notice--light,
     ),
     dark: (
         clr-liquipedia: $clr-liquipedia--dark,
@@ -141,5 +155,12 @@ $themes: (
         button-bg-color-disabled: $button-bg-color-disabled--dark,
         clr-logo-1: $clr-logo-1--dark,
         clr-logo-2: $clr-logo-2--dark,
+
+        clr-card-badge: $clr-card-badge--dark,
+        clr-card-badge-bg: $clr-card-badge-bg--dark,
+        clr-card-badge-sports: $clr-card-badge-sports--dark,
+        clr-card-badge-bg-sports: $clr-card-badge-bg-sports--dark,
+
+        clr-highlighted-notice: $clr-highlighted-notice--dark,
     )
 );

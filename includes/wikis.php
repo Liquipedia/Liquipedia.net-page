@@ -149,8 +149,8 @@ $sportswikis = [
 $alphawikis = [
 	'tetris' => [
 		'name' => 'Tetris',
-		'theme-light' => '#466800',
-		'theme-dark' => '#a1d832',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/tetris/api.php',
 		'new' => true,
 	],

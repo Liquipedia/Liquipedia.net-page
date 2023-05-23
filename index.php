@@ -39,7 +39,7 @@ while ( $row = $selectstmt->fetch() ) {
 	if ( count( $hot_links[ $wiki ] ) < 5 ) {
 		$hot_links[ $wiki ][] = [
 			'title' => $title,
-			'href' => $url
+			'href' => $url,
 		];
 	}
 }
@@ -48,11 +48,14 @@ $keywords = '';
 foreach ( $wikis as $wiki_key => $wiki ) {
 	$keywords .= ', ' . $wiki[ 'name' ];
 }
+foreach ( $sportswikis as $wiki_key => $wiki ) {
+	$keywords .= ', ' . $wiki[ 'name' ];
+}
 foreach ( $alphawikis as $wiki_key => $wiki ) {
 	$keywords .= ', ' . $wiki[ 'name' ];
 }
 
-$allwikis = $wikis + $alphawikis;
+$allwikis = $wikis + $sportswikis + $alphawikis;
 ksort( $allwikis );
 
 // $noticeBar = null;
@@ -135,7 +138,6 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 					<li><a href="https://tl.net/" rel="external noopener noreferrer" target="_blank">TLnet</a></li>
 				</ul>
 			</div>
-
 		</div>
 		<header class="header header--top">
 			<div class="container">
@@ -265,7 +267,6 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 									</svg>
 								</div>
 								<div class="card__line"></div>
-
 								<ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
 									<?php
 									if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {
@@ -343,7 +344,6 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 									</svg>
 								</div>
 								<div class="card__line"></div>
-
 								<ul id="<?php echo $wiki_key; ?>" class="card__list is--hidden" data-component="card-list">
 									<?php
 									if ( isset( $hot_links[ $wiki_key ] ) && is_array( $hot_links[ $wiki_key ] ) ) {

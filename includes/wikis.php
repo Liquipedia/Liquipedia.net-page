@@ -147,6 +147,13 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'tft' => [
+		'name' => 'Teamfight Tactics',
+		'theme-light' => '#006a6a',
+		'theme-dark' => '#4ddada',
+		'api' => $baseurl . '/tft/api.php',
+		'new' => true,
+	],
 	'tetris' => [
 		'name' => 'Tetris',
 		'theme-light' => '#3a5ba9',
@@ -254,12 +261,6 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'tft' => [
-		'name' => 'Teamfight Tactics',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/tft/api.php',
-	],
 	'crossfire' => [
 		'name' => 'CrossFire',
 		'theme-light' => '',

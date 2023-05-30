@@ -154,13 +154,6 @@ $alphawikis = [
 		'api' => $baseurl . '/tft/api.php',
 		'new' => true,
 	],
-	'tetris' => [
-		'name' => 'Tetris',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/tetris/api.php',
-		'new' => true,
-	],
 	'fighters' => [
 		'name' => 'Fighting Games',
 		'theme-light' => '#bc111d',
@@ -172,6 +165,12 @@ $alphawikis = [
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/arenaofvalor/api.php',
+	],
+	'tetris' => [
+		'name' => 'Tetris',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/tetris/api.php',
 	],
 	'callofduty' => [
 		'name' => 'Call of Duty',

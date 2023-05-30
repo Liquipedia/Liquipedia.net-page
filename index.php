@@ -202,12 +202,12 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 								</h2>
 								<div class="card__image">
 									<?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
-										<img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+										<img src="./images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
 									<?php } ?>
 								</div>
 								<div class="card__game-icon">
 									<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
-										<use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+										<use href="./images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
 											 fill="currentColor"/>
 									</svg>
 								</div>
@@ -257,12 +257,12 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 								</h2>
 								<div class="card__image">
 									<?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
-										<img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+										<img src="./images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
 									<?php } ?>
 								</div>
 								<div class="card__game-icon">
 									<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
-										<use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+										<use href="./images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
 											 fill="currentColor"/>
 									</svg>
 								</div>
@@ -334,12 +334,12 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 								</h2>
 								<div class="card__image">
 									<?php if ( file_exists( "images/wikis/" . $wiki_key . ".png" ) ) { ?>
-										<img src="images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
+										<img src="./images/wikis/<?php echo $wiki_key; ?>.png" alt="<?php echo $wiki_key; ?> wiki" />
 									<?php } ?>
 								</div>
 								<div class="card__game-icon">
 									<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000" >
-										<use href="/images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
+										<use href="./images/game-icons/<?php echo $wiki_key ?>.svg#<?php echo $wiki_key ?>"
 											 fill="currentColor"/>
 									</svg>
 								</div>

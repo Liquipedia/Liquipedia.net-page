@@ -356,4 +356,10 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/stormgate/api.php',
 	],
+	'omegastrikers' => [
+		'name' => 'Omega Strikers',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/omegastrikers/api.php',
+	],
 ];

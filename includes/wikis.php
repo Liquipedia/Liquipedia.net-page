@@ -9,6 +9,13 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'fifa' => [
+		'name' => 'FIFA',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/fifa/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
@@ -201,12 +208,6 @@ $alphawikis = [
 		'theme-light' => '#6f5d00',
 		'theme-dark' => '#e4c532',
 		'api' => $baseurl . '/pokemon/api.php',
-	],
-	'fifa' => [
-		'name' => 'FIFA',
-		'theme-light' => '#5e5e62',
-		'theme-dark' => '#c6c6cA',
-		'api' => $baseurl . '/fifa/api.php',
 	],
 	'halo' => [
 		'name' => 'Halo',

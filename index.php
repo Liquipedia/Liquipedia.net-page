@@ -112,7 +112,6 @@ $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 100
 		<meta property="og:title" content="Liquipedia" />
 		<meta property="og:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta property="og:site_name" content="Liquipedia" />
-		<style>
 		<!-- NitroPay Header Code -->
 		<script>window.adProvider = "nitro";</script>
 		<script>
@@ -124,7 +123,7 @@ $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 100
 			};
 		</script>
 		<script async src="https://s.nitropay.com/ads-90.js"></script>
-
+		<style>
 <?php
 foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 	echo "\t\t\t" . 'html.theme--light ' . '.' . $wiki_key . '-card .card__line, html.theme--light .' . $wiki_key .

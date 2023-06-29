@@ -112,17 +112,6 @@ $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 100
 		<meta property="og:title" content="Liquipedia" />
 		<meta property="og:description" content="The esports wiki, the best resource for live updated results, tournament overview, team and player profiles, game information, and more..." />
 		<meta property="og:site_name" content="Liquipedia" />
-		<!-- NitroPay Header Code -->
-		<script>window.adProvider = "nitro";</script>
-		<script>
-			window["nitroAds"] = window["nitroAds"] || {
-				createAd: function() {
-					window.nitroAds.queue.push(["createAd", arguments]);
-				},
-				queue: []
-			};
-		</script>
-		<script async src="https://s.nitropay.com/ads-90.js"></script>
 		<style>
 <?php
 foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
@@ -530,5 +519,11 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 			_paq.push(['setSiteId', '1']);
 		</script>
 		<script async src="/mm.js"></script>
+		
+		<!-- NitroPay Header Code -->
+		<script data-cfasync="false">
+			window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};
+		</script>
+		<script data-cfasync="false" defer src="https://s.nitropay.com/ads-90.js"></script>
 	</body>
 </html>

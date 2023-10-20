@@ -19,6 +19,8 @@ export class Theme {
             this.darkModeActive = !this.darkModeActive;
             this.toggleThemeClassOnBody();
         } );
+
+        this.setupEventListener();
     }
 
     setDarkMode() {
@@ -49,5 +51,18 @@ export class Theme {
 
     checkLocalStorage() {
         return window.localStorage.getItem( this.darkModeStorageKey );
+    }
+
+    setupEventListener() {
+        window.addEventListener( 'storage', ( event ) => {
+            if ( event.key === this.darkModeStorageKey ) {
+                this.darkModeActive = JSON.parse( event.newValue );
+                if ( event.newValue === 'true' ) {
+                    this.setDarkMode();
+                } else {
+                    this.setLightMode();
+                }
+            }
+        } );
     }
 }

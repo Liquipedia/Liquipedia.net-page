@@ -367,4 +367,16 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/stormgate/api.php',
 	],
+	'osu' => [
+		'name' => 'osu!',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/osu/api.php',
+	],
+	'worldoftanks' => [
+		'name' => 'World of Tanks',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/worldoftanks/api.php',
+	],
 ];

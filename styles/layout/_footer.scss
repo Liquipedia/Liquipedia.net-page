@@ -55,7 +55,7 @@
         a {
 
             @include themed() {
-                color: t( $clr-liquipedia );
+                color: t( $clr-footer-social-icons );
             }
 
             @include breakpoint( null, $breakpoint-xsmall ) {

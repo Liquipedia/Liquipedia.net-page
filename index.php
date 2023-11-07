@@ -16,7 +16,7 @@ $hot_links = [];
 
 $pdo = null;
 try {
-	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquid', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" ] );
+	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquipedia', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4" ] );
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );

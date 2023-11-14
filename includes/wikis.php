@@ -9,6 +9,13 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'arenaofvalor' => [
+		'name' => 'Arena of Valor',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/arenaofvalor/api.php',
+		'new' => true,
+	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
@@ -123,12 +130,6 @@ $wikis = [
 		'theme-dark' => '#c6c6cA',
 		'api' => $baseurl . '/fifa/api.php',
 	],
-	'arenaofvalor' => [
-		'name' => 'Arena of Valor',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/arenaofvalor/api.php',
-	],
 	'heroes' => [
 		'name' => 'Heroes',
 		'theme-light' => '#7e5700',
@@ -159,6 +160,13 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'clashofclans' => [
+		'name' => 'Clash of Clans',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/clashofclans/api.php',
+		'new' => true,
+	],
 	'fighters' => [
 		'name' => 'Fighting Games',
 		'theme-light' => '#bc111d',
@@ -248,12 +256,6 @@ $alphawikis = [
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/sideswipe/api.php',
-	],
-	'clashofclans' => [
-		'name' => 'Clash of Clans',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/clashofclans/api.php',
 	],
 ];
 $miscwikis = [

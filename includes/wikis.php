@@ -123,6 +123,12 @@ $wikis = [
 		'theme-dark' => '#c6c6cA',
 		'api' => $baseurl . '/fifa/api.php',
 	],
+	'arenaofvalor' => [
+		'name' => 'Arena of Valor',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/arenaofvalor/api.php',
+	],
 	'heroes' => [
 		'name' => 'Heroes',
 		'theme-light' => '#7e5700',
@@ -164,12 +170,6 @@ $alphawikis = [
 		'theme-light' => '#006e00',
 		'theme-dark' => '#5ae150',
 		'api' => $baseurl . '/trackmania/api.php',
-	],
-	'arenaofvalor' => [
-		'name' => 'Arena of Valor',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/arenaofvalor/api.php',
 	],
 	'callofduty' => [
 		'name' => 'Call of Duty',
@@ -249,6 +249,12 @@ $alphawikis = [
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/sideswipe/api.php',
 	],
+	'clashofclans' => [
+		'name' => 'Clash of Clans',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/clashofclans/api.php',
+	],
 ];
 $miscwikis = [
 	'commons' => [
@@ -294,12 +300,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/omegastrikers/api.php',
-	],
-	'clashofclans' => [
-		'name' => 'Clash of Clans',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/clashofclans/api.php',
 	],
 	'naraka' => [
 		'name' => 'Naraka',

@@ -1,7 +1,7 @@
 <?php
 $no_session = true;
 require_once( __DIR__ . '/includes/wikis.php' );
-require_once( __DIR__ . '/../config/db_config.php' );
+require_once( __DIR__ . '/../config/secrets.php' );
 
 $expire = gmdate( 'D, d M Y H:i:s \G\M\T', time() + 60 );
 
@@ -13,16 +13,28 @@ header( 'Expires: ' . $expire );
 header( 'Link: </css/base.css?c=1>; as=style; rel=preload' );
 
 $hot_links = [];
-
 $pdo = null;
+
+// Getting DB Credentials
+$wikiDBcredentials = $dbCredentials['wiki'];
+
 try {
-	$pdo = new PDO( 'mysql:host=' . $server . ';dbname=liquipedia', $login, $pass, [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4" ] );
+	$pdo = new PDO(
+            'mysql:host=' . $wikiDBcredentials['host'] . ';dbname='.$wikiDBcredentials['database'],
+            $wikiDBcredentials['user'],
+            $wikiDBcredentials['pass'],
+            [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4" ]
+    );
+
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
 	$pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
 } catch ( PDOException $e ) {
 	// echo 'Connection Error: ' . $e->getMessage();
 }
+
+// Unsetting DB Credentials
+unset($dbCredentials, $wikiDBcredentials);
 
 $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
@@ -519,7 +531,7 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 			_paq.push(['setSiteId', '1']);
 		</script>
 		<script async src="/mm.js"></script>
-		
+
 		<!-- NitroPay Header Code -->
 		<script data-cfasync="false">
 			window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};

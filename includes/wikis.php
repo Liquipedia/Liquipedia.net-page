@@ -14,13 +14,19 @@ $wikis = [
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/arenaofvalor/api.php',
-		'new' => true,
 	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/dota2/api.php',
+	],
+	'fighters' => [
+		'name' => 'Fighting Games',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/fighters/api.php',
+		'new' => true,
 	],
 	'valorant' => [
 		'name' => 'VALORANT',
@@ -165,13 +171,6 @@ $alphawikis = [
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/clashofclans/api.php',
-		'new' => true,
-	],
-	'fighters' => [
-		'name' => 'Fighting Games',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/fighters/api.php',
 	],
 	'trackmania' => [
 		'name' => 'Trackmania',

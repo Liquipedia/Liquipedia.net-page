@@ -9,24 +9,18 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
-	'arenaofvalor' => [
-		'name' => 'Arena of Valor',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/arenaofvalor/api.php',
-	],
-	'dota2' => [
-		'name' => 'Dota 2',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/dota2/api.php',
-	],
 	'fighters' => [
 		'name' => 'Fighting Games',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/fighters/api.php',
 		'new' => true,
+	],
+	'dota2' => [
+		'name' => 'Dota 2',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/dota2/api.php',
 	],
 	'valorant' => [
 		'name' => 'VALORANT',
@@ -100,6 +94,12 @@ $wikis = [
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/smash/api.php',
 	],
+	'arenaofvalor' => [
+		'name' => 'Arena of Valor',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/arenaofvalor/api.php',
+	],
 	'pubg' => [
 		'name' => 'PUBG',
 		'theme-light' => '#7e5700',
@@ -166,12 +166,6 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
-	'clashofclans' => [
-		'name' => 'Clash of Clans',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/clashofclans/api.php',
-	],
 	'trackmania' => [
 		'name' => 'Trackmania',
 		'theme-light' => '#006e00',
@@ -213,6 +207,12 @@ $alphawikis = [
 		'theme-light' => '#006a6a',
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/halo/api.php',
+	],
+	'clashofclans' => [
+		'name' => 'Clash of Clans',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/clashofclans/api.php',
 	],
 	'clashroyale' => [
 		'name' => 'Clash Royale',

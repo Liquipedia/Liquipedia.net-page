@@ -380,4 +380,10 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/worldoftanks/api.php',
 	],
+	'smite' => [
+		'name' => 'SMITE',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/smite/api.php',
+	],
 ];

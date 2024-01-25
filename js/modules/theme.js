@@ -23,17 +23,17 @@ export class Theme {
         this.setupEventListener();
     }
 
-    setDarkMode() {
+    setDarkMode( setLocalStorage = true ) {
         this.htmlElement.classList.remove( this.lightThemeClass );
         this.htmlElement.classList.add( this.darkThemeClass );
-        this.setLocalStorage();
+        this.setLocalStorage( 'true' );
         // this.setAriaPressed( 'true' );
     }
 
-    setLightMode() {
+    setLightMode( setLocalStorage = true ) {
         this.htmlElement.classList.remove( this.darkThemeClass );
         this.htmlElement.classList.add( this.lightThemeClass );
-        this.setLocalStorage();
+        this.setLocalStorage( null );
         // this.setAriaPressed( 'false' );
     }
 
@@ -45,8 +45,8 @@ export class Theme {
         }
     }
 
-    setLocalStorage() {
-        window.localStorage.setItem( this.darkModeStorageKey, this.darkModeActive.toString() );
+    setLocalStorage( value ) {
+        window.localStorage.setItem( this.darkModeStorageKey, value );
     }
 
     checkLocalStorage() {
@@ -58,9 +58,9 @@ export class Theme {
             if ( event.key === this.darkModeStorageKey ) {
                 this.darkModeActive = JSON.parse( event.newValue );
                 if ( event.newValue === 'true' ) {
-                    this.setDarkMode();
+                    this.setDarkMode( false );
                 } else {
-                    this.setLightMode();
+                    this.setLightMode( false );
                 }
             }
         } );

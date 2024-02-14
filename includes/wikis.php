@@ -9,13 +9,6 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
-	'fighters' => [
-		'name' => 'Fighting Games',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/fighters/api.php',
-		'new' => true,
-	],
 	'dota2' => [
 		'name' => 'Dota 2',
 		'theme-light' => '#bc111d',
@@ -94,6 +87,12 @@ $wikis = [
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/smash/api.php',
 	],
+	'fighters' => [
+		'name' => 'Fighting Games',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/fighters/api.php',
+	],
 	'arenaofvalor' => [
 		'name' => 'Arena of Valor',
 		'theme-light' => '#3a5ba9',
@@ -166,6 +165,13 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'stormgate' => [
+		'name' => 'Stormgate',
+		'theme-light' => '#954a00',
+		'theme-dark' => '#ffb781',
+		'api' => $baseurl . '/stormgate/api.php',
+		'new' => true,
+	],
 	'trackmania' => [
 		'name' => 'Trackmania',
 		'theme-light' => '#006e00',
@@ -361,12 +367,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/battlerite/api.php',
-	],
-	'stormgate' => [
-		'name' => 'Stormgate',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/stormgate/api.php',
 	],
 	'osu' => [
 		'name' => 'osu!',

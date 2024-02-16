@@ -327,7 +327,7 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 				<div class="container">
 					<div class="section__intro">
 						<p>In addition to our standard wikis we are also allowing people to create new wikis that we host and help form. If you wish to start a wiki not listed below:</p>
-						<a class="btn mt-1" target="_blank" href="https://goo.gl/forms/kF0dCtJzHT">Fill in this form</a>
+						<a class="btn mt-1" href="https://goo.gl/forms/kF0dCtJzHT" rel="external noopener noreferrer" target="_blank">Fill in this form</a>
 					</div>
 					<div class="cards">
 						<?php foreach ( $alphawikis as $wiki_key => $wiki ) { ?>
@@ -390,11 +390,11 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 						<p>When you visit Liquipedia, consider adding to it or correcting something, it doesn't have to take up much of your time and effort and it will help other visitors like yourself and Liquipedia as a whole.</p>
 						<p>Many people start by fixing typos, which is actually the easiest way to contribute. You just have to create an account&mdash;if you don't have one already&mdash;log in, click edit, find and fix the typo, click save, and you are done.</p>
 						<p>Another thing that many contributors start with is keeping tournament results up to date while the tournament is ongoing. Most of the times the pages are already set up by one of the more experienced contributors, and you just have to fill in the results as they happen. Filling a bracket is pretty straightforward. You log in, click on edit, find the bracket, update scores and fill in names. If you are unsure, just look at how it was done on other pages, either by just looking at the page itself, or by clicking edit to examine how the page was created. In general, looking at how things are done on other pages gives you a good idea of how you can do it yourself. </p>
-						<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a rel="noopener" href="https://discord.gg/liquipedia" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
+						<p>If you feel comfortable with wiki editing or if you want to learn things that are more advanced, feel free to browse our &quot;How to contribute&quot; sections you can find in the menus on the left of the wiki pages. You can <a href="https://discord.gg/liquipedia" rel="external noopener noreferrer" target="_blank">find us on our Discord server</a> where other contributors can help you.</p>
 						<h3 class="contribution-content__title title title--heading">Logging in and registering</h3>
-						<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://tl.net/mytlnet/register" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration. Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
+						<p>To log in and edit Liquipedia you need a TeamLiquid account. To register an account, click on the &quot;<a href="https://tl.net/mytlnet/register" rel="external noopener noreferrer" target="_blank">create account</a>&quot; link on any wiki page, just remember to follow the instructions and complete the registration. Once you have an account go click on the log in box in the top right and enter your details or if logged in on any of the three sites mentioned just click on the TL quick log in link. </p>
 						<h3 class="contribution-content__title title title--heading">Editing</h3>
-						<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a rel="noopener" href="https://en.wikipedia.org/wiki/Help:Wiki_markup" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
+						<p>There are two types of edit links. One is a tab at the top of the page which lets you edit all sections of the page at once. The second is on the far right side of all sub-headers, this allows you to edit the specific section you are on. When editing a page you will have some tools in a toolbar above the editing box to help you with the markup language that the wiki uses for things like bold text, italics, headers, and links. To know more about the wiki markup language visit <a href="https://en.wikipedia.org/wiki/Help:Wiki_markup" rel="external noopener noreferrer" target="_blank">Wikipedia's Help: Wiki markup</a>.</p>
 						<h3 class="contribution-content__title title title--heading">Areas to help out with</h3>
 						<p>There are multiple things one can do to help out with on the wikis. Besides fixing typos or entering results you can:</p>
 						<ul>
@@ -410,9 +410,9 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 							<li>Give the wiki the right to display your photographs and upload them to the wiki.</li>
 							<li>Develop new templates to make our wikis look good and make contributing easier.</li>
 							<li>Use knowledge of PHP, JS, CSS, HTML, or graphic design to improve on any element that you find the wikis are lacking in.</li>
-							<li>Help other contributors in our <a href="https://discord.gg/liquipedia" target="_blank">Discord server</a>, especially newer ones.</li>
+							<li>Help other contributors in our <a href="https://discord.gg/liquipedia" rel="external noopener noreferrer" target="_blank">Discord server</a>, especially newer ones.</li>
 							<li>Spread the word that everyone can help grow Liquipedia.</li>
-							<li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
+							<li>Give us <a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" rel="external noopener noreferrer" target="_blank">new ideas</a> of what we can do, even a paint scribble can help improving the wikis, if it gives us an idea of how a template could look.</li>
 							<li>Correct people when they call us &quot;LiquiDpedia&quot; with one d too many. Liquids flow and pronouncing Liquipedia flows easier than LiquiDpedia.</li>
 						</ul>
 					</div>
@@ -430,44 +430,44 @@ foreach ( $wikis + $sportswikis + $alphawikis as $wiki_key => $wiki ) {
 				<div class="footer__group">
 					<ul class="footer__links">
 						<li><a href="mailto:contact@liquipedia.net">Send an email</a></li>
-						<li><a href="https://discord.gg/liquipedia" target="_blank">Chat with us</a></li>
+						<li><a href="https://discord.gg/liquipedia" rel="external noopener noreferrer" target="_blank">Chat with us</a></li>
 						<li><a href="/commons/Contact">Contact</a></li>
 						<li><a href="/commons/Liquipedia:Privacy_policy" class="mw-redirect" title="Liquipedia:Privacy policy">Privacy policy</a></li>
 					</ul>
 					<ul class="footer__social">
 						<li>
-							<a aria-label="Discord" rel="noopener" href="https://discord.gg/liquipedia" target="_blank">
+							<a aria-label="Discord" href="https://discord.gg/liquipedia" rel="external noopener noreferrer" target="_blank">
 								<svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.328 10.068c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z" fill="currentColor"/><path d="M18.54 0H2.46A2.466 2.466 0 000 2.472v16.224a2.466 2.466 0 002.46 2.472h13.608l-.636-2.22 1.536 1.428 1.452 1.344L21 24V2.472A2.466 2.466 0 0018.54 0zm-4.632 15.672s-.432-.516-.792-.972c1.572-.444 2.172-1.428 2.172-1.428-.492.324-.96.552-1.38.708-.6.252-1.176.42-1.74.516a8.406 8.406 0 01-3.108-.012 10.073 10.073 0 01-1.764-.516 7.032 7.032 0 01-.876-.408c-.036-.024-.072-.036-.108-.06a.166.166 0 01-.048-.036 4.21 4.21 0 01-.336-.204s.576.96 2.1 1.416c-.36.456-.804.996-.804.996-2.652-.084-3.66-1.824-3.66-1.824 0-3.864 1.728-6.996 1.728-6.996 1.728-1.296 3.372-1.26 3.372-1.26l.12.144c-2.16.624-3.156 1.572-3.156 1.572s.264-.144.708-.348c1.284-.564 2.304-.72 2.724-.756.072-.012.132-.024.204-.024A9.782 9.782 0 0115.3 7.308s-.948-.9-2.988-1.524l.168-.192s1.644-.036 3.372 1.26c0 0 1.728 3.132 1.728 6.996 0 0-1.02 1.74-3.672 1.824z" fill="currentColor"/></svg>
 							</a>
 						</li>
 						<li>
-							<a aria-label="Twitter" rel="noopener" href="https://twitter.com/LiquipediaNet" target="_blank">
+							<a aria-label="Twitter" href="https://twitter.com/LiquipediaNet" rel="external noopener noreferrer" target="_blank">
 								<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.53 19.515c9.063 0 14.018-7.51 14.018-14.018 0-.215 0-.43-.01-.634A10.093 10.093 0 0024 2.31a10 10 0 01-2.83.777A4.924 4.924 0 0023.336.358c-.95.562-2.003.97-3.127 1.195A4.903 4.903 0 0016.613 0a4.927 4.927 0 00-4.925 4.925c0 .388.041.766.133 1.124A13.976 13.976 0 011.665.899a4.942 4.942 0 00-.664 2.473c0 1.706.869 3.218 2.197 4.097a4.84 4.84 0 01-2.227-.613v.061a4.932 4.932 0 003.954 4.833 4.91 4.91 0 01-1.298.173c-.317 0-.623-.03-.93-.092a4.92 4.92 0 004.598 3.423A9.904 9.904 0 010 17.287a13.726 13.726 0 007.53 2.228z" fill="currentColor"/></svg>
 							</a>
 						</li>
 						<li>
-							<a aria-label="Facebook" rel="noopener" href="https://www.facebook.com/Liquipedia" target="_blank">
+							<a aria-label="Facebook" href="https://www.facebook.com/Liquipedia" rel="external noopener noreferrer" target="_blank">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12C24 5.37188 18.6281 0 12 0C5.37188 0 0 5.37188 0 12C0 18.6281 5.37188 24 12 24C12.0703 24 12.1406 24 12.2109 23.9953V14.6578H9.63281V11.6531H12.2109V9.44062C12.2109 6.87656 13.7766 5.47969 16.0641 5.47969C17.1609 5.47969 18.1031 5.55938 18.375 5.59688V8.27813H16.8C15.5578 8.27813 15.3141 8.86875 15.3141 9.73594V11.6484H18.2906L17.9016 14.6531H15.3141V23.5359C20.3297 22.0969 24 17.4797 24 12Z" fill="currentColor"/></svg>
 							</a>
 						</li>
 						<li>
-							<a aria-label="YouTube" rel="noopener" href="https://www.youtube.com/user/Liquipedia" target="_blank">
+							<a aria-label="YouTube" href="https://www.youtube.com/user/Liquipedia" rel="external noopener noreferrer" target="_blank">
 								<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.506 2.63A3.007 3.007 0 0021.39.513C19.512 0 12 0 12 0S4.488 0 2.61.494A3.068 3.068 0 00.493 2.63C0 4.507 0 8.402 0 8.402s0 3.914.494 5.772A3.007 3.007 0 002.61 16.29c1.897.514 9.39.514 9.39.514s7.512 0 9.39-.494a3.007 3.007 0 002.116-2.116C24 12.316 24 8.422 24 8.422s.02-3.915-.494-5.793zM9.608 12V4.804l6.247 3.598L9.608 12z" fill="currentColor"/></svg>
 							</a>
 						</li>
 						<li>
-							<a aria-label="Twitch" rel="noopener" href="https://www.twitch.tv/liquipedia" target="_blank">
+							<a aria-label="Twitch" href="https://www.twitch.tv/liquipedia" rel="external noopener noreferrer" target="_blank">
 								<svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.302 0L0 4.286v15.428h5.163V24l4.302-4.286h3.442L20.651 12V0H4.302zM18.93 11.143l-3.442 3.428h-3.441l-3.012 3v-3H5.163V1.714H18.93v9.429z" fill="currentColor"/><path d="M16.349 4.714h-1.721v5.143h1.72V4.714zM11.616 4.714h-1.72v5.143h1.72V4.714z" fill="currentColor"/></svg>
 							</a>
 						</li>
 						<li>
-							<a aria-label="GitHub" rel="noopener" href="https://github.com/Liquipedia" target="_blank">
+							<a aria-label="GitHub" href="https://github.com/Liquipedia" rel="external noopener noreferrer" target="_blank">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.998 0C5.373 0 0 5.394 0 12.048c0 5.322 3.438 9.837 8.208 11.432.6.11.819-.262.819-.581 0-.287-.01-1.044-.016-2.049-3.338.727-4.043-1.616-4.043-1.616-.545-1.392-1.332-1.762-1.332-1.762-1.09-.747.081-.732.081-.732 1.204.086 1.837 1.242 1.837 1.242 1.071 1.84 2.81 1.31 3.494 1 .108-.778.418-1.309.762-1.61-2.664-.305-5.466-1.338-5.466-5.954 0-1.316.468-2.391 1.236-3.234-.125-.304-.535-1.53.117-3.187 0 0 1.008-.324 3.3 1.234.957-.267 1.983-.4 3.005-.405 1.018.006 2.045.138 3.004.407 2.29-1.559 3.297-1.235 3.297-1.235.654 1.659.243 2.883.12 3.187.77.843 1.233 1.919 1.233 3.234 0 4.628-2.805 5.646-5.478 5.945.43.372.814 1.107.814 2.23 0 1.611-.015 2.91-.015 3.305 0 .322.216.697.825.579A12.048 12.048 0 0024 12.048C24 5.394 18.627 0 11.998 0z" fill="currentColor"/></svg>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<p class="footer__text">Text is licensed under <a rel="noopener" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a>. Files have varied licenses. Click on an image to see the image's page for more details.</p>
+				<p class="footer__text">Text is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external noopener noreferrer" target="_blank">CC BY-SA</a>. Files have varied licenses. Click on an image to see the image's page for more details.</p>
 			</div>
 		</footer>
 		<script type="application/ld+json">

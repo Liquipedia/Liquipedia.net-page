@@ -37,7 +37,6 @@ export class Theme {
     setupThemeListeners() {
         window.addEventListener( 'storage', ( event ) => {
             if ( event.key === this.darkThemeStorageKey ) {
-		    console.log(event);
                 if ( event.newValue === 'dark' ) {
                     this.setDarkTheme( false );
                 } else if ( event.newValue === 'light' ) {

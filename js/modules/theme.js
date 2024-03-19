@@ -1,7 +1,6 @@
 export class Theme {
     constructor( htmlElement ) {
         this.htmlElement = htmlElement;
-        this.darkThemeActive = null;
         this.darkModeStorageKey = 'LiquipediaDarkMode';
         this.darkThemeStorageKey = 'LiquipediaDarkTheme';
         this.lightThemeClass = 'theme--light';

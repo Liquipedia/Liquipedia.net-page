@@ -84,10 +84,10 @@ $noticeBar = null;
 			if(
 				window.hasOwnProperty( 'localStorage' ) &&
 				(
-					window.localStorage.getItem( 'LiquipediaDarkTheme' ) === 'dark' ||
+					window.localStorage.getItem( 'LiquipediaTheme' ) === 'dark' ||
 					window.localStorage.getItem( 'LiquipediaDarkMode' ) === 'true' ||
 					(
-						window.localStorage.getItem( 'LiquipediaDarkTheme' ) === null &&
+						window.localStorage.getItem( 'LiquipediaTheme' ) === null &&
 						window.matchMedia( '( prefers-color-scheme: dark )' ).matches
 					)
 				)

@@ -2,7 +2,7 @@ export class Theme {
     constructor( htmlElement ) {
         this.htmlElement = htmlElement;
         this.darkModeStorageKey = 'LiquipediaDarkMode';
-        this.darkThemeStorageKey = 'LiquipediaDarkTheme';
+        this.themeStorageKey = 'LiquipediaTheme';
         this.lightThemeClass = 'theme--light';
         this.darkThemeClass = 'theme--dark';
         this.button = document.querySelector( '[data-component="theme-switch"]' );
@@ -10,7 +10,7 @@ export class Theme {
         // Transform old storage key to new storage key
         // @todo remove after 2024-04-15
         if ( window.localStorage.getItem( this.darkModeStorageKey ) !== null ) {
-            window.localStorage.setItem( this.darkThemeStorageKey, 'dark' );
+            window.localStorage.setItem( this.themeStorageKey, 'dark' );
             window.localStorage.removeItem( this.darkModeStorageKey );
         }
     }
@@ -36,7 +36,7 @@ export class Theme {
 
     setupThemeListeners() {
         window.addEventListener( 'storage', ( event ) => {
-            if ( event.key === this.darkThemeStorageKey ) {
+            if ( event.key === this.themeStorageKey ) {
                 if ( event.newValue === 'dark' ) {
                     this.setDarkTheme( false );
                 } else if ( event.newValue === 'light' ) {
@@ -47,7 +47,7 @@ export class Theme {
 
         const osPreference = window.matchMedia( '( prefers-color-scheme: dark )' );
         osPreference.addEventListener( 'change', ( event ) => {
-            if ( window.localStorage.getItem( this.darkThemeStorageKey ) === null ) {
+            if ( window.localStorage.getItem( this.themeStorageKey ) === null ) {
                 if ( event.matches ) {
                     this.setDarkTheme( false );
                 } else {
@@ -58,7 +58,7 @@ export class Theme {
     }
 
     getCurrentTheme() {
-        const currentTheme = window.localStorage.getItem( this.darkThemeStorageKey );
+        const currentTheme = window.localStorage.getItem( this.themeStorageKey );
         if ( currentTheme === null ) {
             if ( window.matchMedia( '( prefers-color-scheme: dark )' ).matches ) {
                 return 'dark';
@@ -72,7 +72,7 @@ export class Theme {
         this.htmlElement.classList.remove( this.lightThemeClass );
         this.htmlElement.classList.add( this.darkThemeClass );
         if ( setLocalStorage ) {
-            window.localStorage.setItem( this.darkThemeStorageKey, 'dark' );
+            window.localStorage.setItem( this.themeStorageKey, 'dark' );
         }
         // this.setAriaPressed( 'true' );
     }
@@ -81,7 +81,7 @@ export class Theme {
         this.htmlElement.classList.remove( this.darkThemeClass );
         this.htmlElement.classList.add( this.lightThemeClass );
         if ( setLocalStorage ) {
-            window.localStorage.setItem( this.darkThemeStorageKey, 'light' );
+            window.localStorage.setItem( this.themeStorageKey, 'light' );
         }
         // this.setAriaPressed( 'false' );
     }

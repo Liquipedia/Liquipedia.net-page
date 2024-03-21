@@ -16,15 +16,15 @@ $hot_links = [];
 $pdo = null;
 
 // Getting DB Credentials
-$wikiDBcredentials = $dbCredentials['wiki'];
+$wikiDBcredentials = $dbCredentials[ 'wiki' ];
 
 try {
 	$pdo = new PDO(
-            'mysql:host=' . $wikiDBcredentials['host'] . ';dbname='.$wikiDBcredentials['database'],
-            $wikiDBcredentials['user'],
-            $wikiDBcredentials['pass'],
-            [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4" ]
-    );
+		'mysql:host=' . $wikiDBcredentials[ 'host' ] . ';dbname=' . $wikiDBcredentials[ 'database' ],
+		$wikiDBcredentials[ 'user' ],
+		$wikiDBcredentials[ 'pass' ],
+		[ PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4' ]
+	);
 
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	$pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC );
@@ -34,7 +34,7 @@ try {
 }
 
 // Unsetting DB Credentials
-unset($dbCredentials, $wikiDBcredentials);
+unset( $dbCredentials, $wikiDBcredentials );
 
 $selectstmt = $pdo->prepare( 'SELECT * FROM `wiki_hot` ORDER BY `hits` DESC' );
 $selectstmt->execute();
@@ -77,20 +77,25 @@ $noticeBar = null;
 <!-- Set one of the themes as default -->
 <html lang="en" class="theme--light">
 	<head>
-	<script>
-		/**
-		 * Quick check for dark theme
-		 */
-		// Move to new localStorage key
-		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaNetDarkMode' ) ) !== null && window.localStorage.getItem( 'LiquipediaDarkMode' ) === null ) {
-			window.localStorage.setItem( 'LiquipediaDarkMode', window.localStorage.getItem( 'LiquipediaNetDarkMode' ) );
-		}
-		window.localStorage.removeItem( 'LiquipediaNetDarkMode' );
-		if ( JSON.parse( window.localStorage.getItem( 'LiquipediaDarkMode' ) ) ) {
-			document.documentElement.classList.remove( 'theme--light' );
-			document.documentElement.classList.add( 'theme--dark' );
-		}
-	</script>
+		<script>
+			/**
+			 * Quick check for dark theme
+			 */
+			if(
+				window.hasOwnProperty( 'localStorage' ) &&
+				(
+					window.localStorage.getItem( 'LiquipediaTheme' ) === 'dark' ||
+					window.localStorage.getItem( 'LiquipediaDarkMode' ) === 'true' ||
+					(
+						window.localStorage.getItem( 'LiquipediaTheme' ) === null &&
+						window.matchMedia( '( prefers-color-scheme: dark )' ).matches
+					)
+				)
+			) {
+				document.documentElement.classList.remove( 'theme--light' );
+				document.documentElement.classList.add ( 'theme--dark' );
+			}
+		</script>
 <!--
 	************************************************
 	*  _ _             _                _ _        *

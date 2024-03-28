@@ -386,4 +386,10 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/smite/api.php',
 	],
+	'goals' => [
+		'name' => 'GOALS',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/goals/api.php',
+	],
 ];

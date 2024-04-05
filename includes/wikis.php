@@ -106,7 +106,7 @@ $wikis = [
 		'api' => $baseurl . '/pubg/api.php',
 	],
 	'warcraft' => [
-		'name' => 'Warcraft III',
+		'name' => 'Warcraft',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/warcraft/api.php',

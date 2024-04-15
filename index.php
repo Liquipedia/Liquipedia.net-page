@@ -70,8 +70,8 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 $allwikis = $wikis + $sportswikis + $alphawikis;
 ksort( $allwikis );
 
-$noticeBar = null;
-// $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/formula1.svg#formula1" fill="currentColor"></use></svg> <b>Formula 1 is here!</b> Get comprehensive info on drivers, teams, and race results on our brand new Sports Wiki. <a href="/formula1/Main_Page">Start Exploring</a>';
+// $noticeBar = null;
+$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/dota2.svg#dota2" fill="currentColor"></use></svg> <b>The Dota 2 Fandom Team is here!</b> All your favorite Dota 2 game content is now available on Liquipedia. <a href="/dota2game/Main_Page">Start Exploring Now!</a> We are happy to welcome the Dota 2 Fandom Team as they have officially joined Liquipedia. Read their statement <a href="https://www.reddit.com/r/DotA2/comments/1c4kg1n/official_announcement_dota_2_wiki_has_moved_to_a/">here</a>.';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->

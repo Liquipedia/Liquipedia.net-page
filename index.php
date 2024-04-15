@@ -71,7 +71,7 @@ $allwikis = $wikis + $sportswikis + $alphawikis;
 ksort( $allwikis );
 
 // $noticeBar = null;
-$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/dota2.svg" fill="currentColor"></use></svg> <b>Dota 2 Fandom Team is here!</b> All your favorite Dota 2 game content is now available on Liquipedia. <a href="/dota2game/Main_Page">Start Exploring Now!</a> We are happy to welcome the Dota 2 Fandom Team as they have officially joined Liquipedia. Read their statement <a href="#">here</a>.';
+$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/dota2.svg#dota2" fill="currentColor"></use></svg> <b>Dota 2 Fandom Team is here!</b> All your favorite Dota 2 game content is now available on Liquipedia. <a href="/dota2game/Main_Page">Start Exploring Now!</a> We are happy to welcome the Dota 2 Fandom Team as they have officially joined Liquipedia. Read their statement <a href="#">here</a>.';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->

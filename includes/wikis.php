@@ -9,8 +9,15 @@ $protocol = 'https://';
 $baseurl = $protocol . 'liquipedia.net';
 
 $wikis = [
+	'dota2game' => [
+		'name' => 'Dota 2 (Game)',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/dota2game/api.php',
+		'new' => true,
+	],
 	'dota2' => [
-		'name' => 'Dota 2',
+		'name' => 'Dota 2 (Esports)',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/dota2/api.php',

@@ -41,7 +41,7 @@ $wikis = [
 		'api' => $baseurl . '/rocketleague/api.php',
 	],
 	'mobilelegends' => [
-		'name' => 'Mobile Legends',
+		'name' => 'Mobile Legends: Bang Bang',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/mobilelegends/api.php',
@@ -89,7 +89,7 @@ $wikis = [
 		'api' => $baseurl . '/ageofempires/api.php',
 	],
 	'smash' => [
-		'name' => 'Smash',
+		'name' => 'Super Smash Bros.',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/smash/api.php',

@@ -32,6 +32,7 @@ $clr-surface-3: 'clr-surface-3';
 $clr-surface-4: 'clr-surface-4';
 $clr-surface-5: 'clr-surface-5';
 $clr-border: 'clr-border';
+$clr-footer-social-icons: 'clr-footer-social-icons';
 
 $clr-body-bg: 'clr-body-bg';
 $clr-top-nav-bg: 'clr-top-nav-bg';
@@ -107,6 +108,8 @@ $themes: (
         clr-card-badge-bg-sports: $clr-card-badge-bg-sports--light,
 
         clr-highlighted-notice: $clr-highlighted-notice--light,
+	
+        clr-footer-social-icons: $clr-footer-social-icons--light,
     ),
     dark: (
         clr-liquipedia: $clr-liquipedia--dark,
@@ -162,5 +165,7 @@ $themes: (
         clr-card-badge-bg-sports: $clr-card-badge-bg-sports--dark,
 
         clr-highlighted-notice: $clr-highlighted-notice--dark,
+	
+        clr-footer-social-icons: $clr-footer-social-icons--dark,
     )
 );

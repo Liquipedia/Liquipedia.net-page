@@ -105,6 +105,8 @@
         font-size: $font-size-default;
         font-weight: $font-weight-bold;
         line-height: $line-height-medium;
+        display: flex;
+        align-items: end;
 
         @include breakpoint( $breakpoint-xxsmall ) {
             font-size: $font-size-medium;
@@ -117,13 +119,8 @@
 
     .card__title-link {
         text-decoration: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
         z-index: 3;
-        padding: 1.75rem $_card-padding-default 0 $_card-padding-default;
+        padding: 0.25rem 3rem 0.25rem $_card-padding-default;
         color: white;
 
         @include breakpoint( null, $breakpoint-xxsmall ) {
@@ -131,7 +128,7 @@
         }
 
         @include breakpoint( $breakpoint-xsmall ) {
-            padding: 3rem $_card-padding-default 0 $_card-padding-default;
+            padding: 0.5rem 5.75rem 0.5rem $_card-padding-default;
         }
 
         &::after {

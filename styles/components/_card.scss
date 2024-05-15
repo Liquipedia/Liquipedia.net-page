@@ -128,7 +128,7 @@
         }
 
         @include breakpoint( $breakpoint-xsmall ) {
-            padding: 0.5rem 5.5rem 0.5rem $_card-padding-default;
+            padding: 0.5rem 5.75rem 0.5rem $_card-padding-default;
         }
 
         &::after {

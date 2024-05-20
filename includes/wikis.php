@@ -137,7 +137,7 @@ $wikis = [
 		'api' => $baseurl . '/wildrift/api.php',
 	],
 	'fifa' => [
-		'name' => 'FIFA',
+		'name' => 'EA Sports FC',
 		'theme-light' => '#5e5e62',
 		'theme-dark' => '#c6c6cA',
 		'api' => $baseurl . '/fifa/api.php',

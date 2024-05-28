@@ -136,11 +136,11 @@ $wikis = [
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/wildrift/api.php',
 	],
-	'fifa' => [
-		'name' => 'FIFA',
+	'easportsfc' => [
+		'name' => 'EA SPORTS FC',
 		'theme-light' => '#5e5e62',
 		'theme-dark' => '#c6c6cA',
-		'api' => $baseurl . '/fifa/api.php',
+		'api' => $baseurl . '/easportsfc/api.php',
 	],
 	'heroes' => [
 		'name' => 'Heroes',

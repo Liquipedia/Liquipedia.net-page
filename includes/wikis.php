@@ -125,13 +125,13 @@ $wikis = [
 		'api' => $baseurl . '/brawlstars/api.php',
 	],
 	'starcraft' => [
-		'name' => 'StarCraft: Brood War',
+		'name' => 'StarCraft',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/starcraft/api.php',
 	],
 	'wildrift' => [
-		'name' => 'League of Legends: Wild Rift',
+		'name' => 'Wild Rift',
 		'theme-light' => '#006a6a',
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/wildrift/api.php',

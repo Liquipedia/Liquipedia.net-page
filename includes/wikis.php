@@ -107,7 +107,7 @@ $wikis = [
 		'api' => $baseurl . '/arenaofvalor/api.php',
 	],
 	'pubg' => [
-		'name' => 'PUBG',
+		'name' => 'PUBG: Battlegrounds',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/pubg/api.php',
@@ -125,7 +125,7 @@ $wikis = [
 		'api' => $baseurl . '/brawlstars/api.php',
 	],
 	'starcraft' => [
-		'name' => 'Brood War',
+		'name' => 'StarCraft',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/starcraft/api.php',
@@ -143,7 +143,7 @@ $wikis = [
 		'api' => $baseurl . '/easportsfc/api.php',
 	],
 	'heroes' => [
-		'name' => 'Heroes',
+		'name' => 'Heroes of the Storm',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/heroes/api.php',
@@ -334,7 +334,7 @@ $otherwikis = [
 		'api' => $baseurl . '/criticalops/api.php',
 	],
 	'runeterra' => [
-		'name' => 'Runeterra',
+		'name' => 'Legends of Runeterra',
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/runeterra/api.php',

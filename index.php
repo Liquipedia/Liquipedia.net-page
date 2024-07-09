@@ -114,7 +114,6 @@ $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 100
 		<meta name="keywords" content="esports, wiki, liquipedia<?php echo $keywords; ?>" />
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
 		<link href="/commons/extensions/SearchEngineOptimization/resources/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-		<link href="/manifest.json" rel="manifest" />
 		<link href="<?php echo $baseurl; ?>" rel="canonical" />
 		<meta name="theme-color" content="#00162c" />
 		<meta name="twitter:card" content="summary" />

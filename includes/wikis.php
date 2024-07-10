@@ -172,6 +172,13 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'esports' => [
+		'name' => 'Esports',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/esports/api.php',
+		'new' => true,
+	],
 	'stormgate' => [
 		'name' => 'Stormgate',
 		'theme-light' => '#954a00',

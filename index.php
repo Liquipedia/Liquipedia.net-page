@@ -71,7 +71,7 @@ $allwikis = $wikis + $sportswikis + $alphawikis;
 ksort( $allwikis );
 
 // $noticeBar = null;
-$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/dota2game.svg#dota2game" fill="currentColor"></use></svg> <b>The Dota 2 Fandom Team is here!</b> All your favorite Dota 2 game content is now available on Liquipedia. <a href="/dota2game/Main_Page">Start Exploring Now!</a> We are happy to welcome the Dota 2 Fandom Team as they have officially joined Liquipedia. Read their statement <a href="https://www.reddit.com/r/DotA2/comments/1c4kg1n/official_announcement_dota_2_wiki_has_moved_to_a/">here</a>.';
+$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/esports.svg#esports" fill="currentColor"></use></svg> <b>The Esports Wiki is here</b>, covering the largest cross-game events in the industry. <a href="https://liquipedia.net/esports/Main_Page">Start exploring now</a> and bookmark it to stay up to date with the <a href="https://liquipedia.net/esports/Esports_World_Cup/2024">Esports World Cup 2024</a>.';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->

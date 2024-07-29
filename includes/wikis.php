@@ -179,12 +179,18 @@ $alphawikis = [
 		'api' => $baseurl . '/esports/api.php',
 		'new' => true,
 	],
+	'worldoftanks' => [
+		'name' => 'World of Tanks',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/worldoftanks/api.php',
+		'new' => true,
+	],
 	'stormgate' => [
 		'name' => 'Stormgate',
 		'theme-light' => '#954a00',
 		'theme-dark' => '#ffb781',
 		'api' => $baseurl . '/stormgate/api.php',
-		'new' => true,
 	],
 	'trackmania' => [
 		'name' => 'Trackmania',
@@ -387,12 +393,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/osu/api.php',
-	],
-	'worldoftanks' => [
-		'name' => 'World of Tanks',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/worldoftanks/api.php',
 	],
 	'smite' => [
 		'name' => 'SMITE',

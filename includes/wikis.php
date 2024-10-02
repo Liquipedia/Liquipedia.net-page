@@ -93,11 +93,11 @@ $wikis = [
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/fighters/api.php',
 	],
-	'arenaofvalor' => [
-		'name' => 'Arena of Valor',
+	'honorofkings' => [
+		'name' => 'Honor of Kings',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/arenaofvalor/api.php',
+		'api' => $baseurl . '/honorofkings/api.php',
 	],
 	'pubg' => [
 		'name' => 'PUBG',

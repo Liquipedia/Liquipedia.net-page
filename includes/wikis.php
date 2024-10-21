@@ -165,19 +165,31 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'deadlock' => [
+		'name' => 'Deadlock',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/deadlock/api.php',
+		'new' => true,
+	],
+	'osu' => [
+		'name' => 'osu!',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/osu/api.php',
+		'new' => true,
+	],
 	'esports' => [
 		'name' => 'Esports',
 		'theme-light' => '#5e5e62',
 		'theme-dark' => '#c6c6cA',
 		'api' => $baseurl . '/esports/api.php',
-		'new' => true,
 	],
 	'worldoftanks' => [
 		'name' => 'World of Tanks',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/worldoftanks/api.php',
-		'new' => true,
 	],
 	'stormgate' => [
 		'name' => 'Stormgate',
@@ -380,12 +392,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/battlerite/api.php',
-	],
-	'osu' => [
-		'name' => 'osu!',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/osu/api.php',
 	],
 	'smite' => [
 		'name' => 'SMITE',

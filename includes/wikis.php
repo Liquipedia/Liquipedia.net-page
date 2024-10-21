@@ -165,6 +165,13 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'deadlock' => [
+		'name' => 'Deadlock',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/deadlock/api.php',
+		'new' => true,
+	],
 	'osu' => [
 		'name' => 'osu!',
 		'theme-light' => '#bc111d',

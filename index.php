@@ -70,8 +70,8 @@ foreach ( $alphawikis as $wiki_key => $wiki ) {
 $allwikis = $wikis + $sportswikis + $alphawikis;
 ksort( $allwikis );
 
-// $noticeBar = null;
-$noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/esports.svg#esports" fill="currentColor"></use></svg> <b>The Esports Wiki is here</b>, covering the largest cross-game events in the industry. <a href="https://liquipedia.net/esports/Main_Page">Start exploring now</a> and bookmark it to stay up to date with the <b><a href="https://liquipedia.net/esports/Esports_World_Cup/2024">Esports World Cup 2024</a></b>.';
+$noticeBar = null;
+// $noticeBar = '<svg class="icon" width="1000" height="1000" viewBox="0 0 1000 1000"><use href="/images/game-icons/esports.svg#esports" fill="currentColor"></use></svg> <b>The Esports Wiki is here</b>, covering the largest cross-game events in the industry. <a href="https://liquipedia.net/esports/Main_Page">Start exploring now</a> and bookmark it to stay up to date with the <b><a href="https://liquipedia.net/esports/Esports_World_Cup/2024">Esports World Cup 2024</a></b>.';
 ?>
 <!DOCTYPE html>
 <!-- Set one of the themes as default -->

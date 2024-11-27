@@ -165,19 +165,24 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'crossfire' => [
+		'name' => 'CrossFire',
+		'theme-light' => '#006a6a',
+		'theme-dark' => '#4ddada',
+		'api' => $baseurl . '/crossfire/api.php',
+		'new' => true,
+	],
 	'deadlock' => [
 		'name' => 'Deadlock',
 		'theme-light' => '#5e5e62',
 		'theme-dark' => '#c6c6cA',
 		'api' => $baseurl . '/deadlock/api.php',
-		'new' => true,
 	],
 	'osu' => [
 		'name' => 'osu!',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/osu/api.php',
-		'new' => true,
 	],
 	'esports' => [
 		'name' => 'Esports',
@@ -297,12 +302,6 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'crossfire' => [
-		'name' => 'CrossFire',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/crossfire/api.php',
-	],
 	'brawlhalla' => [
 		'name' => 'Brawlhalla',
 		'theme-light' => '',

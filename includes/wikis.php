@@ -404,6 +404,12 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/goals/api.php',
 	],
+	'geoguessr' => [
+		'name' => 'GeoGuessr',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/geoguessr/api.php',
+	],
 	'marvelrivals' => [
 		'name' => 'Marvel Rivals',
 		'theme-light' => '',

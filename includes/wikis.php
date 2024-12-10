@@ -404,4 +404,10 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/goals/api.php',
 	],
+	'marvelrivals' => [
+		'name' => 'Marvel Rivals',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/marvelrivals/api.php',
+	],
 ];

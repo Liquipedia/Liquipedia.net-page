@@ -160,8 +160,13 @@ $sportswikis = [
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#fad1d1',
 		'api' => $baseurl . '/formula1/api.php',
+	],
+	'chess' => [
+		'name' => 'Chess',
+		'theme-light' => '#7e5700',
+		'theme-dark' => '#fabc45',
+		'api' => $baseurl . '/chess/api.php',
 		'new' => true,
-		'class' => 'card__wide',
 	],
 ];
 $alphawikis = [

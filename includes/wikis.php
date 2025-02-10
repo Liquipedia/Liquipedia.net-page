@@ -421,4 +421,16 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/marvelrivals/api.php',
 	],
+	'tarkovarena' => [
+		'name' => 'Escape from Tarkov: Arena',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/tarkovarena/api.php',
+	],
+	'warthunder' => [
+		'name' => 'War Thunder',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/warthunder/api.php',
+	],
 ];

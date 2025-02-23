@@ -170,12 +170,18 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
+	'geoguessr' => [
+		'name' => 'GeoGuessr',
+		'theme-light' => '#1c0066',
+		'theme-dark' => '#8669d6',
+		'api' => $baseurl . '/geoguessr/api.php',
+		'new' => true,
+	],
 	'crossfire' => [
 		'name' => 'CrossFire',
 		'theme-light' => '#006a6a',
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/crossfire/api.php',
-		'new' => true,
 	],
 	'deadlock' => [
 		'name' => 'Deadlock',
@@ -409,12 +415,6 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/goals/api.php',
 	],
-	'geoguessr' => [
-		'name' => 'GeoGuessr',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/geoguessr/api.php',
-	],
 	'marvelrivals' => [
 		'name' => 'Marvel Rivals',
 		'theme-light' => '',
@@ -432,5 +432,11 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/warthunder/api.php',
+	],
+	'wildcard' => [
+		'name' => 'Wildcard',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/wildcard/api.php',
 	],
 ];

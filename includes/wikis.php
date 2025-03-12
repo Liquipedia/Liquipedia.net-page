@@ -15,23 +15,17 @@ $wikis = [
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/dota2/api.php',
 	],
-	'valorant' => [
-		'name' => 'VALORANT',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/valorant/api.php',
-	],
 	'counterstrike' => [
 		'name' => 'Counter-Strike',
 		'theme-light' => '#466800',
 		'theme-dark' => '#a1d832',
 		'api' => $baseurl . '/counterstrike/api.php',
 	],
-	'rocketleague' => [
-		'name' => 'Rocket League',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/rocketleague/api.php',
+	'valorant' => [
+		'name' => 'VALORANT',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/valorant/api.php',
 	],
 	'mobilelegends' => [
 		'name' => 'Mobile Legends: Bang Bang',
@@ -45,17 +39,17 @@ $wikis = [
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/leagueoflegends/api.php',
 	],
+	'rocketleague' => [
+		'name' => 'Rocket League',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/rocketleague/api.php',
+	],
 	'apexlegends' => [
 		'name' => 'Apex Legends',
 		'theme-light' => '#bc111d',
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/apexlegends/api.php',
-	],
-	'rainbowsix' => [
-		'name' => 'Rainbow Six',
-		'theme-light' => '#006a6a',
-		'theme-dark' => '#4ddada',
-		'api' => $baseurl . '/rainbowsix/api.php',
 	],
 	'overwatch' => [
 		'name' => 'Overwatch',
@@ -63,29 +57,17 @@ $wikis = [
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/overwatch/api.php',
 	],
-	'starcraft2' => [
-		'name' => 'StarCraft II',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/starcraft2/api.php',
-	],
 	'pubgmobile' => [
 		'name' => 'PUBG Mobile',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/pubgmobile/api.php',
 	],
-	'ageofempires' => [
-		'name' => 'Age of Empires',
-		'theme-light' => '#3a5ba9',
-		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/ageofempires/api.php',
-	],
-	'smash' => [
-		'name' => 'Super Smash Bros.',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/smash/api.php',
+	'rainbowsix' => [
+		'name' => 'Rainbow Six',
+		'theme-light' => '#006a6a',
+		'theme-dark' => '#4ddada',
+		'api' => $baseurl . '/rainbowsix/api.php',
 	],
 	'fighters' => [
 		'name' => 'Fighting Games',
@@ -93,11 +75,11 @@ $wikis = [
 		'theme-dark' => '#ffb3aa',
 		'api' => $baseurl . '/fighters/api.php',
 	],
-	'honorofkings' => [
-		'name' => 'Honor of Kings',
+	'starcraft2' => [
+		'name' => 'StarCraft II',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
-		'api' => $baseurl . '/honorofkings/api.php',
+		'api' => $baseurl . '/starcraft2/api.php',
 	],
 	'pubg' => [
 		'name' => 'PUBG: Battlegrounds',
@@ -105,17 +87,41 @@ $wikis = [
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/pubg/api.php',
 	],
-	'warcraft' => [
-		'name' => 'Warcraft',
-		'theme-light' => '#7e5700',
-		'theme-dark' => '#fabc45',
-		'api' => $baseurl . '/warcraft/api.php',
+	'ageofempires' => [
+		'name' => 'Age of Empires',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/ageofempires/api.php',
+	],
+	'honorofkings' => [
+		'name' => 'Honor of Kings',
+		'theme-light' => '#3a5ba9',
+		'theme-dark' => '#b0c5ff',
+		'api' => $baseurl . '/honorofkings/api.php',
+	],
+	'smash' => [
+		'name' => 'Super Smash Bros.',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/smash/api.php',
 	],
 	'brawlstars' => [
 		'name' => 'Brawl Stars',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/brawlstars/api.php',
+	],
+	'warcraft' => [
+		'name' => 'Warcraft',
+		'theme-light' => '#7e5700',
+		'theme-dark' => '#fabc45',
+		'api' => $baseurl . '/warcraft/api.php',
+	],
+	'easportsfc' => [
+		'name' => 'EA SPORTS FC',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/easportsfc/api.php',
 	],
 	'starcraft' => [
 		'name' => 'StarCraft',
@@ -129,23 +135,17 @@ $wikis = [
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/wildrift/api.php',
 	],
-	'easportsfc' => [
-		'name' => 'EA SPORTS FC',
-		'theme-light' => '#5e5e62',
-		'theme-dark' => '#c6c6cA',
-		'api' => $baseurl . '/easportsfc/api.php',
+	'hearthstone' => [
+		'name' => 'Hearthstone',
+		'theme-light' => '#7e5700',
+		'theme-dark' => '#fabc45',
+		'api' => $baseurl . '/hearthstone/api.php',
 	],
 	'heroes' => [
 		'name' => 'Heroes of the Storm',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/heroes/api.php',
-	],
-	'hearthstone' => [
-		'name' => 'Hearthstone',
-		'theme-light' => '#7e5700',
-		'theme-dark' => '#fabc45',
-		'api' => $baseurl . '/hearthstone/api.php',
 	],
 	'artifact' => [
 		'name' => 'Artifact',
@@ -170,54 +170,11 @@ $sportswikis = [
 	],
 ];
 $alphawikis = [
-	'geoguessr' => [
-		'name' => 'GeoGuessr',
-		'theme-light' => '#1c0066',
-		'theme-dark' => '#8669d6',
-		'api' => $baseurl . '/geoguessr/api.php',
-		'new' => true,
-	],
-	'crossfire' => [
-		'name' => 'CrossFire',
+	'fortnite' => [
+		'name' => 'Fortnite',
 		'theme-light' => '#006a6a',
 		'theme-dark' => '#4ddada',
-		'api' => $baseurl . '/crossfire/api.php',
-	],
-	'deadlock' => [
-		'name' => 'Deadlock',
-		'theme-light' => '#5e5e62',
-		'theme-dark' => '#c6c6cA',
-		'api' => $baseurl . '/deadlock/api.php',
-	],
-	'osu' => [
-		'name' => 'osu!',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/osu/api.php',
-	],
-	'esports' => [
-		'name' => 'Esports',
-		'theme-light' => '#5e5e62',
-		'theme-dark' => '#c6c6cA',
-		'api' => $baseurl . '/esports/api.php',
-	],
-	'worldoftanks' => [
-		'name' => 'World of Tanks',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/worldoftanks/api.php',
-	],
-	'stormgate' => [
-		'name' => 'Stormgate',
-		'theme-light' => '#954a00',
-		'theme-dark' => '#ffb781',
-		'api' => $baseurl . '/stormgate/api.php',
-	],
-	'trackmania' => [
-		'name' => 'Trackmania',
-		'theme-light' => '#006e00',
-		'theme-dark' => '#5ae150',
-		'api' => $baseurl . '/trackmania/api.php',
+		'api' => $baseurl . '/fortnite/api.php',
 	],
 	'callofduty' => [
 		'name' => 'Call of Duty',
@@ -225,17 +182,29 @@ $alphawikis = [
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/callofduty/api.php',
 	],
+	'tft' => [
+		'name' => 'Teamfight Tactics',
+		'theme-light' => '#006a6a',
+		'theme-dark' => '#4ddada',
+		'api' => $baseurl . '/tft/api.php',
+	],
 	'freefire' => [
 		'name' => 'Free Fire',
 		'theme-light' => '#7e5700',
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/freefire/api.php',
 	],
-	'fortnite' => [
-		'name' => 'Fortnite',
-		'theme-light' => '#006a6a',
-		'theme-dark' => '#4ddada',
-		'api' => $baseurl . '/fortnite/api.php',
+	'deadlock' => [
+		'name' => 'Deadlock',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/deadlock/api.php',
+	],
+	'esports' => [
+		'name' => 'Esports',
+		'theme-light' => '#5e5e62',
+		'theme-dark' => '#c6c6cA',
+		'api' => $baseurl . '/esports/api.php',
 	],
 	'pokemon' => [
 		'name' => 'Pokémon',
@@ -243,11 +212,35 @@ $alphawikis = [
 		'theme-dark' => '#e4c532',
 		'api' => $baseurl . '/pokemon/api.php',
 	],
-	'tft' => [
-		'name' => 'Teamfight Tactics',
+	'worldoftanks' => [
+		'name' => 'World of Tanks',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/worldoftanks/api.php',
+	],
+	'crossfire' => [
+		'name' => 'CrossFire',
 		'theme-light' => '#006a6a',
 		'theme-dark' => '#4ddada',
-		'api' => $baseurl . '/tft/api.php',
+		'api' => $baseurl . '/crossfire/api.php',
+	],
+	'trackmania' => [
+		'name' => 'Trackmania',
+		'theme-light' => '#006e00',
+		'theme-dark' => '#5ae150',
+		'api' => $baseurl . '/trackmania/api.php',
+	],
+	'geoguessr' => [
+		'name' => 'GeoGuessr',
+		'theme-light' => '#1c0066',
+		'theme-dark' => '#8669d6',
+		'api' => $baseurl . '/geoguessr/api.php',
+	],
+	'osu' => [
+		'name' => 'osu!',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/osu/api.php',
 	],
 	'halo' => [
 		'name' => 'Halo',
@@ -255,17 +248,23 @@ $alphawikis = [
 		'theme-dark' => '#4ddada',
 		'api' => $baseurl . '/halo/api.php',
 	],
-	'clashofclans' => [
-		'name' => 'Clash of Clans',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/clashofclans/api.php',
-	],
 	'clashroyale' => [
 		'name' => 'Clash Royale',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/clashroyale/api.php',
+	],
+	'stormgate' => [
+		'name' => 'Stormgate',
+		'theme-light' => '#954a00',
+		'theme-dark' => '#ffb781',
+		'api' => $baseurl . '/stormgate/api.php',
+	],
+	'clashofclans' => [
+		'name' => 'Clash of Clans',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/clashofclans/api.php',
 	],
 	'worldofwarcraft' => [
 		'name' => 'World of Warcraft',
@@ -273,17 +272,17 @@ $alphawikis = [
 		'theme-dark' => '#fabc45',
 		'api' => $baseurl . '/worldofwarcraft/api.php',
 	],
-	'arenafps' => [
-		'name' => 'Arena FPS',
-		'theme-light' => '#bc111d',
-		'theme-dark' => '#ffb3aa',
-		'api' => $baseurl . '/arenafps/api.php',
-	],
 	'teamfortress' => [
 		'name' => 'Team Fortress',
 		'theme-light' => '#954a00',
 		'theme-dark' => '#ffb781',
 		'api' => $baseurl . '/teamfortress/api.php',
+	],
+	'arenafps' => [
+		'name' => 'Arena FPS',
+		'theme-light' => '#bc111d',
+		'theme-dark' => '#ffb3aa',
+		'api' => $baseurl . '/arenafps/api.php',
 	],
 	'tetris' => [
 		'name' => 'Tetris',
@@ -291,17 +290,17 @@ $alphawikis = [
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/tetris/api.php',
 	],
-	'paladins' => [
-		'name' => 'Paladins',
-		'theme-light' => '#006a6a',
-		'theme-dark' => '#4ddada',
-		'api' => $baseurl . '/paladins/api.php',
-	],
 	'sideswipe' => [
 		'name' => 'Sideswipe',
 		'theme-light' => '#3a5ba9',
 		'theme-dark' => '#b0c5ff',
 		'api' => $baseurl . '/sideswipe/api.php',
+	],
+	'paladins' => [
+		'name' => 'Paladins',
+		'theme-light' => '#006a6a',
+		'theme-dark' => '#4ddada',
+		'api' => $baseurl . '/paladins/api.php',
 	],
 ];
 $miscwikis = [
@@ -313,11 +312,11 @@ $miscwikis = [
 	],
 ];
 $otherwikis = [
-	'brawlhalla' => [
-		'name' => 'Brawlhalla',
+	'marvelrivals' => [
+		'name' => 'Marvel Rivals',
 		'theme-light' => '',
 		'theme-dark' => '',
-		'api' => $baseurl . '/brawlhalla/api.php',
+		'api' => $baseurl . '/marvelrivals/api.php',
 	],
 	'simracing' => [
 		'name' => 'Sim Racing',
@@ -325,17 +324,11 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/simracing/api.php',
 	],
-	'zula' => [
-		'name' => 'Zula',
+	'brawlhalla' => [
+		'name' => 'Brawlhalla',
 		'theme-light' => '',
 		'theme-dark' => '',
-		'api' => $baseurl . '/zula/api.php',
-	],
-	'splatoon' => [
-		'name' => 'Splatoon',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/splatoon/api.php',
+		'api' => $baseurl . '/brawlhalla/api.php',
 	],
 	'omegastrikers' => [
 		'name' => 'Omega Strikers',
@@ -343,11 +336,23 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/omegastrikers/api.php',
 	],
+	'smite' => [
+		'name' => 'SMITE',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/smite/api.php',
+	],
 	'naraka' => [
 		'name' => 'Naraka',
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/naraka/api.php',
+	],
+	'splatoon' => [
+		'name' => 'Splatoon',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/splatoon/api.php',
 	],
 	'splitgate' => [
 		'name' => 'Splitgate',
@@ -361,17 +366,29 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/criticalops/api.php',
 	],
+	'magic' => [
+		'name' => 'Magic: The Gathering',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/magic/api.php',
+	],
+	'zula' => [
+		'name' => 'Zula',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/zula/api.php',
+	],
+	'goals' => [
+		'name' => 'GOALS',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/goals/api.php',
+	],
 	'runeterra' => [
 		'name' => 'Legends of Runeterra',
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/runeterra/api.php',
-	],
-	'battalion' => [
-		'name' => 'Battalion 1944',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/battalion/api.php',
 	],
 	'autochess' => [
 		'name' => 'Auto Chess',
@@ -379,11 +396,17 @@ $otherwikis = [
 		'theme-dark' => '',
 		'api' => $baseurl . '/autochess/api.php',
 	],
-	'magic' => [
-		'name' => 'Magic: The Gathering',
+	'battalion' => [
+		'name' => 'Battalion 1944',
 		'theme-light' => '',
 		'theme-dark' => '',
-		'api' => $baseurl . '/magic/api.php',
+		'api' => $baseurl . '/battalion/api.php',
+	],
+	'battlerite' => [
+		'name' => 'Battlerite',
+		'theme-light' => '',
+		'theme-dark' => '',
+		'api' => $baseurl . '/battlerite/api.php',
 	],
 	'underlords' => [
 		'name' => 'Dota Underlords',
@@ -396,30 +419,6 @@ $otherwikis = [
 		'theme-light' => '',
 		'theme-dark' => '',
 		'api' => $baseurl . '/squadrons/api.php',
-	],
-	'battlerite' => [
-		'name' => 'Battlerite',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/battlerite/api.php',
-	],
-	'smite' => [
-		'name' => 'SMITE',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/smite/api.php',
-	],
-	'goals' => [
-		'name' => 'GOALS',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/goals/api.php',
-	],
-	'marvelrivals' => [
-		'name' => 'Marvel Rivals',
-		'theme-light' => '',
-		'theme-dark' => '',
-		'api' => $baseurl . '/marvelrivals/api.php',
 	],
 	'tarkovarena' => [
 		'name' => 'Escape from Tarkov: Arena',

@@ -1,7 +1,9 @@
-#Liquipedia.net-page
+# Liquipedia.net-page
 Front page for liquipedia.net
 
-#Build base.css
+:warning: This repository is archived and does not accept contributions anymore. This code is not used at Liquipedia anymore.
+
+# Build base.css
 Currently the css is build locally, to achieve this:
 * install dart-sass
 * add it to your system PATH: https://katiek2.github.io/path-doc/
